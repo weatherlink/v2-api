@@ -12,8 +12,8 @@ nav_order: 6
 
 <script src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
 <script src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-standalone-preset.js"></script>
-</head>
-<body>
+
+
 <div id="main"></div>
 <script>
 var ui = SwaggerUIBundle({
