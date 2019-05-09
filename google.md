@@ -1,6 +1,6 @@
 ---
 nav_order: 8
-permalink: //www.google.com
+permalink: /out-links/google.html
 ---
 
 # Google
