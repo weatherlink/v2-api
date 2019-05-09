@@ -9,3 +9,5 @@ aux_links:
       - "//github.com/pmarsceill/just-the-docs"
     "woot":
       - "https://www.weatherlink.com"
+    "a":
+      - "https://gitter.im/WeatherLink/v2-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"
