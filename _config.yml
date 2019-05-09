@@ -1,4 +1,5 @@
-# theme: jekyll-theme-slate
 remote_theme: pmarsceill/just-the-docs
+
+title: WeatherLink v2 API
 
 search_enabled: true
