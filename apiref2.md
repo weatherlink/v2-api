@@ -1,4 +1,4 @@
 ---
 nav_order: 7
-permalink: /swagger.html
+permalink: /swagger-orig.html
 ---
