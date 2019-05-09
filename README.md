@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-http://weatherlink.github.io/v2-api/
+[http://weatherlink.github.io/v2-api/](http://weatherlink.github.io/v2-api/)
 
 [![Join the chat at https://gitter.im/WeatherLink/v2-api](https://badges.gitter.im/WeatherLink/v2-api.svg)](https://gitter.im/WeatherLink/v2-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
