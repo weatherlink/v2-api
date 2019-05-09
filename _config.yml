@@ -7,7 +7,7 @@ search_enabled: true
 aux_links:
     "Just the Docs on GitHub":
       - "//github.com/pmarsceill/just-the-docs"
-    "woot2":
+    "woot3":
       - "https://www.weatherlink.com"
     "![Join the chat at https://gitter.im/WeatherLink/v2-api](https://badges.gitter.im/WeatherLink/v2-api.svg)":
       - "https://gitter.im/WeatherLink/v2-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"
