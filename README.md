@@ -2,6 +2,8 @@ https://weatherlink.github.io/v2-api/
 
 ## Welcome to GitHub Pages
 
+[![Join the chat at https://gitter.im/WeatherLink/v2-api](https://badges.gitter.im/WeatherLink/v2-api.svg)](https://gitter.im/WeatherLink/v2-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 You can use the [editor on GitHub](https://github.com/weatherlink/v2-api/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
