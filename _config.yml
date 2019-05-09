@@ -3,3 +3,9 @@ remote_theme: pmarsceill/just-the-docs
 title: v2 API
 
 search_enabled: true
+
+aux_links:
+    "Just the Docs on GitHub":
+      - "//github.com/pmarsceill/just-the-docs"
+    "woot":
+      - "https://www.weatherlink.com"
