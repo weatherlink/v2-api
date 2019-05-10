@@ -1,13 +1,11 @@
 # remote_theme: pmarsceill/just-the-docs
 remote_theme: mmistakes/minimal-mistakes@4.16.3
 
-plugins:
-  - jekyll-include-cache
+
+title: v2 API 1
 
 include:
   - _pages
-
-title: v2 API
 
 # Defaults
 defaults:
@@ -28,4 +26,7 @@ defaults:
       type: pages
     values:
       layout: single
-author_profile: true
+      author_profile: true
+
+plugins:
+  - jekyll-include-cache
