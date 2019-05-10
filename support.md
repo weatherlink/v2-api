@@ -3,7 +3,7 @@ title: Support
 nav_order: 40
 permalink: /support
 sidebar:
-  nav: "main"
+  nav: "navMain"
 ---
 
 # Support
