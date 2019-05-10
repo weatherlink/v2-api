@@ -1,8 +1,9 @@
 ---
-nav_order: 600
+title: API Reference
+permalink: /
+sidebar:
+  nav: "navMain"
 ---
-
-# API Reference
 
 <style>
 .swagger-ui{
