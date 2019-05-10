@@ -20,7 +20,8 @@ var ui = SwaggerUIBundle({
 		SwaggerUIBundle.presets.apis,
 		SwaggerUIBundle.SwaggerUIStandalonePreset
 	],
-	layout: "BaseLayout"
+	layout: "BaseLayout",
+	supportedSubmitMethods: []
 });
 </script>
 
