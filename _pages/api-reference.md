@@ -1,5 +1,7 @@
 ---
+title: lol
 permalink: /api-reference
+classes: wide
 sidebar:
   nav: "navMain"
 ---
