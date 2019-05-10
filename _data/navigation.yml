@@ -2,7 +2,7 @@ main:
   - title: "WeatherLink"
     url: https://www.weatherlink.com
 
-main:
+navMain:
   - title: Section 1
     children:
       - title: Support
