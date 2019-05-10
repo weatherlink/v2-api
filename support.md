@@ -6,8 +6,6 @@ sidebar:
   nav: "navMain"
 ---
 
-# Support
-
 ## v2 API Beta Test Support
 
 Support for v2 API beta testers is available in our [private Gitter chat room](https://gitter.im/WeatherLink/v2-api-beta).
