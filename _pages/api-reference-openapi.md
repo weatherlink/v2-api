@@ -1,6 +1,6 @@
 ---
-title: API Reference 3
-permalink: /api-reference-3
+title: API Reference OpenAPI
+permalink: /api-reference-openapi
 classes: wide
 sidebar:
   nav: "navMain"
@@ -15,7 +15,7 @@ sidebar:
 <script>
 var ui = SwaggerUIBundle({
 	dom_id: '#api-ref',
-	url: "https://weatherlink.github.io/v2-api/_pages/v2-api-swagger-3.json",
+	url: "https://weatherlink.github.io/v2-api/_pages/v2-api-openapi.yaml",
 	presets: [
 		SwaggerUIBundle.presets.apis,
 		SwaggerUIBundle.SwaggerUIStandalonePreset
