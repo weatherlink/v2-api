@@ -9,5 +9,7 @@ navMain:
         url: /
       - title: Support
         url: /support
-      - title: API Reference
-        url: /api-reference
+      - title: API Reference 2
+        url: /api-reference-2
+      - title: API Reference 3
+        url: /api-reference-3
