@@ -15,11 +15,11 @@ sidebar:
 <script src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-standalone-preset.js"></script>
 
 
-<div id="main"></div>
+<div id="api-ref"></div>
 <script>
 var ui = SwaggerUIBundle({
 	url: "https://petstore.swagger.io/v2/swagger.json",
-	dom_id: '#main',
+	dom_id: '#api-ref',
 	presets: [
 		SwaggerUIBundle.presets.apis,
 		SwaggerUIBundle.SwaggerUIStandalonePreset
