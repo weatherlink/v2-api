@@ -514,7 +514,7 @@ var ui = SwaggerUIBundle({
         "tags": [
           "Weather Stations"
         ],
-        "summary": "Get latest reporting times for all sensors attached to all weather stations associated with your API Key",
+        "summary": "Get latest reporting times for all sensors",
         "description": "Returns the most recent times data was uploaded for all sensors associated with the api key that was passed.  The fields listed below are returned for each sensor; additionally, a **generated_at** field is returned for the entire response, containing a Unix timestamp of the time the response was returned by the server.\n  | name | description |\n  | ---- | ----------- |\n  | **lsid** | Id of the sensor for purposes of this API |\n  | **time_received** | Date and time data was last received at Davis Instruments, as a Unix timestamp |\n  | **time_recorded** | Date and time the latest-received data was recorded by the sensor, as a Unix timestamp |\n  | **time_loop_received** | Date and time the loop record was received at Davis Instruments, as a Unix timestamp (available only for Integrated Sensor Suite devices) |\n",
         "parameters": [
           {
