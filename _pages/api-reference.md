@@ -1,5 +1,4 @@
 ---
-title: API Reference
 permalink: /api-reference
 sidebar:
   nav: "navMain"
