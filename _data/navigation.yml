@@ -7,9 +7,9 @@ navMain:
     children:
       - title: Introduction
         url: /
-      - title: Support
-        url: /support
       - title: API Reference
         url: /api-reference
+      - title: Support
+        url: /support
       - title: Terms of Service
         url: /terms-of-service
