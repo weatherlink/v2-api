@@ -2,60 +2,17 @@ openapi: 3.0.0
 info:
   title: WeatherLink v2 API
   description: >
-    This API provides descriptions of any and all weather stations, sensors and
-    nodes associated with the API key provided. Various endpoints will return
-    all stations, nodes or sensors associated with your API key; or results can
-    be filtered by passing station, node or sensor IDs.  Additional endpoints
-    provide the most recent time data was uploaded for each station; and a
-    catalog of all types of sensors.
-
-
-    The Weatherlink Data API uses an API Key, API Secret and API Signature to
-    sign each request to prevent others from accessing your data:
-
-      - As a user of this API you will be assigned API Keys which can be set to grant access to one or more weather stations.
-      
-      - You will also be assigned an API Secret. You need to keep the API Secret protected because it is used to sign your requests to the API.  It should never be passed directly in request URLs.
-      
-      - The API signature will be generated for each request at the time the request is made.  See below for detailed instructions.
-
-      - A timestamp parameter is also used to prevent bookmarking and reuse of URLs by requiring a unique URL for each request.
-
-    To sign a request let's walk through an example of the process to invoke the
-    `/stations` operation and assume you have an API Key `987654321` and API
-    Secret `ABC123`:
-
-    1. Generate the current Unix timestamp and set this as the parameter `t`;
-    e.g. `t=1506642732`
-
-    1. Except for the apiSignature parameter, sort all the query parameters
-    alphabetically by their parameter name using ASCII sorting. All parameter
-    names are in US English so ASCII sorting is safe.
-
-    1. Create a string by concatenating the name value pairs of the sorted
-    parameters. For our example that would yield `api-key987654321t1506642732`
-
-    1. Once the string is built run it through HMAC SHA-256 hashing and generate
-    a hex encoded string. This is your API Signature. The
-    `api-key987654321t1506642732` string with the `ABC123` API secret will hash
-    to `ccbf62a726e7d99f329b092633fc305f3b796c2775f3f88f9ade4ae4a3bba040`
-
-    1. Now you can make a call to
-    /stations?api-key=987654321&t=1506642732&api-signature=ccbf62a726e7d99f329b092633fc305f3b796c2775f3f88f9ade4ae4a3bba040
-
-    1. If any device IDs are passed as a path parameter, these should also be
-    included.  For example, if station IDs 5555 and 6666 were included in the
-    path, the string in step 3 above would be modified to
-    `api-key987654321station-ids5555,6666t1506642732` and hash to
-    `0232f9e5443b26038dfd0f3191b3bab1a6bcc79d2b811240cb8200be07b3b2b6`. 
-    Similarly, query parameters such as `registered-since=1488509789` should be
-    included as well if used in the API query.
-  version: "v2-openapi-oas3"
+    The description
+  termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
+  contact:
+    name: API Support
+    url: "https://gitter.im/WeatherLink/v2-api"
+  version: "v2-openapi"
+servers:
+  - url: 'https://api.weatherlink.com/v2'
 tags:
   - name: Weather Stations
     description: Operations related to weather stations and their related sensors
-security:
-  - GeneralSecurity: []
 paths:
   /stations:
     get:
@@ -70,31 +27,6 @@ paths:
         station; additionally, a **generated_at** field is returned for the
         entire response, containing a Unix timestamp of the time the response
         was returned by the server.
-          | name | description |
-          | ---- | ----------- |
-          | **station_id** | ID of the station for purposes of this API |
-          | **station_name** | Name of the station |
-          | **gateway_id** | Hardware ID of the station's gateway represented as a decimal integer |
-          | **gateway_id_hex** | Hardware ID of the station's gateway represented as a hexadecimal string |
-          | **product_number** | Manufacturer's product number |
-          | **username** | Name of the registered user for the station |
-          | **user_email** | Email address of the registered user for the station |
-          | **company_name** | Company of the registered user for the station |
-          | **active** | Status of the station. 'true' = active; 'false' = inactive |
-          | **private** | If 'true', station data is viewable only to the registered user; if 'false', data is shared publicly |
-          | **recording_interval** | Time in minutes between recording of data by the system |
-          | **firmware_version** | The version number of the firmware currently installed on the station |
-          | **imei** | The International Mobile Equipment Identity number that identifies the station on cellular networks |
-          | **meid** | The Mobile Equipment Identifier that identifies the station on cellular networks |
-          | **registered_date** | Date the station was registered with Davis Instruments, as a Unix timestamp |
-          | **subscription_end_date** | Ending date of the data plan subscription associated with the station, as a Unix timestamp |
-          | **time_zone** | Named time zone in which the station is located |
-          | **city** | City in which the station is located |
-          | **region** | U.S. state or international region in which the station is located |
-          | **country** | Country in which the station is located |
-          | **latitude** | Latitude at which the station is located, in degrees |
-          | **longitude** | Longitude at which the station is located, in degrees |
-          | **elevation** | Elevation at which the station is located, in feet |
       parameters:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
@@ -694,8 +626,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse500'
-servers:
-  - url: 'https://api.weatherlink.com/v2'
 components:
   parameters:
     ApiKey:
@@ -776,12 +706,6 @@ components:
       description: 'List of one or more sensor IDs, separated by commas'
       schema:
         type: string
-  securitySchemes:
-    GeneralSecurity:
-      type: apiKey
-      description: Unique API Key used to identify who is making the API call
-      name: api-key
-      in: query
   schemas:
     StationsResponse:
       description: |
