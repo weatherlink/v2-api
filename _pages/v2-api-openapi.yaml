@@ -3,10 +3,10 @@ info:
   title: WeatherLink v2 API
   description: >
     The description
-  termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
-  contact:
-    name: API Support
-    url: "https://gitter.im/WeatherLink/v2-api"
+#  termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
+#  contact:
+#    name: API Support
+#    url: "https://gitter.im/WeatherLink/v2-api"
   version: "v2-openapi"
 servers:
   - url: 'https://api.weatherlink.com/v2'
