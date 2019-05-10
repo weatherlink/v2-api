@@ -1,6 +1,5 @@
 ---
 title: Support
-nav_order: 40
 permalink: /support
 sidebar:
   nav: "navMain"
