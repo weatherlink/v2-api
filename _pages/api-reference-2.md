@@ -1,6 +1,6 @@
 ---
-title: API Reference
-permalink: /api-reference
+title: API Reference 2
+permalink: /api-reference-2
 classes: wide
 sidebar:
   nav: "navMain"
