@@ -5,5 +5,7 @@ main:
 navMain:
   - title: Section 1
     children:
+      - title: Introduction
+        url: /
       - title: Support
         url: /support
