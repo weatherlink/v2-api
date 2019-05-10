@@ -10,6 +10,6 @@ navMain:
       - title: Support
         url: /support
       - title: API Reference
-        url: /api-reference-openapi
+        url: /api-reference
       - title: Terms of Service
         url: /terms-of-service
