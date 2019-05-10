@@ -7,7 +7,7 @@ info:
 #  contact:
 #    name: API Support
 #    url: "https://gitter.im/WeatherLink/v2-api"
-  version: "v2-openapi"
+  version: "v2"
 servers:
   - url: 'https://api.weatherlink.com/v2'
 tags:
