@@ -1,5 +1,5 @@
 ---
-title: lol
+title: API Reference
 permalink: /api-reference
 classes: wide
 sidebar:
