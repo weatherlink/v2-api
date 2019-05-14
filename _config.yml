@@ -9,6 +9,9 @@ baseurl: /v2-api
 search: true
 search_full_content: true
 
+after_footer_scripts:
+  - /assets/js/footer-copyright.js
+
 include:
   - _pages
 
