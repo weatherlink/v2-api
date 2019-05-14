@@ -1,7 +1,7 @@
 # remote_theme: pmarsceill/just-the-docs
 remote_theme: mmistakes/minimal-mistakes@4.16.3
 
-title: v2 API
+title: WeatherLink v2 API
 
 url: "https://weatherlink.github.io"
 baseurl: /v2-api
