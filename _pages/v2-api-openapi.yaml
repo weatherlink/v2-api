@@ -12,7 +12,7 @@ servers:
   - url: 'https://api.weatherlink.com/v2'
 tags:
   - name: Weather Stations
-    description: Operations related to weather stations and their related sensors
+    description: Operations related to weather stations and their related sensors!!!
 paths:
   /stations:
     get:
