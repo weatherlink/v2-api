@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: WeatherLink v2 API
+  title: WeatherLink v2 API...
   description: >
     The description
 #  termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
