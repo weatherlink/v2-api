@@ -689,8 +689,8 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/StartTimestamp
-        - $ref: '#/components/parameters/EndTimestamp
+        - $ref: '#/components/parameters/StartTimestamp'
+        - $ref: '#/components/parameters/EndTimestamp'
       responses:
         '200':
           description: success
@@ -1316,6 +1316,53 @@ components:
                     type: float
                     units: ultraviolet index
         generated_at: 1509055056
+    CurrentResponse:
+      description: |
+        Wrapper for current data objects
+      type: object
+      properties:
+        sensors:
+          type: array
+          items:
+            type: object
+            properties:
+              lsid:
+                type: integer
+                format: int32
+              sensor_type:
+                type: integer
+                format: int32
+              data_structure_type:
+                type: integer
+                format: int32
+              ts:
+                type: integer
+                format: int32
+     example:
+        stations:
+          - station_id: 6974
+            station_name: Private - BL Orchard Range Test x39
+            gateway_id: 8388665
+            gateway_id_hex: 001D0A800039
+            product_number: '6800'
+            username: davisroof
+            user_email: benp@davisnet.com
+            company_name: Keny Sam Company
+            active: true
+            private: true
+            recording_interval: 5
+            firmware_version: 1470358845
+            imei: '351579055911216'
+            meid: A1000045841C5D
+            registered_date: 1467345143
+            subscription_end_date: 1498881143
+            time_zone: America/Los_Angeles
+            city: Manteca
+            region: CA
+            country: USA
+            latitude: 37.75104
+            longitude: -121.25094
+            elevation: 19
     ErrorResponse400:
       type: object
       properties:
