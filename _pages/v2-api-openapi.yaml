@@ -1338,7 +1338,7 @@ components:
               ts:
                 type: integer
                 format: int32
-     example:
+      example:
         stations:
           - station_id: 6974
             station_name: Private - BL Orchard Range Test x39
