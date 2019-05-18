@@ -645,7 +645,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StationsResponse'
+                $ref: '#/components/schemas/CurrentResponse'
         '400':
           description: bad request
           content:
@@ -663,7 +663,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse403Stations'
+                $ref: '#/components/schemas/ErrorResponse403CurrentOrHistoric'
         '404':
           description: resource not found
           content:
@@ -680,7 +680,7 @@ paths:
     get:
       tags:
         - Weather Stations
-      summary: Get current coonditions data for one station ID
+      summary: Get historic data for one station ID within a given timerange
       description: >
         Returns historic data for a weather station selected by a station ID passed as a path parameter, 
         within a given time range.
@@ -689,6 +689,8 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
+        - $ref: '#/components/parameters/StartTimestamp
+        - $ref: '#/components/parameters/EndTimestamp
       responses:
         '200':
           description: success
@@ -713,7 +715,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse403Stations'
+                $ref: '#/components/schemas/ErrorResponse403CurrentOrHistoric'
         '404':
           description: resource not found
           content:
@@ -753,6 +755,24 @@ components:
       allowEmptyValue: false
       description: |
         Unix timestamp when the query is submitted
+      schema:
+        type: integer
+    StartTimestamp:
+      name: start-timestamp
+      in: query
+      required: true
+      allowEmptyValue: false
+      description: |
+        Unix timestamp marking the beginning of the data requested
+      schema:
+        type: integer
+    EndTimestamp:
+      name: start-timestamp
+      in: query
+      required: false
+      allowEmptyValue: true
+      description: |
+        Unix timestamp marking the end of the data requested.  If omitted, the current time is used.
       schema:
         type: integer
     RegisteredSinceStations:
@@ -1374,6 +1394,19 @@ components:
       example:
         code: 403
         message: 'Access is not authorized for one or more sensors: 1234, 5678'
+    ErrorResponse403CurrentOrHistoric
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 403
+        message: 'Access is not authorized for station 1234'
     ErrorResponse404:
       type: object
       properties:
