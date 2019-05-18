@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: WeatherLink v2 API...
+  title: WeatherLink v2 API
   description: >
     The description
 #  termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
@@ -12,7 +12,7 @@ servers:
   - url: 'https://api.weatherlink.com/v2'
 tags:
   - name: Weather Stations
-    description: Operations related to weather stations and their related sensors!!!
+    description: Operations related to weather stations and their related sensors
 paths:
   /stations:
     get:
@@ -614,6 +614,110 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse403'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/current/{station-id}':
+    get:
+      tags:
+        - Weather Stations
+      summary: Get current coonditions data for one station ID
+      description: >
+        Returns current conditions data for a weather station selected by a station ID
+        passed as a path parameter.  The fields listed below are returned for the
+        station.
+      parameters:
+        - $ref: '#/components/parameters/StationIds'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        - $ref: '#/components/parameters/RegisteredSinceStations'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StationsResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Stations'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/historic/{station-id}':
+    get:
+      tags:
+        - Weather Stations
+      summary: Get current coonditions data for one station ID
+      description: >
+        Returns historic data for a weather station selected by a station ID
+        passed as a path parameter, within a given time range.  The fields listed below are returned for the
+        station.
+      parameters:
+        - $ref: '#/components/parameters/StationIds'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        - $ref: '#/components/parameters/RegisteredSinceStations'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StationsResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Stations'
         '404':
           description: resource not found
           content:
