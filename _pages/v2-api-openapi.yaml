@@ -630,17 +630,15 @@ paths:
     get:
       tags:
         - Weather Stations
-      summary: Get current coonditions data for one station ID
+      summary: Get current conditions data for one station
       description: >
         Returns current conditions data for a weather station selected by a station ID
-        passed as a path parameter.  The fields listed below are returned for the
-        station.
+        passed as a path parameter.
       parameters:
-        - $ref: '#/components/parameters/StationIds'
+        - $ref: '#/components/parameters/StationId'
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/RegisteredSinceStations'
       responses:
         '200':
           description: success
@@ -684,15 +682,13 @@ paths:
         - Weather Stations
       summary: Get current coonditions data for one station ID
       description: >
-        Returns historic data for a weather station selected by a station ID
-        passed as a path parameter, within a given time range.  The fields listed below are returned for the
-        station.
+        Returns historic data for a weather station selected by a station ID passed as a path parameter, 
+        within a given time range.
       parameters:
-        - $ref: '#/components/parameters/StationIds'
+        - $ref: '#/components/parameters/StationId'
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/RegisteredSinceStations'
       responses:
         '200':
           description: success
@@ -789,6 +785,13 @@ components:
         be returned
       schema:
         type: integer
+    StationId:
+      name: station-id
+      in: path
+      required: true
+      description: 'A single station ID'
+      schema:
+        type: string
     StationIds:
       name: station-ids
       in: path
