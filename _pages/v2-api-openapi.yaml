@@ -1394,7 +1394,7 @@ components:
       example:
         code: 403
         message: 'Access is not authorized for one or more sensors: 1234, 5678'
-    ErrorResponse403CurrentOrHistoric
+    ErrorResponse403CurrentOrHistoric:
       type: object
       properties:
         code:
