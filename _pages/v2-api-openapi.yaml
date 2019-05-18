@@ -767,7 +767,7 @@ components:
       schema:
         type: integer
     EndTimestamp:
-      name: start-timestamp
+      name: end-timestamp
       in: query
       required: false
       allowEmptyValue: true
