@@ -31,7 +31,7 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/RegisteredSinceStations'
+        # - $ref: '#/components/parameters/RegisteredSinceStations'
       responses:
         '200':
           description: success
@@ -111,7 +111,7 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/RegisteredSinceStations'
+        # - $ref: '#/components/parameters/RegisteredSinceStations'
       responses:
         '200':
           description: success
@@ -182,7 +182,7 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/RegisteredSinceNodes'
+        # - $ref: '#/components/parameters/RegisteredSinceNodes'
       responses:
         '200':
           description: success
@@ -251,7 +251,7 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/RegisteredSinceNodes'
+        # - $ref: '#/components/parameters/RegisteredSinceNodes'
       responses:
         '200':
           description: success
@@ -330,7 +330,7 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/ModifiedSince'
+        # - $ref: '#/components/parameters/ModifiedSince'
       responses:
         '200':
           description: success
@@ -407,7 +407,7 @@ paths:
         - $ref: '#/components/parameters/ApiKey'
         - $ref: '#/components/parameters/ApiSignature'
         - $ref: '#/components/parameters/Timestamp'
-        - $ref: '#/components/parameters/ModifiedSince'
+        # - $ref: '#/components/parameters/ModifiedSince'
       responses:
         '200':
           description: success
