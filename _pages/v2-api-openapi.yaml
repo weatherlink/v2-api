@@ -1321,6 +1321,9 @@ components:
         Wrapper for current data objects
       type: object
       properties:
+        stationId:
+          type: integer
+          format: int32
         sensors:
           type: array
           items:
@@ -1338,31 +1341,46 @@ components:
               ts:
                 type: integer
                 format: int32
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    field_1:
+                      type: number
+                      format: float
+                    field_2:
+                      type: number
+                      format: float
+                    field_n:
+                      type: number
+                      format: float
       example:
-        stations:
-          - station_id: 6974
-            station_name: Private - BL Orchard Range Test x39
-            gateway_id: 8388665
-            gateway_id_hex: 001D0A800039
-            product_number: '6800'
-            username: davisroof
-            user_email: benp@davisnet.com
-            company_name: Keny Sam Company
-            active: true
-            private: true
-            recording_interval: 5
-            firmware_version: 1470358845
-            imei: '351579055911216'
-            meid: A1000045841C5D
-            registered_date: 1467345143
-            subscription_end_date: 1498881143
-            time_zone: America/Los_Angeles
-            city: Manteca
-            region: CA
-            country: USA
-            latitude: 37.75104
-            longitude: -121.25094
-            elevation: 19
+        station_id: 1234
+        sensors:
+          - lsid: 69743
+            sensor_type: 243
+            data_structure_type: 12
+            ts: 1556909900
+            data:
+              dew_point_in: 40.3
+              heat_index_in: 75.5
+              temp_in: 76.5
+          - lsid: 73905
+            sensor_type: 56
+            data_structure_type: 12
+            ts: 1558396041
+            data:
+              moist_soil_1: 7.2
+              moist_soil_2: 14.1
+              moist_soil_3: null
+              moist_soil_4: null
+              temp_1: 57.9
+              temp_2: 65.3
+              temp_3: 65.3
+              temp_4: 64.9
+              wet_leaf_1: null
+              wet_leaf_2: 0.1
     ErrorResponse400:
       type: object
       properties:
