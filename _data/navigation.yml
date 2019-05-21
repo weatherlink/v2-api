@@ -2,15 +2,24 @@ main:
   - title: "WeatherLink"
     url: https://www.weatherlink.com
 
-navMain:
-  - title: Section 1
+navMain: Overview
     children:
       - title: Introduction
         url: /
+  - title: Getting Started
+    children:
+      - title: API Key
+        url: /api-key
+      - title: Authentication
+        url: /authentication
+      - title: Make an API Call
+        url: /make-an-api-call
+  - title: Reference
+    children:
       - title: API Reference
-        url: /api-reference
-      - title: API Reference Experimental
-        url: /api-reference-exp
+        url: /api-reference-openapi
+- title: Resources
+    children:
       - title: Support
         url: /support
       - title: Terms of Service
