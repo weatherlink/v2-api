@@ -18,7 +18,7 @@ navMain: Overview
     children:
       - title: API Reference
         url: /api-reference-openapi
-- title: Resources
+  - title: Resources
     children:
       - title: Support
         url: /support
