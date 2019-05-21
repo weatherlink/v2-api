@@ -769,8 +769,8 @@ components:
     EndTimestamp:
       name: end-timestamp
       in: query
-      required: false
-      allowEmptyValue: true
+      required: true
+      allowEmptyValue: false
       description: |
         Unix timestamp marking the end of the data requested.  If omitted, the current time is used.
       schema:
@@ -1342,19 +1342,17 @@ components:
                 type: integer
                 format: int32
               data:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    field_1:
-                      type: number
-                      format: float
-                    field_2:
-                      type: number
-                      format: float
-                    field_n:
-                      type: number
-                      format: float
+                type: object
+                properties:
+                  field_1:
+                    type: number
+                    format: float
+                  field_2:
+                    type: number
+                    format: float
+                  field_n:
+                    type: number
+                    format: float
         generated_at:
           type: integer
       example:
