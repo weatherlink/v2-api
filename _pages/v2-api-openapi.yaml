@@ -1355,6 +1355,8 @@ components:
                     field_n:
                       type: number
                       format: float
+        generated_at:
+          type: integer
       example:
         station_id: 1234
         sensors:
@@ -1381,11 +1383,15 @@ components:
               temp_4: 64.9
               wet_leaf_1: null
               wet_leaf_2: 0.1
+        generated_at: 1509055056
     HistoricResponse:
       description: |
         Wrapper for historic data objects
       type: object
       properties:
+        station-id:
+          type: integer
+          format: int32
         sensors:
           type: array
           items:
@@ -1417,6 +1423,8 @@ components:
                     field_n:
                       type: number
                       format: float
+        generated_at:
+          type: integer
       example:
         station_id: 1234
         sensors:
@@ -1468,6 +1476,7 @@ components:
                 hum_in_lo_at: 1555192806
                 heat_index_in: 75.5
                 hum_in_hi_at: 1555193136
+        generated_at: 1509055056
     ErrorResponse400:
       type: object
       properties:
