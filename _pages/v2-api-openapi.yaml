@@ -697,7 +697,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StationsResponse'
+                $ref: '#/components/schemas/HistoricResponse'
         '400':
           description: bad request
           content:
@@ -1381,6 +1381,93 @@ components:
               temp_4: 64.9
               wet_leaf_1: null
               wet_leaf_2: 0.1
+    HistoricResponse:
+      description: |
+        Wrapper for historic data objects
+      type: object
+      properties:
+        sensors:
+          type: array
+          items:
+            type: object
+            properties:
+              lsid:
+                type: integer
+                format: int32
+              sensor_type:
+                type: integer
+                format: int32
+              data_structure_type:
+                type: integer
+                format: int32
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ts:
+                      type: integer
+                      format: int32
+                    field_1:
+                      type: number
+                      format: float
+                    field_2:
+                      type: number
+                      format: float
+                    field_n:
+                      type: number
+                      format: float
+      example:
+        station_id: 1234
+        sensors:
+          - lsid: 69743
+            sensor_type: 243
+            data_structure_type: 12
+            data:
+              - ts: 1556909900
+                dew_point_in: 40.3
+                heat_index_in: 75.5
+                temp_in: 76.5
+              - ts: 1556910800
+                dew_point_in: 43.1
+                heat_index_in: 76.9
+                temp_in: 76.5
+              - ts: 15569011700
+                dew_point_in: 37.3
+                heat_index_in: 79.4
+                temp_in: 73.0
+          - lsid: 73905
+            sensor_type: 56
+            data_structure_type: 13
+            data:
+              - ts: 1555192800
+                temp_in_lo_at: 1555192296
+                arch_int: 900
+                temp_in_hi: 76.3
+                temp_in_hi_at: 1555192025
+                hum_in_hi: 41.2
+                temp_in_last: 76.2
+                temp_in_lo: 75.9
+                hum_in_lo: 40.8
+                hum_in_last: 40.8
+                dew_point_in: 50.7
+                hum_in_lo_at: 1555191935
+                heat_index_in: 75.3
+                hum_in_hi_at: 1555192416
+              - ts: 1555193700
+                temp_in_lo_at: 1555193346
+                arch_int: 900
+                temp_in_hi: 76.8
+                temp_in_hi_at: 1555193646
+                hum_in_hi: 41.2
+                temp_in_last: 76.4
+                temp_in_lo: 76.1
+                hum_in_lo: 40.7
+                hum_in_last: 41
+                dew_point_in: 51
+                hum_in_lo_at: 1555192806
+                heat_index_in: 75.5
+                hum_in_hi_at: 1555193136
     ErrorResponse400:
       type: object
       properties:
