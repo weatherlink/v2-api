@@ -9,6 +9,4 @@ sidebar:
   nav: "navMain"
 ---
 
-# Introduction 2
-
 this is the intro
