@@ -11,8 +11,10 @@ info:
 servers:
   - url: 'https://api.weatherlink.com/v2'
 tags:
-  - name: Weather Stations
-    description: Operations related to weather stations and their related sensors
+  - name: Metadata
+    description: Metadata about the weather stations and sensors
+  - name: Weather Data
+    description: Weather sensor observation data
 paths:
   /stations:
     get:
