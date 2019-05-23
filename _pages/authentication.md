@@ -12,3 +12,11 @@ sidebar:
 ```js
 var s = {};
 ```
+
+```javascript
+var s = {};
+```
+
+```java
+BigDecimal b = new BigDecimal("3.14156");
+```
