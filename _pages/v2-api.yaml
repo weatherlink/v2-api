@@ -765,8 +765,7 @@ components:
       required: true
       allowEmptyValue: false
       description: |
-        Unix timestamp marking the beginning of the data requested
-      schema:
+        Unix timestamp marking the beginning of the data requested.  Must be earlier than start-timestamp but not more than 24 hours earlier.      schema:
         type: integer
     EndTimestamp:
       name: end-timestamp
@@ -774,7 +773,7 @@ components:
       required: true
       allowEmptyValue: false
       description: |
-        Unix timestamp marking the end of the data requested.  If omitted, the current time is used.
+        Unix timestamp marking the beginning of the data requested.  Must be later than start-timestamp but not more than 24 hours later.      schema:
       schema:
         type: integer
     RegisteredSinceStations:
