@@ -21,6 +21,8 @@ navMain:
     children:
       - title: API Reference
         url: /api-reference
+      - title: Rate Limits
+        url: /rate-limits
   - title: Resources
     children:
       - title: Support
