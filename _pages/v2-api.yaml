@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: WeatherLink v2 API
   description: >
-    The description
+    Metadata endpoints describe weather stations and their component parts, as well as the structure of the data available from the Weather Data endpoints.  Weather Data enpoints provide current and historical data.
   termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
   contact:
     name: API Support
@@ -12,14 +12,14 @@ servers:
   - url: 'https://api.weatherlink.com/v2'
 tags:
   - name: Metadata
-    description: Metadata about the weather stations and sensors
+    description: Metadata about the weather stations and sensors, as well as the different types of sensors, and the structure of the data returned by each one
   - name: Weather Data
     description: Weather sensor observation data
 paths:
   /stations:
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: Get all weather stations associated with your API Key
       description: >
         Returns data for all weather stations associated with the API Key passed
@@ -74,7 +74,7 @@ paths:
   '/stations/{station-ids}':
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: Get weather stations for one or more station IDs provided
       description: >
         Returns data for weather stations selected by station IDs passed as a
@@ -154,7 +154,7 @@ paths:
   /nodes:
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: >-
         Get all nodes attached to all weather stations associated with your API
         Key
@@ -225,7 +225,7 @@ paths:
   '/nodes/{node-ids}':
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: Get nodes for one or more node IDs provided
       description: >
         Returns data for all nodes selected by node IDs passed as a path
@@ -294,7 +294,7 @@ paths:
   /sensors:
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: >-
         Get all sensors attached to all weather stations associated with your
         API Key
@@ -373,7 +373,7 @@ paths:
   '/sensors/{sensor-ids}':
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: Get sensors for one or more sensor IDs provided
       description: >
         Returns data for all sensors selected by sensor IDs passed as a path
@@ -450,7 +450,7 @@ paths:
   /sensor-activity:
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: >-
         Get latest reporting times for all sensors attached to all weather
         stations associated with your API Key
@@ -510,7 +510,7 @@ paths:
   '/sensor-activity/{sensor-ids}':
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: >-
         Get latest reporting times for one or more sensors for sensor IDs
         provided
@@ -572,7 +572,7 @@ paths:
   /sensor-catalog/:
     get:
       tags:
-        - Weather Stations
+        - Metadata
       summary: Get a catalog of all types of sensors
       description: >
         Returns a catalog of all available sensor types.  The fields listed
@@ -631,7 +631,7 @@ paths:
   '/current/{station-id}':
     get:
       tags:
-        - Weather Stations
+        - Weather Data
       summary: Get current conditions data for one station
       description: >
         Returns current conditions data for a weather station selected by a station ID
@@ -681,7 +681,7 @@ paths:
   '/historic/{station-id}':
     get:
       tags:
-        - Weather Stations
+        - Weather Data
       summary: Get historic data for one station ID within a given timerange
       description: >
         Returns historic data for a weather station selected by a station ID passed as a path parameter, 
