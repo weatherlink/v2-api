@@ -6,7 +6,7 @@ info:
   termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
   contact:
     name: API Support
-    url: "https://gitter.im/WeatherLink/v2-api"
+    url: "https://weatherlink.github.io/v2-api/support"
   version: "v2"
 servers:
   - url: 'https://api.weatherlink.com/v2'
