@@ -9,4 +9,4 @@ sidebar:
   nav: "navMain"
 ---
 
-The WeatherLink v2 API is in a beta test phase. API Keys and access to the API is currently limited to selected beta testers. At this time API users can not create their own API Keys. Instead, each beta tester will be contacted an API Key to use.
+The WeatherLink v2 API is in a beta test phase. API Keys and access to the API is currently limited to selected beta testers. At this time API users can not create their own API Keys. Instead, each beta tester will be contacted and receive an API Key to use.
