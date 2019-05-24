@@ -55,18 +55,13 @@ The explain how the API Signature calculation process works we will walk through
 
 ### Step 1
 
-The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter because it is dynamically computed) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
+The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
 
 In this example the path parameters are:
 
 Parameter Name|Parameter Value
 --------------|---------------
 station-id|2
-
-```
-Parameter Name: station-id
-Parameter Value: 2
-```
 
 And the query parameters are:
 
@@ -75,11 +70,40 @@ Parameter Name|Parameter Value
 api-key|987654321
 t|1558729481
 
-```
-Parameter Name: api-key
-Parameter Value: 987654321
+After sorting the combined set of parameters will look like this:
 
-Parameter Name: t
-Parameter Value: 1558729481
+Parameter Name|Parameter Value
+--------------|---------------
+api-key|987654321
+station-id|2
+t|1558729481
+
+### Step 2
+
+Next, iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
+
+```
+api-key987654321station-id2t1558729481
 ```
 
+To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:
+
+```
+(api-key)(987654321)(station-id)(2)(t)(1558729481)
+```
+
+### Step 3
+
+Now it is time to compute the API Signature using the the API Secret and the concatenated string from the previous step. To calculate the signature use the HMAC SHA-256 algorithm with the concatenated string as the message and the API Secret as the HMAC secret key. The resulting computed HMAC value as a hexadecimal string is the API Signature.
+
+In this scenario we have the following:
+
+```
+Message to hash: api-key987654321station-id2t1558729481
+HMAC secret key: ABC123
+Computed HMAC as a hexadecimal string: api-key987654321station-id2t1558729481
+```
+
+The online HMAC tool at https://www.freeformatter.com/hmac-generator.html can help you test your computed HMAC SHA-256 values.
+
+All major programming languages have built-in support or offer libraries to calculate HMAC SHA-256 values.
