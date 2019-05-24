@@ -1,6 +1,7 @@
 ---
 title: API Key
 permalink: /api-key
+classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
