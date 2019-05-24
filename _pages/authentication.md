@@ -59,8 +59,8 @@ The first step is to collect all of the API request query parameters and path pa
 
 In this example the path parameters are:
 
-Name|Value
--|-
+Station Name|Station Value
+------------|-------------
 station-id|2
 
 ```
