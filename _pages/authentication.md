@@ -105,7 +105,7 @@ HMAC secret key: ABC123
 Computed HMAC as a hexadecimal string: 9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
 ```
 
-The online HMAC tool at https://www.freeformatter.com/hmac-generator.html can help you test your computed HMAC SHA-256 values.
+The online HMAC tool at <a href="https://www.freeformatter.com/hmac-generator.html" target="_blank">https://www.freeformatter.com/hmac-generator.html</a> can help you test your computed HMAC SHA-256 values.
 
 All major programming languages have built-in support or offer libraries to calculate HMAC SHA-256 values.
 
