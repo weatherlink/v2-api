@@ -101,9 +101,19 @@ In this scenario we have the following:
 ```
 Message to hash: api-key987654321station-id2t1558729481
 HMAC secret key: ABC123
-Computed HMAC as a hexadecimal string: api-key987654321station-id2t1558729481
+Computed HMAC as a hexadecimal string: 9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
 ```
 
 The online HMAC tool at https://www.freeformatter.com/hmac-generator.html can help you test your computed HMAC SHA-256 values.
 
 All major programming languages have built-in support or offer libraries to calculate HMAC SHA-256 values.
+
+### Step 4
+
+Take the computed API Signature and include it in the API request as the value of a query parameter named `api-signature`.
+
+The final URL with parameters in the example scenario is:
+
+```
+https://api.weatherlink.com/v2/current/2?api-key=987654321&station-id=2&t=1558729481&api-signature=9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+```
