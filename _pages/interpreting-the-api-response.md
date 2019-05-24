@@ -1,6 +1,6 @@
 ---
 title: Interpreting the API Response
-permalink: /interpreting-the-api-response
+permalink: /api-response
 classes: wide
 header:
   overlay_color: "#000000"
