@@ -55,7 +55,7 @@ The explain how the API Signature calculation process works we will walk through
 
 ### Step 1
 
-The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
+The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter because it is dynamically computed) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
 
 In this example the path parameters are:
 
@@ -68,5 +68,18 @@ Parameter Name: station-id
 Parameter Value: 2
 ```
 
+And the query parameters are:
 
+Parameter Name|Parameter Value
+--------------|---------------
+api-key|987654321
+t|1558729481
+
+```
+Parameter Name: api-key
+Parameter Value: 987654321
+
+Parameter Name: t
+Parameter Value: 1558729481
+```
 
