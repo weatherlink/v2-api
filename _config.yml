@@ -9,6 +9,7 @@ baseurl: /v2-api
 search: false
 
 after_footer_scripts:
+  - /assets/js/author.js
   - /assets/js/footer-copyright.js
 
 include:
