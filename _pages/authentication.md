@@ -43,5 +43,26 @@ The API Signature is a calculated value used to prevent API request parameter ta
 
 The API Signature is passed in the API request as a query parameter named `api-signature`.
 
-The explain how the API Signature calculation process works we will walk through an example. In this example we will calculate an the API Signature for an API request for Current Conditions data at the `/current` API path and we will use the fictitious API Key `987654321` and the fictitious API Secret `ABC123`.
+## API Signature Calculation Example
+
+The explain how the API Signature calculation process works we will walk through an example. For the purposes of this example we will use the following details:
+
+* This is for an API request for Current Conditions data which is available at the `/current/{station-id}` API path which accepts a station ID as a URL path parameter.
+* We will use the fictitious Station ID `2`.
+* We will use the fictitious API Key `987654321`.
+* We will use the fictitious API Secret `ABC123`.
+* We will use the Unix timestamp `1558729481` as the API Request Timestamp.
+
+### Step 1
+
+The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
+
+In this example the path parameters are
+
+```
+Parameter Name: station-id
+Parameter Value: 2
+```
+
+
 
