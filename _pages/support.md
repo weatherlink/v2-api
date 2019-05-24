@@ -1,6 +1,7 @@
 ---
 title: Support
 permalink: /support
+classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
