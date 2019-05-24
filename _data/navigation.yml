@@ -13,8 +13,6 @@ navMain:
         url: /api-key
       - title: Authentication
         url: /authentication
-      - title: Make an API Request
-        url: /make-an-api-request
       - title: Interpreting the Response
         url: /interpreting-the-response
   - title: Reference
