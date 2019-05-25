@@ -10,7 +10,11 @@ sidebar:
   nav: "navMain"
 ---
 
-The WeatherLink v2 API response format is in JSON.
+The WeatherLink v2 API response
+
+## API Response Format
+
+The WeatherLink v2 API response format is in JSON. Below is a sample JSON document for WeatherLink Live current conditions data.
 
 ```json
 {
