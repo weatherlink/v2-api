@@ -10,8 +10,6 @@ sidebar:
   nav: "navMain"
 ---
 
-# Authentication Overview
-
 The WeatherLink v2 API uses an API Key, as API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
 
 During the beta test phase of the v2 API selected beta testers will be provided with an API Key and API Secret.
