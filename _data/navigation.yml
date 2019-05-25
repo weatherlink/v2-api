@@ -15,8 +15,6 @@ navMain:
         url: /authentication
       - title: Interpreting the API Response
         url: /interpreting-the-api-response
-      - title: Interpreting the API Response
-        url: /api-response
   - title: Reference
     children:
       - title: API Reference
