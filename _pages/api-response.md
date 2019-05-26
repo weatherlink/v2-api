@@ -171,19 +171,21 @@ Below is a sample response JSON document for WeatherLink Live current conditions
 }
 ```
 
-## Weather Observation API Response Structure
+## Weather Observation Data API Response Structure
 
-API responses for weather observation data follows the same format regardless of the type of weather station. The response is composed of the following components:
+API responses for weather observation data follows the same format regardless of the type of weather station. However, there are some minor structural differences between current condition data and historic, also known as "archive", data. These minor differences are discussed in the outline below.
+
+A weather observation data response is composed of the following components:
 
 * `station_id` - The unique ID of the weather station. This metadata API endpoint `/stations` can be used to retrieve the station ID numbers for your stations.
-* `sensors` - A list of sensors associated with the station.
+* `sensors` - A list of sensors associated with the station. The list of sensors will contain the observation data, this is further explained below.
 * `generated_at` - A Unix timestamp for when the API response was generated.
 
 Each sensor listed in the `sensors` section contains the following information:
 
 * `lsid` - The Logical Sensor ID. This is a unique ID for the sensor. The metadata API endpoint `/sensors` can be used to retrieve all sensor IDs for your stations.
-* `sensor_type` - The sensor type can be used to cross reference with 
-* `data_structure_type` - 
+* `sensor_type` - The sensor type can be used to cross reference with the [Sensor Catalog](sensor-catalog) to find documentation on the field names and data types for all data fields supported by each type of sensor.
+* `data_structure_type` - The data structure type is used to further specify the nature of a weather observation data record when the sensor can support generating multiple types of data records. Please see the [Data Structure Types](data-structure-types) page for more details.
 * 
 * 
   
