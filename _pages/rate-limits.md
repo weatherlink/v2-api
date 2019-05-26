@@ -17,6 +17,7 @@ Rate limits are dynamically calculated based on the types of weather stations an
 ## WeatherLink Live
 
 Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
+-|-|-
 Pro+|120|100
 Pro|25|100
 Basic|10|0
