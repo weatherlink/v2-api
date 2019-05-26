@@ -15,10 +15,12 @@ navMain:
         url: /authentication
       - title: API Response
         url: /api-response
-  - title: Reference
+- title: Reference
     children:
       - title: API Reference
         url: /api-reference
+      - title: Sensor Catalog
+        url: /sensor-catalog
       - title: Data Structure Types
         url: /data-structure-types
       - title: Rate Limits
