@@ -10,11 +10,11 @@ sidebar:
   nav: "navMain"
 ---
 
-The WeatherLink v2 API response
+The WeatherLink v2 API response format is JSON.
 
-## API Response Format
+## Sample Response
 
-The WeatherLink v2 API response format is in JSON. Below is a sample JSON document for WeatherLink Live current conditions data.
+Below is a sample response JSON document for WeatherLink Live current conditions data.
 
 ```json
 {
@@ -170,3 +170,21 @@ The WeatherLink v2 API response format is in JSON. Below is a sample JSON docume
     "generated_at": 1558741957
 }
 ```
+
+## Weather Observation API Response Structure
+
+API responses for weather observation data follows the same format regardless of the type of weather station. The response is composed of the following components:
+
+* `station_id` - The unique ID of the weather station. This metadata API endpoint `/stations` can be used to retrieve the station ID numbers for your stations.
+* `sensors` - A list of sensors associated with the station.
+* `generated_at` - A Unix timestamp for when the API response was generated.
+
+Each sensor listed in the `sensors` section contains the following information:
+
+* `lsid` - The Logical Sensor ID. This is a unique ID for the sensor. The metadata API endpoint `/sensors` can be used to retrieve all sensor IDs for your stations.
+* `sensor_type` - The sensor type can be used to cross reference with 
+* `data_structure_type` - 
+* 
+* 
+  
+  
