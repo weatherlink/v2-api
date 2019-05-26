@@ -14,10 +14,17 @@ The WeatherLink v2 API is a shared resource between all API users. In an effort 
 
 Rate limits are dynamically calculated based on the types of weather stations and WeatherLink subscriptions associated with the WeatherLink account that is connected to the API Key.
 
+Below a
+
 ## WeatherLink Live
 
-Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
--|-|-
-Pro+|120|100
-Pro|25|100
-Basic|10|0
+Relationshop with the Weather Station|Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
+-|-|-|-
+Owned or Shared|Pro+|120|100
+Owned or Shared|Pro|25|100
+Owned or Shared|Basic|10|0
+Saved|Pro+|120*|100
+Saved|Pro|25*|100
+Saved|Basic|0|0
+
+`*` Only data from the Primary Sensor Suite will be accessible.
