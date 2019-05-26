@@ -15,7 +15,7 @@ navMain:
         url: /authentication
       - title: API Response
         url: /api-response
-- title: Reference
+  - title: Reference
     children:
       - title: API Reference
         url: /api-reference
