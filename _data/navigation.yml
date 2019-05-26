@@ -19,6 +19,8 @@ navMain:
     children:
       - title: API Reference
         url: /api-reference
+      - title: Data Structure Types
+        url: /data-structure-types
       - title: Rate Limits
         url: /rate-limits
   - title: Resources
