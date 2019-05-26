@@ -18,7 +18,7 @@ Below a
 
 ## WeatherLink Live
 
-Relationshop with the Weather Station|Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
+Relationship with the Weather Station|Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
 -|-|-|-
 Owned or Shared|Pro+|120|100
 Owned or Shared|Pro|25|100
