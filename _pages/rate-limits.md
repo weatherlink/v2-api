@@ -27,4 +27,4 @@ Saved|Pro+|120*|100
 Saved|Pro|25*|100
 Saved|Basic|0|0
 
-`*` Only data from the Primary Sensor Suite will be accessible.
+\* Only data from the Primary Sensor Suite will be accessible.
