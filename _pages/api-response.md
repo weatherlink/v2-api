@@ -215,8 +215,8 @@ Here's some truncated samples showing the differences between the current condit
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 10,
-            "ts": 1558741927,     // timestamp is at the senor level
-            "data": {             // data is a JSON object
+            "ts": 1558741927,     // timestamp is at the sensor level
+            "data": {             // data is a JSON object representing a single data record
                 "wind_speed_hi_last_2_min": 5,
                 "hum": 42.7,
                 "wind_dir_at_hi_speed_last_10_min": 260,
@@ -240,7 +240,7 @@ Here's some truncated samples showing the differences between the current condit
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 11
-            "data": [                    // data is an array of JSON objects
+            "data": [                    // data is an array of JSON objects, each object is a data record
                 {
                     "ts": 1557997200,    // timestamp is on the data record level
                     "wind_speed_avg": 3.56,
