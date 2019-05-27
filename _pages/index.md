@@ -10,4 +10,15 @@ sidebar:
   nav: "navMain"
 ---
 
-this is the intro
+this is the intro ...
+
+it's currently in a beta test
+
+## Metadata
+
+overview of metadata features
+
+## Weather Data
+
+overview of weather data features
+
