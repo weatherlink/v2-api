@@ -10,11 +10,11 @@ sidebar:
   nav: "navMain"
 ---
 
-The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from accidental or intential abuse all API requests will be rate limited by the API Key.
+The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
 
 Rate limits are dynamically calculated based on the types of weather stations, the WeatherLink subscription level, and the number of weather stations associated with the WeatherLink account that is connected to the API Key.
 
-For example, if you own a WeatherLink Live with a Pro+ subscription and another WeatherLink Live is shared with you at a Basic subscription level you will be able to submit API requests to the Current Conditions API endpoint at 120 + 10 = 130 requests per hour.
+For example, if you own a WeatherLink Live with a Pro+ subscription and another WeatherLink Live is shared with you at a Basic subscription level you will be able to submit API requests to the Current Conditions API endpoint at 130 requests per hour. This value is derived from the sum of 120 requests per hour for the owned station and 10 requests per hour for the shared station.
 
 ## WeatherLink Live
 
