@@ -23,8 +23,8 @@ Relationship with the Weather Station|Subscription Level|Current Conditions API 
 Owned or Shared|Pro+|120|100
 Owned or Shared|Pro|25|100
 Owned or Shared|Basic|10|0
-Saved|Pro+|120*|100
-Saved|Pro|25*|100
+Saved|Pro+|120*|100*
+Saved|Pro|25*|100*
 Saved|Basic|0|0
 
 \* Only data from the Primary Sensor Suite will be accessible.
