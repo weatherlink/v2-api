@@ -240,9 +240,9 @@ Here's some truncated samples showing the differences between the current condit
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 11
-            "data": [                    // data is an array of JSON objects, each object is a data record
+            "data": [                 // data is an array of JSON objects representing data records
                 {
-                    "ts": 1557997200,    // timestamp is on the data record level
+                    "ts": 1557997200, // timestamp is on the data record level
                     "wind_speed_avg": 3.56,
                     "dew_point_hi_at": 1557990015,
                     "uv_dose": 0,
