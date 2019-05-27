@@ -19,10 +19,10 @@ navMain:
     children:
       - title: API Reference
         url: /api-reference
-      - title: Sensor Catalog
-        url: /sensor-catalog
       - title: Data Structure Types
         url: /data-structure-types
+      - title: Sensor Catalog
+        url: /sensor-catalog
       - title: Rate Limits
         url: /rate-limits
   - title: Resources
