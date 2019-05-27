@@ -10,7 +10,7 @@ sidebar:
   nav: "navMain"
 ---
 
-this is the intro ...
+The WeatherLink v2 API
 
 it's currently in a beta test
 
