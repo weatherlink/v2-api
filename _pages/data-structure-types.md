@@ -16,28 +16,28 @@ In this example the Vantage Pro2 Plus would be listed in an API weather observat
 
 ## WeatherLink Live
 
-Record Type|Data Structure Type
+Data Structure Type|Record Type
 -|-
-WeatherLink Live ISS Current Conditions Record|10
-WeatherLink Live ISS Archive Record|11
-WeatherLink Live non-ISS Current Conditions Record|12
-WeatherLink Live non-ISS Archive Record|13
+10|WeatherLink Live ISS Current Conditions Record
+11|WeatherLink Live ISS Archive Record
+12|WeatherLink Live non-ISS Current Conditions Record
+13|WeatherLink Live non-ISS Archive Record
 
 ## EnviroMonitor
 
-Record Type|Data Structure Type
+Data Structure Type|Record Type
 -|-
-EnviroMonitor ISS Current Conditions Record|6
-EnviroMonitor ISS Archive Record|7
-EnviroMonitor ISS High/Low Record|8
-EnviroMonitor non-ISS Archive Record|9
+6|EnviroMonitor ISS Current Conditions Record
+7|EnviroMonitor ISS Archive Record
+8|EnviroMonitor ISS High/Low Record
+9|EnviroMonitor non-ISS Archive Record
 
 ## WeatherLink IP / Vantage Connect
 
-Record Type|Data Structure Type
+Data Structure Type|Record Type
 -|-
-WeatherLink IP/Vantage Connect Current Conditions Record - Revision A|1
-WeatherLink IP/Vantage Connect Current Conditions Record - Revision B|2
-WeatherLink IP/Vantage Connect Archive Record - Revision A|3
-WeatherLink IP/Vantage Connect Archive Record - Revision B|4
-WeatherLink IP/Vantage Connect High/Low Record|5
+1|WeatherLink IP/Vantage Connect Current Conditions Record - Revision A
+2|WeatherLink IP/Vantage Connect Current Conditions Record - Revision B
+3|WeatherLink IP/Vantage Connect Archive Record - Revision A
+4|WeatherLink IP/Vantage Connect Archive Record - Revision B
+5|WeatherLink IP/Vantage Connect High/Low Record
