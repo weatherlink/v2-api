@@ -29,6 +29,8 @@ The `sensor_types` field is an array of JSON objects, each containing metadata i
 
 Continuing with this example of a Vantage Pro2 Plus let us assume it is connected to a WeatherLink Live to report data to the WeatherLink service. When you make an API request to the `/current` API endpoint for current conditions data the API response will contain a data structure for this ISS that corresponds to the type 10 data structure shown below. Similarly, an API request to the `/historic` API endpoint for historic "archive" data will result in an API response containing data for this ISS in the type 11 data structure.
 
+In each data structure type is a `data_structure` JSON object that lists each data field in the weather observation data record and includes the data type (integer, floating point number, etc.) and unit type (degrees Fahrenheit, inches of mercury, etc.) information for the data fields.
+
 ```json
 {
     "sensor_type": 45,
