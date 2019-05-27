@@ -205,7 +205,7 @@ Each sensor listed in the `sensors` section contains the following information:
 
 Here's some truncated samples showing the differences between the current conditions and historic data JSON structures.
 
-Current Conditions Data:
+### Current Conditions Data
 
 ```json
 {
@@ -215,8 +215,8 @@ Current Conditions Data:
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 10,
-            "ts": 1558741927,
-            "data": {
+            "ts": 1558741927,     // timestamp is at the senor level
+            "data": {             // data is a JSON object
                 "wind_speed_hi_last_2_min": 5,
                 "hum": 42.7,
                 "wind_dir_at_hi_speed_last_10_min": 260,
@@ -230,7 +230,7 @@ Current Conditions Data:
 }
 ```
 
-Historic Data:
+### Historic Data
 
 ```json
 {
@@ -240,9 +240,9 @@ Historic Data:
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 11
-            "data": [
+            "data": [                    // data is an array of JSON objects
                 {
-                    "ts": 1557997200,
+                    "ts": 1557997200,    // timestamp is on the data record level
                     "wind_speed_avg": 3.56,
                     "dew_point_hi_at": 1557990015,
                     "uv_dose": 0,
