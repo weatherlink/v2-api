@@ -20,11 +20,37 @@ For example, if you own a WeatherLink Live with a Pro+ subscription and another 
 
 Relationship with the Weather Station|Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
 -|-|-|-
-Owned or Shared|Pro+|120|100
-Owned or Shared|Pro|25|100
-Owned or Shared|Basic|10|0
-Saved|Pro+|120*|100*
-Saved|Pro|25*|100*
-Saved|Basic|0|0
+Owned or Shared |Pro+  |120  |100
+Owned or Shared |Pro   |25   |100
+Owned or Shared |Basic |10   | 0
+Saved           |Pro+  |120* |100*
+Saved           |Pro   |25*  |100*
+Saved           |Basic |0    |0
 
-\* Only data from the Primary Sensor Suite will be accessible.
+\* Only data from the Primary Integrated Sensor Suite will be accessible.
+
+## EnviroMonitor / Vantage Connect
+
+Relationship with the Weather Station|Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
+-|-|-|-
+Owned or Shared |Pro+  |25   |100
+Owned or Shared |Pro   |25   |100
+Shared          |Basic |10   | 0
+Saved           |Pro+  |25*  |100*
+Saved           |Pro   |25*  |100*
+Saved           |Basic |0    |0
+
+\* Only data from the Integerated Sensor Suite will be accessible.
+
+## WeatherLink IP / WeatherLink Network Annual Subscription
+
+Relationship with the Weather Station|Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
+-|-|-|-
+Owned or Shared |Pro+  |120  |100
+Owned or Shared |Pro   |25   |100
+Owned or Shared |Basic |10   | 0
+Saved           |Pro+  |120* |100*
+Saved           |Pro   |25*  |100*
+Saved           |Basic |0    |0
+
+\* Only data from the Integrated Sensor Suite will be accessible.
