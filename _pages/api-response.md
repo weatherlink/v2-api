@@ -181,6 +181,16 @@ A weather observation data response is composed of the following components:
 * `sensors` - A list of sensors associated with the station. The list of sensors will contain the observation data, this is further explained below.
 * `generated_at` - A Unix timestamp for when the API response was generated.
 
+Here's a truncated section of the sample JSON highlighting these fields:
+
+```json
+{
+    "station_id": 374964,
+    "sensors": ...,
+    "generated_at": 1558741957
+}
+```
+
 Each sensor listed in the `sensors` section contains the following information:
 
 * `lsid` - The Logical Sensor ID. This is a unique ID for the sensor. The metadata API endpoint `/sensors` can be used to retrieve all sensor IDs for your stations.
@@ -193,8 +203,59 @@ Each sensor listed in the `sensors` section contains the following information:
   * For current conditions weather observation data this field will be a Unix timestamp field representing the timestamp of the data record.
   * For historic weather observation data this field will be a Unix timestamp field representing the timestamp of the data record and will be located in each data record in the JSON array of the `data` field described above.
 
+Here's some truncated samples showing the differences between the current conditions and historic data JSON structures.
 
+Current Conditions Data:
 
+```json
+{
+    "station_id": 374964,
+    "sensors": [
+        {
+            "lsid": 5271273,
+            "sensor_type": 45,
+            "data_structure_type": 10,
+            "ts": 1558741927,
+            "data": {
+                "wind_speed_hi_last_2_min": 5,
+                "hum": 42.7,
+                "wind_dir_at_hi_speed_last_10_min": 260,
+                "wind_chill": 73.3,
+                ...
+            }
+        },
+        ...
+    ],
+    "generated_at": 1558741957
+}
+```
+
+Historic Data:
+
+```json
+{
+    "station_id": 374964,
+    "sensors": [
+        {
+            "lsid": 5271273,
+            "sensor_type": 45,
+            "data_structure_type": 11
+            "data": [
+                {
+                    "ts": 1557997200,
+                    "wind_speed_avg": 3.56,
+                    "dew_point_hi_at": 1557990015,
+                    "uv_dose": 0,
+                    "wind_chill_last": 51.8,
+                    ...
+                },
+                ...
+            ]
+        }
+    ],
+    "generated_at": 1558932381
+}
+```
 
 
 
