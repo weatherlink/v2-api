@@ -191,7 +191,7 @@ Each sensor listed in the `sensors` section contains the following information:
   * For historic weather observation data this field will be a JSON array of JSON objects where each object is a historic record.
 * `ts`
   * For current conditions weather observation data this field will be a Unix timestamp field representing the timestamp of the data record.
-  * For historic weather observation data this field will be located in each data record in the JSON array of the `data` field described above.
+  * For historic weather observation data this field will be a Unix timestamp field representing the timestamp of the data record and will be located in each data record in the JSON array of the `data` field described above.
 
 
 
