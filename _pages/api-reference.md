@@ -19,7 +19,7 @@ sidebar:
 <script>
 var ui = SwaggerUIBundle({
 	dom_id: '#api-ref',
-	url: "https://weatherlink.github.io/v2-api/_pages/v2-api.yaml",
+	url: "https://weatherlink.github.io/v2-api/resources/v2-api.yaml",
 	presets: [
 		SwaggerUIBundle.presets.apis,
 		SwaggerUIBundle.SwaggerUIStandalonePreset
