@@ -1,0 +1,1596 @@
+openapi: 3.0.0
+info:
+  title: WeatherLink v2 API
+  description: >
+    Metadata endpoints describe weather stations and their component parts, as well as the structure of the data available from the Weather Data endpoints.  Weather Data enpoints provide current and historical data.
+  termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
+  contact:
+    name: API Support
+    url: "https://weatherlink.github.io/v2-api/support"
+  version: "v2"
+servers:
+  - url: 'https://api.weatherlink.com/v2'
+tags:
+  - name: Metadata
+    description: Metadata about the weather stations and sensors, as well as the different types of sensors, and the structure of the data returned by each one
+  - name: Weather Data
+    description: Weather sensor observation data
+paths:
+  /stations:
+    get:
+      tags:
+        - Metadata
+      summary: Get all weather stations associated with your API Key
+      description: >
+        Returns data for all weather stations associated with the API Key passed
+        in the query parameters.  Currently all stations are returned in a
+        single response.  A future enhancement will provide pagination to reduce
+        the size of the response.  The fields listed below are returned for each
+        station; additionally, a **generated_at** field is returned for the
+        entire response, containing a Unix timestamp of the time the response
+        was returned by the server.
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        # - $ref: '#/components/parameters/RegisteredSinceStations'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StationsResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Stations'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/stations/{station-ids}':
+    get:
+      tags:
+        - Metadata
+      summary: Get weather stations for one or more station IDs provided
+      description: >
+        Returns data for weather stations selected by station IDs passed as a
+        path parameter.  Up to 100 IDs may be passed; entering more than 100
+        will result in an error.  The fields listed below are returned for each
+        station; additionally, a **generated_at** field is returned for the
+        entire response, containing a Unix timestamp of the time the response
+        was returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **station_id** | ID of the station for purposes of this API |
+          | **station_name** | Name of the station |
+          | **gateway_id** | Hardware ID of the station's gateway represented as a decimal integer |
+          | **gateway_id_hex** | Hardware ID of the station's gateway represented as a hexadecimal string |
+          | **product_number** | Manufacturer's product number |
+          | **username** | Name of the registered user for the station |
+          | **user_email** | Email address of the registered user for the station |
+          | **company_name** | Company of the registered user for the station |
+          | **active** | Status of the station. 'true' = active; 'false' = inactive |
+          | **private** | If 'true', station data is viewable only to the registered user; if 'false', data is shared publicly |
+          | **recording_interval** | Time in minutes between recording of data by the system |
+          | **firmware_version** | The version number of the firmware currently installed on the station |
+          | **imei** | The International Mobile Equipment Identity number that identifies the station on cellular networks |
+          | **meid** | The Mobile Equipment Identifier that identifies the station on cellular networks |
+          | **registered_date** | Date the station was registered with Davis Instruments, as a Unix timestamp |
+          | **subscription_end_date** | Ending date of the data plan subscription associated with the station, as a Unix timestamp |
+          | **time_zone** | Named time zone in which the station is located |
+          | **city** | City in which the station is located |
+          | **region** | U.S. state or international region in which the station is located |
+          | **country** | Country in which the station is located |
+          | **latitude** | Latitude at which the station is located, in degrees |
+          | **longitude** | Longitude at which the station is located, in degrees |
+          | **elevation** | Elevation at which the station is located, in feet |
+      parameters:
+        - $ref: '#/components/parameters/StationIds'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        # - $ref: '#/components/parameters/RegisteredSinceStations'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StationsResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Stations'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  /nodes:
+    get:
+      tags:
+        - Metadata
+      summary: >-
+        Get all nodes attached to all weather stations associated with your API
+        Key
+      description: >
+        Returns data for all nodes attached to all gateways associated with the
+        API Key passed in the query parameters.  Currently all nodes are
+        returned in a single response.  A future enhancement will provide
+        pagination to reduce the size of the response.  The fields listed below
+        are returned for each node; additionally, a **generated_at** field is
+        returned for the entire response, containing a Unix timestamp of the
+        time the response was returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **node_id** | ID of the node for purposes of this API |
+          | **node_name** | Name of the node |
+          | **registered_date** | Date the system was registered with Davis Instruments, as a Unix timestamp |
+          | **device_id** | Hardware ID of the node represented as a decimal integer |
+          | **device_id_hex** | Hardware ID of the node represented as a hexadecimal string |
+          | **firmware_version** | The version number of the firmware currently installed on the system |
+          | **active** | Status of the node. 'true' = active; 'false' = inactive |
+          | **station_id** | ID in this API of the station to which the node is attached |
+          | **station_name** | Name of the station to which the node is attached |
+          | **latitude** | Latitude at which the node is located, in degrees |
+          | **longitude** | Longitude at which the node is located, in degrees |
+          | **elevation** | Elevation at which the node is located, in feet |
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        # - $ref: '#/components/parameters/RegisteredSinceNodes'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NodesResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Nodes'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/nodes/{node-ids}':
+    get:
+      tags:
+        - Metadata
+      summary: Get nodes for one or more node IDs provided
+      description: >
+        Returns data for all nodes selected by node IDs passed as a path
+        parameter. Up to 100 IDs may be passed; entering more than 100 will
+        result in an error.  The fields listed below are returned for each node;
+        additionally, a **generated_at** field is returned for the entire
+        response, containing a Unix timestamp of the time the response was
+        returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **node_id** | ID of the node for purposes of this API |
+          | **node_name** | Name of the node |
+          | **registered_date** | Date the system was registered with Davis Instruments, as a Unix timestamp |
+          | **device_id** | Hardware ID of the node represented as a decimal integer |
+          | **device_id_hex** | Hardware ID of the node represented as a hexadecimal string |
+          | **firmware_version** | The version number of the firmware currently installed on the system |
+          | **active** | Status of the node. 'true' = active; 'false' = inactive |
+          | **station_id** | ID in this API of the station to which the node is attached |
+          | **station_name** | Name of the station to which the node is attached |
+          | **latitude** | Latitude at which the node is located, in degrees |
+          | **longitude** | Longitude at which the node is located, in degrees |
+          | **elevation** | Elevation at which the node is located, in feet |
+      parameters:
+        - $ref: '#/components/parameters/NodeIds'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        # - $ref: '#/components/parameters/RegisteredSinceNodes'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NodesResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Nodes'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  /sensors:
+    get:
+      tags:
+        - Metadata
+      summary: >-
+        Get all sensors attached to all weather stations associated with your
+        API Key
+      description: >
+        Returns data for all sensors attached to all gateways associated with
+        the API Key passed in the query parameters.  Currently all sensors are
+        returned in a single response.  A future enhancement will provide
+        pagination to reduce the size of the response.  The fields listed below
+        are returned for each sensor; additionally, a **generated_at** field is
+        returned for the entire response, containing a Unix timestamp of the
+        time the response was returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **lsid** | ID of the sensor for purposes of this API |
+          | **sensor_type** | Numerical type ID of the sensor |
+          | **category** | Category of the sensor |
+          | **manufacturer** | Name of the sensor manufactuer |
+          | **product_name** | Manufacturer's product name of the sensor |
+          | **product_number** | Manufacturer's product number of the sensor |
+          | **active** | Status of the station. 'true' = active; 'false' = inactive |
+          | **created_date** | Date the sensor was created, as a Unix timestamp |
+          | **modified_date** | Date the sensor was last modified, as a Unix timestamp |
+          | **station_id** | ID in this API of the station to which the sensor is attached |
+          | **station_name** | Name of the station to which the sensor is attached |
+          | **parent_device** | Type of device (Gateway or Node) to which the sensor is attached |
+          | **parent_device_name** | Name of the parent device |
+          | **parent_device_id** | Hardware ID of the parent device as a decimal integer |
+          | **parent_device_id_hex** | Hardware ID of the parent device as a hexadecimal string |
+          | **port_number** | Which port the sensor is plugged into on the parent device, if a node |
+          | **latitude** | Latitude at which the sensor is located, in degrees |
+          | **longitude** | Longitude at which the sensor is located, in degrees |
+          | **elevation** | Elevation at which the sensor is located, in feet |
+          | **rain_collector_type** | (if present) rain collector type of the sensor|
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        # - $ref: '#/components/parameters/ModifiedSince'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorsResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Sensors'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/sensors/{sensor-ids}':
+    get:
+      tags:
+        - Metadata
+      summary: Get sensors for one or more sensor IDs provided
+      description: >
+        Returns data for all sensors selected by sensor IDs passed as a path
+        parameter. Up to 100 IDs may be passed; entering more than 100 will
+        result in an error.  The fields listed below are returned for each
+        sensor; additionally, a **generated_at** field is returned for the
+        entire response, containing a Unix timestamp of the time the response
+        was returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **lsid** | ID of the sensor for purposes of this API |
+          | **sensor_type** | Numerical type ID of the sensor |
+          | **category** | Category of the sensor |
+          | **manufacturer** | Name of the sensor manufactuer |
+          | **product_name** | Manufacturer's product name of the sensor |
+          | **product_number** | Manufacturer's product number of the sensor |
+          | **active** | Status of the station. 'true' = active; 'false' = inactive |
+          | **created_date** | Date the sensor was created, as a Unix timestamp |
+          | **modified_date** | Date the sensor was last modified, as a Unix timestamp |
+          | **station_id** | ID in this API of the station to which the sensor is attached |
+          | **station_name** | Name of the station to which the sensor is attached |
+          | **parent_device** | Type of device (Gateway or Node) to which the sensor is attached |
+          | **parent_device_name** | Name of the parent device |
+          | **parent_device_id** | Hardware ID of the parent device as a decimal integer |
+          | **parent_device_id_hex** | Hardware ID of the parent device as a hexadecimal string |
+          | **port_number** | Which port the sensor is plugged into on the parent device, if a node |
+          | **latitude** | Latitude at which the sensor is located, in degrees |
+          | **longitude** | Longitude at which the sensor is located, in degrees |
+          | **elevation** | Elevation at which the sensor is located, in feet |
+          | **rain_collector_type** | (if present) rain collector type of the sensor|
+      parameters:
+        - $ref: '#/components/parameters/SensorIds'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        # - $ref: '#/components/parameters/ModifiedSince'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorsResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Sensors'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  /sensor-activity:
+    get:
+      tags:
+        - Metadata
+      summary: >-
+        Get latest reporting times for all sensors attached to all weather
+        stations associated with your API Key
+      description: >
+        Returns the most recent times data was uploaded for all sensors
+        associated with the api key that was passed.  The fields listed below
+        are returned for each sensor; additionally, a **generated_at** field is
+        returned for the entire response, containing a Unix timestamp of the
+        time the response was returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **lsid** | Id of the sensor for purposes of this API |
+          | **time_received** | Date and time data was last received at Davis Instruments, as a Unix timestamp |
+          | **time_recorded** | Date and time the latest-received data was recorded by the sensor, as a Unix timestamp |
+          | **time_loop_received** | Date and time the loop record was received at Davis Instruments, as a Unix timestamp (available only for Integrated Sensor Suite devices) |
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorActivityResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Sensors'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/sensor-activity/{sensor-ids}':
+    get:
+      tags:
+        - Metadata
+      summary: >-
+        Get latest reporting times for one or more sensors for sensor IDs
+        provided
+      description: >
+        Returns the most recent times data was uploaded for all sensors selected
+        by sensor IDs passed as a path parameter. Up to 100 IDs may be passed;
+        entering more than 100 will result in an error.  The fields listed below
+        are returned for each sensor; additionally, a **generated_at** field is
+        returned for the entire response, containing a Unix timestamp of the
+        time the response was returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **lsid** | Id of the sensor for purposes of this API |
+          | **time_received** | Date and time data was last received at Davis Instruments, as a Unix timestamp |
+          | **time_recorded** | Date and time the latest-received data was recorded by the sensor, as a Unix timestamp |
+          | **time_loop_received** | Date and time the loop record was received at Davis Instruments, as a Unix timestamp (available only for Integrated Sensor Suite devices) |
+      parameters:
+        - $ref: '#/components/parameters/SensorIds'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorActivityResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403Sensors'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  /sensor-catalog/:
+    get:
+      tags:
+        - Metadata
+      summary: Get a catalog of all types of sensors
+      description: >
+        Returns a catalog of all available sensor types.  The fields listed
+        below are returned for each sensor type; additionally, a
+        **generated_at** field is returned for the entire response, containing a
+        Unix timestamp of the time the response was returned by the server.
+          | name | description |
+          | ---- | ----------- |
+          | **sensor_type** | Numerical type Id of the sensor |
+          | **manufacturer** | Name of the sensor's manufacturer |
+          | **product_name** | Manufacturer's product name |
+          | **product_number** | Manufacturer's product number |
+          | **category** | Category of the sensor |
+          | **data_structures** | Data fields reported by the sensor, with data type and units of measurement |
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorCatalogResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/current/{station-id}':
+    get:
+      tags:
+        - Weather Data
+      summary: Get current conditions data for one station
+      description: >
+        Returns current conditions data for a weather station selected by a station ID
+        passed as a path parameter.
+      parameters:
+        - $ref: '#/components/parameters/StationId'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CurrentResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403CurrentOrHistoric'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+  '/historic/{station-id}':
+    get:
+      tags:
+        - Weather Data
+      summary: Get historic data for one station ID within a given timerange
+      description: >
+        Returns historic data for a weather station selected by a station ID passed as a path parameter, 
+        within a given time range.
+      parameters:
+        - $ref: '#/components/parameters/StationId'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        - $ref: '#/components/parameters/StartTimestamp'
+        - $ref: '#/components/parameters/EndTimestamp'
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HistoricResponse'
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse400'
+        '401':
+          description: client not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse401'
+        '403':
+          description: client not authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse403CurrentOrHistoric'
+        '404':
+          description: resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse404'
+        '500':
+          description: internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse500'
+components:
+  parameters:
+    ApiKey:
+      name: api-key
+      in: query
+      required: true
+      allowEmptyValue: false
+      description: |
+        API key
+      schema:
+        type: string
+    ApiSignature:
+      name: api-signature
+      in: query
+      required: true
+      allowEmptyValue: false
+      description: |
+        API signature
+      schema:
+        type: string
+    Timestamp:
+      name: t
+      in: query
+      required: true
+      allowEmptyValue: false
+      description: |
+        Unix timestamp when the query is submitted
+      schema:
+        type: integer
+    StartTimestamp:
+      name: start-timestamp
+      in: query
+      required: true
+      allowEmptyValue: false
+      description: |
+        Unix timestamp marking the beginning of the data requested.  Must be earlier than end-timestamp but not more than 24 hours earlier.
+      schema:
+        type: integer
+    EndTimestamp:
+      name: end-timestamp
+      in: query
+      required: true
+      allowEmptyValue: false
+      description: |
+        Unix timestamp marking the end of the data requested.  Must be later than start-timestamp but not more than 24 hours later.
+      schema:
+        type: integer
+    RegisteredSinceStations:
+      name: registered-since
+      in: query
+      required: false
+      allowEmptyValue: true
+      description: >
+        Unix timestamp; only stations registered after the date/time specified
+        will be returned
+      schema:
+        type: integer
+    RegisteredSinceNodes:
+      name: registered-since
+      in: query
+      required: false
+      allowEmptyValue: true
+      description: >
+        Unix timestamp; only nodes registered after the date/time specified will
+        be returned
+      schema:
+        type: integer
+    ModifiedSince:
+      name: modified-since
+      in: query
+      required: false
+      allowEmptyValue: true
+      description: >
+        Unix timestamp; only sensors modified after the date/time specified will
+        be returned
+      schema:
+        type: integer
+    StationId:
+      name: station-id
+      in: path
+      required: true
+      description: 'A single station ID'
+      schema:
+        type: string
+    StationIds:
+      name: station-ids
+      in: path
+      required: true
+      description: 'List of one or more station IDs, separated by commas'
+      schema:
+        type: string
+    NodeIds:
+      name: node-ids
+      in: path
+      required: true
+      description: 'List of one or more node IDs, separated by commas'
+      schema:
+        type: string
+    SensorIds:
+      name: sensor-ids
+      in: path
+      required: true
+      description: 'List of one or more sensor IDs, separated by commas'
+      schema:
+        type: string
+  schemas:
+    StationsResponse:
+      description: |
+        Wrapper for station objects
+      type: object
+      properties:
+        stations:
+          type: array
+          items:
+            type: object
+            properties:
+              station_id:
+                type: integer
+                format: int32
+              station_name:
+                type: string
+              gateway_id:
+                type: integer
+                format: int32
+              gateway_id_hex:
+                type: string
+              product_number:
+                type: string
+              username:
+                type: string
+              user_email:
+                type: string
+              company_name:
+                type: string
+              active:
+                type: boolean
+              private:
+                type: boolean
+              uploadInterval:
+                type: integer
+                format: int32
+              firmware_version:
+                type: integer
+                format: int32
+              imei:
+                type: string
+              meid:
+                type: string
+              registered_date:
+                type: integer
+                format: int32
+              subscription_end_date:
+                type: integer
+                format: int32
+              time_zone:
+                type: string
+              city:
+                type: string
+              region:
+                type: string
+              country:
+                type: string
+              latitude:
+                type: number
+                format: float
+              longitude:
+                type: number
+                format: float
+              elevation:
+                type: integer
+        generated_at:
+          type: integer
+      example:
+        stations:
+          - station_id: 6974
+            station_name: Private - BL Orchard Range Test x39
+            gateway_id: 8388665
+            gateway_id_hex: 001D0A800039
+            product_number: '6800'
+            username: davisroof
+            user_email: benp@davisnet.com
+            company_name: Keny Sam Company
+            active: true
+            private: true
+            recording_interval: 5
+            firmware_version: 1470358845
+            imei: '351579055911216'
+            meid: A1000045841C5D
+            registered_date: 1467345143
+            subscription_end_date: 1498881143
+            time_zone: America/Los_Angeles
+            city: Manteca
+            region: CA
+            country: USA
+            latitude: 37.75104
+            longitude: -121.25094
+            elevation: 19
+          - station_id: 7327
+            station_name: Hayward Mesh 15min x4F
+            gateway_id: 8388687
+            gateway_id_hex: 001D0A80004F
+            product_number: '6801'
+            username: diablo
+            user_email: Blane@davisnet.com
+            company_name: Keny Sam Company
+            active: true
+            private: true
+            recording_interval: 15
+            firmware_version: 1494962930
+            imei: '351579055911216'
+            meid: A1000045841C5D
+            registered_date: 1467345143
+            subscription_end_date: 1498881143
+            time_zone: America/Los_Angeles
+            city: Hayward
+            region: CA
+            country: USA
+            latitude: 37.635952
+            longitude: -122.124794
+            elevation: 20.0344
+        generated_at: 1509055056
+    NodesResponse:
+      description: |
+        Wrapper for node objects
+      type: object
+      properties:
+        stations:
+          type: array
+          items:
+            type: object
+            properties:
+              node_id:
+                type: integer
+                format: int32
+              node_name:
+                type: string
+              registration_date:
+                type: integer
+                format: int32
+              device_id:
+                type: integer
+                format: int32
+              device_id_hex:
+                type: string
+              firmware_version:
+                type: integer
+              active:
+                type: boolean
+              station_id:
+                type: integer
+                format: int32
+              station_name:
+                type: string
+              latitude:
+                type: number
+                format: float
+              longitude:
+                type: number
+                format: float
+              elevation:
+                type: integer
+        generated_at:
+          type: integer
+      example:
+        nodes:
+          - node_id: 9029
+            node_name: xE8
+            registered_date: 1467345143
+            device_id: 9568488
+            device_id_hex: 001D0A9200E8
+            firmware_version: 0
+            active: true
+            station_id: 7459
+            station_name: Orchard Network CDMA
+            latitude: 37.718246
+            longitude: -121.3796
+            elevation: 0
+          - node_id: 9157
+            node_name: Training Room DEV
+            registered_date: 1467345143
+            device_id: 9568504
+            device_id_hex: 001D0A9200F8
+            firmware_version: 0
+            active: false
+            station_id: 7519
+            station_name: Hayward Sharks DEV
+            latitude: 37.49338
+            longitude: -122.26799
+            elevation: 0
+        generated_at: 1509055056
+    SensorsResponse:
+      description: |
+        Wrapper for sensor objects
+      type: object
+      properties:
+        sensors:
+          type: array
+          items:
+            type: object
+            properties:
+              lsid:
+                type: integer
+                format: int32
+              sensor_type:
+                type: integer
+                format: int32
+              category:
+                type: string
+              manufacturer:
+                type: string
+              product_name:
+                type: string
+              product_number:
+                type: string
+              active:
+                type: boolean
+              created_date:
+                type: string
+                format: date-time
+              modified_date:
+                type: string
+                format: date-time
+              station_id:
+                type: integer
+                format: int32
+              station_name:
+                type: string
+              parent_device_type:
+                type: string
+              parent_device_name:
+                type: string
+              parent_device_id:
+                type: integer
+                format: int32
+              parent_device_hex:
+                type: string
+              port_number:
+                type: integer
+                format: int32
+              latitude:
+                type: number
+                format: float
+              longitude:
+                type: number
+                format: float
+              elevation:
+                type: integer
+        generated_at:
+          type: integer
+      example:
+        sensors:
+          - lsid: 4522
+            sensor_type: 105
+            category: Temperature
+            manufacturer: Davis Instruments
+            product_name: Temperature Probe
+            product_number: '6470'
+            active: false
+            created_date: 1469150144
+            modified_date: 1469578518
+            station_id: 6974
+            station_name: Private - BL Orchard Range Test x39
+            parent_device_type: Node
+            parent_device_name: OLD - x6B
+            parent_device_id: 9437291
+            parent_device_id_hex: 001D0A90006B
+            port_number: 2
+            latitude: 37.63642
+            longitude: -122.1263
+            elevation: 0
+          - lsid: 4523
+            sensor_type: 100
+            category: Temp/Hum
+            manufacturer: Davis Instruments
+            product_name: Temp/Hum Sensor
+            product_number: '6830'
+            active: false
+            created_date: 1469150144
+            modified_date: 1469578518
+            station_id: 6974
+            station_name: Private - BL Orchard Range Test x39
+            parent_device_type: Node
+            parent_device_name: x70
+            parent_device_id: 9437296
+            parent_device_id_hex: 001D0A900070
+            port_number: 1
+            latitude: 37.63642
+            longitude: -122.1263
+            elevation: 0
+        generated_at: 1509055056
+    SensorActivityResponse:
+      description: |
+        Wrapper for sensor activity
+      type: object
+      properties:
+        sensor_activity:
+          type: array
+          items:
+            type: object
+            properties:
+              lsid:
+                type: integer
+                format: int32
+              time_received:
+                type: integer
+                format: int32
+              time_recorded:
+                type: integer
+                format: int32
+              time_loop_received:
+                type: integer
+                format: int32
+        generated_at:
+          type: integer
+      example:
+        sensor_activity:
+          - lsid: 4225
+            time_received: 1473694823
+            time_recorded: 1473694801
+          - lsid: 6118
+            time_loop_received: 1506727200
+        generated_at: 1509055056
+    SensorCatalogResponse:
+      description: |
+        Wrapper for sensor types
+      type: object
+      properties:
+        sensor_types:
+          type: array
+          items:
+            type: object
+            properties:
+              sensor_type:
+                type: integer
+                format: int32
+              manufacturer:
+                type: string
+              product_name:
+                type: string
+              product_number:
+                type: string
+              category:
+                type: string
+      example:
+        sensor_types:
+          - sensor_type: 100
+            manufacturer: Davis Instruments
+            product_name: Temp/Hum Sensor
+            product_number: 6830
+            category: Temp/Hum
+            data_structure:
+              max_temp:
+                type: float
+                units: degrees Fahrenheit
+              max_temp_time:
+                type: integer
+                units: seconds from epoch
+              avg_temp:
+                type: float
+                units: degrees Fahrenheit
+              max_hum:
+                type: float
+                units: percent relative humidity
+              max_hum_time:
+                type: integer
+                units: seconds from epoch
+              avg_hum:
+                type: float
+                units: percent relative humidity
+          - sensor_type: 23
+            manufacturer: Davis Instruments
+            product_name: Vantage Pro2
+            product_number: 6322C
+            category: ISS
+            data_structures:
+              - data_structure_type: '1'
+                description: >-
+                  WeatherLink IP/Vantage Connect Current Conditions Record -
+                  Revision A
+                data_structure:
+                  barometer:
+                    type: float
+                    units: inches of mercury
+                  inside_temperature:
+                    type: float
+                    units: degrees Fahrenheit
+              - data_structure_type: '2'
+                description: >-
+                  WeatherLink IP/Vantage Connect Current Conditions Record -
+                  Revision B
+                data_structure:
+                  bar_trend:
+                    type: integer
+                    units: scale from -60 to 60
+                  barometer:
+                    type: float
+                    units: inches of mercury
+                  inside_temperature:
+                    type: float
+                    units: degrees fahrenheit
+              - data_structure_type: '3'
+                description: WeatherLink IP/Vantage Connect Archive Record - Revision A
+                data_structure:
+                  bar:
+                    type: float
+                    units: inches of mercury
+                  et:
+                    type: float
+                    units: inches
+                  moist_soil_1:
+                    type: integer
+                    units: centibars
+              - data_structure_type: '4'
+                description: WeatherLink IP/Vantage Connect Archive Record - Revision B
+                data_structure:
+                  solar_rad_avg:
+                    type: integer
+                    units: watts per square meter
+                  wet_leaf_1:
+                    type: integer
+                    units: wetness scale from 0 to 15
+                  wind_dir_of_prevail:
+                    type: integer
+                    units: 'direction code; 0=N, 1=NNE, ... 14=NW, 15=NNW'
+              - data_structure_type: '5'
+                description: WeatherLink IP/Vantage Connect High/Low Record
+                data_structure:
+                  current_state_bar_trend:
+                    type: float
+                    units: inches of mercury
+                  temp_out:
+                    type: float
+                    units: degrees Fahrenheit
+                  wind_speed:
+                    type: integer
+                    units: miles per hour
+                  wind_dir:
+                    type: integer
+                    units: degrees of compass
+              - data_structure_type: '6'
+                description: Enviromonitor ISS Current Conditions Record
+                data_structure:
+                  wind_speed:
+                    type: integer
+                    units: miles per hour
+                  dir_of_hi_speed:
+                    type: integer
+                    units: 'direction code; 0=N, 1=NNE, ... 14=NW, 15=NNW'
+                  uv:
+                    type: float
+                    units: ultraviolet index
+              - data_structure_type: '7'
+                description: EnviroMonitor ISS Archive Record
+                data_structure:
+                  wind_speed:
+                    type: integer
+                    units: miles per hour
+                  dir_of_hi_speed:
+                    type: integer
+                    units: 'direction code; 0=N, 1=NNE, ... 14=NW, 15=NNW'
+                  uv:
+                    type: float
+                    units: ultraviolet index
+              - data_structure_type: '8'
+                description: EnviroMonitor ISS Hi/Low Record
+                data_structure:
+                  wind_speed:
+                    type: integer
+                    units: miles per hour
+                  dir_of_hi_speed:
+                    type: integer
+                    units: 'direction code; 0=N, 1=NNE, ... 14=NW, 15=NNW'
+                  uv:
+                    type: float
+                    units: ultraviolet index
+              - data_structure_type: '9'
+                description: EnviroMonitor Sensor Data Record
+                data_structure:
+                  wind_speed:
+                    type: integer
+                    units: miles per hour
+                  dir_of_hi_speed:
+                    type: integer
+                    units: 'direction code; 0=N, 1=NNE, ... 14=NW, 15=NNW'
+                  uv:
+                    type: float
+                    units: ultraviolet index
+        generated_at: 1509055056
+    CurrentResponse:
+      description: |
+        Wrapper for current data objects
+      type: object
+      properties:
+        stationId:
+          type: integer
+          format: int32
+        sensors:
+          type: array
+          items:
+            type: object
+            properties:
+              lsid:
+                type: integer
+                format: int32
+              sensor_type:
+                type: integer
+                format: int32
+              data_structure_type:
+                type: integer
+                format: int32
+              ts:
+                type: integer
+                format: int32
+              data:
+                type: object
+                properties:
+                  field_1:
+                    type: number
+                    format: float
+                  field_2:
+                    type: number
+                    format: float
+                  field_n:
+                    type: number
+                    format: float
+        generated_at:
+          type: integer
+      example:
+        station_id: 1234
+        sensors:
+          - lsid: 69743
+            sensor_type: 243
+            data_structure_type: 12
+            ts: 1556909900
+            data:
+              dew_point_in: 40.3
+              heat_index_in: 75.5
+              temp_in: 76.5
+          - lsid: 73905
+            sensor_type: 56
+            data_structure_type: 12
+            ts: 1558396041
+            data:
+              moist_soil_1: 7.2
+              moist_soil_2: 14.1
+              moist_soil_3: null
+              moist_soil_4: null
+              temp_1: 57.9
+              temp_2: 65.3
+              temp_3: 65.3
+              temp_4: 64.9
+              wet_leaf_1: null
+              wet_leaf_2: 0.1
+        generated_at: 1509055056
+    HistoricResponse:
+      description: |
+        Wrapper for historic data objects
+      type: object
+      properties:
+        station-id:
+          type: integer
+          format: int32
+        sensors:
+          type: array
+          items:
+            type: object
+            properties:
+              lsid:
+                type: integer
+                format: int32
+              sensor_type:
+                type: integer
+                format: int32
+              data_structure_type:
+                type: integer
+                format: int32
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ts:
+                      type: integer
+                      format: int32
+                    field_1:
+                      type: number
+                      format: float
+                    field_2:
+                      type: number
+                      format: float
+                    field_n:
+                      type: number
+                      format: float
+        generated_at:
+          type: integer
+      example:
+        station_id: 1234
+        sensors:
+          - lsid: 69743
+            sensor_type: 243
+            data_structure_type: 12
+            data:
+              - ts: 1556909900
+                dew_point_in: 40.3
+                heat_index_in: 75.5
+                temp_in: 76.5
+              - ts: 1556910800
+                dew_point_in: 43.1
+                heat_index_in: 76.9
+                temp_in: 76.5
+              - ts: 15569011700
+                dew_point_in: 37.3
+                heat_index_in: 79.4
+                temp_in: 73.0
+          - lsid: 73905
+            sensor_type: 56
+            data_structure_type: 13
+            data:
+              - ts: 1555192800
+                temp_in_lo_at: 1555192296
+                arch_int: 900
+                temp_in_hi: 76.3
+                temp_in_hi_at: 1555192025
+                hum_in_hi: 41.2
+                temp_in_last: 76.2
+                temp_in_lo: 75.9
+                hum_in_lo: 40.8
+                hum_in_last: 40.8
+                dew_point_in: 50.7
+                hum_in_lo_at: 1555191935
+                heat_index_in: 75.3
+                hum_in_hi_at: 1555192416
+              - ts: 1555193700
+                temp_in_lo_at: 1555193346
+                arch_int: 900
+                temp_in_hi: 76.8
+                temp_in_hi_at: 1555193646
+                hum_in_hi: 41.2
+                temp_in_last: 76.4
+                temp_in_lo: 76.1
+                hum_in_lo: 40.7
+                hum_in_last: 41
+                dew_point_in: 51
+                hum_in_lo_at: 1555192806
+                heat_index_in: 75.5
+                hum_in_hi_at: 1555193136
+        generated_at: 1509055056
+    ErrorResponse400:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 400
+        message: Missing or malformed request
+    ErrorResponse401:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 401
+        message: Unable to authenticate client
+    ErrorResponse403:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 403
+        message: Access is not authorized
+    ErrorResponse403Stations:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 403
+        message: 'Access is not authorized for one or more stations: 1234, 5678'
+    ErrorResponse403Nodes:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 403
+        message: 'Access is not authorized for one or more nodes: 1234, 5678'
+    ErrorResponse403Sensors:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 403
+        message: 'Access is not authorized for one or more sensors: 1234, 5678'
+    ErrorResponse403CurrentOrHistoric:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 403
+        message: 'Access is not authorized for station 1234'
+    ErrorResponse404:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 404
+        message: Resource not found
+    ErrorResponse500:
+      type: object
+      properties:
+        code:
+          description: HTTP error code
+          type: integer
+          format: int32
+        message:
+          description: Error message
+          type: string
+      example:
+        code: 500
+        message: Internal error
