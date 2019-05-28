@@ -41,5 +41,6 @@ overview of weather data features
   -ms-transform:rotate(-45deg);
   -webkit-transform:rotate(-45deg);
   transform:rotate(-45deg);
+  z-index: 1000;
 }
 </style>
