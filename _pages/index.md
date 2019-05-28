@@ -23,7 +23,7 @@ overview of metadata features
 overview of weather data features
 
 <style>
-  body:after{
+  div.initial-content:after{
   content: "beta";
   position: fixed;
   width: 80px;
