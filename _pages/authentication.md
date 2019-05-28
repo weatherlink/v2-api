@@ -114,6 +114,6 @@ Take the computed API Signature and include it in the API request as the value o
 The final URL with parameters in the example scenario is:
 
 ```
-https://api.weatherlink.com/v2/current/2?api-key=987654321&station-id=2&t=1558729481&api-signature=9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+https://api.weatherlink.com/v2/current/2?api-key=987654321&t=1558729481&api-signature=9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
 ```
 
