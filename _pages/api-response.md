@@ -173,7 +173,7 @@ Below is a sample response JSON document for WeatherLink Live current conditions
 
 ## Weather Observation Data API Response Structure
 
-API responses for weather observation data follows the same format regardless of the type of weather station. However, there are some minor structural differences between current condition data and historic, also known as "archive", data. These minor differences are discussed in the outline below.
+API responses for weather observation data follow the same format regardless of the type of weather station. However, there are some minor structural differences between current condition data and historic, also known as "archive", data. These minor differences are discussed in the outline below.
 
 A weather observation data response is composed of the following components:
 
