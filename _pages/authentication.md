@@ -10,7 +10,7 @@ sidebar:
   nav: "navMain"
 ---
 
-The WeatherLink v2 API uses an API Key, as API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
+The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
 
 During the beta test phase of the v2 API selected beta testers will be provided with an API Key and API Secret.
 
@@ -28,7 +28,7 @@ The API Secret is a secret value that is used to calculate a signature for each 
 
 **The API Secret must be protected and must never be passed as a parameter to the API.**
 
-If your API Secret is compromised it will allow others to access the API while pretending to be you. If your API Secret is compromised please contact the Davis Instruments/WeatherLink engineering team through the <a href="https://gitter.im/WeatherLink/v2-api" target="_blank">Gitter chat room</a>.
+If your API Secret is compromised it will allow others to access the API while pretending to be you. If your API Secret is compromised please [contact the Davis Instruments/WeatherLink engineering team](support).
 
 ## API Request Timestamp
 
@@ -38,13 +38,13 @@ The API Request Timestamp is passed in the API request as a query parameter name
 
 ## API Signature
 
-The API Signature is a calculated value used to prevent API request parameter tampering. The API Signature process takes all of the request parameters and the API Secret and computes a fingerprint like value that represents the request. If someone else intercepts the request parameters and attempts to alter them the API Signature will no longer match and the API servers will reject the altered request.
+The API Signature is a calculated value used to prevent API request parameter tampering. The API Signature process takes all of the request parameters and the API Secret and computes a fingerprint-like value that represents the request. If someone else intercepts the request parameters and attempts to alter them the API Signature will no longer match and the API servers will reject the altered request.
 
 The API Signature is passed in the API request as a query parameter named `api-signature`.
 
 ## API Signature Calculation Example
 
-The explain how the API Signature calculation process works we will walk through an example. For the purposes of this example we will use the following details:
+To explain how the API Signature calculation process works we will walk through an example. For the purposes of this example we will use the following details:
 
 * This is for an API request for Current Conditions data which is available at the `/current/{station-id}` API path which accepts a station ID as a URL path parameter.
 * We will use the fictitious Station ID `2`.
