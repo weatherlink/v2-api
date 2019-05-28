@@ -24,7 +24,7 @@ overview of weather data features
 
 <style>
   body:after{
-  content: "beta2";
+  content: "beta";
   position: fixed;
   width: 80px;
   height: 25px;
