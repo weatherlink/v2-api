@@ -10,7 +10,9 @@ sidebar:
   nav: "navMain"
 ---
 
-The WeatherLink v2 API
+The WeatherLink v2 API can be used to access weather station metadata and weather observation data for WeatherLink connected weather stations that you have access to.
+
+Access to the API is based on an [API Key](api-key).
 
 it's currently in a beta test
 
