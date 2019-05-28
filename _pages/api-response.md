@@ -203,7 +203,7 @@ Each sensor listed in the `sensors` section contains the following information:
   * For current conditions weather observation data this field will be a Unix timestamp field representing the timestamp of the data record.
   * For historic weather observation data this field will be a Unix timestamp field representing the timestamp of the data record and will be located in each data record in the JSON array of the `data` field described above.
 
-Here's some truncated samples showing the differences between the current conditions and historic data JSON structures.
+Here are some truncated samples showing the differences between the current conditions and historic data JSON structures.
 
 ### Current Conditions Data
 
