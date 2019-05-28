@@ -14,7 +14,15 @@ The WeatherLink v2 API can be used to access weather station metadata and weathe
 
 Access to the API is based on an [API Key](api-key).
 
-it's currently in a beta test
+<p class="notice--warning">
+<h4>Beta Test:</h4>
+<p>The WeatherLink v2 API is currently in a beta test phase. The API currently has the following limitations:</p>
+<ul>
+  <li>API Keys are currently only available to approved API beta testers.</li>
+  <li>Weather observation data is only supported for WeatherLink Live weather stations.</li>
+</ul>
+</p>
+
 
 ## Metadata
 
