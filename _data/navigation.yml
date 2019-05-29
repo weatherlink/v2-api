@@ -25,6 +25,8 @@ navMain:
         url: /sensor-catalog
       - title: Rate Limits
         url: /rate-limits
+      - title: Size Limits
+        url: /size-limits
   - title: Resources
     children:
       - title: Support
