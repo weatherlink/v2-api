@@ -24,7 +24,7 @@ Below is a sample response JSON document for WeatherLink Live current conditions
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 10,
-            "data": {
+            "data": [{
                 "ts": 1558741927,
                 "wind_speed_hi_last_2_min": 5,
                 "hum": 42.7,
@@ -85,25 +85,25 @@ Below is a sample response JSON document for WeatherLink Live current conditions
                 "rain_rate_last_in": 0,
                 "rain_rate_hi_last_15_min_mm": 0,
                 "rain_rate_hi_last_15_min_in": 0
-            }
+            }]
         },
         {
             "lsid": 5271271,
             "sensor_type": 242,
             "data_structure_type": 12,
-            "data": {
+            "data": [{
                 "ts": 1558741927,
                 "bar_absolute": 29.515,
                 "bar_sea_level": 29.61,
                 "bar_offset": -0.001,
                 "bar_trend": -0.063
-            }
+            }]
         },
         {
             "lsid": 5271399,
             "sensor_type": 37,
             "data_structure_type": 10,
-            "data": {
+            "data": [{
                 "ts": 1558741927,
                 "wind_speed_hi_last_2_min": 3.93,
                 "hum": 53.7,
@@ -164,7 +164,7 @@ Below is a sample response JSON document for WeatherLink Live current conditions
                 "rain_rate_last_in": 0,
                 "rain_rate_hi_last_15_min_mm": 0,
                 "rain_rate_hi_last_15_min_in": 0
-            }
+            }]
         }
     ],
     "generated_at": 1558741957
