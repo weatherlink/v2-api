@@ -24,8 +24,8 @@ Below is a sample response JSON document for WeatherLink Live current conditions
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 10,
-            "ts": 1558741927,
             "data": {
+                "ts": 1558741927,
                 "wind_speed_hi_last_2_min": 5,
                 "hum": 42.7,
                 "wind_dir_at_hi_speed_last_10_min": 260,
@@ -91,8 +91,8 @@ Below is a sample response JSON document for WeatherLink Live current conditions
             "lsid": 5271271,
             "sensor_type": 242,
             "data_structure_type": 12,
-            "ts": 1558741927,
             "data": {
+                "ts": 1558741927,
                 "bar_absolute": 29.515,
                 "bar_sea_level": 29.61,
                 "bar_offset": -0.001,
@@ -103,8 +103,8 @@ Below is a sample response JSON document for WeatherLink Live current conditions
             "lsid": 5271399,
             "sensor_type": 37,
             "data_structure_type": 10,
-            "ts": 1558741927,
             "data": {
+                "ts": 1558741927,
                 "wind_speed_hi_last_2_min": 3.93,
                 "hum": 53.7,
                 "wind_dir_at_hi_speed_last_10_min": 266,
@@ -173,7 +173,7 @@ Below is a sample response JSON document for WeatherLink Live current conditions
 
 ## Weather Observation Data API Response Structure
 
-API responses for weather observation data follow the same format regardless of the type of weather station. However, there are some minor structural differences between current condition data and historic, also known as "archive", data. These minor differences are discussed in the outline below.
+API responses for weather observation data follow the same format regardless of the type of weather station.
 
 A weather observation data response is composed of the following components:
 
@@ -186,7 +186,7 @@ Here's a truncated section of the sample JSON highlighting these fields:
 ```json
 {
     "station_id": 374964,
-    "sensors": ...,
+    "sensors": [...],
     "generated_at": 1558741957
 }
 ```
@@ -196,12 +196,9 @@ Each sensor listed in the `sensors` section contains the following information:
 * `lsid` - The Logical Sensor ID. This is a unique ID for the sensor. The metadata API endpoint `/sensors` can be used to retrieve all sensor IDs for your stations.
 * `sensor_type` - The sensor type can be used to cross reference with the [Sensor Catalog](sensor-catalog) to find documentation on the field names and data types for all data fields supported by each type of sensor.
 * `data_structure_type` - The data structure type is used to further specify the nature of a weather observation data record when the sensor supports generating multiple types of data records. Please see the [Data Structure Types](data-structure-types) page for more details.
-* `data`
-  * For current conditions weather observation data this field will be a JSON object containg name/value pairs for the supported data fields in the data record.
-  * For historic weather observation data this field will be a JSON array of JSON objects where each object is a historic record.
-* `ts`
-  * For current conditions weather observation data this field will be a Unix timestamp field representing the timestamp of the data record.
-  * For historic weather observation data this field will be a Unix timestamp field representing the timestamp of the data record and will be located in each data record in the JSON array of the `data` field described above.
+* `data` - An array of weather observation data records. For current conditions weather observation data the array will contain either one record. For historic weather observation data the array may contain zero, one, or many records depending on the requested time window for data.
+
+Additionally, each weather observation data record in the `data` array will contain a `ts` field in addition to the weather observation data fields. The `ts` field is the Unix timestamp of the data record.
 
 Here are some truncated samples showing the differences between the current conditions and historic data JSON structures.
 
@@ -215,14 +212,16 @@ Here are some truncated samples showing the differences between the current cond
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 10,
-            "ts": 1558741927,     // timestamp is at the sensor level
-            "data": {             // data is a JSON object representing a single data record
-                "wind_speed_hi_last_2_min": 5,
-                "hum": 42.7,
-                "wind_dir_at_hi_speed_last_10_min": 260,
-                "wind_chill": 73.3,
-                ...
-            }
+            "data": [
+                {             
+                    "ts": 1558741927,
+                    "wind_speed_hi_last_2_min": 5,
+                    "hum": 42.7,
+                    "wind_dir_at_hi_speed_last_10_min": 260,
+                    "wind_chill": 73.3,
+                    ...
+                }
+            ]
         },
         ...
     ],
@@ -240,9 +239,9 @@ Here are some truncated samples showing the differences between the current cond
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 11
-            "data": [                 // data is an array of JSON objects representing data records
+            "data": [
                 {
-                    "ts": 1557997200, // timestamp is on the data record level
+                    "ts": 1557997200,
                     "wind_speed_avg": 3.56,
                     "dew_point_hi_at": 1557990015,
                     "uv_dose": 0,
