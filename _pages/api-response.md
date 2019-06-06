@@ -196,7 +196,7 @@ Each sensor listed in the `sensors` section contains the following information:
 * `lsid` - The Logical Sensor ID. This is a unique ID for the sensor. The metadata API endpoint `/sensors` can be used to retrieve all sensor IDs for your stations.
 * `sensor_type` - The sensor type can be used to cross reference with the [Sensor Catalog](sensor-catalog) to find documentation on the field names and data types for all data fields supported by each type of sensor.
 * `data_structure_type` - The data structure type is used to further specify the nature of a weather observation data record when the sensor supports generating multiple types of data records. Please see the [Data Structure Types](data-structure-types) page for more details.
-* `data` - An array of weather observation data records. For current conditions weather observation data the array will contain either one record. For historic weather observation data the array may contain zero, one, or many records depending on the requested time window for data.
+* `data` - An array of weather observation data records. For current conditions weather observation data the array will contain zero or one record. For historic weather observation data the array may contain zero, one, or many records depending on the requested time window for data.
 
 Additionally, each weather observation data record in the `data` array will contain a `ts` field in addition to the weather observation data fields. The `ts` field is the Unix timestamp of the data record.
 
