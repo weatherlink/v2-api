@@ -18,7 +18,4 @@ The chat room is monitored by the Davis Instruments/WeatherLink engineers respon
 
 Keep in mind other people will also be in the chat room so please be careful and do not post your API Secret in the chat.
 
-The private chat room for v2 API beta testers is available at <a href="https://gitter.im/WeatherLink/v2-api-beta">https://gitter.im/WeatherLink/v2-api-beta</a>
-
-Once the v2 API exits the beta testing phase a new public chat room will be opened and this page and link will be updated.
-
+The chat room is available at <a href="https://gitter.im/WeatherLink/v2-api">https://gitter.im/WeatherLink/v2-api</a>
