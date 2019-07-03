@@ -12,6 +12,12 @@ sidebar:
 
 The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
 
+<div class="notice--warning">
+<h4>Beta Test:</h4>
+<p>During the beta test phase of the v2 API selected beta testers will be provided with an API Key and API Secret.</p>
+<p>After the beta test phase WeatherLink users will be able to generate their own API Key and API Secret on the WeatherLink web site.</p>
+</div>
+
 During the beta test phase of the v2 API selected beta testers will be provided with an API Key and API Secret.
 
 After the beta test phase WeatherLink users will be able to generate their own API Key and API Secret on the WeatherLink web site.
