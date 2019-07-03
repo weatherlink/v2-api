@@ -129,9 +129,12 @@ Now we will walk through another example. In this example we will use the follow
 * We will use the fictitious Station ID `72443`.
 * We will use the fictitious API Key `987654321`.
 * We will use the fictitious API Secret `ABC123`.
-* We will use the Unix timestamp `1558729481` as the API Request Timestamp.
+* We will use the Unix timestamp `1562176956` as the API Request Timestamp.
 * We will query for historic data from the day 2019-07-01 in the America/Los_Angeles timezone.
-  * This will result in a time range query for data with timestamps greater than 2019-07-01 00:00:00 and less than or equal to 2019-07-02 00:00:00
+  * This will result in a starting Unix timestamp of `1561964400`
+  * And an ending Unix timestamp of `1562050800`
+
+In this example we are querying for data with timestamps greater than 2019-07-01 00:00:00 America/Los_Angeles and less than or equal to 2019-07-02 00:00:00 America/Los_Angeles. This is due to the fact that data record timestamps represent the end of the data record's recording time interval. Therefore the record with the 2019-07-01 00:00:00 America/Los_Angeles timestamp is actually the last data record from 2019-06-30 America/Los_Angeles.
 
 ### Step 1
 
@@ -141,35 +144,39 @@ In this example the path parameters are:
 
 Parameter Name|Parameter Value
 --------------|---------------
-station-id|2
+station-id|72443
 
 And the query parameters are:
 
 Parameter Name|Parameter Value
 --------------|---------------
 api-key|987654321
-t|1558729481
+t|1562176956
+start-timestamp|1561964400
+end-timestamp|1562050800
 
 After sorting the combined set of parameters will look like this:
 
 Parameter Name|Parameter Value
 --------------|---------------
 api-key|987654321
-station-id|2
-t|1558729481
+end-timestamp|1562050800
+start-timestamp|1561964400
+station-id|72443
+t|1562176956
 
 ### Step 2
 
 Next, iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
 
 ```
-api-key987654321station-id2t1558729481
+api-key987654321end-timestamp1562050800start-timestamp1561964400station-id72443t1562176956
 ```
 
 To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:
 
 ```
-(api-key)(987654321)(station-id)(2)(t)(1558729481)
+(api-key)(987654321)(end-timestamp)(1562050800)(start-timestamp)(1561964400)(station-id)(72443)(t)(1562176956)
 ```
 
 ### Step 3
@@ -179,9 +186,9 @@ Now it is time to compute the API Signature using the the API Secret and the con
 In this scenario we have the following:
 
 ```
-Message to hash: api-key987654321station-id2t1558729481
+Message to hash: api-key987654321end-timestamp1562050800start-timestamp1561964400station-id72443t1562176956
 HMAC secret key: ABC123
-Computed HMAC as a hexadecimal string: 9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+Computed HMAC as a hexadecimal string: d40baf8649aaf83fae135e0b57db03ec78688b49fce96d815474f366957f2b39
 ```
 
 The online HMAC tool at <a href="https://www.freeformatter.com/hmac-generator.html" target="_blank">https://www.freeformatter.com/hmac-generator.html</a> can help you test your computed HMAC SHA-256 values.
@@ -195,6 +202,6 @@ Take the computed API Signature and include it in the API request as the value o
 The final URL with parameters in the example scenario is:
 
 ```
-https://api.weatherlink.com/v2/current/2?api-key=987654321&t=1558729481&api-signature=9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+https://api.weatherlink.com/v2/historic/72443?api-key=987654321&t=1562176956&start-timestamp=1561964400&end-timestamp=1562050800&api-signature=d40baf8649aaf83fae135e0b57db03ec78688b49fce96d815474f366957f2b39
 ```
 
