@@ -94,7 +94,7 @@ sidebar:
 <label for="api-endpoint">
 <span>API Endpoint</span>
 <select name="api-endpoint" class="select-field">
-<option value="">*** Meta Data API Endpoints*** </option>
+<option value="">*** Meta Data API Endpoints *** </option>
 <option value="/stations">/stations - Get All Stations</option>
 <option value="/stations/{station-ids}">/stations/{station-ids} - Get Some Stations</option>
 <option value="/nodes">/nodes - Get All Nodes</option>
@@ -104,7 +104,7 @@ sidebar:
 <option value="/sensor-activity">/sensor-activity - Get Latest Activity For All Sensors</option>
 <option value="/sensor-activity/{sensor-ids}">/sensor-activity/{sensor-ids} - Get Latest Activity For Some Sensors</option>
 <option value="/sensor-catalog">/sensor-catalog - Get The Sensor Catalog</option>
-<option value="">*** Weather Data API Endpoints*** </option>
+<option value="">*** Weather Data API Endpoints *** </option>
 <option value="/current">/current/{station-id} - Get Current Conditions Data</option>
 <option value="/historic">/historic/{station-id} - GEt Historic Data</option>
 </select>
