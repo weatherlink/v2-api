@@ -1,5 +1,5 @@
 ---
-title: Tips
+title: API Use Cases
 permalink: /tips
 classes: wide
 header:
@@ -10,5 +10,5 @@ sidebar:
   nav: "navMain"
 ---
 
-Here are a set of quick tips on what how to use the WeatherLink v2 API.
+Here are some common use cases on how to use the WeatherLink v2 API.
 
