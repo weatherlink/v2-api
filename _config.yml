@@ -11,6 +11,7 @@ search: false
 after_footer_scripts:
   - /assets/js/author.js
   - /assets/js/footer-copyright.js
+  - /assets/js/api-test-tool.js
 
 include:
   - _pages
