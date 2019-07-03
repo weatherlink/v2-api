@@ -12,3 +12,7 @@ sidebar:
 
 Here are some common use cases on how to use the WeatherLink v2 API.
 
+- <a href="#getting-the-list-of-stations">Getting the list of stations</a>
+
+<a name="getting-the-list-of-stations"></a>
+## Getting the list of stations
