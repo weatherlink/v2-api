@@ -88,7 +88,6 @@ sidebar:
 }
 
 .form-style-2 div.params {
-	visibility: hidden;
 	display: none;
 }
 </style>
