@@ -44,7 +44,9 @@ The API Signature is a calculated value used to prevent API request parameter ta
 
 The API Signature is passed in the API request as a query parameter named `api-signature`.
 
-## API Signature Calculation Example #1
+## API Signature Calculation Examples
+
+### Example #1 - Current Conditions
 
 To explain how the API Signature calculation process works we will walk through an example. For the purposes of this example we will use the following details:
 
@@ -55,6 +57,8 @@ To explain how the API Signature calculation process works we will walk through 
 * We will use the Unix timestamp `1558729481` as the API Request Timestamp.
 
 ### Step 1
+
+#### Step 1 Test
 
 The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
 
