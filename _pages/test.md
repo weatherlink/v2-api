@@ -9,7 +9,7 @@ header:
 sidebar:
   nav: "navMain"
 ---
-
+<!--
 <style type="text/css">
 .form-style-1 {
 /*
@@ -122,3 +122,6 @@ select{
     </li>
 </ul>
 </form>
+-->
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/forms-min.css">
