@@ -95,18 +95,18 @@ sidebar:
 <span>API Endpoint</span>
 <select name="api-endpoint" class="select-field">
 <option value="">*** Meta Data API Endpoints *** </option>
-<option value="/stations">/stations - Get All Stations</option>
-<option value="/stations/{station-ids}">/stations/{station-ids} - Get Some Stations</option>
-<option value="/nodes">/nodes - Get All Nodes</option>
-<option value="/nodes/{node-ids}">/nodes/{node-ids} - Get Some Nodes</option>
-<option value="/sensors">/sensors - Get All Sensors</option>
-<option value="/sensors/{sensor-ids}">/sensors/{sensor-ids} - Get Some Sensors</option>
-<option value="/sensor-activity">/sensor-activity - Get Latest Activity For All Sensors</option>
-<option value="/sensor-activity/{sensor-ids}">/sensor-activity/{sensor-ids} - Get Latest Activity For Some Sensors</option>
-<option value="/sensor-catalog">/sensor-catalog - Get The Sensor Catalog</option>
+<option value="stations-all">/stations - Get All Stations</option>
+<option value="stations-some">/stations/{station-ids} - Get Some Stations</option>
+<option value="nodes-all">/nodes - Get All Nodes</option>
+<option value="nodes-some">/nodes/{node-ids} - Get Some Nodes</option>
+<option value="sensors-all">/sensors - Get All Sensors</option>
+<option value="sensors-some">/sensors/{sensor-ids} - Get Some Sensors</option>
+<option value="sensor-activity-all">/sensor-activity - Get Latest Activity For All Sensors</option>
+<option value="sensor-activity-some">/sensor-activity/{sensor-ids} - Get Latest Activity For Some Sensors</option>
+<option value="sensor-catalog">/sensor-catalog - Get The Sensor Catalog</option>
 <option value="">*** Weather Data API Endpoints *** </option>
-<option value="/current">/current/{station-id} - Get Current Conditions Data</option>
-<option value="/historic">/historic/{station-id} - GEt Historic Data</option>
+<option value="current">/current/{station-id} - Get Current Conditions Data</option>
+<option value="historic">/historic/{station-id} - GEt Historic Data</option>
 </select>
 </label>
 
@@ -125,9 +125,62 @@ sidebar:
 <input id="api-timestamp" type="text" class="input-field" name="api-timestamp" value="" readonly/>
 </label>
 
-<label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
-<label for="field2"><span>Email <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
-<label for="field5"><span>Message <span class="required">*</span></span><textarea name="field5" class="textarea-field"></textarea></label>
+<div id="params-stations-all" class="params">
+</div>
+
+<div id="params-stations-some" class="params">
+<label for="stations-some-station-ids">
+<span>Station IDs <span class="required">*</span></span>
+<input type="text" class="input-field" name="stations-some-station-ids" value="" placeholder="Comma-delimited list of Station IDs" />
+</label>
+</div>
+
+<div id="params-nodes-all" class="params">
+</div>
+
+<div id="params-nodes-some" class="params">
+<label for="nodes-some-node-ids">
+<span>Node IDs <span class="required">*</span></span>
+<input type="text" class="input-field" name="nodes-some-node-ids" value="" placeholder="Comma-delimited list of Node IDs" />
+</label>
+</div>
+
+<div id="params-sensors-all" class="params">
+</div>
+
+<div id="params-sensors-some" class="params">
+<label for="sensors-some-sensor-ids">
+<span>Sensor IDs <span class="required">*</span></span>
+<input type="text" class="input-field" name="sensors-some-sensor-ids" value="" placeholder="Comma-delimited list of Sensor IDs" />
+</label>
+</div>
+
+<div id="params-sensor-activity-all" class="params">
+</div>
+
+<div id="params-sensor-activity-some" class="params">
+<label for="sensor-activity-some-sensor-ids">
+<span>Sensor IDs <span class="required">*</span></span>
+<input type="text" class="input-field" name="sensor-activity-some-sensor-ids" value="" placeholder="Comma-delimited list of Sensor IDs" />
+</label>
+</div>
+
+<div id="params-sensor-catalog" class="params">
+</div>
+
+<div id="params-current" class="params">
+<label for="current-station-id">
+<span>Station ID <span class="required">*</span></span>
+<input type="text" class="input-field" name="current-station-id" value="" placeholder="Station ID" />
+</label>
+</div>
+
+<div id="params-historic" class="params">
+<label for="historic-station-id">
+<span>Station ID <span class="required">*</span></span>
+<input type="text" class="input-field" name="historic-station-id" value="" placeholder="Station ID" />
+</label>
+</div>
 
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>
