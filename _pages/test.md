@@ -12,7 +12,7 @@ sidebar:
 
 <style type="text/css">
 .form-style-2{
-	max-width: 500px;
+	max-width: 600px;
 	padding: 20px 12px 10px 20px;
 	font: 13px Arial, Helvetica, sans-serif;
 }
@@ -93,7 +93,6 @@ sidebar:
 </style>
 
 <div class="form-style-2">
-<div class="form-style-2-heading">Provide your information</div>
 <form action="" method="post">
 <label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
 <label for="field2"><span>Email <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
