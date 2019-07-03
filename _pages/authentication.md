@@ -131,7 +131,7 @@ Now we will walk through another example. In this example we will use the follow
 * We will use the fictitious API Secret `ABC123`.
 * We will use the Unix timestamp `1558729481` as the API Request Timestamp.
 * We will query for historic data from the day 2019-07-01 in the America/Los_Angeles timezone.
-** This will 
+  * This will result in a time range query for data with timestamps greater than 2019-07-01 00:00:00 and less than or equal to 2019-07-02 00:00:00
 
 ### Step 1
 
