@@ -8,6 +8,7 @@ header:
   overlay_image: /assets/images/landing.jpg
 sidebar:
   nav: "navMain"
+toc: true
 ---
 
 The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
@@ -131,8 +132,8 @@ Now we will walk through another example. In this example we will use the follow
 * We will use the fictitious API Secret `ABC123`.
 * We will use the Unix timestamp `1562176956` as the API Request Timestamp.
 * We will query for historic data from the day 2019-07-01 in the America/Los_Angeles timezone.
-  * This will result in a starting Unix timestamp of `1561964400`
-  * And an ending Unix timestamp of `1562050800`
+  * This will result in a starting Unix timestamp of `1561964400`.
+  * And an ending Unix timestamp of `1562050800`.
 
 In this example we are querying for data with timestamps greater than 2019-07-01 00:00:00 America/Los_Angeles and less than or equal to 2019-07-02 00:00:00 America/Los_Angeles. This is due to the fact that data record timestamps represent the end of the data record's recording time interval. Therefore the record with the 2019-07-01 00:00:00 America/Los_Angeles timestamp is actually the last data record from 2019-06-30 America/Los_Angeles.
 
