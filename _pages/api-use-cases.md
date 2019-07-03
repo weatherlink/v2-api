@@ -115,6 +115,61 @@ Please see the [Sensor Catalog](sensor-catalog) and [API Reference](api-referenc
 <a name="data-structure-type"></a>
 ## Identifying a type of data record
 
-a
+When you query weather observation data the API response will include a `data_structure_type` field that identifies the type of the data record. Here's a truncated response from the `/current` Current Conditions API endpoint for an EnviroMonitor weather station.
+
+```json
+{
+    "station_id": 379012,
+    "sensors": [
+        {
+            "lsid": 5307568,
+            "sensor_type": 108,
+            "data_structure_type": 9,
+            "data": [
+                {
+                    "ts": 1562187900,
+                    "moist_soil_last": 3.3
+                }
+            ]
+        },
+        {
+            "lsid": 5307508,
+            "sensor_type": 24,
+            "data_structure_type": 6,
+            "data": [
+                {
+                    "ts": 1562188200,
+                    "temp_out": 77.3,
+                    "hum_out": 45,
+                    ...
+                }
+            ]
+        },
+        {
+            "lsid": 5307480,
+            "sensor_type": 3,
+            "data_structure_type": 9,
+            "data": [
+                {
+                    "ts": 1562188200,
+                    "bar_trend_3_hr": 0,
+                    "pressure_last": 29.944
+                }
+            ]
+        }
+    ],
+    "generated_at": 1562188310
+}
+```
+
+In this example there are 3 sensors.
+
+Sensor Type|Sensor Description|Data Structure Type
+-----------|------------------|-------------------
+108|Davis Instruments #6440 Soil Moisture Sensor|9
+24|Vantage Pro2 Plus #6327C Cabled Integrated Sensor Suite|6
+3|Barometer|9
+
+
 
 [Back to the top](#top)
