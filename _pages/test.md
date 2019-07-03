@@ -58,7 +58,6 @@ sidebar:
 	outline: none;
 }
 .form-style-2 .input-field:focus, 
-.form-style-2 .tel-number-field:focus, 
 .form-style-2 .textarea-field:focus,  
 .form-style-2 .select-field:focus{
 	/*
