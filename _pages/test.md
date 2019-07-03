@@ -12,7 +12,7 @@ sidebar:
 
 aaa
 
-<input type="text"></input>
+<input type="text" value="woot">
 
  <select>
   <option value="volvo">Volvo</option>
