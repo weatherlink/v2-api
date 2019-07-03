@@ -46,7 +46,7 @@ The API Signature is passed in the API request as a query parameter named `api-s
 
 ## API Signature Calculation Examples
 
-### Example #1 - Current Conditions
+### Example #1 - Current Conditions Data
 
 To explain how the API Signature calculation process works we will walk through an example. For the purposes of this example we will use the following details:
 
@@ -58,7 +58,82 @@ To explain how the API Signature calculation process works we will walk through 
 
 ### Step 1
 
-#### Step 1 Test
+The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
+
+In this example the path parameters are:
+
+Parameter Name|Parameter Value
+--------------|---------------
+station-id|2
+
+And the query parameters are:
+
+Parameter Name|Parameter Value
+--------------|---------------
+api-key|987654321
+t|1558729481
+
+After sorting the combined set of parameters will look like this:
+
+Parameter Name|Parameter Value
+--------------|---------------
+api-key|987654321
+station-id|2
+t|1558729481
+
+### Step 2
+
+Next, iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
+
+```
+api-key987654321station-id2t1558729481
+```
+
+To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:
+
+```
+(api-key)(987654321)(station-id)(2)(t)(1558729481)
+```
+
+### Step 3
+
+Now it is time to compute the API Signature using the the API Secret and the concatenated string from the previous step. To calculate the signature use the HMAC SHA-256 algorithm with the concatenated string as the message and the API Secret as the HMAC secret key. The resulting computed HMAC value as a hexadecimal string is the API Signature.
+
+In this scenario we have the following:
+
+```
+Message to hash: api-key987654321station-id2t1558729481
+HMAC secret key: ABC123
+Computed HMAC as a hexadecimal string: 9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+```
+
+The online HMAC tool at <a href="https://www.freeformatter.com/hmac-generator.html" target="_blank">https://www.freeformatter.com/hmac-generator.html</a> can help you test your computed HMAC SHA-256 values.
+
+All major programming languages have built-in support or offer libraries to calculate HMAC SHA-256 values.
+
+### Step 4
+
+Take the computed API Signature and include it in the API request as the value of a query parameter named `api-signature`.
+
+The final URL with parameters in the example scenario is:
+
+```
+https://api.weatherlink.com/v2/current/2?api-key=987654321&t=1558729481&api-signature=9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+```
+
+### Example #2 - Historic Data
+
+Now we will walk through another example. In this example we will use the following details:
+
+* This is for an API request for Historic data which is available at the `/historic/{station-id}` API path which accepts a station ID as a URL path parameter.
+* We will use the fictitious Station ID `72443`.
+* We will use the fictitious API Key `987654321`.
+* We will use the fictitious API Secret `ABC123`.
+* We will use the Unix timestamp `1558729481` as the API Request Timestamp.
+* We will query for historic data from the day 2019-07-01 in the America/Los_Angeles timezone.
+** This will 
+
+### Step 1
 
 The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
 
