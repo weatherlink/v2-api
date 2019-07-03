@@ -106,7 +106,7 @@ sidebar:
 <option value="sensor-catalog">/sensor-catalog - Get The Sensor Catalog</option>
 <option value="">*** Weather Data API Endpoints *** </option>
 <option value="current">/current/{station-id} - Get Current Conditions Data</option>
-<option value="historic">/historic/{station-id} - GEt Historic Data</option>
+<option value="historic">/historic/{station-id} - Get Historic Data</option>
 </select>
 </label>
 
