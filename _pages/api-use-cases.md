@@ -15,6 +15,8 @@ sidebar:
 Here are some common use cases on how to use the WeatherLink v2 API.
 
 - <a href="#getting-the-list-of-stations">Getting the list of stations</a>
+- <a href="#using-the-sensor-type">Using the sensor type</a>
+- <a href="#using-the-data-structure-type">Using the data structure type</a>
 
 <a name="getting-the-list-of-stations"></a>
 ## Getting the list of stations
@@ -80,5 +82,19 @@ Here is a quick example of the API response for the `/stations` API endpoint.
   "generated_at": 1509055056
 }
 ```
+
+<a href="#top">Back to the top</a>
+
+<a href="#using-the-sensor-type">Using the sensor type</a>
+## Using the sensor type
+
+a
+
+<a href="#top">Back to the top</a>
+
+<a href="#using-the-data-structure-type">Using the data structure type</a>
+## Using the data structure type
+
+a
 
 <a href="#top">Back to the top</a>
