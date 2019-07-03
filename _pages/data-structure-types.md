@@ -30,7 +30,7 @@ Data Structure Type|Record Type
 6|ISS Current Conditions Record
 7|ISS Archive Record
 8|ISS High/Low Record
-9|non-ISS Archive Record
+9|non-ISS Record
 
 ## WeatherLink IP / Vantage Connect / WeatherLink Network Annual Subscription
 
