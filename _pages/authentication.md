@@ -18,10 +18,6 @@ The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and 
 <p>After the beta test phase WeatherLink users will be able to generate their own API Key and API Secret on the WeatherLink web site.</p>
 </div>
 
-During the beta test phase of the v2 API selected beta testers will be provided with an API Key and API Secret.
-
-After the beta test phase WeatherLink users will be able to generate their own API Key and API Secret on the WeatherLink web site.
-
 ## API Key
 
 The API Key is a unique ID that identifies the API user making the API call. The API Key must be passed as a query parameter in all API requests.
