@@ -29,7 +29,7 @@ sidebar:
 	margin: 0px 0px 15px 0px;
 }
 .form-style-2 label > span{
-	width: 100px;
+	width: 150px;
 	font-weight: bold;
 	float: left;
 	padding-top: 8px;
