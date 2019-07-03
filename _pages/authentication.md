@@ -44,7 +44,7 @@ The API Signature is a calculated value used to prevent API request parameter ta
 
 The API Signature is passed in the API request as a query parameter named `api-signature`.
 
-## API Signature Calculation Example
+## API Signature Calculation Example #1
 
 To explain how the API Signature calculation process works we will walk through an example. For the purposes of this example we will use the following details:
 
