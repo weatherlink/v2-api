@@ -38,15 +38,10 @@ sidebar:
 .form-style-2 span.required{
 	color:red;
 }
-.form-style-2 .tel-number-field{
-	width: 40px;
-	text-align: center;
-}
 .form-style-2 input.input-field, .form-style-2 .select-field{
-	width: 48%;	
+	width: 60%;	
 }
 .form-style-2 input.input-field, 
-.form-style-2 .tel-number-field, 
 .form-style-2 .textarea-field, 
  .form-style-2 .select-field{
 	box-sizing: border-box;
