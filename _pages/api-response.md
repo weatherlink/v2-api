@@ -12,7 +12,7 @@ sidebar:
 
 The WeatherLink v2 API response format is JSON.
 
-## Sample Response
+## Sample Responses
 
 Below is a sample response JSON document for WeatherLink Live current conditions data.
 
@@ -168,6 +168,93 @@ Below is a sample response JSON document for WeatherLink Live current conditions
         }
     ],
     "generated_at": 1558741957
+}
+```
+
+And here is a sample JSON response for EnviroMonitor historic data. Note the sample data is truncated to only show 1 data record for each sensor. Othwerwise the JSON document is just too big to show here.
+
+```json
+{
+    "station_id": 379012,
+    "sensors": [
+        {
+            "lsid": 5307568,
+            "sensor_type": 108,
+            "data_structure_type": 9,
+            "data": [
+                {
+                    "moist_soil_last": 0,
+                    "ts": 1561964700
+                },
+                ...
+            ]
+        },
+        {
+            "lsid": 5307508,
+            "sensor_type": 24,
+            "data_structure_type": 7,
+            "data": [
+                {
+                    "iss_reception": 100,
+                    "wind_speed_avg": 0,
+                    "uv_dose": 0,
+                    "wind_speed_hi": 1,
+                    "wind_dir_of_hi": 9,
+                    "wind_chill": 55.4,
+                    "solar_rad_hi": 0,
+                    "deg_days_heat": 0.033333328,
+                    "thw_index": 55.140003,
+                    "bar": 30.079,
+                    "hum_out": 82,
+                    "uv_index_hi": 0,
+                    "temp_out": 55.4,
+                    "temp_out_lo": 55.3,
+                    "wet_bulb": 52.09369,
+                    "temp_out_hi": 55.4,
+                    "solar_rad_avg": 0,
+                    "bar_alt": 30.079,
+                    "arch_int": 300,
+                    "wind_run": 0,
+                    "solar_energy": 0,
+                    "dew_point_out": 49.99538,
+                    "rain_rate_hi_clicks": 0,
+                    "wind_dir_of_prevail": 9,
+                    "et": 0,
+                    "air_density": 0.07541041,
+                    "rainfall_in": 0,
+                    "heat_index_out": 55.140003,
+                    "thsw_index": 53,
+                    "rainfall_mm": 0,
+                    "night_cloud_cover": 0.77692354,
+                    "deg_days_cool": 0,
+                    "rain_rate_hi_in": 0,
+                    "uv_index_avg": 0,
+                    "wind_num_samples": 117,
+                    "emc": 16.958,
+                    "rain_rate_hi_mm": 0,
+                    "rev_type": 2,
+                    "rainfall_clicks": 0,
+                    "ts": 1561964700,
+                    "abs_press": 29.647081
+                },
+                ...
+            ]
+        },
+        {
+            "lsid": 5307480,
+            "sensor_type": 3,
+            "data_structure_type": 9,
+            "data": [
+                {
+                    "bar_trend_3_hr": 0,
+                    "pressure_last": 30.079,
+                    "ts": 1561964700
+                },
+                ...
+            ]
+        }
+    ],
+    "generated_at": 1562182504
 }
 ```
 
