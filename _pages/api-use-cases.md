@@ -21,7 +21,7 @@ Here are some common use cases on how to use the WeatherLink v2 API.
 <a name="getting-the-list-of-stations"></a>
 ## Getting the list of stations
 
-The get the list of stations your API Key has access to you can make an API call to the `/stations` API endpoint. More information is available in the <a href="api-reference">API Reference</a>.
+The get the list of stations your API Key has access to you can make an API call to the `/stations` API endpoint. More information is available in the [API Reference](api-reference).
 
 Here is a quick example of the API response for the `/stations` API endpoint.
 
@@ -88,7 +88,27 @@ Here is a quick example of the API response for the `/stations` API endpoint.
 <a href="#using-the-sensor-type">Using the sensor type</a>
 ## Using the sensor type
 
-a
+When you query the `/sensors` API endpoint or the weather observation data endpoints you will see a sensor type is included in the response for each sensor. The sensor type is used to identify the type of sensor in the [Sensor Catalog](sensor-catalog). The Sensor Catalog lists all supported sensors in WeatherLink and includes information about the sensor, like manufacturer, but also includes the list of data fields from the sensor that are available via the WeatherLink v2 API.
+
+Here is a snippet of the Sensor Catalog showing the entry for the Davis Instruments #6440 Soil Moisture Sensor. It shows that this particular sensor reports a single data field that will be named `moist_soil_last` and that the data field is a floating point number and reports data in units of centibars.
+
+```json
+{
+    "sensor_type": 108,
+    "manufacturer": "Davis Instruments",
+    "product_name": "Soil Moisture Sensor",
+    "product_number": "6440",
+    "category": "Soil Moisture",
+    "data_structure": {
+        "moist_soil_last": {
+            "type": "float",
+            "units": "centibars"
+        }
+    }
+}
+```
+
+Please see the [Sensor Catalog](sensor-catalog) and [API Reference](api-reference) for more examples and details.
 
 <a href="#top">Back to the top</a>
 
