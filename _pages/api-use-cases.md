@@ -170,6 +170,15 @@ Sensor Type|Sensor Description|Data Structure Type
 24|Vantage Pro2 Plus #6327C Cabled Integrated Sensor Suite|6
 3|Barometer|9
 
+You can reference the [Data Structure Types](data-structure-types) documentation for the full list of all supported data structure types but here are the values for EnviroMonitor for quick reference.
 
+Data Structure Type|Record Type
+-|-
+6|ISS Current Conditions Record
+7|ISS Archive Record
+8|ISS High/Low Record
+9|non-ISS Record
+
+Based on this information we see that data from the soil moisture sensor and barometer are non-ISS records. That means these sensors are not part of the Vantage Pro2 Plus Integrated Sensor Suite. Additionally, we see the data structure type of 6 for the data from the Vantage Pro2 Plus which tells us this data record is an ISS current conditions record.
 
 [Back to the top](#top)
