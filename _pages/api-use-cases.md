@@ -47,7 +47,7 @@ Here is a quick example of the API response for the `/stations` API endpoint.
       "city": "Manteca",
       "region": "CA",
       "country": "USA",
-      "latitude": 37.75104,
+      "latitude": 37.77104,
       "longitude": -121.25094,
       "elevation": 19
     },
@@ -72,7 +72,7 @@ Here is a quick example of the API response for the `/stations` API endpoint.
       "city": "Hayward",
       "region": "CA",
       "country": "USA",
-      "latitude": 37.635952,
+      "latitude": 37.535952,
       "longitude": -122.124794,
       "elevation": 20.0344
     }
