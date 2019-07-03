@@ -11,114 +11,100 @@ sidebar:
 ---
 
 <style type="text/css">
-.form-style-1 {
-/*
-	margin:10px auto;
-	max-width: 400px;
+.form-style-2{
+	max-width: 500px;
 	padding: 20px 12px 10px 20px;
-	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-*/
+	font: 13px Arial, Helvetica, sans-serif;
 }
-.form-style-1 li {
-	padding: 0;
-	display: block;
-	list-style: none;
-	margin: 10px 0 0 0;
-}
-.form-style-1 label{
-	margin:0 0 3px 0;
-	padding:0px;
-	display:block;
+.form-style-2-heading{
 	font-weight: bold;
+	font-style: italic;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 20px;
+	font-size: 15px;
+	padding-bottom: 3px;
 }
-.form-style-1 input[type=text], 
-.form-style-1 input[type=date],
-.form-style-1 input[type=datetime],
-.form-style-1 input[type=number],
-.form-style-1 input[type=search],
-.form-style-1 input[type=time],
-.form-style-1 input[type=url],
-.form-style-1 input[type=email],
-textarea, 
-select{
+.form-style-2 label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+.form-style-2 span.required{
+	color:red;
+}
+.form-style-2 .tel-number-field{
+	width: 40px;
+	text-align: center;
+}
+.form-style-2 input.input-field, .form-style-2 .select-field{
+	width: 48%;	
+}
+.form-style-2 input.input-field, 
+.form-style-2 .tel-number-field, 
+.form-style-2 .textarea-field, 
+ .form-style-2 .select-field{
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	padding: 7px;
-	margin:0px;
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
-	outline: none;	
+	outline: none;
 }
-.form-style-1 input[type=text]:focus, 
-.form-style-1 input[type=date]:focus,
-.form-style-1 input[type=datetime]:focus,
-.form-style-1 input[type=number]:focus,
-.form-style-1 input[type=search]:focus,
-.form-style-1 input[type=time]:focus,
-.form-style-1 input[type=url]:focus,
-.form-style-1 input[type=email]:focus,
-.form-style-1 textarea:focus, 
-.form-style-1 select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
+.form-style-2 .input-field:focus, 
+.form-style-2 .tel-number-field:focus, 
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+	border: 1px solid #0C0;
 }
-.form-style-1 .field-divided{
-	width: 49%;
+.form-style-2 .textarea-field{
+	height:100px;
+	width: 55%;
 }
-
-.form-style-1 .field-long{
-	width: 100%;
-}
-.form-style-1 .field-select{
-	width: 100%;
-}
-.form-style-1 .field-textarea{
-	height: 100px;
-}
-.form-style-1 input[type=submit], .form-style-1 input[type=button]{
-	background: #4B99AD;
-	padding: 8px 15px 8px 15px;
+.form-style-2 input[type=submit],
+.form-style-2 input[type=button]{
 	border: none;
+	padding: 8px 15px 8px 15px;
+	background: #FF8500;
 	color: #fff;
+	box-shadow: 1px 1px 4px #DADADA;
+	-moz-box-shadow: 1px 1px 4px #DADADA;
+	-webkit-box-shadow: 1px 1px 4px #DADADA;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 }
-.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-	background: #4691A4;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
-}
-.form-style-1 .required{
-	color:red;
+.form-style-2 input[type=submit]:hover,
+.form-style-2 input[type=button]:hover{
+	background: #EA7B00;
+	color: #fff;
 }
 </style>
 
-<form>
-<ul class="form-style-1">
-    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" /> <input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
-    <li>
-        <label>Email <span class="required">*</span></label>
-        <input type="email" name="field3" class="field-long" />
-    </li>
-    <li>
-        <label>Subject</label>
-        <select name="field4" class="field-select">
-        <option value="Advertise">Advertise</option>
-        <option value="Partnership">Partnership</option>
-        <option value="General Question">General</option>
-        </select>
-    </li>
-    <li>
-        <label>Your Message <span class="required">*</span></label>
-        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
-    </li>
-    <li>
-        <input type="submit" value="Submit" />
-    </li>
-</ul>
+<div class="form-style-2">
+<div class="form-style-2-heading">Provide your information</div>
+<form action="" method="post">
+<label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
+<label for="field2"><span>Email <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
+<label><span>Telephone</span><input type="text" class="tel-number-field" name="tel_no_1" value="" maxlength="4" />-<input type="text" class="tel-number-field" name="tel_no_2" value="" maxlength="4"  />-<input type="text" class="tel-number-field" name="tel_no_3" value="" maxlength="10"  /></label>
+<label for="field4"><span>Regarding</span><select name="field4" class="select-field">
+<option value="General Question">General</option>
+<option value="Advertise">Advertisement</option>
+<option value="Partnership">Partnership</option>
+</select></label>
+<label for="field5"><span>Message <span class="required">*</span></span><textarea name="field5" class="textarea-field"></textarea></label>
+
+<label><span> </span><input type="submit" value="Submit" /></label>
 </form>
+</div>
