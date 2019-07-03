@@ -12,10 +12,12 @@ sidebar:
 
 <style type="text/css">
 .form-style-1 {
+/*
 	margin:10px auto;
 	max-width: 400px;
 	padding: 20px 12px 10px 20px;
 	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+*/
 }
 .form-style-1 li {
 	padding: 0;
