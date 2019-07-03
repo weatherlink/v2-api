@@ -14,11 +14,11 @@ sidebar:
 
 Here are some common use cases on how to use the WeatherLink v2 API.
 
-- [Getting the list of stations](#getting-the-list-of-stations)
-- [Using the sensor type](#using-the-sensor-type)
-- [Using the data structure type](#using-the-data-structure-type)
+- [Getting the list of stations](#getting-stations)
+- [What data fields are supported for a specific sensor](#sensor-type)
+- [Identifyig a type of data record](#data-structure-type)
 
-<a name="getting-the-list-of-stations"></a>
+<a name="getting-stations"></a>
 ## Getting the list of stations
 
 The get the list of stations your API Key has access to you can make an API call to the `/stations` API endpoint. More information is available in the [API Reference](api-reference).
@@ -85,8 +85,8 @@ Here is a quick example of the API response for the `/stations` API endpoint.
 
 [Back to the top](#top)
 
-<a href="#using-the-sensor-type">Using the sensor type</a>
-## Using the sensor type
+<a name="sensor-type"></a>
+## What data fields are supported for a specific sensor
 
 When you query the `/sensors` API endpoint or the weather observation data endpoints you will see a sensor type is included in the response for each sensor. The sensor type is used to identify the type of sensor in the [Sensor Catalog](sensor-catalog). The Sensor Catalog lists all supported sensors in WeatherLink and includes information about the sensor, like manufacturer, but also includes the list of data fields from the sensor that are available via the WeatherLink v2 API.
 
@@ -112,8 +112,8 @@ Please see the [Sensor Catalog](sensor-catalog) and [API Reference](api-referenc
 
 [Back to the top](#top)
 
-<a href="#using-the-data-structure-type">Using the data structure type</a>
-## Using the data structure type
+<a name="data-structure-type"></a>
+## Identifyig a type of data record
 
 a
 
