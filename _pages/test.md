@@ -66,7 +66,9 @@ sidebar:
 .form-style-2 .tel-number-field:focus, 
 .form-style-2 .textarea-field:focus,  
 .form-style-2 .select-field:focus{
+	/*
 	border: 1px solid #0C0;
+	*/
 }
 .form-style-2 .textarea-field{
 	height:100px;
@@ -95,14 +97,24 @@ sidebar:
 <div class="form-style-2">
 <form action="" method="post">
 
-<label for="api-endpoint"><span>API Endpoint</span><select name="api-endpoint" class="select-field">
+<label for="api-endpoint">
+<span>API Endpoint</span>
+<select name="api-endpoint" class="select-field">
 <option value="/stations">/stations - Get All Stations</option>
 <option value="/current">/current/{station-id} - Current Conditions Data</option>
 <option value="/historic">/historic/{station-id} - Historic Data</option>
-</select></label>
+</select>
+</label>
 
+<label for="api-key">
+<span>API Key <span class="required">*</span></span>
+<input type="text" class="input-field" name="api-key" value="" />
+</label>
 
-
+<label for="api-secret">
+<span>API Secret <span class="required">*</span></span>
+<input type="text" class="input-field" name="api-secret" value="" />
+</label>
 
 <label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
 <label for="field2"><span>Email <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
