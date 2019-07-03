@@ -8,7 +8,7 @@ function updateAPITimestamp() {
 
 $('select#api-endpoint').change(function() {
   $('div.params').hide();
-  var selectedVal = $('select#api-endpoint').find(':selected').text();
+  var selectedVal = $('select#api-endpoint').find(':selected').val();
   if (selectedVal != '') {
   	 $('div#params-' + selectedVal).show();
   }
