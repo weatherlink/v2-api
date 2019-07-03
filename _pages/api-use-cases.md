@@ -1,6 +1,6 @@
 ---
 title: API Use Cases
-permalink: /tips
+permalink: /api-use-cases
 classes: wide
 header:
   overlay_color: "#000000"
