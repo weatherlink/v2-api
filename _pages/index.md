@@ -20,7 +20,7 @@ Access to the API is based on an [API Key](api-key).
 <ul>
   <li>API Keys are only available to approved API beta testers.</li>
   <li>
-    Weather observation data is only supported for:
+    Weather observation data is currently only supported for:
     <ul>
       <li>EnviroMonitor</li>
       <li>WeatherLink Live</li>
