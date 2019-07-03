@@ -95,8 +95,16 @@ sidebar:
 <span>API Endpoint</span>
 <select name="api-endpoint" class="select-field">
 <option value="/stations">/stations - Get All Stations</option>
-<option value="/current">/current/{station-id} - Current Conditions Data</option>
-<option value="/historic">/historic/{station-id} - Historic Data</option>
+<option value="/stations/{station-ids}">/stations/{station-ids} - Get Some Stations</option>
+<option value="/nodes">/nodes - Get All Nodes</option>
+<option value="/nodes/{node-ids}">/nodes/{node-ids} - Get Some Nodes</option>
+<option value="/sensors">/sensors - Get All Sensors</option>
+<option value="/sensors/{sensor-ids}">/sensors/{sensor-ids} - Get Some Sensors</option>
+<option value="/sensor-activity">/sensor-activity - Get Latest Activity For All Sensors</option>
+<option value="/sensor-activity/{sensor-ids}">/sensor-activity/{sensor-ids} - Get Latest Activity For Some Sensors</option>
+<option value="/sensor-catalog">/sensor-catalog - Get The Sensor Catalog</option>
+<option value="/current">/current/{station-id} - Get Current Conditions Data</option>
+<option value="/historic">/historic/{station-id} - GEt Historic Data</option>
 </select>
 </label>
 
