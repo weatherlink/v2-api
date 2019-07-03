@@ -16,7 +16,7 @@ Here are some common use cases on how to use the WeatherLink v2 API.
 
 - [Getting the list of stations](#getting-stations)
 - [What data fields are supported for a specific sensor](#sensor-type)
-- [Identifyig a type of data record](#data-structure-type)
+- [Identifying a type of data record](#data-structure-type)
 
 <a name="getting-stations"></a>
 ## Getting the list of stations
@@ -113,7 +113,7 @@ Please see the [Sensor Catalog](sensor-catalog) and [API Reference](api-referenc
 [Back to the top](#top)
 
 <a name="data-structure-type"></a>
-## Identifyig a type of data record
+## Identifying a type of data record
 
 a
 
