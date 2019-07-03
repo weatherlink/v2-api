@@ -116,6 +116,11 @@ sidebar:
 <input type="text" class="input-field" name="api-secret" value="" />
 </label>
 
+<label for="api-timestamp">
+<span>API Timestamp <span class="required">*</span></span>
+<input id="api-timestamp" type="text" class="input-field" name="api-timestamp" value="" readonly/>
+</label>
+
 <label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
 <label for="field2"><span>Email <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
 <label for="field5"><span>Message <span class="required">*</span></span><textarea name="field5" class="textarea-field"></textarea></label>
@@ -123,3 +128,12 @@ sidebar:
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>
 </div>
+
+<script>
+setInterval(change, 1000);
+
+function change() {
+	$('input#api-timestamp').value(Math.floor(Date.now() / 1000));
+}
+
+</script>
