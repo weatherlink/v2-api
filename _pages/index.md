@@ -19,6 +19,12 @@ Access to the API is based on an [API Key](api-key).
 <p>The WeatherLink v2 API is currently in a beta test phase. The API currently has the following limitations:</p>
 <ul>
   <li>API Keys are only available to approved API beta testers.</li>
-  <li>Weather observation data is only supported for WeatherLink Live weather stations.</li>
+  <li>
+    Weather observation data is only supported for:
+    <ul>
+      <li>EnviroMonitor</li>
+      <li>WeatherLink Live</li>
+    </ul>
+  </li>
 </ul>
 </div>
