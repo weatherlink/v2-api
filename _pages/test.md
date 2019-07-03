@@ -130,10 +130,10 @@ sidebar:
 </div>
 
 <script>
-setInterval(change, 1000);
+setInterval(updateAPITimestamp, 1000);
 
-function change() {
-	$('input#api-timestamp').value(Math.floor(Date.now() / 1000));
+function updateAPITimestamp() {
+	$('input#api-timestamp').val(Math.floor(Date.now() / 1000));
 }
 
 </script>
