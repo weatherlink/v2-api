@@ -19,4 +19,66 @@ Here are some common use cases on how to use the WeatherLink v2 API.
 <a name="getting-the-list-of-stations"></a>
 ## Getting the list of stations
 
+The get the list of stations your API Key has access to you can make an API call to the `/stations` API endpoint. More information is available in the <a href="api-reference">API Reference</a>.
+
+Here is a quick example of the API response for the `/stations` API endpoint.
+
+```json
+{
+  "stations": [
+    {
+      "station_id": 6974,
+      "station_name": "Private - BL Orchard Range Test x39",
+      "gateway_id": 8388665,
+      "gateway_id_hex": "001D0A800039",
+      "product_number": "6800",
+      "username": "davisroof",
+      "user_email": "benp@davisnet.com",
+      "company_name": "Keny Sam Company",
+      "active": true,
+      "private": true,
+      "recording_interval": 5,
+      "firmware_version": 1470358845,
+      "imei": "351579055911216",
+      "meid": "A1000045841C5D",
+      "registered_date": 1467345143,
+      "subscription_end_date": 1498881143,
+      "time_zone": "America/Los_Angeles",
+      "city": "Manteca",
+      "region": "CA",
+      "country": "USA",
+      "latitude": 37.75104,
+      "longitude": -121.25094,
+      "elevation": 19
+    },
+    {
+      "station_id": 7327,
+      "station_name": "Hayward Mesh 15min x4F",
+      "gateway_id": 8388687,
+      "gateway_id_hex": "001D0A80004F",
+      "product_number": "6801",
+      "username": "diablo",
+      "user_email": "Blane@davisnet.com",
+      "company_name": "Keny Sam Company",
+      "active": true,
+      "private": true,
+      "recording_interval": 15,
+      "firmware_version": 1494962930,
+      "imei": "351579055911216",
+      "meid": "A1000045841C5D",
+      "registered_date": 1467345143,
+      "subscription_end_date": 1498881143,
+      "time_zone": "America/Los_Angeles",
+      "city": "Hayward",
+      "region": "CA",
+      "country": "USA",
+      "latitude": 37.635952,
+      "longitude": -122.124794,
+      "elevation": 20.0344
+    }
+  ],
+  "generated_at": 1509055056
+}
+```
+
 <a href="#top">Back to the top</a>
