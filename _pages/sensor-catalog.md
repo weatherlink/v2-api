@@ -205,3 +205,66 @@ In each data structure type is a `data_structure` JSON object that lists each da
 }
 ```
 
+For a second example here is a portion of the Sensor Catalog showing the entry for the Sentek Drill & Drop 6cm Soil Moisture Probe. It shows that this particular sensor reports 6 soil moisture readings and 6 temperature readings. It also shows that these readings are floating point numbers and reported in percentages and degrees Fahrenheit, respectively.
+
+Note that the Sentek sensor does not have multiple data structures like the Vantage Pro2 Plus example above. This is due to the fact that this sensor only returns one kind of data structure.
+
+```json
+{
+    "sensor_type": 115,
+    "manufacturer": "Sentek",
+    "product_name": "Drill & Drop 60 cm (24\"); 6 sensors",
+    "product_number": "00620",
+    "category": "Soil Moisture",
+    "data_structure": {
+        "moist_soil_last_1": {
+            "type": "float",
+            "units": "percent"
+        },
+        "moist_soil_last_2": {
+            "type": "float",
+            "units": "percent"
+        },
+        "moist_soil_last_3": {
+            "type": "float",
+            "units": "percent"
+        },
+        "moist_soil_last_4": {
+            "type": "float",
+            "units": "percent"
+        },
+        "moist_soil_last_5": {
+            "type": "float",
+            "units": "percent"
+        },
+        "moist_soil_last_6": {
+            "type": "float",
+            "units": "percent"
+        },
+        "temp_last_1": {
+            "type": "float",
+            "units": "degrees Fahrenheit"
+        },
+        "temp_last_2": {
+            "type": "float",
+            "units": "degrees Fahrenheit"
+        },
+        "temp_last_3": {
+            "type": "float",
+            "units": "degrees Fahrenheit"
+        },
+        "temp_last_4": {
+            "type": "float",
+            "units": "degrees Fahrenheit"
+        },
+        "temp_last_5": {
+            "type": "float",
+            "units": "degrees Fahrenheit"
+        },
+        "temp_last_6": {
+            "type": "float",
+            "units": "degrees Fahrenheit"
+        }
+    }
+}
+```
