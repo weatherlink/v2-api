@@ -82,5 +82,5 @@ function calculateAPISignature() {
 }
 
 $('input#send-api-request-button').on('click', function(eventData) {
-
+	calculateAPISignature();
 });
