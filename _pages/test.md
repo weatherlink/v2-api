@@ -116,12 +116,12 @@ sidebar:
 
 <label for="api-key">
 <span>API Key <span class="required">*</span></span>
-<input type="text" class="input-field" name="api-key" value="" />
+<input id="api-key" type="text" class="input-field" name="api-key" value="" />
 </label>
 
 <label for="api-secret">
 <span>API Secret <span class="required">*</span></span>
-<input type="text" class="input-field" name="api-secret" value="" />
+<input id="api-secret" type="text" class="input-field" name="api-secret" value="" />
 </label>
 
 <label for="api-timestamp">
@@ -135,7 +135,7 @@ sidebar:
 <div id="params-stations-some" class="params">
 <label for="stations-some-station-ids">
 <span>Station IDs <span class="required">*</span></span>
-<input type="text" class="input-field" name="stations-some-station-ids" value="" placeholder="Comma-separated list of Station IDs" />
+<input id="stations-some-station-ids" type="text" class="input-field" name="stations-some-station-ids" value="" placeholder="Comma-separated list of Station IDs" />
 </label>
 </div>
 
@@ -145,7 +145,7 @@ sidebar:
 <div id="params-nodes-some" class="params">
 <label for="nodes-some-node-ids">
 <span>Node IDs <span class="required">*</span></span>
-<input type="text" class="input-field" name="nodes-some-node-ids" value="" placeholder="Comma-separated list of Node IDs" />
+<input id="nodes-some-node-ids" type="text" class="input-field" name="nodes-some-node-ids" value="" placeholder="Comma-separated list of Node IDs" />
 </label>
 </div>
 
@@ -155,7 +155,7 @@ sidebar:
 <div id="params-sensors-some" class="params">
 <label for="sensors-some-sensor-ids">
 <span>Sensor IDs <span class="required">*</span></span>
-<input type="text" class="input-field" name="sensors-some-sensor-ids" value="" placeholder="Comma-separated list of Sensor IDs" />
+<input id="sensors-some-sensor-ids" type="text" class="input-field" name="sensors-some-sensor-ids" value="" placeholder="Comma-separated list of Sensor IDs" />
 </label>
 </div>
 
@@ -165,7 +165,7 @@ sidebar:
 <div id="params-sensor-activity-some" class="params">
 <label for="sensor-activity-some-sensor-ids">
 <span>Sensor IDs <span class="required">*</span></span>
-<input type="text" class="input-field" name="sensor-activity-some-sensor-ids" value="" placeholder="Comma-separated list of Sensor IDs" />
+<input id="sensor-activity-some-sensor-ids" type="text" class="input-field" name="sensor-activity-some-sensor-ids" value="" placeholder="Comma-separated list of Sensor IDs" />
 </label>
 </div>
 
@@ -175,18 +175,18 @@ sidebar:
 <div id="params-current" class="params">
 <label for="current-station-id">
 <span>Station ID <span class="required">*</span></span>
-<input type="text" class="input-field" name="current-station-id" value="" placeholder="Station ID" />
+<input id="current-station-id" type="text" class="input-field" name="current-station-id" value="" placeholder="Station ID" />
 </label>
 </div>
 
 <div id="params-historic" class="params">
 <label for="historic-station-id">
 <span>Station ID <span class="required">*</span></span>
-<input type="text" class="input-field" name="historic-station-id" value="" placeholder="Station ID" />
+<input id="historic-station-id" type="text" class="input-field" name="historic-station-id" value="" placeholder="Station ID" />
 </label>
 </div>
 
-<label><span> </span><input type="submit" value="Send API Request" /></label>
+<label><span> </span><input id="send-api-request" type="button" value="Send API Request" /></label>
 </form>
 </div>
 
