@@ -96,7 +96,7 @@ sidebar:
 <form action="" method="post">
 
 <label for="api-endpoint">
-<span>API Endpoint</span>
+<span>API Endpoint <span class="required">*</span></span>
 <select id="api-endpoint" name="api-endpoint" class="select-field">
 <option value="">*** Meta Data API Endpoints *** </option>
 <option value="stations-all">/stations - Get All Stations</option>
@@ -186,7 +186,7 @@ sidebar:
 </label>
 </div>
 
-<label><span> </span><input type="submit" value="Submit" /></label>
+<label><span> </span><input type="submit" value="Send API Request" /></label>
 </form>
 </div>
 
