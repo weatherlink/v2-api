@@ -92,6 +92,8 @@ sidebar:
 }
 </style>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-print-json@0.1/dist/pretty-print-json.css">
+
 <div class="form-style-2">
 <form action="" method="post">
 
@@ -188,7 +190,12 @@ sidebar:
 
 <label><span> </span><input id="send-api-request-button" type="button" value="Send API Request" /></label>
 </form>
+
+<pre id="api-response"></pre>
 </div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/node-forge@0.8.5/dist/forge.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pretty-print-json@0.1.0/dist/pretty-print-json.min.js"></script>
