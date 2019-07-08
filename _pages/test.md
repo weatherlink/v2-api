@@ -191,4 +191,4 @@ sidebar:
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/node-forge@0.8.5/dist/forge.min.js"></script>
