@@ -186,7 +186,7 @@ sidebar:
 </label>
 </div>
 
-<label><span> </span><input id="send-api-request" type="button" value="Send API Request" /></label>
+<label><span> </span><input id="send-api-request-button" type="button" value="Send API Request" /></label>
 </form>
 </div>
 
