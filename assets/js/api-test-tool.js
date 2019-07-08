@@ -14,10 +14,10 @@ $('select#api-endpoint').change(function() {
 	}
 });
 
-function calculateAPISignature() {
-	var apiEndpoint = $('select#api-endpoint').find(':selected').val();
+function sendAPIRequest() {
+	var apiEndpointID = $('select#api-endpoint').find(':selected').val();
 	
-	if (apiEndpoint == '') {
+	if (apiEndpointID == '') {
 		alert("Please select an API Endpoint");
 		return;
 	}
@@ -32,34 +32,47 @@ function calculateAPISignature() {
 	];
 	var pathParams = [];
 	
-	switch (apiEndpoint) {
+	var apiEndpointPath = null;
+	
+	switch (apiEndpointID) {
 		case 'stations-all':
+			apiEndpointPath = '/stations';
 			break;
 		case 'stations-some':
 			pathParams.push({"key": "station-ids", "value": $('input#stations-some-station-ids').val()});
+			apiEndpointPath = '/stations/' + $('input#stations-some-station-ids').val();
 			break;
 		case 'nodes-all':
+			apiEndpointPath = '/nodes';
 			break;
 		case 'nodes-some':
 			pathParams.push({"key": "node-ids", "value": $('input#nodes-some-node-ids').val()});
+			apiEndpointPath = '/nodes/' + $('input#nodes-some-node-ids').val();
 			break;
 		case 'sensors-all':
+			apiEndpointPath = '/sensors';
 			break;
 		case 'sensors-some':
 			pathParams.push({"key": "sensor-ids", "value": $('input#sensors-some-sensor-ids').val()});
+			apiEndpointPath = '/sensors/' + $('input#sensors-some-sensor-ids').val();
 			break;
 		case 'sensor-activity-all':
+			apiEndpointPath = '/sensor-activity';
 			break;
 		case 'sensor-activity-some':
 			pathParams.push({"key": "sensor-ids", "value": $('input#sensor-activity-some-sensor-ids').val()});
+			apiEndpointPath = '/sensor-activity/' + $('input#sensor-activity-some-sensor-ids').val();
 			break;
 		case 'sensor-catalog':
+			apiEndpointPath = '/sensor-catalog';
 			break;
 		case 'current':
 			pathParams.push({"key": "station-id", "value": $('input#current-station-id').val()});
+			apiEndpointPath = '/current/' + $('input#current-station-id').val();
 			break;
 		case 'historic':
 			pathParams.push({"key": "station-id", "value": $('input#historic-station-id').val()});
+			apiEndpointPath = '/historic/' + $('input#historic-station-id').val();
 			break;
 	}
 
@@ -77,10 +90,23 @@ function calculateAPISignature() {
 	hmac.update(stringToHash);
 	var apiSignature = hmac.digest().toHex();
 	
-	console.log(stringToHash);
-	console.log(apiSignature);
+	queryParams.push({"key": "api-signature", "value": apiSignature});
+	
+	var requestData = {};
+	_.forEach(queryParams, function(param) {
+		_.set(requestData, param.key, param.value);
+	});
+
+	var jqxhr = $.getJSON('https://api.weatherlink.com/v2' + apiEndpointPath, requestData)
+		.done(function(responseJson) {
+			$('pre#api-response').html(prettyPrintJson.toHtml(responseJson));
+		})
+		.fail(function(jqxhr, textStatus, error) {
+			console.log(textStatus);
+			console.log(error);
+		});
 }
 
 $('input#send-api-request-button').on('click', function(eventData) {
-	calculateAPISignature();
+	sendAPIRequest();
 });
