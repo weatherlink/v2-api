@@ -10,6 +10,7 @@ if ($('div#api-response').length > 0) {
 	editor = ace.edit("api-response");
 	editor.setReadOnly(true);
 	editor.session.setMode("ace/mode/json");
+	editor.getSession().setUseWrapMode(true);
 	beautify.beautify(editor.session);
     	//editor.setTheme("ace/theme/monokai");
     	//editor.session.setMode("ace/mode/javascript");
