@@ -96,7 +96,7 @@ sidebar:
 #api-response { 
 	position: relative !important;
 	border: 1px solid lightgray;
-	height: 200px;
+	height: 500px;
 	width: 80%;
 }
 </style>
@@ -198,8 +198,9 @@ sidebar:
 <label><span> </span><input id="send-api-request-button" type="button" value="Send API Request" /></label>
 </form>
 
-<div id="api-response"></div>
 </div>
+
+<div id="api-response"></div>
 
 
 
