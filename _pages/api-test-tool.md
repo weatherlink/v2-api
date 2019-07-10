@@ -1,6 +1,6 @@
 ---
 title: Test
-permalink: /test
+permalink: /api-test-tool
 classes: wide
 header:
   overlay_color: "#000000"
