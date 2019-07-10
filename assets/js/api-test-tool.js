@@ -112,7 +112,7 @@ function sendAPIRequest() {
 		_.set(requestData, param.key, param.value);
 	});
 
-	var jqxhr = $.getJSON('https://enviro-testapi.weatherlink.com/v2' + apiEndpointPath, requestData)
+	var jqxhr = $.getJSON('https://api.weatherlink.com/v2' + apiEndpointPath, requestData)
 		.done(function(responseJson) {
 			editor.gotoLine(0, 0, false);
 			editor.setValue(JSON.stringify(responseJson, null, 4), -1);
