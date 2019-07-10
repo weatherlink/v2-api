@@ -195,12 +195,12 @@ sidebar:
 </label>
 
 <label for="historic-start-timestamp">
-<span>Station ID <span class="required">*</span></span>
+<span>Start Timestamp <span class="required">*</span></span>
 <input id="historic-start-timestamp" type="text" class="input-field" name="historic-start-timestamp" value="" placeholder="Unix timestamp" />
 </label>
 
 <label for="historic-end-timestamp">
-<span>Station ID <span class="required">*</span></span>
+<span>End Timestamp <span class="required">*</span></span>
 <input id="historic-end-timestamp" type="text" class="input-field" name="historic-end-timestamp" value="" placeholder="Unix timestamp" />
 </label>
 </div>
