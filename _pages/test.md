@@ -92,7 +92,14 @@ sidebar:
 }
 </style>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-print-json@0.1/dist/pretty-print-json.css">
+<style type="text/css" media="screen">
+#api-response { 
+	position: relative !important;
+	border: 1px solid lightgray;
+	height: 200px;
+	width: 80%;
+}
+</style>
 
 <div class="form-style-2">
 <form action="" method="post">
@@ -191,7 +198,7 @@ sidebar:
 <label><span> </span><input id="send-api-request-button" type="button" value="Send API Request" /></label>
 </form>
 
-<pre id="api-response"></pre>
+<div id="api-response"></div>
 </div>
 
 
