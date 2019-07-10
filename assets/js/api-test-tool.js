@@ -13,7 +13,6 @@ if ($('div#api-response').length > 0) {
 	editor.getSession().setUseWrapMode(true);
 	beautify.beautify(editor.session);
     	//editor.setTheme("ace/theme/monokai");
-    	//editor.session.setMode("ace/mode/javascript");
 }
 
 function updateAPITimestamp() {
@@ -87,6 +86,8 @@ function sendAPIRequest() {
 			break;
 		case 'historic':
 			pathParams.push({"key": "station-id", "value": $('input#historic-station-id').val()});
+			pathParams.push({"key": "start-timestamp", "value": $('input#historic-start-timestamp').val()});
+			pathParams.push({"key": "end-timestamp", "value": $('input#historic-end-timestamp').val()});
 			apiEndpointPath = '/historic/' + $('input#historic-station-id').val();
 			break;
 	}
