@@ -115,6 +115,7 @@ function sendAPIRequest() {
 		.done(function(responseJson) {
 			editor.gotoLine(0, 0, false);
 			editor.setValue(JSON.stringify(responseJson, null, 4), -1);
+			editor.gotoLine(0, 0, false);
 		})
 		.fail(function(jqxhr, textStatus, error) {
 			console.log(textStatus);
