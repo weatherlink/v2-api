@@ -193,6 +193,16 @@ sidebar:
 <span>Station ID <span class="required">*</span></span>
 <input id="historic-station-id" type="text" class="input-field" name="historic-station-id" value="" placeholder="Station ID" />
 </label>
+
+<label for="historic-start-timestamp">
+<span>Station ID <span class="required">*</span></span>
+<input id="historic-start-timestamp" type="text" class="input-field" name="historic-start-timestamp" value="" placeholder="Unix timestamp" />
+</label>
+
+<label for="historic-end-timestamp">
+<span>Station ID <span class="required">*</span></span>
+<input id="historic-end-timestamp" type="text" class="input-field" name="historic-end-timestamp" value="" placeholder="Unix timestamp" />
+</label>
 </div>
 
 <label><span> </span><input id="send-api-request-button" type="button" value="Send API Request" /></label>
@@ -201,8 +211,6 @@ sidebar:
 </div>
 
 <div id="api-response"></div>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/node-forge@0.8.5/dist/forge.min.js"></script>
