@@ -7,6 +7,7 @@ var editor = null;
 if ($('div#api-response').length > 0) {
 	editor = ace.edit("api-response");
 	editor.setReadOnly(true);
+	editor.session.setMode("ace/mode/json");
     	//editor.setTheme("ace/theme/monokai");
     	//editor.session.setMode("ace/mode/javascript");
 }
