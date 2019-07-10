@@ -2,6 +2,15 @@ if ($('input#api-timestamp').length > 0) {
 	setInterval(updateAPITimestamp, 1000);
 }
 
+var editor = null;
+
+if ($('div#api-response').length > 0) {
+	editor = ace.edit("api-response");
+	editor.setReadOnly(true);
+    	//editor.setTheme("ace/theme/monokai");
+    	//editor.session.setMode("ace/mode/javascript");
+}
+
 function updateAPITimestamp() {
 	$('input#api-timestamp').val(Math.floor(Date.now() / 1000));
 }
@@ -15,6 +24,7 @@ $('select#api-endpoint').change(function() {
 });
 
 function sendAPIRequest() {
+	editor.setValue("");
 	var apiEndpointID = $('select#api-endpoint').find(':selected').val();
 	
 	if (apiEndpointID == '') {
@@ -99,7 +109,7 @@ function sendAPIRequest() {
 
 	var jqxhr = $.getJSON('https://URL/v2' + apiEndpointPath, requestData)
 		.done(function(responseJson) {
-			$('pre#api-response').html(prettyPrintJson.toHtml(responseJson));
+			editor.setValue(responseJson);
 		})
 		.fail(function(jqxhr, textStatus, error) {
 			console.log(textStatus);
