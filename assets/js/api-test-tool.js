@@ -2,12 +2,15 @@ if ($('input#api-timestamp').length > 0) {
 	setInterval(updateAPITimestamp, 1000);
 }
 
+var beautify = null;
 var editor = null;
 
 if ($('div#api-response').length > 0) {
+	beautify = ace.require("ace/ext/beautify");
 	editor = ace.edit("api-response");
 	editor.setReadOnly(true);
 	editor.session.setMode("ace/mode/json");
+	beautify.beautify(editor.session);
     	//editor.setTheme("ace/theme/monokai");
     	//editor.session.setMode("ace/mode/javascript");
 }
