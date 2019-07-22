@@ -11,4 +11,4 @@ sidebar:
 ---
 
 - 2019-07-22
-  - Added links to Java, PHP, and Python live code samples for API Signature calculation under [Authentication](/authentication)
+  - Added links for Java, PHP, and Python live code samples for API Signature calculation under [Authentication](authentication)
