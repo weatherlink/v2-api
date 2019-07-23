@@ -10,5 +10,7 @@ sidebar:
   nav: "navMain"
 ---
 
+- 2019-07-23
+  - Added link for a Node.js live code sample for API Signature calculation under [Authentication](authentication)
 - 2019-07-22
   - Added links for Java, PHP, and Python live code samples for API Signature calculation under [Authentication](authentication)
