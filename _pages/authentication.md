@@ -49,6 +49,7 @@ The API Signature is passed in the API request as a query parameter named `api-s
 We have created some live code samples similar to Example #1 below. The live code sample is available in different programming languages.
 
 * [Java](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Java)
+* [Node.js](https://repl.it/@JeremyWall/v2-API-Signature-Calculation-in-Nodejs)
 * [PHP](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-PHP)
 * [Python](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Python)
 
