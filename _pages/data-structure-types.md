@@ -22,6 +22,7 @@ Data Structure Type|Record Type
 11|ISS Archive Record
 12|non-ISS Current Conditions Record
 13|non-ISS Archive Record
+15|Health Record
 
 ## EnviroMonitor
 
@@ -31,6 +32,7 @@ Data Structure Type|Record Type
 7|ISS Archive Record
 8|ISS High/Low Record
 9|non-ISS Record
+14|Health Record
 
 ## WeatherLink IP / Vantage Connect / WeatherLink Network Annual Subscription
 
