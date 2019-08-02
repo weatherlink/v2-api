@@ -362,7 +362,7 @@ This sensor also only returns one kind of data structure.
 				},
 				"wifi_rssi": {
 					"type": "integer",
-					"units": "0: (−113) dBm or less; 1: (−111) dBm; 2..30: (−109) dBm..(−53) dBm / 2 dBm per step; 31: (−51) dBm or greater; 99: not known or not detectable"
+					"units": "received signal strength indicator"
 				},
 				"link_uptime": {
 					"type": "long",
