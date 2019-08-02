@@ -268,3 +268,120 @@ Note that the Sentek sensor does not have multiple data structures like the Vant
     }
 }
 ```
+A third example shows a Health Record for a WeatherLink Live. It shows that many data points are version numbers, counts or other values without units of measurement. Where applicable, it shows values with units such as millivolts or seconds.
+
+This sensor also only returns one kind of data structure.
+
+```json
+{
+	"sensor_type": 504,
+	"manufacturer": "",
+	"product_name": "WeatherWand Health",
+	"product_number": "",
+	"category": "Health",
+	"data_structures": [
+		{
+			"data_structure_type": "15",
+			"description": "WeatherLink Live Health Record",
+			"data_structure": {
+				"health_version": {
+					"type": "integer",
+					"units": "none"
+				},
+				"ww_fw_version": {
+					"type": "long",
+					"units": "none"
+				},
+				"bluetooth_version": {
+					"type": "long",
+					"units": "none"
+				},
+				"radio_version": {
+					"type": "long",
+					"units": "none"
+				},
+				"espressif_version": {
+					"type": "long",
+					"units": "none"
+				},
+				"battery_voltage": {
+					"type": "integer",
+					"units": "millivolts"
+				},
+				"input_voltage": {
+					"type": "integer",
+					"units": "millivolts"
+				},
+				"uptime": {
+					"type": "long",
+					"units": "seconds"
+				},
+				"bgn": {
+					"type": "integer",
+					"units": "none"
+				},
+				"network_type": {
+					"type": "integer",
+					"units": "1 = WiFi; 2 = Ethernet"
+				},
+				"ip_address_type": {
+					"type": "integer",
+					"units": "1 = Dynamic; 2 = Secondary; 3 = Public"
+				},
+				"ipv4_address": {
+					"type": "long",
+					"units": "none"
+				},
+				"ipv4_gateway": {
+					"type": "long",
+					"units": "none"
+				},
+				"ipv4_netmask": {
+					"type": "long",
+					"units": "none"
+				},
+				"dns_used": {
+					"type": "integer",
+					"units": "1 = Primary, 2 = Secondary; 3 = Public"
+				},
+				"rx_bytes": {
+					"type": "long",
+					"units": "none"
+				},
+				"tx_bytes": {
+					"type": "long",
+					"units": "none"
+				},
+				"local_api_queries": {
+					"type": "long",
+					"units": "none"
+				},
+				"rapid_records_sent": {
+					"type": "long",
+					"units": "none"
+				},
+				"wifi_rssi": {
+					"type": "integer",
+					"units": "0: (−113) dBm or less; 1: (−111) dBm; 2..30: (−109) dBm..(−53) dBm / 2 dBm per step; 31: (−51) dBm or greater; 99: not known or not detectable"
+				},
+				"link_uptime": {
+					"type": "long",
+					"units": "seconds"
+				},
+				"network_error": {
+					"type": "integer",
+					"units": "none"
+				},
+				"touchpad_wakeups": {
+					"type": "integer",
+					"units": "none"
+				},
+				"bootloader_version": {
+					"type": "long",
+					"units": "none"
+				}
+			}
+		}
+	]
+}
+```
