@@ -10,7 +10,8 @@ sidebar:
   nav: "navMain"
 ---
 
-- 2019-Added health sensor data structures under [Data Structure Types](data structure types), plus example at [Sensor Catalog](sensor catalog)
+- 2019-08-01
+  - Added health sensor data structures under [Data Structure Types](data-structure-types), plus example at [Sensor Catalog](sensor-catalog)
 - 2019-07-23
   - Added link for a Node.js live code sample for API Signature calculation under [Authentication](authentication)
 - 2019-07-22
