@@ -115,7 +115,7 @@ Please see the [Sensor Catalog](sensor-catalog) and [API Reference](api-referenc
 <a name="data-structure-type"></a>
 ## Identifying a type of data record
 
-When you query weather observation data the API response will include a `data_structure_type` field that identifies the type of the data record. Here's a truncated response from the `/current` Current Conditions API endpoint for an EnviroMonitor weather station.
+When you query weather observation data the API response will include a `data_structure_type` field that identifies the type of the data record. Here's a truncated response from the `/current` Current Conditions API endpoint for an EnviroMonitor weather station, showing two data sensors and one health sensor.
 
 ```json
 {
@@ -144,6 +144,46 @@ When you query weather observation data the API response will include a `data_st
                     ...
                 }
             ]
+        },
+        {
+            "lsid": 5307479,
+            "data": [
+                {
+                    "mcc_nmc": 310260,
+                    "noise_floor_rssi": -113,
+                    "access_technology": 2,
+                    "lead_acid_battery_voltage": 7073,
+                    "bluetooth_firmware_version": null,
+                    "location_area_code": 40481,
+                    "beacon_interval": 2097,
+                    "link_layer_packets_received": 336,
+                    "solar_panel_voltage": 19362,
+                    "rank": 256,
+                    "creg_cgreg": 85,
+                    "health_version": 1,
+                    "false_wakeup_rssi": -99,
+                    "inside_box_temp": 110.59625,
+                    "cell_id": 164121796,
+                    "power_percentage_tx": 0,
+                    "rssi": 14,
+                    "last_rx_rssi": -76,
+                    "power_percentage_mcu": 6,
+                    "application_firmware_version": 1559080571,
+                    "false_wakeup_count": 40,
+                    "etx": 0,
+                    "rpl_mode": 0,
+                    "uptime": 528615,
+                    "number_of_neighbors": 2,
+                    "last_parent_rtt_ping": 0,
+                    "platform_id": 2,
+                    "cme": 0,
+                    "power_percentage_rx": 1,
+                    "rpl_parent_node_id": null,
+                    "ts": 1565652600
+                }
+            ],
+            "sensor_type": 502,
+            "data_structure_type": 14
         },
         {
             "lsid": 5307480,
@@ -178,6 +218,7 @@ Data Structure Type|Record Type
 7|ISS Archive Record
 8|ISS High/Low Record
 9|non-ISS Record
+14|Health Record
 
 Based on this information we see that data from the soil moisture sensor and barometer are non-ISS records. That means these sensors are not part of the Vantage Pro2 Plus Integrated Sensor Suite. Additionally, we see the data structure type of 6 for the data from the Vantage Pro2 Plus which tells us this data record is an ISS current conditions record.
 
