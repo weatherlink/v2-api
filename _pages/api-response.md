@@ -21,6 +21,37 @@ Below is a sample response JSON document for WeatherLink Live current conditions
     "station_id": 374964,
     "sensors": [
         {
+            "lsid": 5271270,
+            "data": [
+                {
+                    "ip_v4_netmask": "255.255.255.0",
+                    "battery_voltage": 70,
+                    "wifi_rssi": -70,
+                    "network_error": 2,
+                    "ip_v4_gateway": "192.168.0.1",
+                    "rapid_records_sent": 138,
+                    "firmware_version": 1559767913,
+                    "uptime": 5376092,
+                    "touchpad_wakeups": 27,
+                    "ip_v4_address": "192.168.0.103",
+                    "bootloader_version": 1550707628,
+                    "local_api_queries": 4,
+                    "rx_bytes": 342707,
+                    "health_version": 1,
+                    "radio_version": 621020416,
+                    "espressif_version": 1534381024,
+                    "ip_address_type": 1,
+                    "link_uptime": 774880,
+                    "network_type": 1,
+                    "input_voltage": 4686,
+                    "tx_bytes": 3823085,
+                    "ts": 1565656200
+                }
+            ],
+            "sensor_type": 504,
+            "data_structure_type": 15
+        },
+        {
             "lsid": 5271273,
             "sensor_type": 45,
             "data_structure_type": 10,
@@ -239,6 +270,47 @@ And here is a sample JSON response for EnviroMonitor historic data. Note the sam
                 },
                 ...
             ]
+        },
+        {
+            "lsid": 5307479,
+            "data": [
+                {
+                    "mcc_nmc": 310260,
+                    "noise_floor_rssi": -114,
+                    "access_technology": 2,
+                    "lead_acid_battery_voltage": 7063,
+                    "bluetooth_firmware_version": null,
+                    "location_area_code": 40481,
+                    "beacon_interval": 2097,
+                    "link_layer_packets_received": 317,
+                    "solar_panel_voltage": 19055,
+                    "rank": 256,
+                    "creg_cgreg": 85,
+                    "health_version": 1,
+                    "false_wakeup_rssi": -82,
+                    "inside_box_temp": 110.791245,
+                    "cell_id": 164140046,
+                    "power_percentage_tx": 0,
+                    "rssi": 15,
+                    "last_rx_rssi": -82,
+                    "power_percentage_mcu": 6,
+                    "application_firmware_version": 1559080571,
+                    "false_wakeup_count": 15,
+                    "etx": 0,
+                    "rpl_mode": 0,
+                    "uptime": 533115,
+                    "number_of_neighbors": 2,
+                    "last_parent_rtt_ping": 0,
+                    "platform_id": 2,
+                    "cme": 0,
+                    "power_percentage_rx": 1,
+                    "rpl_parent_node_id": null,
+                    "ts": 1565657100
+                },
+                ...
+            ],
+            "sensor_type": 502,
+            "data_structure_type": 14
         },
         {
             "lsid": 5307480,
