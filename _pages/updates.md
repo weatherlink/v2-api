@@ -10,6 +10,8 @@ sidebar:
   nav: "navMain"
 ---
 
+- 2019-08-13
+  - Added sample health data under [API Use Cases](api-use-cases) and [API Response](api-response)
 - 2019-08-01
   - Added health sensor data structures under [Data Structure Types](data-structure-types), plus example at [Sensor Catalog](sensor-catalog)
 - 2019-07-23
