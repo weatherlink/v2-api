@@ -30,7 +30,7 @@ Data Structure Type|Record Type
 -|-
 6|ISS Current Conditions Record
 7|ISS Archive Record
-~~8~~|~~ISS High/Low Record~~ *(deprecated)*
+8|~~ISS High/Low Record~~ *(deprecated)*
 9|non-ISS Record
 14|Health Record
 
@@ -42,5 +42,5 @@ Data Structure Type|Record Type
 2|Current Conditions Record - Revision B
 3|Archive Record - Revision A
 4|Archive Record - Revision B
-~~5~~|~~High/Low Record~~ *(deprecated)*
+5|~~High/Low Record~~ *(deprecated)*
 
