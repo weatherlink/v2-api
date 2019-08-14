@@ -216,7 +216,7 @@ Data Structure Type|Record Type
 -|-
 6|ISS Current Conditions Record
 7|ISS Archive Record
-8|ISS High/Low Record
+8|~~ISS High/Low Record~~ *(deprecated)*
 9|non-ISS Record
 14|Health Record
 
