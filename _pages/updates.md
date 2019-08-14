@@ -11,7 +11,7 @@ sidebar:
 ---
 
 - 2019-08-14
-  - Marked Data Structure Types for High/Low as deprecated under [API Use Cases](api-use-cases) and [Data Structure Types](data-structure-types) as these record types are no longer supported.
+  - Marked Data Structure Types for High/Low records as deprecated under [API Use Cases](api-use-cases) and [Data Structure Types](data-structure-types) as these record types are no longer supported.
 - 2019-08-13
   - Added sample health data under [API Use Cases](api-use-cases) and [API Response](api-response).
 - 2019-08-01
