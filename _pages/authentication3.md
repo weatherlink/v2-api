@@ -215,8 +215,10 @@ https://api.weatherlink.com/v2/historic/72443?api-key=987654321&t=1562176956&sta
 
 </article>
 
+<aside>
 <div id="tc"></div>
-
+</aside>
+  
 <script>
   const tc = (e,c,d) => {
 
