@@ -1,5 +1,4 @@
-# remote_theme: pmarsceill/just-the-docs
-remote_theme: mmistakes/minimal-mistakes@4.16.3
+remote_theme: mmistakes/minimal-mistakes@4.16.5
 
 title: WeatherLink v2 API
 
