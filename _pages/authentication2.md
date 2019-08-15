@@ -1,7 +1,6 @@
 ---
 title: Authentication22
 permalink: /authentication2
-classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
