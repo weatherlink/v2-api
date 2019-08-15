@@ -1,13 +1,11 @@
 ---
-title: Authentication31
-permalink: /authentication3
+title: Authentication4
+permalink: /authentication4
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
   overlay_image: /assets/images/landing.jpg
 ---
-
-<article id="article">
 
 The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
 
@@ -213,43 +211,3 @@ The final URL with parameters in the example scenario is:
 https://api.weatherlink.com/v2/historic/72443?api-key=987654321&t=1562176956&start-timestamp=1561964400&end-timestamp=1562050800&api-signature=d40baf8649aaf83fae135e0b57db03ec78688b49fce96d815474f366957f2b39
 ```
 
-</article>
-
-<aside>
-<div id="tc"></div>
-</aside>
-  
-<script>
-  const tc = (e,c,d) => {
-
-  let container = d.getElementById(e),
-      tags      = [...container.querySelectorAll('h2, h3, h4, h5, h6')],
-      output    = d.getElementById(c);
-
-  let nav  = d.createElement('nav');
-  nav.classList.add('tc');
-
-  let titles = tags.map(t => {
-    // Adding ID to the actual titles
-    let idContent = t.textContent.replace(/ /g, "_") 
-    t.id = idContent;
-
-    //	Creating Elements
-    let title = d.createElement(t.nodeName);
-    let link = d.createElement('a');
-
-    // Adding Content
-    link.textContent = t.textContent;
-    link.href = `#${idContent}`;
-    
-    title.appendChild(link);
-    nav.appendChild(title);
-  });
-
-
-  // Adding to the DOM
-  output.appendChild(nav);
-};
-
-tc('article','tc', document);
-</script>
