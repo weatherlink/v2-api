@@ -1,13 +1,11 @@
 ---
-title: Authentication2
+title: Authentication22
 permalink: /authentication2
 classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
   overlay_image: /assets/images/landing.jpg
-sidebar:
-  nav: "navMain"
 ---
 
 The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
