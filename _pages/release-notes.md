@@ -8,16 +8,17 @@ header:
   overlay_image: /assets/images/landing.jpg
 ---
 
-- 2019-08-23
-  - Added information about soil probe sensor depths to the [Sensor Catalog](sensor-catalog).
-  - Added information about transmitter ID to WeatherLink Live data responses at [API Response](api-response).
-- 2019-08-14
-  - Marked Data Structure Types for High/Low records as deprecated under [API Use Cases](api-use-cases) and [Data Structure Types](data-structure-types) as these record types are no longer supported.
-- 2019-08-13
-  - Added sample health data under [API Use Cases](api-use-cases) and [API Response](api-response).
-- 2019-08-01
-  - Added health sensor data structures under [Data Structure Types](data-structure-types), plus example at [Sensor Catalog](sensor-catalog).
-- 2019-07-23
-  - Added link for a Node.js live code sample for API Signature calculation under [Authentication](authentication).
-- 2019-07-22
-  - Added links for Java, PHP, and Python live code samples for API Signature calculation under [Authentication](authentication).
+- 2019-08-21 - v0.0.88 Beta
+  - Add transmitter ID for WeatherLink Live.
+  - Add depth information, if available, for multi-depth soil probes.
+- 2019-08-08 - v0.0.83 Beta
+- 2019-07-11 - v0.0.73 Beta
+- 2019-07-02 - v0.0.68 Beta
+- 2019-06-12 - v0.0.60 Beta
+- 2019-06-06 - v0.0.57 Beta
+- 2019-05-23 - v0.0.54 Beta
+- 2019-04-15 - v0.0.45 Beta
+  - Support station sharing.
+- 2018-10-26 - v0.0.22 Beta
+  - Add rain collector type information to sensor details.
+- 2018-09-26 - v0.0.1 Beta
