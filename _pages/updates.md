@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/landing.jpg
 ---
 
+- 2019-08-23
+  - Added information about soil probe sensor depths to the [Sensor Catalog](sensor-catalog).
+  - Added information about transmitter ID to WeatherLink Live data responses at [API Response](api-response).
 - 2019-08-14
   - Marked Data Structure Types for High/Low records as deprecated under [API Use Cases](api-use-cases) and [Data Structure Types](data-structure-types) as these record types are no longer supported.
 - 2019-08-13
