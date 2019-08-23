@@ -203,7 +203,7 @@ In each data structure type is a `data_structure` JSON object that lists each da
 }
 ```
 
-For a second example here is a portion of the Sensor Catalog showing the entry for the Sentek Drill & Drop 6cm Soil Moisture Probe. It shows that this particular sensor reports 6 soil moisture readings and 6 temperature readings. It also shows that these readings are floating point numbers and reported in percentages and degrees Fahrenheit, respectively.
+For a second example here is a portion of the Sensor Catalog showing the entry for the Sentek Drill & Drop 6cm Soil Moisture Probe. It shows that this particular sensor reports 6 soil moisture readings and 6 temperature readings. It also shows that these readings are floating point numbers and reported in percentages and degrees Fahrenheit, respectively. This example also shows how the sensor catalog contains sensor depth information, if it is available, for soil moisture probes that support multiple sensor depths. The depth information is can be found under the sensor's `configuration` field. There you will find a `depth_unit` representing inches or millimeters as well as the depth of each sensor ring.
 
 Note that the Sentek sensor does not have multiple data structures like the Vantage Pro2 Plus example above. This is due to the fact that this sensor only returns one kind of data structure.
 
@@ -214,6 +214,17 @@ Note that the Sentek sensor does not have multiple data structures like the Vant
     "product_name": "Drill & Drop 60 cm (24\"); 6 sensors",
     "product_number": "00620",
     "category": "Soil Moisture",
+    "configuration": {
+        "depth_unit": "in",
+        "depths": {
+            "ring1": 4,
+            "ring2": 8,
+            "ring3": 12,
+            "ring4": 16,
+            "ring5": 20,
+            "ring6": 24
+        }
+    },
     "data_structure": {
         "moist_soil_last_1": {
             "type": "float",
@@ -274,7 +285,7 @@ This sensor also only returns one kind of data structure.
 {
 	"sensor_type": 504,
 	"manufacturer": "",
-	"product_name": "WeatherWand Health",
+	"product_name": "`WeatherLink LIVE Health",
 	"product_number": "",
 	"category": "Health",
 	"data_structures": [
