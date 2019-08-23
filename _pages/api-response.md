@@ -55,6 +55,7 @@ Below is a sample response JSON document for WeatherLink Live current conditions
             "data_structure_type": 10,
             "data": [{
                 "ts": 1558741927,
+                "tx_id": 1,
                 "wind_speed_hi_last_2_min": 5,
                 "hum": 42.7,
                 "wind_dir_at_hi_speed_last_10_min": 260,
@@ -134,6 +135,7 @@ Below is a sample response JSON document for WeatherLink Live current conditions
             "data_structure_type": 10,
             "data": [{
                 "ts": 1558741927,
+                "tx_id": 2,
                 "wind_speed_hi_last_2_min": 3.93,
                 "hum": 53.7,
                 "wind_dir_at_hi_speed_last_10_min": 266,
@@ -372,6 +374,7 @@ Here are some truncated samples showing the differences between the current cond
             "data": [
                 {             
                     "ts": 1558741927,
+                    "tx_id": 1,
                     "wind_speed_hi_last_2_min": 5,
                     "hum": 42.7,
                     "wind_dir_at_hi_speed_last_10_min": 260,
@@ -399,6 +402,7 @@ Here are some truncated samples showing the differences between the current cond
             "data": [
                 {
                     "ts": 1557997200,
+                    "tx_id": 1,
                     "wind_speed_avg": 3.56,
                     "dew_point_hi_at": 1557990015,
                     "uv_dose": 0,
