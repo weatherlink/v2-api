@@ -359,6 +359,8 @@ Each sensor listed in the `sensors` section contains the following information:
 
 Additionally, each weather observation data record in the `data` array will contain a `ts` field in addition to the weather observation data fields. The `ts` field is the Unix timestamp of the data record.
 
+WeatherLink Live devices will also include an additional field in the weather observation data record named `tx_id`. This field is specific to WeatherLink Live devices. This is the transmitter ID the sensor is currently configured for. The transmitter ID is not stored historically so you will see whatever value it is currently configured for, even if you are querying for historic data.
+
 Here are some truncated samples showing the differences between the current conditions and historic data JSON structures.
 
 ### Current Conditions Data
