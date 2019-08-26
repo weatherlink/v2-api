@@ -5,7 +5,7 @@ classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
-  overlay_image: /assets/images/landing.jpg
+  overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
 API requests for historic data requires a starting Unix timestamp parameter and ending Unix timestamp parameter to define the time window of the data being requested.
