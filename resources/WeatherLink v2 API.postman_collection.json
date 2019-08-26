@@ -1,0 +1,716 @@
+{
+	"info": {
+		"_postman_id": "101bc3d7-ad35-4e4f-8257-cadd1b5d9c25",
+		"name": "WeatherLink v2 API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Metadata",
+			"item": [
+				{
+					"name": "Stations - Get All",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/stations?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"stations"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							]
+						},
+						"description": "Get all weather stations associated with your API Key"
+					},
+					"response": []
+				},
+				{
+					"name": "Stations - Get Some",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/stations/:station-ids?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"stations",
+								":station-ids"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							],
+							"variable": [
+								{
+									"key": "station-ids",
+									"value": "",
+									"type": "string",
+									"description": "(Required) List of one or more station IDs, separated by commas"
+								}
+							]
+						},
+						"description": "Get weather stations for one or more station IDs provided"
+					},
+					"response": []
+				},
+				{
+					"name": "Nodes - Get All",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/nodes?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"nodes"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							]
+						},
+						"description": "Get all nodes attached to all weather stations associated with your API Key"
+					},
+					"response": []
+				},
+				{
+					"name": "Nodes - Get Some",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/nodes/:node-ids?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"nodes",
+								":node-ids"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							],
+							"variable": [
+								{
+									"key": "node-ids",
+									"value": "",
+									"description": "(Required) List of one or more node IDs, separated by commas",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Get nodes for one or more node IDs provided"
+					},
+					"response": []
+				},
+				{
+					"name": "Sensors - Get All",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/sensors?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"sensors"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							]
+						},
+						"description": "Get all sensors attached to all weather stations associated with your API Key"
+					},
+					"response": []
+				},
+				{
+					"name": "Sensors - Get Some",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/sensors/:sensor-ids?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"sensors",
+								":sensor-ids"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							],
+							"variable": [
+								{
+									"key": "sensor-ids",
+									"value": "",
+									"description": "(Required) List of one or more sensor IDs, separated by commas",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Get sensors for one or more sensor IDs provided"
+					},
+					"response": []
+				},
+				{
+					"name": "Latest Sensor Activity - Get All",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/sensor-activity?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"sensor-activity"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							]
+						},
+						"description": "Get latest reporting times for all sensors attached to all weather stations associated with your API Key"
+					},
+					"response": []
+				},
+				{
+					"name": "Latest Sensor Activity - Get Some",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/sensor-activity/:sensor-ids?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"sensor-activity",
+								":sensor-ids"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							],
+							"variable": [
+								{
+									"key": "sensor-ids",
+									"value": "",
+									"description": "(Required) List of one or more sensor IDs, separated by commas",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Get latest reporting times for one or more sensors for sensor IDs provided"
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor Catalog",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/sensor-catalog?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"sensor-catalog"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							]
+						},
+						"description": "Get a catalog of all types of sensors"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Weather Data",
+			"item": [
+				{
+					"name": "Current Conditions Data",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/current/:station-id?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"current",
+								":station-id"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							],
+							"variable": [
+								{
+									"key": "station-id",
+									"value": "",
+									"type": "string",
+									"description": "(Required) Station ID"
+								}
+							]
+						},
+						"description": "Get current conditions data for one station"
+					},
+					"response": []
+				},
+				{
+					"name": "Historic Data",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/historic/:station-id?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}&start-timestamp=1561964400&end-timestamp=1561965400",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"historic",
+								":station-id"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "start-timestamp",
+									"value": "1561964400",
+									"description": "Unix timestamp, time window queried is (start-timestamp, end-timestamp]"
+								},
+								{
+									"key": "end-timestamp",
+									"value": "1561965400",
+									"description": "Unix timestamp, time window queried is (start-timestamp, end-timestamp]"
+								}
+							],
+							"variable": [
+								{
+									"key": "station-id",
+									"value": "",
+									"type": "string",
+									"description": "(Required) Station ID"
+								}
+							]
+						},
+						"description": "Get historic data for one station ID within a given timerange"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "03974938-bbcb-4f94-a6be-07c60dbd02ce",
+				"type": "text/javascript",
+				"exec": [
+					"/*",
+					"This script computes the v2 API Signature and writes it to the Postman environment variables",
+					"so it can be used as a parameter in the API call.",
+					"*/",
+					"",
+					"var _ = require(\"lodash\");",
+					"",
+					"// get the v2 API Key and API Secret from Postman environment variables",
+					"var apiKey = pm.environment.get(\"V2_API_KEY\");",
+					"var apiSecret = pm.environment.get(\"V2_API_SECRET\");",
+					"",
+					"// get the current unix timestamp and save it to a Postman environment variable",
+					"var t = Math.round((new Date()).getTime() / 1000);",
+					"pm.environment.set(\"V2_API_TIMESTAMP\", t);",
+					"",
+					"/*",
+					"get the request URL, it's already an object but for some reason we can't access all of it",
+					"so a hacky way to get access to all of the fields is to JSON stringify the object and then",
+					"JSON parse it back to an object",
+					"*/",
+					"var requestUrlObject = JSON.parse(JSON.stringify(pm.request.url));",
+					"",
+					"/*",
+					"work with the query and URL parameters and calculate the string that will be hashed to",
+					"create the API Signature",
+					"*/",
+					"var stringToHash = _.chain(requestUrlObject.query)",
+					"    .concat(requestUrlObject.variable)",
+					"    .filter(function(param) {",
+					"        if (param.key == \"api-key\" || param.key == \"api-signature\" || param.key == \"t\" || _.get(param, \"disabled\", false) === true) {",
+					"            return false;",
+					"        }",
+					"        return true;",
+					"    })",
+					"    .concat([",
+					"        {\"key\": \"api-key\", \"value\": apiKey},",
+					"        {\"key\": \"t\",       \"value\": t}",
+					"    ])",
+					"    .orderBy(\"key\")",
+					"    .map(function(param) {",
+					"        return param.key + param.value;",
+					"    })",
+					"    .join(\"\")",
+					"    .value();",
+					"",
+					"// compute the hashed v2 API Signature",
+					"var apiSignature = CryptoJS.HmacSHA256(stringToHash, apiSecret).toString(CryptoJS.enc.Hex);",
+					"",
+					"// save the API Signature to a Postman environment variable",
+					"pm.environment.set(\"V2_API_SIGNATURE\", apiSignature);",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "37a406f6-ea52-462d-96a7-21c4a7d35591",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
