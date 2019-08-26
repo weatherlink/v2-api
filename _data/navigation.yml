@@ -31,6 +31,8 @@ navMain:
         url: /size-limits
   - title: Resources
     children:
+      - title: Tools <i class="fas fa-star"></i>
+        url: /tools
       - title: Support
         url: /support
       - title: Terms of Service
