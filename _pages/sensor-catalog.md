@@ -5,7 +5,7 @@ classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
-  overlay_image: /assets/images/landing.jpg
+  overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
 The Sensor Catalog is an API endpoint, `/sensor-catalog`, that returns a list of all sensor definitions supported in WeatherLink. These sensor definitions describe the data fields that can be found in weather observation data records.
