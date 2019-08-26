@@ -5,7 +5,7 @@ classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
-  overlay_image: /assets/images/landing.jpg
+  overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
 Sensors can produce multiple kinds of data records. For example, a WeatherLink Live with an Integrated Sensor Suite (ISS) like a Vantage Pro2 Plus will produce both current condition as well as historic "archive" data records.
