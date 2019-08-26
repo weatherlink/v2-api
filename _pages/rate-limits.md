@@ -5,7 +5,7 @@ classes: wide
 header:
   overlay_color: "#000000"
   overlay_filter: "0.0"
-  overlay_image: /assets/images/landing.jpg
+  overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
 The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
