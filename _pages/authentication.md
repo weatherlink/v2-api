@@ -58,7 +58,7 @@ We have created some live code samples similar to Example #1 below. The live cod
 To explain how the API Signature calculation process works we will walk through an example. For the purposes of this example we will use the following details:
 
 * This is for an API request for Current Conditions data which is available at the `/current/{station-id}` API path which accepts a station ID as a URL path parameter.
-* We will use the fictitious Station ID `2`.
+* We will use the fictitious Station ID `1052`.
 * We will use the fictitious API Key `987654321`.
 * We will use the fictitious API Secret `ABC123`.
 * We will use the Unix timestamp `1558729481` as the API Request Timestamp.
@@ -71,7 +71,7 @@ In this example the path parameters are:
 
 Parameter Name|Parameter Value
 --------------|---------------
-station-id|2
+station-id|1052
 
 And the query parameters are:
 
@@ -85,7 +85,7 @@ After sorting the combined set of parameters will look like this:
 Parameter Name|Parameter Value
 --------------|---------------
 api-key|987654321
-station-id|2
+station-id|1052
 t|1558729481
 
 ### Step 2
@@ -93,13 +93,13 @@ t|1558729481
 Next, iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
 
 ```
-api-key987654321station-id2t1558729481
+api-key987654321station-id1052t1558729481
 ```
 
 To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:
 
 ```
-(api-key)(987654321)(station-id)(2)(t)(1558729481)
+(api-key)(987654321)(station-id)(1052)(t)(1558729481)
 ```
 
 ### Step 3
@@ -109,9 +109,9 @@ Now it is time to compute the API Signature using the the API Secret and the con
 In this scenario we have the following:
 
 ```
-Message to hash: api-key987654321station-id2t1558729481
+Message to hash: api-key987654321station-id1052t1558729481
 HMAC secret key: ABC123
-Computed HMAC as a hexadecimal string: 9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+Computed HMAC as a hexadecimal string: dd4b08355101dc6d259bbe21413d0838a1b83c4e9df24a98f61323a1198b08ff
 ```
 
 The online HMAC tool at <a href="https://www.freeformatter.com/hmac-generator.html" target="_blank">https://www.freeformatter.com/hmac-generator.html</a> can help you test your computed HMAC SHA-256 values.
@@ -125,7 +125,7 @@ Take the computed API Signature and include it in the API request as the value o
 The final URL with parameters in the example scenario is:
 
 ```
-https://api.weatherlink.com/v2/current/2?api-key=987654321&t=1558729481&api-signature=9de393b0c939545065b67c3560ac900fd3f83fb5b70c67f3cd6b5d2f6a806d9d
+https://api.weatherlink.com/v2/current/1052?api-key=987654321&t=1558729481&api-signature=dd4b08355101dc6d259bbe21413d0838a1b83c4e9df24a98f61323a1198b08ff
 ```
 
 ### Example #2 - Historic Data
