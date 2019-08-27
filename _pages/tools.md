@@ -33,13 +33,15 @@ Save the environment file after replacing the API Key and Secret placeholders.
 
 Install and/or start Postman. From the menu select File > Import and browse for the Postman collection file you downloaded in Step 1. Then select File > Import again and browse for the Postman environment file you downloaded and edited.
 
-After importing both files you will see a collection on the left hand side of Postman named "WeatherLink v2 API". This is the collection of URLs for testing the API. To use the environment settings that include your API Key and Secret look near the top right corner in Postman. There will be a drop down list that might say "No Environment" if this is a fresh installation of Postman. Click that list and choose the "WeatherLink v2 API" entry to change the Postman environment to use your API Key and Secret.
+After importing both files you will see a collection on the left hand side of Postman named "WeatherLink v2 API". This is the collection of URLs for testing the API. Additionally, the collection import file also contains a small block of JavaScript code that calculates the API Signature and API Timestamp variables dynamically. More on this will be discussed later.
+
+To use the environment settings that include your API Key and Secret look near the top right corner in Postman. There will be a drop down list that might say "No Environment" if this is a fresh installation of Postman. Click that list and choose the "WeatherLink v2 API" entry to change the Postman environment to use your API Key and Secret.
 
 ## Step 4
 
 Under the Collections section expand the WeatherLink v2 API and expand the Metadata folder. Select the "Stations - Get All" item to see the details screen about this API call. On the details page you will see the special placeholders like `{{V2_API_KEY}}`. These are placeholders that tell Postman to refer to the environment variables you imported. If you ever need to change your API Key or Secret do not change the placeholders. Instead edit the environment to have the new values.
 
-In addition to the API Key and API Secret environment variables there are additional environment variables that are calculated on the fly when you make a test call the the API from Postman. These additional environment variables are `V2_API_SIGNATURE` and `V2_API_TIMESTAMP`. Do not edit these values as they are automatically calculated and updated for each API call.
+In addition to the API Key and API Secret environment variables there are additional environment variables that are calculated on the fly when you make a test call the the API from Postman. These additional environment variables are `V2_API_SIGNATURE` and `V2_API_TIMESTAMP`. Do not edit these values as they are automatically calculated and updated for each API call. The code that calculates these additional environment variables is a small block of JavaScript code embedded in the collection that automatically runs when you click the Send button to test an API call.
 
 Now it's time to send a test API call. With the "Stations - Get All" detail screen open click the Send button in the upper right corner of Postman.
 
