@@ -210,7 +210,6 @@ header:
 
 <div id="api-response"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/node-forge@0.8.5/dist/forge.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.4.5/src-min/ace.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.4.5/src-min/ext-beautify.js"></script>
