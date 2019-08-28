@@ -8,7 +8,6 @@ baseurl: /v2-api
 search: false
 
 after_footer_scripts:
-  - /assets/vendor/weatherlink/js/author.js
   - /assets/vendor/weatherlink/js/footer-copyright.js
   - /assets/vendor/weatherlink/js/api-test-tool.js
 
