@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-<div class="notice--warning">
+<div class="notice--danger">
 <p>The rate limits are being revised and an update will be announced before the launch of the rate limits.</p>
 </div>
 
