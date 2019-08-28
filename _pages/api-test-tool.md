@@ -210,7 +210,19 @@ header:
 
 <div id="api-response"></div>
 
-<script src="/v2-api/assets/vendor/weatherlink/js/api-test-tool.js"></script>
+<script>
+(function() {
+  var nTimer = setInterval(function() {
+    if (window.jQuery) {
+      clearInterval(nTimer);
+      var fileref = document.createElement('script');
+      fileref.setAttribute("type","text/javascript");
+      fileref.setAttribute("src", "/v2-api/assets/vendor/weatherlink/js/api-test-tool.js");
+      document.getElementsByTagName("head")[0].appendChild(fileref);
+    }
+  }, 100);
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/node-forge@0.8.5/dist/forge.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.4.5/src-min/ace.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.4.5/src-min/ext-beautify.js"></script>
