@@ -9,7 +9,6 @@ search: false
 
 after_footer_scripts:
   - /assets/vendor/weatherlink/js/footer-copyright.js
-  - /assets/vendor/weatherlink/js/api-test-tool.js
 
 include:
   - _pages
