@@ -9,6 +9,7 @@ search: false
 
 after_footer_scripts:
   - /assets/vendor/weatherlink/js/footer-copyright.js
+  - https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js
 
 include:
   - _pages
