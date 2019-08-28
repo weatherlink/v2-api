@@ -10,7 +10,7 @@ header:
 
 <div class="notice--warning">
 <h4>Update in Progress:</h4>
-<p>The rate limits are being revised and an update will be announced before the launch of the rate limits.</p>
+<p>The rate limits are being revised and an update will be announced before rate limiting rules are enforced.</p>
 </div>
 
 The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
