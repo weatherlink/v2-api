@@ -8,9 +8,11 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
+<div class="notice--warning">
+<p>The rate limits are being revised and an update will be announced before the launch of the rate limits.</p>
+</div>
 
-The rate limits are being revised and an update will be announced before the launch of the rate limits.
+The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
 
 <!--
 Rate limits are dynamically calculated based on the types of weather stations, the WeatherLink subscription level, and the number of weather stations associated with the WeatherLink account that is connected to the API Key.
