@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2019-08-27
+  - Added the [Tools](tools) page.
 - 2019-08-23
   - Added information about soil probe sensor depths to the [Sensor Catalog](sensor-catalog).
   - Added information about transmitter ID to WeatherLink Live data responses at [API Response](api-response).
