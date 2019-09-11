@@ -1,6 +1,6 @@
 ---
 title: Postman
-permalink: /tools-postman
+permalink: /tools/postman
 classes: wide
 header:
   overlay_color: "#000000"
