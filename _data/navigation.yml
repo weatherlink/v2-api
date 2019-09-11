@@ -1,6 +1,6 @@
 main:
-  - title: "WeatherLink"
-    url: https://www.weatherlink.com
+  #- title: "WeatherLink"
+  #  url: https://www.weatherlink.com
 
 navMain: 
   - title: Overview
