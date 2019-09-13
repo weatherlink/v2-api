@@ -1,54 +1,51 @@
-/*
 var $activeNavItem = $('div.sidebar.sticky nav.nav__list ul.nav__items li ul li a.active');
 var $headers = $('article h2, article h3');
 
-if ($headers.length > 0) {
-  var $h2List = $('<ul>');
+var menuLevels = [];
+var currentMenuLevel = null;
 
-  for (var headerIndex = 0 ; headerIndex < $headers.length ; headerIndex) {
+if ($headers.length > 0) {
+  for (var headerIndex = 0 ; headerIndex < $headers.length ; headerIndex++) {
     var header = $headers.get(headerIndex);
     var $header = $(header);
 
-    $header.wrap('<a name="'$header.attr('id')+'"></a>');
+    $header.wrap('<a name="'+$header.attr('id')+'"></a>');
 
-    
-
-    
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-if ($h2Headers.length > 0) {
-  var $h2List = $('<ul>');
-  for (var h2Index = 0 ; h2Index < $h2Headers.length ; h2Index++) {
-    var h2Header = $h2Headers.get(h2Index);
-    var $h2Header = $(h2Header);
-    $h2Header.wrap('<a name="'+$h2Header.attr('id')+'"></a>');
-    var $h2Item = $('<li>- <a href="#'+$h2Header.attr('id')+'">'+h2Header.textContent+'</a></li>');
-    $h2List.append($h2Item);
-    var $h3Headers = $h2Header.children('h3');
-    if ($h3Headers.length > 0) {
-      var $h3List = $('<ul>');
-      for (var h3Index = 0 ; h3Index < $h3Headers.length ; h3Index++) {
-        var h3Header = $h3Headers.get(h3Index);
-		console.log(h3Header);
-        var $h3Header = $(h3Header);
-        $h3Header.wrap('<a name="'+$h3Header.attr('id')+'"></a>');
-        var $h3Item = $('<li>-- <a href="#'+$h3Header.attr('id')+'">'+h3Header.textContent+'</a></li>');
-        $h3List.append($h3Item);
+    var tagName = header.tagName.toLowerCase();
+    if (tagName == 'h2') {
+      currentMenuLevel = {title: header.textContent, id: $header.attr('id'), children: []};
+      menuLevels.push(currentMenuLevel);
+    } else if (tagName == 'h3') {
+      if (currentMenuLevel != null) {
+        currentMenuLevel.children.push({title: header.textContent, id: $header.attr('id')});
       }
-      $h2Item.after($h3List);
     }
   }
+
+  var $h2List = $('<ul>');
+
+  for (var menuIndex = 0 ; menuIndex < menuLevels.length ; menuIndex++) {
+    var menuLevel = menuLevels[menuIndex];
+    var $h2ListItem = $('<li>');
+    var $h2ListItemA = $('<a href="#'+menuLevel.id+'">- '+menuLevel.title+'</a>');
+    $h2ListItem.append($h2ListItemA);
+    $h2List.append($h2ListItem);
+
+/*
+    if (menuLevel.children.length > 0) {
+      var $h3List = $('<ul>');
+      $h2ListItem.append($h3List);
+
+      for (var subMenuIndex = 0 ; subMenuIndex < menuLevel.children.length ; subMenuIndex++) {
+        var subMenuLevel = menuLevel.children[subMenuIndex];
+        var $h3ListItem = $('<li>');
+        var $h3ListItemA = $('<a href="#'+subMenuLevel.id+'">-- '+subMenuLevel.title+'</a>');
+        $h3ListItem.append($h3ListItemA);
+        $h3List.append($h3ListItem);
+      }
+    }
+*/
+  }
+
   $activeNavItem.after($h2List);
 }
-*/
