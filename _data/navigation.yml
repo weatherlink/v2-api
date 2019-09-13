@@ -1,6 +1,10 @@
 main:
-  #- title: "WeatherLink"
-  #  url: https://www.weatherlink.com
+  - title: "Developer Portal"
+    url: https://weatherlink.github.io
+  - title: "WeatherLink"
+    url: https://www.weatherlink.com
+  - title: "Davis Instruments"
+    url: https://www.davisinstruments.com
 
 navMain: 
   - title: Overview
