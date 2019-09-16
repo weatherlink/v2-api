@@ -27,7 +27,7 @@ if ($headers.length > 0) {
   for (var menuIndex = 0 ; menuIndex < menuLevels.length ; menuIndex++) {
     var menuLevel = menuLevels[menuIndex];
     var $h2ListItem = $('<li>');
-    var $h2ListItemA = $('<a href="#'+menuLevel.id+'">- '+menuLevel.title+'</a>');
+    var $h2ListItemA = $('<a href="#'+menuLevel.id+'"><i class="fas fa-angle-right"></i> '+menuLevel.title+'</a>');
     $h2ListItem.append($h2ListItemA);
     $h2List.append($h2ListItem);
 
