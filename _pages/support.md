@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-## Support Chat Room
+# Support Chat Room
 
 We have set up a dedicated support chat room for WeatherLink v2 API users.
 
