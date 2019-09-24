@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2019-09-24
+  - Added the [FAQ](faq) page.
 - 2019-08-27
   - Added the [Tools](tools) page.
 - 2019-08-23
