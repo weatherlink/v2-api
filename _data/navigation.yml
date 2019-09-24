@@ -21,6 +21,8 @@ navMain:
         url: /api-response
       - title: API Use Cases
         url: /api-use-cases
+      - title: FAQ
+        url: /faq
   - title: Reference
     children:
       - title: API Reference
