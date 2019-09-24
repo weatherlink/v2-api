@@ -21,7 +21,7 @@ navMain:
         url: /api-response
       - title: API Use Cases
         url: /api-use-cases
-      - title: FAQ
+      - title: FAQ <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
         url: /faq
   - title: Reference
     children:
