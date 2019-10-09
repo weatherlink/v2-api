@@ -8,6 +8,11 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+<div class="notice--warning">
+<h4>Beta Test:</h4>
+<p>Rate limits are not currently enforced during the beta test. An announcement will be made prior to the launch of rate limit enforcement.</p>
+</div>
+
 The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
 
 By default, all API users will have the following rate limits:
