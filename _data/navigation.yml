@@ -31,7 +31,7 @@ navMain:
         url: /data-structure-types
       - title: Sensor Catalog
         url: /sensor-catalog
-      - title: Rate Limits
+      - title: Rate Limits <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>
         url: /rate-limits
       - title: Size Limits
         url: /size-limits
