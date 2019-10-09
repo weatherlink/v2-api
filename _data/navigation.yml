@@ -37,7 +37,7 @@ navMain:
         url: /size-limits
   - title: Resources
     children:
-      - title: Tools <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+      - title: Tools
         url: /tools
       - title: Support
         url: /support
