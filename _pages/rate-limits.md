@@ -8,12 +8,16 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-<div class="notice--warning">
-<h4>Update in Progress:</h4>
-<p>The rate limits are being revised and an update will be announced before rate limiting rules are enforced.</p>
-</div>
-
 The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
+
+By default, all API users will have the following rate limits:
+
+* 300 API calls per hour
+* 2 API calls per second
+
+This is more than enough for 95% percent of all WeatherLink users to access meta-data, current conditions data, and historic data for all of their weather stations.
+
+Higher rate limits will be granted for large scale WeatherLink customers.
 
 <!--
 Rate limits are dynamically calculated based on the types of weather stations, the WeatherLink subscription level, and the number of weather stations associated with the WeatherLink account that is connected to the API Key.
