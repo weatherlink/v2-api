@@ -42,16 +42,16 @@ The API Signature is a calculated value used to prevent API request parameter ta
 
 The API Signature is passed in the API request as a query parameter named `api-signature`.
 
-## API Signature Calculation Live Code Examples
+## Live Code Examples
 
-We have created some live code samples similar to Example #1 below. The live code sample is available in different programming languages.
+We have created some API Signature Calculation live code examples similar to Example #1 below. The live code sample is available in different programming languages.
 
 * [Java](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Java)
 * [Node.js](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Nodejs)
 * [PHP](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-PHP)
 * [Python](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Python)
 
-## API Signature Calculation Walkthrough Examples
+## Walkthrough Examples
 
 ### Example #1 - Current Conditions Data
 
