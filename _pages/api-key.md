@@ -8,6 +8,17 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-The WeatherLink v2 API is in a beta test phase.
-
-API Keys are available upon request, please submit your request through the [developer support chat room](https://gitter.im/WeatherLink/v2-api).
+<div class="notice--warning">
+<h4>Beta Test:</h4>
+<p>The WeatherLink v2 API is currently in a beta test phase. The API currently has the following limitations:</p>
+<ul>
+  <li>You cannot create your own v2 API Keys at this time, but API Keys are available upon request. Please submit your request through the <a href="https://gitter.im/WeatherLink/v2-api">developer support chat room</a> and be sure to include the WeatherLink account username that the API Key will belong to.</li>
+  <li>
+    Weather observation data is currently only supported for:
+    <ul>
+      <li>EnviroMonitor</li>
+      <li>WeatherLink Live</li>
+    </ul>
+  </li>
+</ul>
+</div>
