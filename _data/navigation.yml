@@ -13,8 +13,8 @@ navMain:
         url: /
   - title: Getting Started
     children:
-      - title: API Key
-        url: /api-key
+#      - title: API Key
+#        url: /api-key
       - title: Authentication
         url: /authentication
       - title: API Response
