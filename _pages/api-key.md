@@ -10,9 +10,4 @@ header:
 
 The WeatherLink v2 API is in a beta test phase.
 
-API Keys and access to the API is currently limited to selected beta testers.
-
-At this time API users can not create their own API Keys.
-
-Instead, each beta tester will be contacted and receive an API Key to use with the v2 API.
-
+API Keys are available upon request, please submit your request through the [developer support chat room](https://gitter.im/WeatherLink/v2-api).
