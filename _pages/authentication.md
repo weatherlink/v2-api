@@ -12,8 +12,17 @@ The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and 
 
 <div class="notice--warning">
 <h4>Beta Test:</h4>
-<p>During the beta test phase of the v2 API selected beta testers will be provided with an API Key and API Secret.</p>
-<p>After the beta test phase WeatherLink users will be able to generate their own API Key and API Secret on the WeatherLink web site.</p>
+<p>The WeatherLink v2 API is currently in a beta test phase. The API currently has the following limitations:</p>
+<ul>
+  <li>API Keys are available upon request, please submit your request through the <a href="https://gitter.im/WeatherLink/v2-api">developer support chat room</a>.</li>
+  <li>
+    Weather observation data is currently only supported for:
+    <ul>
+      <li>EnviroMonitor</li>
+      <li>WeatherLink Live</li>
+    </ul>
+  </li>
+</ul>
 </div>
 
 ## API Key
