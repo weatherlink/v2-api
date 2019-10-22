@@ -16,7 +16,7 @@ Access to the API is based on an [API Key](api-key).
 <h4>Beta Test:</h4>
 <p>The WeatherLink v2 API is currently in a beta test phase. The API currently has the following limitations:</p>
 <ul>
-  <li>API Keys are only available to approved API beta testers.</li>
+  <li>API Keys are available upon request, please submit your request through the [developer support chat room](https://gitter.im/WeatherLink/v2-api).</li>
   <li>
     Weather observation data is currently only supported for:
     <ul>
