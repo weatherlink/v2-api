@@ -46,10 +46,6 @@ The following tables illustrate the combinations of these factors and how they t
 |Self Upgrade |Basic |Not applicable |Not applicable |Not applicable |Not applicable
 
 
-| One    | Two | Three | Four    | Five  | Six 
-| -
-| Span <td colspan=3>triple  <td colspan=2>double
-
 <!--
 ## WeatherLink Live
 
