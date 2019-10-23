@@ -106,3 +106,78 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
 |Self Upgrade |Pro+ |Most recent record |Yes |No |No
 |Self Upgrade |Pro |Most recent record |Yes |No |No
 |Self Upgrade |Basic |Not applicable |Not applicable |Not applicable |Not applicable
+
+<table>
+  <thead>
+    <tr>
+      <th>Relationship with the Weather Station</th>
+      <th>Subscription Level</th>
+      <th>ISS Current Conditions Permission</th>
+      <th>ISS Historic Data Permission</th>
+      <th>Node Sensor Current Conditions Permission</th>
+      <th>Node Sensor Historic Data Permission</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Owned</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td colspan="4">Not applicable</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Shared</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Most recent 15 minute record</td>
+      <td>No</td>
+      <td>Most recent 15 minute record</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Self Upgrade</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td colspan="4">Not applicable</td>
+    </tr>
+  </tbody>
+</table>
