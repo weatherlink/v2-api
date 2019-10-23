@@ -88,7 +88,8 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
     </tr>
     <tr>
       <td>Basic</td>
-      <td colspan="2">Not applicable</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
     </tr>
   </tbody>
 </table>
@@ -136,7 +137,10 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
     </tr>
     <tr>
       <td>Basic</td>
-      <td colspan="4">Not applicable</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
     </tr>
     <tr>
       <td rowspan="3">Shared</td>
@@ -177,7 +181,10 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
     </tr>
     <tr>
       <td>Basic</td>
-      <td colspan="4">Not applicable</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
     </tr>
   </tbody>
 </table>
