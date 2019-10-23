@@ -19,31 +19,31 @@ The following tables illustrate the combinations of these factors and how they t
 
 ## WeatherLink Live
 
-Relationship with the Weather Station|Subscription Level|Current Conditions Permission|Historic Data Permission
--|-|-|-
-Owned |Pro+ |Every 1 minute record |Yes
-Owned |Pro |Every 5 minute record |Yes
-Owned |Basic |Every 15 minute record |No
-Shared |Pro+ |Every 1 minute record |Yes
-Shared |Pro |Every 5 minute record |Yes
-Shared |Basic |Every 15 minute record |No
-Self Upgrade |Pro+ |Every 1 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
-Self Upgrade |Pro |Every 5 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
-Self Upgrade |Basic |Not applicable |Not applicable
+|Relationship with the Weather Station|Subscription Level|Current Conditions Permission|Historic Data Permission
+|-
+|Owned |Pro+ |Most recent record |Yes
+|Owned |Pro |Most recent 5 minute record |Yes
+|Owned |Basic |Most recent 15 minute record |No
+|Shared |Pro+ |Most recent record |Yes
+|Shared |Pro |Most recent 5 minute record |Yes
+|Shared |Basic |Most recent 15 minute record |No
+|Self Upgrade |Pro+ |Most recent record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
+|Self Upgrade |Pro |Most recent 5 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
+|Self Upgrade |Basic |Not applicable |Not applicable
 
 ## EnviroMonitor
 
-Relationship with the Weather Station|Subscription Level|ISS Current Conditions Permission|ISS Historic Data Permission|Node Sensor Current Conditions Permission|Node Sensor Historic Data Permission
--|-|-|-|-|-
-Owned |Pro+ |Most recent record |Yes |Most recent record |Yes
-Owned |Pro |Most recent record |Yes |Most recent record |Yes
-Owned |Basic |Not applicable |Not applicable |Not applicable |Not applicable
-Shared |Pro+ |Most recent record |Yes |Most recent record |Yes
-Shared |Pro |Most recent record |Yes |Most recent record |Yes
-Shared |Basic |Most recent 15 minute record |No |Most recent 15 minute record |No
-Self Upgrade |Pro+ |Most recent record |Yes |No |No
-Self Upgrade |Pro |Most recent record |Yes |No |No
-Self Upgrade |Basic |Not applicable |Not applicable |Not applicable |Not applicable
+|Relationship with the Weather Station|Subscription Level|ISS Current Conditions Permission|ISS Historic Data Permission|Node Sensor Current Conditions Permission|Node Sensor Historic Data Permission
+|-
+|Owned |Pro+ |Most recent record |Yes |Most recent record |Yes
+|Owned |Pro |Most recent record |Yes |Most recent record |Yes
+|Owned |Basic |Not applicable |Not applicable |Not applicable |Not applicable
+|Shared |Pro+ |Most recent record |Yes |Most recent record |Yes
+|Shared |Pro |Most recent record |Yes |Most recent record |Yes
+|Shared |Basic |Most recent 15 minute record |No |Most recent 15 minute record |No
+|Self Upgrade |Pro+ |Most recent record |Yes |No |No
+|Self Upgrade |Pro |Most recent record |Yes |No |No
+|Self Upgrade |Basic |Not applicable |Not applicable |Not applicable |Not applicable
 
 
 
