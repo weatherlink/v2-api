@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-aThere are a number of factors that determine both if and how often you can access weather observation data for a particular weather station. These factors include:
+There are a number of factors that determine both if and how often you can access weather observation data for a particular weather station. These factors include:
 
 * The type of weather station. Is it WeatherLink Live or EnviroMonitor?
 * The type of weather observation data being requested. Are you requesting current conditions or historic data?
