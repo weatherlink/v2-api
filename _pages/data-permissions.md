@@ -19,7 +19,7 @@ The following tables illustrate the combinations of these factors and how they t
 
 ## WeatherLink Live
 
-|Relationship with the Weather Station|Subscription Level|Current Conditions Permission|Historic Data Permission
+|Relationship with the Weather Station |Subscription Level |Current Conditions Permission |Historic Data Permission
 |-
 |Owned |Pro+ |Most recent record |Yes
 |Owned |Pro |Most recent 5 minute record |Yes
@@ -33,7 +33,7 @@ The following tables illustrate the combinations of these factors and how they t
 
 ## EnviroMonitor
 
-|Relationship with the Weather Station|Subscription Level|ISS Current Conditions Permission|ISS Historic Data Permission|Node Sensor Current Conditions Permission|Node Sensor Historic Data Permission
+|Relationship with the Weather Station |Subscription Level |ISS Current Conditions Permission |ISS Historic Data Permission |Node Sensor Current Conditions Permission |Node Sensor Historic Data Permission
 |-
 |Owned |Pro+ |Most recent record |Yes |Most recent record |Yes
 |Owned |Pro |Most recent record |Yes |Most recent record |Yes
@@ -46,6 +46,9 @@ The following tables illustrate the combinations of these factors and how they t
 |Self Upgrade |Basic |Not applicable |Not applicable |Not applicable |Not applicable
 
 
+| One    | Two | Three | Four    | Five  | Six 
+| -
+| Span <td colspan=3>triple  <td colspan=2>double
 
 <!--
 ## WeatherLink Live
