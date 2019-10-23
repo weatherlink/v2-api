@@ -8,22 +8,35 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-There are a number of factors that determine both if and how often you can access weather observation data for a particular weather station.
+There are a number of factors that determine both if and how often you can access weather observation data for a particular weather station. These factors include:
+
+* The type of weather station. Is it WeatherLink Live or EnviroMonitor?
+* The type of weather observation data being requested. Are you requesting current conditions or historic data?
+* Your relationship with the weather station. Does the station belong to your WeatherLink account or was it shared with you?
+* What subscription level is your association with the weather station, do you have Basic, Pro or Pro+ access?
+
+The following tables 
+
+## WeatherLink Live
+
+Relationship with the Weather Station|Subscription Level|Current Conditions Permission|Historic Data Permission
+-|-|-|-
+Owned        |Pro+  |Every 1 minute record  |Yes
+Owned        |Pro   |Every 5 minute record  |Yes
+Owned        |Basic |Every 15 minute record |No
+Shared       |Pro+  |Every 1 minute record  |Yes
+Shared       |Pro   |Every 5 minute record  |Yes
+Shared       |Basic |Every 15 minute record |No
+Self Upgrade |Pro+  |Every 1 minute record but limited to just the Primary ISS and Barometer |Yes but limited to just the Primary ISS and Barometer
+Self Upgrade |Pro   |Every 5 minute record but limited to just the Primary ISS and Barometer |Yes but limited to just the Primary ISS and Barometer
+Self Upgrade |Basic |Not applicable         |Not applicable
 
 
 
 
 
 
-
-Data permissio
-
-
-
-are based on the types of weather stations, the WeatherLink subscription level, and the number of weather stations associated with the WeatherLink account that is connected to the API Key.
-
-For example, if you own a WeatherLink Live with a Pro+ subscription and another WeatherLink Live is shared with you at a Basic subscription level you will be able to submit API requests to the Current Conditions API endpoint at 130 requests per hour. This value is derived from the sum of 120 requests per hour for the owned station and 10 requests per hour for the shared station.
-
+<!--
 ## WeatherLink Live
 
 Relationship with the Weather Station|Subscription Level|Current Conditions API Requests Per Hour|Historic Data API Requests Per Hour
@@ -62,3 +75,4 @@ Saved           |Pro   |25*  |100*
 Saved           |Basic |0    |0
 
 \* Only data from the Integrated Sensor Suite will be accessible.
+-->
