@@ -88,8 +88,7 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
     </tr>
     <tr>
       <td>Basic</td>
-      <td>Not applicable</td>
-      <td>Not applicable</td>
+      <td colspan="2">Not applicable</td>
     </tr>
   </tbody>
 </table>
