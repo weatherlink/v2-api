@@ -15,24 +15,35 @@ There are a number of factors that determine both if and how often you can acces
 * Your relationship with the weather station. Does the station belong to your WeatherLink account or was it shared with you?
 * What subscription level is your association with the weather station, do you have Basic, Pro or Pro+ access?
 
-The following tables 
+The following tables illustrate the combinations of these factors and how they translate to what data can be access via the WeatherLink v2 API.
 
 ## WeatherLink Live
 
 Relationship with the Weather Station|Subscription Level|Current Conditions Permission|Historic Data Permission
 -|-|-|-
+Owned        |Pro+  |Most recent record |Yes
+Owned        |Pro   |Most recent record where the minute is divisible by 5 |Yes
+Owned        |Basic |Every 15 minute record |No
+Shared       |Pro+  |Every 1 minute record  |Yes
+Shared       |Pro   |Every 5 minute record  |Yes
+Shared       |Basic |Every 15 minute record |No
+Self Upgrade |Pro+  |Every 1 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
+Self Upgrade |Pro   |Every 5 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
+Self Upgrade |Basic |Not applicable         |Not applicable
+
+## EnviroMonitor / Vantage Connect
+
+Relationship with the Weather Station|Subscription Level|ISS Current Conditions Permission|ISS Historic Data Permission|Node Sensor Current Conditions Permission|Node Sensor Historic Data Permission
+-|-|-|-|-|-
 Owned        |Pro+  |Every 1 minute record  |Yes
 Owned        |Pro   |Every 5 minute record  |Yes
 Owned        |Basic |Every 15 minute record |No
 Shared       |Pro+  |Every 1 minute record  |Yes
 Shared       |Pro   |Every 5 minute record  |Yes
 Shared       |Basic |Every 15 minute record |No
-Self Upgrade |Pro+  |Every 1 minute record but limited to just the Primary ISS and Barometer |Yes but limited to just the Primary ISS and Barometer
-Self Upgrade |Pro   |Every 5 minute record but limited to just the Primary ISS and Barometer |Yes but limited to just the Primary ISS and Barometer
+Self Upgrade |Pro+  |Every 1 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
+Self Upgrade |Pro   |Every 5 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
 Self Upgrade |Basic |Not applicable         |Not applicable
-
-
-
 
 
 
