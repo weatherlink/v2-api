@@ -15,7 +15,9 @@ There are a number of factors that determine both if and how often you can acces
 * Your relationship with the weather station. Does the station belong to your WeatherLink account or was it shared with you?
 * What subscription level is your association with the weather station, do you have Basic, Pro or Pro+ access?
 
-The following tables illustrate the combinations of these factors and how they translate to what data can be access via the WeatherLink v2 API.
+The following tables illustrate the combinations of these factors and how they translate to what data can be accessed via the WeatherLink v2 API.
+
+Permission descriptions like "Most recent 5 minute record" means that data will be from the most recent time when the minute of the hour was divisible by 5. For example, an API query at 10:08 AM will return the data record from 10:05 AM and querying the API again at 10:12 AM will return the record from 10:10 AM.
 
 ## WeatherLink Live
 
