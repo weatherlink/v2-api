@@ -33,6 +33,67 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
 |Self Upgrade |Pro |Most recent 5 minute record, but limited to just the Primary ISS and Barometer |Yes, but limited to just the Primary ISS and Barometer
 |Self Upgrade |Basic |Not applicable |Not applicable
 
+<table>
+  <thead>
+    <tr>
+      <th>Relationship with the Weather Station</th>
+      <th>Subscription Level</th>
+      <th>Current Conditions Permission</th>
+      <th>Historic Data Permission</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Owned</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent 5 minute record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Most recent 15 minute record</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Shared</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent 5 minute record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Most recent 15 minute record</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Self Upgrade</td>
+      <td>Pro+</td>
+      <td>Most recent record, but limited to just the Primary ISS and Barometer</td>
+      <td>Yes, but limited to just the Primary ISS and Barometer</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent 5 minute record, but limited to just the Primary ISS and Barometer</td>
+      <td>Yes, but limited to just the Primary ISS and Barometer</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+    </tr>
+  </tbody>
+</table>
+
 ## EnviroMonitor
 
 |Relationship with the Weather Station |Subscription Level |ISS Current Conditions Permission |ISS Historic Data Permission |Node Sensor Current Conditions Permission |Node Sensor Historic Data Permission
