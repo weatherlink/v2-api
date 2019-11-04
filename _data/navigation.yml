@@ -21,7 +21,7 @@ navMain:
         url: /api-response
       - title: API Use Cases
         url: /api-use-cases
-      - title: FAQ <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+      - title: FAQ
         url: /faq
   - title: Reference
     children:
@@ -31,7 +31,9 @@ navMain:
         url: /data-structure-types
       - title: Sensor Catalog
         url: /sensor-catalog
-      - title: Rate Limits <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>
+      - title: Data Permissions <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+        url: /data-permissions
+      - title: Rate Limits
         url: /rate-limits
       - title: Size Limits
         url: /size-limits
