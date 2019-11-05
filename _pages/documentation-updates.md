@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2019-11-04
+  - Added [Data Permissions](data-permissions) documentation.
 - 2019-10-29
   - Added links for C# live code sample for API Signature calculation under [Authentication](authentication).
 - 2019-10-09
