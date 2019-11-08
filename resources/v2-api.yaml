@@ -569,7 +569,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse500'
-  /sensor-catalog/:
+  /sensor-catalog:
     get:
       tags:
         - Metadata
