@@ -28,7 +28,7 @@ Each weather station reporting data to the WeatherLink service has a unique inte
 
 The Station ID is not the same as the Device ID or DID that is on the weather station.
 
-In the past a single Device ID could be used to easily identify a weather station connected to a WeatherLink IP or Vantage Connect. However, in EnviroMonitor weather stations every Node and Gateway are assigned Device ID numbers as well. Therefore, Device ID is no longer a nice and simple option to serve as the unique and single ID for the entirety of a weather station and was superseded by a new single identifier called Station ID. This Station ID is used throughout the WeatherLink v2 API to identify which weather station's data is being access by the API request.
+In the past a single Device ID could be used to easily identify a weather station connected to a WeatherLink IP or Vantage Connect. However, in EnviroMonitor weather stations every Node and Gateway are assigned Device ID numbers as well. Therefore, Device ID is no longer a nice and simple option to serve as the unique and single ID for the entirety of a weather station and was superseded by a new single identifier called Station ID. This Station ID is used throughout the WeatherLink v2 API to identify which weather station's data is being accessed by the API request.
 
 [Back to the top](#top)
 
