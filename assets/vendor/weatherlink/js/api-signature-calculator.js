@@ -1,5 +1,5 @@
 if ($('input#api-timestamp').length > 0) {
-	setInterval(updateAPITimestamp, 1000);
+	setInterval(updateApiTimestamp, 1000);
 }
 
 var beautify = null;
@@ -15,7 +15,7 @@ if ($('div#api-response').length > 0) {
     	//editor.setTheme("ace/theme/monokai");
 }
 
-function updateAPITimestamp() {
+function updateApiTimestamp() {
 	$('input#api-timestamp').val(Math.floor(Date.now() / 1000));
 }
 
