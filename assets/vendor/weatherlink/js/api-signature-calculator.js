@@ -7,9 +7,9 @@ var editor = null;
 
 if ($('div#api-response').length > 0) {
 	beautify = ace.require("ace/ext/beautify");
-	editor = ace.edit("api-response");
+	editor = ace.edit("api-signature");
 	editor.setReadOnly(true);
-	editor.session.setMode("ace/mode/json");
+	editor.session.setMode("ace/mode/text");
 	editor.getSession().setUseWrapMode(true);
 	beautify.beautify(editor.session);
     	//editor.setTheme("ace/theme/monokai");
