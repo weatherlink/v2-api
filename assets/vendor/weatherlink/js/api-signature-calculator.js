@@ -27,7 +27,7 @@ $('select#api-endpoint').change(function() {
 	}
 });
 
-function sendAPIRequest() {
+function calculateApiSignature() {
 	editor.setValue("");
 	var apiEndpointID = $('select#api-endpoint').find(':selected').val();
 	
@@ -125,6 +125,6 @@ function sendAPIRequest() {
 		});
 }
 
-$('input#send-api-request-button').on('click', function(eventData) {
-	sendAPIRequest();
+$('input#calculate-api-signature-button').on('click', function(eventData) {
+	calculateApiSignature();
 });
