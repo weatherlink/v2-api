@@ -31,7 +31,7 @@ navMain:
         url: /data-structure-types
       - title: Sensor Catalog
         url: /sensor-catalog
-      - title: Data Permissions <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+      - title: Data Permissions <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /data-permissions
       - title: Rate Limits
         url: /rate-limits
