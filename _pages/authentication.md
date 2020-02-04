@@ -59,7 +59,8 @@ We have created some API Signature Calculation live code examples similar to Exa
 * [Java](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Java)
 * [Node.js](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Nodejs)
 * [PHP](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-PHP)
-* [Python](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Python)
+* [Python 2](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Python-2)
+* [Python 3](https://repl.it/@WeatherLink/v2-API-Signature-Calculation-in-Python-3)
 
 ## Walkthrough Examples
 
