@@ -91,7 +91,7 @@ header:
 </style>
 
 <style type="text/css" media="screen">
-#api-response { 
+#api-signature { 
 	position: relative !important;
 	border: 1px solid lightgray;
 	height: 500px;
@@ -208,7 +208,10 @@ header:
 
 </div>
 
+<label>
+<div><span>API Signature</span></div>
 <div id="api-signature"></div>
+</label>
 
 <script>
 (function() {
