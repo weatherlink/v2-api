@@ -208,7 +208,7 @@ header:
 
 </div>
 
-<div id="api-response"></div>
+<div id="api-signature"></div>
 
 <script>
 (function() {
