@@ -9,7 +9,7 @@ main:
 navMain: 
   - title: Overview
     children:
-      - title: Introduction
+      - title: Introduction <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i>
         url: /
   - title: Getting Started
     children:
@@ -33,7 +33,7 @@ navMain:
         url: /sensor-catalog
       - title: Data Permissions <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /data-permissions
-      - title: Rate Limits
+      - title: Rate Limits <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i>
         url: /rate-limits
       - title: Size Limits
         url: /size-limits
