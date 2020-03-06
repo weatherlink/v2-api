@@ -10,7 +10,7 @@ header:
 
 <div class="notice--info">
 <h4>API General Availability and Enforcement of Rate Limits:</h4>
-<p>The WeatherLink v2 API Rate will be released for general availability on 2020-03-11; at which time the rate limits documented below will be enforced. If you have any questions or concerns please contact the API developers through the API [Support Chat Room](support).</p>
+<p>The WeatherLink v2 API Rate will be released for general availability on 2020-03-11; at which time the rate limits documented below will be enforced. If you have any questions or concerns please contact the API developers through the API <a href="support">Support Chat Room</a>.</p>
 </div>
 
 The WeatherLink v2 API is a shared resource between all API users. In an effort to maintain API availability for all users and protect the API from abuse, either accidental or intentional, all API requests will be rate limited by the API Key.
