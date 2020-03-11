@@ -14,3 +14,9 @@ The WeatherLink v2 API can be used to access weather station metadata and weathe
 <h4>API General Availability and Enforcement of Rate Limits:</h4>
 <p>The WeatherLink v2 API Rate will be released for general availability on 2020-03-11; at which time the documented <a href="rate-limits">rate limits</a> will be enforced. If you have any questions or concerns please contact the API developers through the API <a href="support">Support Chat Room</a>.</p>
 </div>
+
+<div class="notice--warning">
+<h4>Please Note:</h4>
+<p>The WeatherLink v2 API is intended for use with the WeatherLink Live and EnviroMonitor weather station solutions.</p>
+<p>If you are looking for an API intended for use with the WeatherLinkIP/Serial/USB Data Logger or Vantage Connect weather station solutions please see the <a href="https://www.weatherlink.com/static/docs/APIdocumentation.pdf">WeatherLink v1 API documentation</a></p>
+</div>
