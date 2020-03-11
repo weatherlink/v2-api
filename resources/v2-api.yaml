@@ -3,7 +3,7 @@ info:
   title: WeatherLink v2 API
   description: >
     Metadata endpoints describe weather stations and their component parts, as well as the structure of the data available from the Weather Data endpoints. Weather Data enpoints provide current and historical data.
-    
+    <br><br>
     Please note that the WeatherLink v2 API is intended for use with the WeatherLink Live and EnviroMonitor weather station solutions.
   termsOfService: "https://weatherlink.github.io/v2-api/terms-of-service"
   contact:
