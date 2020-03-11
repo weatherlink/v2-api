@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-The WeatherLink v2 API can be used to access weather station metadata and weather observation data for WeatherLink Live and EnviroMonitor weather stations that you have access to.
+The WeatherLink v2 API can be used to access weather station metadata and weather observation data for **WeatherLink Live** and **EnviroMonitor** weather stations that you have access to.
 
 <div class="notice--success">
 <h4>API General Availability and Enforcement of Rate Limits:</h4>
