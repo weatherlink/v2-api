@@ -18,5 +18,5 @@ The WeatherLink v2 API can be used to access weather station metadata and weathe
 <div class="notice--warning">
 <h4>Please Note:</h4>
 <p>The WeatherLink v2 API is intended for use with the WeatherLink Live and EnviroMonitor weather station solutions.</p>
-<p>If you are looking for an API intended for use with the WeatherLinkIP/Serial/USB Data Logger or Vantage Connect weather station solutions please see the <a href="https://www.weatherlink.com/static/docs/APIdocumentation.pdf">WeatherLink v1 API documentation</a></p>
+<p>If you are looking for an API intended for use with the WeatherLinkIP, the Serial/USB Data Logger with the WeatherLink Computer Software, or the Vantage Connect weather station solutions please see the <a href="https://www.weatherlink.com/static/docs/APIdocumentation.pdf">WeatherLink v1 API documentation</a>.</p>
 </div>
