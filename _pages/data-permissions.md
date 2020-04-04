@@ -59,7 +59,7 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
       <td>Yes</td>
     </tr>
     <tr>
-      <td>Basic</td>
+      <td>Basic *</td>
       <td>Most recent 15 minute record</td>
       <td>No</td>
     </tr>
@@ -134,7 +134,7 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
       <td>Yes</td>
     </tr>
     <tr>
-      <td>Basic</td>
+      <td>Basic *</td>
       <td>Most recent 15 minute record</td>
       <td>No</td>
       <td>Most recent 15 minute record</td>
@@ -164,3 +164,5 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
     </tr>
   </tbody>
 </table>
+
+<i>* Basic shares must be created by the owner of the weather station.</i>
