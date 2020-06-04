@@ -32,7 +32,7 @@ Data Structure Type|Record Type
 9|non-ISS Record
 14|Health Record
 
-## WeatherLink IP / Vantage Connect / WeatherLink Network Annual Subscription
+## WeatherLinkIP / Vantage Connect / WeatherLink Network Annual Subscription
 
 Data Structure Type|Record Type
 -|-
