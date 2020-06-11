@@ -1340,12 +1340,12 @@ components:
               data_structure_type:
                 type: integer
                 format: int32
-              ts:
-                type: integer
-                format: int32
               data:
                 type: object
                 properties:
+                  ts:
+                    type: integer
+                    format: int32
                   field_1:
                     type: number
                     format: float
@@ -1430,7 +1430,7 @@ components:
         sensors:
           - lsid: 69743
             sensor_type: 243
-            data_structure_type: 12
+            data_structure_type: 13
             data:
               - ts: 1556909900
                 dew_point_in: 40.3
