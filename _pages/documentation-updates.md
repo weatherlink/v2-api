@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2020-02-04
+  - Added link for Python 2 and Python 3 live code sample for API Signature calculation under [Authentication Live Code Examples](authentication#live-code-examples).
 - 2019-11-04
   - Added [Data Permissions](data-permissions) documentation.
 - 2019-10-29
