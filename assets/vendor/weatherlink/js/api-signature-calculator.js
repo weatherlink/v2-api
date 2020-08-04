@@ -2,19 +2,6 @@ if ($('input#api-timestamp').length > 0) {
 	setInterval(updateApiTimestamp, 1000);
 }
 
-var beautify = null;
-var editor = null;
-
-if ($('div#api-response').length > 0) {
-	beautify = ace.require("ace/ext/beautify");
-	editor = ace.edit("api-signature");
-	editor.setReadOnly(true);
-	editor.session.setMode("ace/mode/text");
-	editor.getSession().setUseWrapMode(true);
-	beautify.beautify(editor.session);
-    	//editor.setTheme("ace/theme/monokai");
-}
-
 function updateApiTimestamp() {
 	$('input#api-timestamp').val(Math.floor(Date.now() / 1000));
 }
@@ -28,7 +15,9 @@ $('select#api-endpoint').change(function() {
 });
 
 function calculateApiSignature() {
-	editor.setValue("");
+	var apiSignatureDiv = $('div#api-signature');
+	apiSignatureDiv.html('');
+	
 	var apiEndpointID = $('select#api-endpoint').find(':selected').val();
 	
 	if (apiEndpointID == '') {
@@ -86,11 +75,16 @@ function calculateApiSignature() {
 			break;
 		case 'historic':
 			pathParams.push({"key": "station-id", "value": $('input#historic-station-id').val()});
-			pathParams.push({"key": "start-timestamp", "value": $('input#historic-start-timestamp').val()});
-			pathParams.push({"key": "end-timestamp", "value": $('input#historic-end-timestamp').val()});
+			queryParams.push({"key": "start-timestamp", "value": $('input#historic-start-timestamp').val()});
+			queryParams.push({"key": "end-timestamp", "value": $('input#historic-end-timestamp').val()});
 			apiEndpointPath = '/historic/' + $('input#historic-station-id').val();
 			break;
 	}
+	
+	var instructions = '';
+	
+	instructions += "For an API call to " + apiEndpointPath + " the following parameters are used<br>";
+	instructions += "Path Parameters:<br>";	
 
 	var stringToHash = _.chain(queryParams)
 		.concat(pathParams)
@@ -107,22 +101,11 @@ function calculateApiSignature() {
 	var apiSignature = hmac.digest().toHex();
 	
 	queryParams.push({"key": "api-signature", "value": apiSignature});
-	
-	var requestData = {};
-	_.forEach(queryParams, function(param) {
-		_.set(requestData, param.key, param.value);
-	});
 
-	var jqxhr = $.getJSON('https://api.weatherlink.com/v2' + apiEndpointPath, requestData)
-		.done(function(responseJson) {
-			editor.gotoLine(0, 0, false);
-			editor.setValue(JSON.stringify(responseJson, null, 4), -1);
-			editor.gotoLine(0, 0, false);
-		})
-		.fail(function(jqxhr, textStatus, error) {
-			console.log(textStatus);
-			console.log(error);
-		});
+	
+	
+	
+	apiSignatureDiv.html(instructions);	
 }
 
 $('input#calculate-api-signature-button').on('click', function(eventData) {
