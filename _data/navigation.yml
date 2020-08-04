@@ -9,7 +9,7 @@ main:
 navMain: 
   - title: Overview
     children:
-      - title: Introduction <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>
+      - title: Introduction <!--<i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>-->
         url: /
   - title: Getting Started
     children:
