@@ -41,7 +41,7 @@ header:
 }
 .form-style-2 input.input-field, 
 .form-style-2 .textarea-field, 
- .form-style-2 .select-field{
+.form-style-2 .select-field{
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -208,10 +208,10 @@ header:
 
 </div>
 
-<label>
+<label></label>
 <div><span>API Signature</span></div>
 <div id="api-signature"></div>
-</label>
+
 
 <script>
 (function() {
