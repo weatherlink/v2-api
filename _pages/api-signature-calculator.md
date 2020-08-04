@@ -210,7 +210,7 @@ header:
 
 <label></label>
 <div><span>API Signature Calculation Steps</span></div>
-<div id="api-signature-calculation-steps"></div>
+<div id="api-signature"></div>
 
 
 <script>
