@@ -96,6 +96,7 @@ header:
 	border: 1px solid lightgray;
 	height: 500px;
 	width: 80%;
+	padding: 16px;
 }
 </style>
 
