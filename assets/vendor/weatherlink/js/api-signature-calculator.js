@@ -83,8 +83,24 @@ function calculateApiSignature() {
 	
 	var instructions = '';
 	
-	instructions += "For an API call to " + apiEndpointPath + " the following parameters are used<br>";
-	instructions += "Path Parameters:<br>";	
+	instructions += "For an API call to " + apiEndpointPath + " the following parameters are used.<br>";
+	if (pathParams.length > 0) {
+		instructions += "Path Parameters:";
+		instructions += "<ul>";
+		_.forEach(pathParams, function(param) {
+			instructions += "<li>" + param.key + " = " + param.value + "</li>";
+		});
+		instructions += "</ul>";
+	}
+	if (queryParams.length > 0) {
+		instructions += "Query Parameters:";
+		instructions += "<ul>";
+		_.forEach(queryParams, function(param) {
+			instructions += "<li>" + param.key + " = " + param.value + "</li>";
+		});
+		instructions += "</ul>";
+	}
+	
 
 	var stringToHash = _.chain(queryParams)
 		.concat(pathParams)
