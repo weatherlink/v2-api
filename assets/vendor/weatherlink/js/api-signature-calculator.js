@@ -83,7 +83,7 @@ function calculateApiSignature() {
 	
 	var instructions = '';
 	
-	instructions += "For an API call to " + apiEndpointPath + " the following parameters are used.<br>";
+	instructions += "For an API call to " + apiEndpointPath + " the following parameters are used:<br>";
 	if (pathParams.length > 0) {
 		instructions += "Path Parameters:";
 		instructions += "<ul>";
@@ -100,6 +100,14 @@ function calculateApiSignature() {
 		});
 		instructions += "</ul>";
 	}
+	instructions += "The first step is to take all of the parameters and sort them by parameter name.<br>";
+	instructions += "Once sorted the list of parameters will look like the following:<br>";
+	var sortedParams = _.chain(queryParams).concat(pathParams).orderBy("key").value();
+	instructions += "<ul>";
+	_.forEach(sortedParams, function(param) {
+		instructions += "<li>" + param.key + " = " + param.value + "</li>";
+	});
+	instructions += "</ul>";
 	
 
 	var stringToHash = _.chain(queryParams)
