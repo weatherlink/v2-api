@@ -209,7 +209,7 @@ header:
 </div>
 
 <label></label>
-<div><span>API Signature Calculation Steps</span></div>
+<div><span>API Signature Calculation Walkthrough</span></div>
 <div id="api-signature"></div>
 
 
