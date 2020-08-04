@@ -94,7 +94,7 @@ header:
 #api-signature { 
 	position: relative !important;
 	border: 1px solid lightgray;
-	height: 500px;
+	min-height: 200px;
 	width: 80%;
 	padding: 16px;
 }
