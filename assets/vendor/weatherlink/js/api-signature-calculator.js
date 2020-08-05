@@ -133,14 +133,14 @@ function calculateApiSignature() {
 	instructions += "The third step is to compute the API Signature using the the API Secret and the concatenated string from the previous step. To calculate the signature use the HMAC SHA-256 algorithm with the concatenated string as the message and the API Secret as the HMAC secret key. The resulting computed HMAC value as a lower case hexadecimal string is the API Signature.<br>";
 	instructions += "The string to hash: " + sortedParamsString + "<br>";
 	instructions += "HMAC secret key: " + apiSecret + "<br>";
-	instructions += "Computed HMAC as a lower case hexadecimal string: " + apiSignature + "<br>";
+	instructions += "Computed HMAC as a lower case hexadecimal string: " + apiSignature + "<br><br>";
 	
-	instructions += "The fourth step is to generate the URL for the API call based on the parametes and the computed API signature.<br>";
-	instructions += "In this example the URL would be:<br><br>";
+	instructions += "The fourth step is to generate the URL for the API call based on the parameters and the computed API signature.<br>";
+	instructions += "In this example the URL would be:<br>";
 
 	queryParams.push({"key": "api-signature", "value": apiSignature});
 	
-	instructions += "https://api.weatherlink.com/v2" + apiEndpointPath + "?" + _.chain(queryParams).map(function(param) { param.key + "=" + param.value; }).join("&").value();
+	instructions += "https://api.weatherlink.com/v2" + apiEndpointPath + "?" + _.chain(queryParams).map(function(param) { return param.key + "=" + param.value; }).join("&").value();
 
 	apiSignatureDiv.html(instructions);	
 }
