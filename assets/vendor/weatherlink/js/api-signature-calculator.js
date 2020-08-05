@@ -135,11 +135,13 @@ function calculateApiSignature() {
 	instructions += "HMAC secret key: " + apiSecret + "<br>";
 	instructions += "Computed HMAC as a lower case hexadecimal string: " + apiSignature + "<br>";
 	
-	queryParams.push({"key": "api-signature", "value": apiSignature});
+	instructions += "The fourth step is to generate the URL for the API call based on the parametes and the computed API signature.<br>";
+	instructions += "In this example the URL would be:<br><br>";
 
+	queryParams.push({"key": "api-signature", "value": apiSignature});
 	
-	
-	
+	instructions += "https://api.weatherlink.com/v2" + apiEndpointPath + "?" + _.chain(queryParams).map(function(param) { param.key + "=" + param.value; }).join("&").value();
+
 	apiSignatureDiv.html(instructions);	
 }
 
