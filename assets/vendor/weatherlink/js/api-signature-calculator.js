@@ -100,6 +100,7 @@ function calculateApiSignature() {
 		});
 		instructions += "</ul>";
 	}
+	
 	instructions += "The first step is to take all of the parameters and sort them by parameter name. Once sorted the list of parameters will look like the following:<br>";
 	var sortedParams = _.chain(queryParams).concat(pathParams).orderBy("key").value();
 	instructions += "<ul>";
@@ -107,14 +108,15 @@ function calculateApiSignature() {
 		instructions += "<li>" + param.key + " = " + param.value + "</li>";
 	});
 	instructions += "</ul>";
+	
 	instructions += "The second step is to iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs like so:<br>";
 	var sortedParamsString = _.chain(sortedParams).map(function(param) { return param.key + param.value; }).join("").value();
 	instructions += sortedParamsString + "<br>";
 	var sortedParamsStringDelim = _.chain(sortedParams).map(function(param) { return "(" + param.key + ")(" + param.value + ")"; }).join("").value();
 	instructions += "To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:<br>";
 	instructions += sortedParamsString + "<br>";
-
-
+	
+	/*
 	var stringToHash = _.chain(queryParams)
 		.concat(pathParams)
     		.orderBy("key")
@@ -123,11 +125,17 @@ function calculateApiSignature() {
     		})
     		.join("")
     		.value();
-
+	*/
+	
 	var hmac = forge.hmac.create();
 	hmac.start('sha256', apiSecret);
 	hmac.update(stringToHash);
-	var apiSignature = hmac.digest().toHex();
+	var apiSignature = hmac.digest().toHex().toLowerCase();
+	
+	instructions += "The third step is to compute the API Signature using the the API Secret and the concatenated string from the previous step. To calculate the signature use the HMAC SHA-256 algorithm with the concatenated string as the message and the API Secret as the HMAC secret key. The resulting computed HMAC value as a lower case hexadecimal string is the API Signature.<br>";
+	instructions += "The string to hash: " + sortedParamsString + "<br>";
+	instructions += "HMAC secret key: " + apiSecret + "<br>";
+	instructions += "Computed HMAC as a lower case hexadecimal string: " + apiSignature + "<br>";
 	
 	queryParams.push({"key": "api-signature", "value": apiSignature});
 
