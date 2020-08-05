@@ -100,15 +100,20 @@ function calculateApiSignature() {
 		});
 		instructions += "</ul>";
 	}
-	instructions += "The first step is to take all of the parameters and sort them by parameter name.<br>";
-	instructions += "Once sorted the list of parameters will look like the following:<br>";
+	instructions += "The first step is to take all of the parameters and sort them by parameter name. Once sorted the list of parameters will look like the following:<br>";
 	var sortedParams = _.chain(queryParams).concat(pathParams).orderBy("key").value();
 	instructions += "<ul>";
 	_.forEach(sortedParams, function(param) {
 		instructions += "<li>" + param.key + " = " + param.value + "</li>";
 	});
 	instructions += "</ul>";
-	
+	instructions += "The second step is to iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs like so:<br>";
+	var sortedParamsString = _.chain(sortedParams).map(function(param) { return param.key + param.value; }).join("").value();
+	instructions += sortedParamsString + "<br>";
+	var sortedParamsStringDelim = _.chain(sortedParams).map(function(param) { return "(" + param.key + ")(" + param.value + ")"; }).join("").value();
+	instructions += "To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:<br>";
+	instructions += sortedParamsString + "<br>";
+
 
 	var stringToHash = _.chain(queryParams)
 		.concat(pathParams)
