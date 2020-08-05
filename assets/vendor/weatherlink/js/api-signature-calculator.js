@@ -111,10 +111,10 @@ function calculateApiSignature() {
 	
 	instructions += "The second step is to iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs like so:<br>";
 	var sortedParamsString = _.chain(sortedParams).map(function(param) { return param.key + param.value; }).join("").value();
-	instructions += "<p>" + sortedParamsString + "</p><br>";
+	instructions += "<pre>" + sortedParamsString + "</pre><br>";
 	var sortedParamsStringDelim = _.chain(sortedParams).map(function(param) { return "(" + param.key + ")(" + param.value + ")"; }).join("").value();
 	instructions += "To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:<br>";
-	instructions += sortedParamsStringDelim + "<br>";
+	instructions += "<pre>" + sortedParamsStringDelim + "</pre><br>";
 	
 	var stringToHash = _.chain(queryParams)
 		.concat(pathParams)
