@@ -116,7 +116,6 @@ function calculateApiSignature() {
 	instructions += "To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:<br>";
 	instructions += sortedParamsString + "<br>";
 	
-	/*
 	var stringToHash = _.chain(queryParams)
 		.concat(pathParams)
     		.orderBy("key")
@@ -125,7 +124,6 @@ function calculateApiSignature() {
     		})
     		.join("")
     		.value();
-	*/
 	
 	var hmac = forge.hmac.create();
 	hmac.start('sha256', apiSecret);
