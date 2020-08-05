@@ -140,7 +140,7 @@ function calculateApiSignature() {
 
 	queryParams.push({"key": "api-signature", "value": apiSignature});
 	
-	instructions += "https://api.weatherlink.com/v2" + apiEndpointPath + "?" + _.chain(queryParams).map(function(param) { return param.key + "=" + param.value; }).join("&").value();
+	instructions += "<pre>https://api.weatherlink.com/v2" + apiEndpointPath + "?" + _.chain(queryParams).map(function(param) { return param.key + "=" + param.value; }).join("&").value() + "</pre>";
 
 	apiSignatureDiv.html(instructions);	
 }
