@@ -223,6 +223,8 @@ header:
       fileref.setAttribute("type","text/javascript");
       fileref.setAttribute("src", "/v2-api/assets/vendor/weatherlink/js/api-signature-calculator.js");
       document.getElementsByTagName("head")[0].appendChild(fileref);
+
+      console.log($('select#api-endpoint').find(':selected').val());
     }
   }, 100);
 })();
