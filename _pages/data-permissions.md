@@ -19,6 +19,71 @@ The following tables illustrate the combinations of these factors and how they t
 
 Permission descriptions like "Most recent 5 minute record" means that data will be from the most recent time when the minute of the hour was divisible by 5. For example, an API query at 10:08 AM will return the data record from 10:05 AM and querying the API again at 10:12 AM will return the record from 10:10 AM.
 
+## AirLink
+
+<table>
+  <thead>
+    <tr>
+      <th>Relationship with the Weather Station</th>
+      <th>Subscription Level</th>
+      <th>Current Conditions Permission</th>
+      <th>Historic Data Permission</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Owned</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent 5 minute record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Most recent 15 minute record</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Shared</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent 5 minute record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic *</td>
+      <td>Most recent 15 minute record</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Self Upgrade</td>
+      <td>Pro+</td>
+      <td>Most recent record, but limited to just the Primary AirLink</td>
+      <td>Yes, but limited to just the Primary AirLink</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent 5 minute record, but limited to just the Primary AirLink</td>
+      <td>Yes, but limited to just the Primary AirLink</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+    </tr>
+  </tbody>
+</table>
+
+<i>* Basic shares must be created by the owner of the weather station.</i>
+
 ## WeatherLink Live
 
 <table>
