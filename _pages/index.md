@@ -11,6 +11,11 @@ header:
 The WeatherLink v2 API can be used to access weather station metadata and weather observation data for WeatherLink.com connected weather stations that you have access to.
 
 <div class="notice--success">
+<h4>API Update</h4>
+<p>The WeatherLink v2 API now supports the <a href="https://www.davisinstruments.com/product/airlink-professional-air-quality-sensor/">AirLink</a> air quality sensor.</p>
+</div>
+
+<div class="notice--success">
 <h4>Please Note:</h4>
 <p>The WeatherLink v2 API now supports Vantage Connect, WeatherLinkIP, and WeatherLink Network Annual Subscription connected stations.</p>
 <p>The older <a href="https://www.weatherlink.com/static/docs/APIdocumentation.pdf">WeatherLink v1 API</a> will continue to function and support these older device types.</p>
