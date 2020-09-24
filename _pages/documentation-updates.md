@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2020-09-24
+  - Added [Data Permissions](data-permissions) information for WeatherLinkIP, WeatherLink Network Annual Subscription, and Vantage Connect.
 - 2020-09-02
   - Added [Data Permissions](data-permissions) and [Data Structure Types](data-structure-types) information for [AirLink](https://www.davisinstruments.com/product/airlink-professional-air-quality-sensor/) air quality sensor.
 - 2020-02-04
