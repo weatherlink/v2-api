@@ -283,8 +283,6 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
       <td>Pro+</td>
       <td>Most recent record</td>
       <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
     </tr>
     <tr>
       <td>Pro</td>
