@@ -233,3 +233,70 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
 </table>
 
 <i>* Basic shares must be created by the owner of the weather station.</i>
+
+## Vantage Connect
+
+<table>
+  <thead>
+    <tr>
+      <th>Relationship with the Weather Station</th>
+      <th>Subscription Level</th>
+      <th>Current Conditions Permission</th>
+      <th>Historic Data Permission</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Owned</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Shared</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic *</td>
+      <td>Most recent 15 minute record</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Self Upgrade</td>
+      <td>Pro+</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>Most recent record</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>Not applicable</td>
+      <td>Not applicable</td>
+    </tr>
+  </tbody>
+</table>
+
+<i>* Basic shares must be created by the owner of the weather station.</i>
