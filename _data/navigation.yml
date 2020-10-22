@@ -49,3 +49,7 @@ navMain:
 #        url: /release-notes
       - title: Documentation Updates
         url: /documentation-updates
+  - title: Polls <i class="fas fa-vote-yea"></i>
+    children:
+      - title: Programming Language
+        url: /programming-language-poll <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
