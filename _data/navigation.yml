@@ -51,6 +51,5 @@ navMain:
         url: /documentation-updates
   - title: Feedback 
     children:
-      - title: Programming Language Poll
-        url: /programming-language-poll <i class="fas fa-vote-yea"></i> <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
-
+      - title: Programming Language Poll <i class="fas fa-vote-yea"></i> <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+        url: /programming-language-poll
