@@ -21,7 +21,7 @@ For the examples shown in this tutorial we will use the following details:
 <p>Also make sure you get a new Unix timestamp for every API call you make.</p>
 </div>
 
-## Step 1 - Get Your WeatherLink v2 API Key and API Secret
+## Step 1 - Get Your API Key and API Secret
 
 To retrieve your WeatherLink v2 API Key and API Secret you can go to WeatherLink.com and visit the Account page at <a href="https://www.weatherlink.com/account">https://www.weatherlink.com/account</a>.
 
