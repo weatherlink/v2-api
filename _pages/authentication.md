@@ -53,5 +53,5 @@ We have created some API Signature Calculation live code examples similar to Exa
 
 <div class="notice--warning">
 <h4>Please Note:</h4>
-<p>The old Walkthrough Examples have been replaced by the new [Tutorial](tutorial) documentation page.</p>
+  <p>The old Walkthrough Examples have been replaced by the new <a href="tutorial">Tutorial</a> documentation page.</p>
 </div>
