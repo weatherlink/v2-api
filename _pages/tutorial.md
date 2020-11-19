@@ -122,7 +122,7 @@ Now that you have found the Station ID you will use that number for all API requ
 
 ## Step 3 - Get Current Conditions Data
 
-Continuing with the Station ID we found in Step 1 above you will now make an API call to retrieve current conditions weather observation data. This is done by making an API call to the `/current/{station-id}` API path where you will replace the `{station-id}` path parameter with the Station ID from Step 1.
+Continuing with the Station ID from before, you will now make an API call to retrieve current conditions weather observation data. This is done by making an API call to the `/current/{station-id}` API path where you will replace the `{station-id}` path parameter with the Station ID.
 
 ### Step 3.1 - Collect the Parameters
 
@@ -197,87 +197,94 @@ The JSON response for the API call will contain current condition observation da
 
 Information about what the weather observation data API response looks like is at [API Response](api-response).
 
-## Step 4 - Historic Data
+## Step 4 - Get Historic Data
 
-Now we will walk through another example. In this example we will use the following details:
+Continuing with the Station ID from before, you will now make an API call to retrieve historic weather observation data. This is done by making an API call to the `/historic/{station-id}` API path where you will replace the `{station-id}` path parameter with the Station ID.
 
-* This is for an API request for Historic data which is available at the `/historic/{station-id}` API path which accepts a station ID as a URL path parameter.
-* We will use the fictitious Station ID `72443`.
-* We will use the fictitious API Key `987654321`.
-* We will use the fictitious API Secret `ABC123`.
-* We will use the Unix timestamp `1562176956` as the API Request Timestamp.
-* We will query for historic data from the day 2019-07-01 in the America/Los_Angeles timezone.
-  * This will result in a starting Unix timestamp of `1561964400`.
-  * And an ending Unix timestamp of `1562050800`.
+When retrieving historic weather observation data you need to provide Unix timestamps for the start and end of the period of time you want to download data for. Please note the current size limit of periods of time per historic data API call is documented at [Size Limits](size-limits).
 
-In this example we are querying for data with timestamps greater than 2019-07-01 00:00:00 America/Los_Angeles and less than or equal to 2019-07-02 00:00:00 America/Los_Angeles. This is due to the fact that data record timestamps represent the end of the data record's recording time interval. Therefore the record with the 2019-07-01 00:00:00 America/Los_Angeles timestamp is actually the last data record from 2019-06-30 America/Los_Angeles.
+### Step 4.1 - Collect the Parameters
 
-### Step 1
+You can check the [API Reference](api-reference) for information on what parameters are available with each API call the WeatherLink v2 API supports.
 
-The first step is to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
+In this tutorial example we will query for historic data from the day 2019-07-01 in the America/Los_Angeles timezone. To do this you need to use the following parameters:
 
-In this example the path parameters are:
+* Unix timestamp `1561964400` for the `start-timestamp` parameter.
+* Unix timestamp `1562050800` for the `end-timestamp` parameter.
 
-Parameter Name|Parameter Value
---------------|---------------
-station-id|72443
+In WeatherLink, the timestamps on historic data records represents the end of the data record's recording time interval. For example, if your station generates 1 historic data record (also known as Archive data record) per hour then the record with the timestamp of 7:00 AM represents the summary of data for the hour of time between 6:00 AM and 7:00 AM. Therefore, any historic data record with a timestamp of midnight is actually the last record of the previous day's data and not the first record of the new day.
 
-And the query parameters are:
+Keeping this in mind, the WeatherLink v2 API uses the `start-timestamp` and `end-timestamp` parameters to look for data records where timestamps fall into an interval that can be expressed as (`start-timestamp`, `end-timestamp`].
+
+Now, getting back making the API call, you first need to collect all of the API request query parameters and path parameters (except for the `api-signature` parameter) and sort them by parameter name using ASCII sorting. All parameter names are in US English so ASCII sorting is safe.
+
+In this example there is a single path parameter because we are making an API call to `/historic/{station-id}`.
 
 Parameter Name|Parameter Value
 --------------|---------------
-api-key|987654321
-t|1562176956
-start-timestamp|1561964400
-end-timestamp|1562050800
+station-id|96230
 
-After sorting the combined set of parameters will look like this:
+Additionally, there are query parameters:
 
 Parameter Name|Parameter Value
 --------------|---------------
 api-key|987654321
+t|1558729481
+start-timestamp|1561964400
+end-timestamp|1562050800
+
+After sorting the combined set of query and path parameters your set of parameters will look like this:
+
+Parameter Name|Parameter Value
+--------------|---------------
+api-key|987654321
 end-timestamp|1562050800
 start-timestamp|1561964400
-station-id|72443
-t|1562176956
+station-id|96230
+t|1558729481
 
-### Step 2
+### Step 4.2 - Create the String to Hash
 
-Next, iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
-
-```
-api-key987654321end-timestamp1562050800start-timestamp1561964400station-id72443t1562176956
-```
-
-To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:
+Next, iterate over the sorted set of all parameters in order by the parameter name and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
 
 ```
-(api-key)(987654321)(end-timestamp)(1562050800)(start-timestamp)(1561964400)(station-id)(72443)(t)(1562176956)
+api-key987654321end-timestamp1562050800start-timestamp1561964400station-id96230t1558729481
 ```
 
-### Step 3
+To better illustrate how the string is built, here is the string again with parentheses showing the different parts used to create the concatenated string:
+
+```
+(api-key)(987654321)(end-timestamp)(1562050800)(start-timestamp)(1561964400)(station-id)(96230)(t)(1558729481)
+```
+
+### Step 4.3 - Compute the API Signature
 
 Now it is time to compute the API Signature using the the API Secret and the concatenated string from the previous step. To calculate the signature use the HMAC SHA-256 algorithm with the concatenated string as the message and the API Secret as the HMAC secret key. The resulting computed HMAC value as a hexadecimal string is the API Signature.
 
 In this scenario we have the following:
 
 ```
-Message to hash: api-key987654321end-timestamp1562050800start-timestamp1561964400station-id72443t1562176956
+Message to hash: api-key987654321end-timestamp1562050800start-timestamp1561964400station-id96230t1558729481
 HMAC secret key: ABC123
-Computed HMAC as a hexadecimal string: d40baf8649aaf83fae135e0b57db03ec78688b49fce96d815474f366957f2b39
+Computed HMAC as a hexadecimal string: fbe025018d78d7b13bb09eb36c6c2d7b1461b33253bf3d291b1ed37826599e8e
 ```
 
 The online HMAC tool at <a href="https://www.freeformatter.com/hmac-generator.html" target="_blank">https://www.freeformatter.com/hmac-generator.html</a> can help you test your computed HMAC SHA-256 values.
 
 All major programming languages have built-in support or offer libraries to calculate HMAC SHA-256 values.
 
-### Step 4
+### Step 4.4 - Build the Final URL For the API Call 
 
 Take the computed API Signature and include it in the API request as the value of a query parameter named `api-signature`.
 
 The final URL with parameters in the example scenario is:
 
 ```
-https://api.weatherlink.com/v2/historic/72443?api-key=987654321&t=1562176956&start-timestamp=1561964400&end-timestamp=1562050800&api-signature=d40baf8649aaf83fae135e0b57db03ec78688b49fce96d815474f366957f2b39
+https://api.weatherlink.com/v2/historic/96230?api-key=987654321&t=1558729481&start-timestamp=1561964400&end-timestamp=1562050800&api-signature=fbe025018d78d7b13bb09eb36c6c2d7b1461b33253bf3d291b1ed37826599e8e
 ```
 
+### Step 4.5 - Read the API Response
+
+The JSON response for the API call will contain historic weather observation data for the specified Station ID, assuming you have permission to view the station via the WeatherLink v2 API. Please refer to the [Data Permissions](data-permissions) documentation about what level of data access is available for the different combinations of weather station types and WeatherLink service plans.
+
+Information about what the weather observation data API response looks like is at [API Response](api-response).
