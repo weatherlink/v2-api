@@ -13,9 +13,12 @@ For the examples shown in this tutorial we will use the following details:
 
 * We will use the fictitious API Key `987654321`.
 * We will use the fictitious API Secret `ABC123`.
-* We will ise the Unix timestamp 1558729481 for the parameter `t` in all API calls.
+* We will use the Unix timestamp 1558729481 for the parameter `t` in all API calls.
 
-Make sure to use your own real API Key and API Secret if you try to recreate the steps shown in this tutorial. And make sure you get a new Unix timestamp for every API call you make.
+<div class="notice--warning">
+<p>Make sure to use your own real API Key and API Secret if you try to recreate the steps shown in this tutorial.</p>
+<p>Also make sure you get a new Unix timestamp for every API call you make.</p>
+</div>
 
 ## Step #1 - Get Your Station ID
 
@@ -38,51 +41,51 @@ Parameter Name|Parameter Value
 api-key|987654321
 t|1558729481
 
-After sorting the combined set of parameters will look like this:
+After sorting the combined set of query and path parameters your set of parameters will look like this:
 
 Parameter Name|Parameter Value
 --------------|---------------
 api-key|987654321
 t|1558729481
 
-### Step 2
+### Step 1.2 - Create the String to Hash
 
-Next, iterate over the sorted parameter set in order and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
-
-```
-api-key987654321station-id1052t1558729481
-```
-
-To better illustrate how the string is built here is the string again with parentheses showing the different parts used to create the concatenated string:
+Next, iterate over the sorted set of all parameters in order by the parameter name and create a string by concatenating the parameter name-value pairs. The resulting string for this example will be:
 
 ```
-(api-key)(987654321)(station-id)(1052)(t)(1558729481)
+api-key987654321t1558729481
 ```
 
-### Step 3
+To better illustrate how the string is built, here is the string again with parentheses showing the different parts used to create the concatenated string:
+
+```
+(api-key)(987654321)(t)(1558729481)
+```
+
+### Step 1.3 - Compute the API Signature
 
 Now it is time to compute the API Signature using the the API Secret and the concatenated string from the previous step. To calculate the signature use the HMAC SHA-256 algorithm with the concatenated string as the message and the API Secret as the HMAC secret key. The resulting computed HMAC value as a hexadecimal string is the API Signature.
 
 In this scenario we have the following:
 
 ```
-Message to hash: api-key987654321station-id1052t1558729481
+Message to hash: api-key987654321t1558729481
 HMAC secret key: ABC123
-Computed HMAC as a hexadecimal string: dd4b08355101dc6d259bbe21413d0838a1b83c4e9df24a98f61323a1198b08ff
+Computed HMAC as a hexadecimal string: 9b6a15f40d78b309a10b8b5a70ce5de4a3993ac2309795b9f90c9f93d5c31f20
 ```
 
 The online HMAC tool at <a href="https://www.freeformatter.com/hmac-generator.html" target="_blank">https://www.freeformatter.com/hmac-generator.html</a> can help you test your computed HMAC SHA-256 values.
 
 All major programming languages have built-in support or offer libraries to calculate HMAC SHA-256 values.
 
-### Step 4
+### Step 1.4 - Build the Final URL For the API Call 
 
 Take the computed API Signature and include it in the API request as the value of a query parameter named `api-signature`.
 
 The final URL with parameters in the example scenario is:
 
 ```
-https://api.weatherlink.com/v2/current/1052?api-key=987654321&t=1558729481&api-signature=dd4b08355101dc6d259bbe21413d0838a1b83c4e9df24a98f61323a1198b08ff
+https://api.weatherlink.com/v2/stations?api-key=987654321&t=1558729481&api-signature=9b6a15f40d78b309a10b8b5a70ce5de4a3993ac2309795b9f90c9f93d5c31f20
 ```
 
 ### Example #2 - Historic Data
