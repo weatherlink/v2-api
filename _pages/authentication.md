@@ -22,7 +22,9 @@ The API Secret is a secret value that is used to calculate a signature for each 
 
 **The API Secret must be protected and must never be passed as a parameter to the API.**
 
-If your API Secret is compromised it will allow others to access the API while pretending to be you. If your API Secret is compromised please [contact the Davis Instruments/WeatherLink engineering team](support).
+If your API Secret is compromised it will allow others to access the API while pretending to be you. If this occurs please go back to the Account page at <a href="https://www.weatherlink.com/account">https://www.weatherlink.com/account</a> and click the `Generate v2 Key` button again. This will delete the old API Secret and create a new API Secret. You will then need to update your code to use the new API Secret. 
+
+Please note that the API Key will not be changed and can not be deleted when generating a new API Secret.
 
 ## API Request Timestamp
 
