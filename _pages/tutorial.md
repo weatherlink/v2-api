@@ -16,6 +16,7 @@ For the examples shown in this tutorial we will use the following details:
 * We will use the Unix timestamp 1558729481 for the parameter `t` in all API calls.
 
 <div class="notice--warning">
+<h4>Please Note:</h4>
 <p>Make sure to use your own real API Key and API Secret if you try to recreate the steps shown in this tutorial.</p>
 <p>Also make sure you get a new Unix timestamp for every API call you make.</p>
 </div>
@@ -24,7 +25,7 @@ For the examples shown in this tutorial we will use the following details:
 
 Before you can download weather observation data you need to know the Station ID of your weather station. This is done by making an API call to the `/stations` API path.
 
-Please note that the Station ID is different from your station's Device ID or DID. The [FAQ](faq) page has some brief explanations of what the Station ID is and why it is different from the Device ID of the past.
+The Station ID is different from your station's Device ID or DID. The [FAQ](faq) page has some brief explanations of what the Station ID is and why it is different from the Device ID of the past.
 
 ### Step 1.1 - Collect the Parameters
 
@@ -87,6 +88,25 @@ The final URL with parameters in the example scenario is:
 ```
 https://api.weatherlink.com/v2/stations?api-key=987654321&t=1558729481&api-signature=9b6a15f40d78b309a10b8b5a70ce5de4a3993ac2309795b9f90c9f93d5c31f20
 ```
+
+### Step 1.5 - Read the API Response
+
+The JSON response for the API call will contain a list of all stations that are accessible by the API Key.
+
+Here is a sample segment of the API response JSON showing what the Station ID will look like. This sample JSON omits many additional fields of infomation like product number, time zone, GPS coordinates, etc. because that information will be different for your weather station.
+
+```json
+{
+    "stations": [
+        {
+            "station_id": 96230,
+            "station_name": "Home WeatherLink Live"
+        }
+    ]
+}
+```
+
+Now that you have found the Station ID you will use that number for all API requests to retrieve weather observation data for that station.
 
 ### Example #2 - Historic Data
 
