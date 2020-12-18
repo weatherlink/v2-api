@@ -30,11 +30,17 @@ Please note that the API Key will not be changed and can not be deleted when gen
 
 The API request timestamp is the Unix timestamp at the time the API request is being generated. The purpose of the timestamp is to prevent request replay attacks.
 
+Every request to the WeatherLink v2 API must use the current Unix timestamp and the API signature must be recomputed to account for the new timestamp on each request.
+
+To allow for variations in clocks between your computer and our servers we allow a several minute window for the use of a specific Unix timestamp. In general it is a best practice to just retrieve the current Unix timestamp for each API call.
+
 The API Request Timestamp is passed in the API request as a query parameter named `t`.
 
 ## API Signature
 
 The API Signature is a calculated value used to prevent API request parameter tampering. The API Signature process takes all of the request parameters and the API Secret and computes a fingerprint-like value that represents the request. If someone else intercepts the request parameters and attempts to alter them the API Signature will no longer match and the API servers will reject the altered request.
+
+Every request to the WeatherLink v2 API must calculate a new signature for the parameters being sent in the API call. If a single parameter changes between API calls then you must compute a new API signature.
 
 The API Signature is passed in the API request as a query parameter named `api-signature`.
 
