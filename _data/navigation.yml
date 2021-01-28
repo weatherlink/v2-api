@@ -45,8 +45,8 @@ navMain:
         url: /tools
       - title: Support
         url: /support
-      - title: Terms of Service
-        url: /terms-of-service
+#      - title: Terms of Service
+#        url: /terms-of-service
 #      - title: Release Notes
 #        url: /release-notes
       - title: Documentation Updates
