@@ -41,7 +41,7 @@ navMain:
         url: /size-limits
   - title: Resources
     children:
-      - title: Status
+      - title: Status <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
         url: http://status.weatherlink.com/
       - title: Tools
         url: /tools
