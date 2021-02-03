@@ -41,6 +41,8 @@ navMain:
         url: /size-limits
   - title: Resources
     children:
+      - title: Status
+        url: http://status.weatherlink.com/
       - title: Tools
         url: /tools
       - title: Support
