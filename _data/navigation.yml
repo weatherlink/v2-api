@@ -41,7 +41,7 @@ navMain:
         url: /size-limits
   - title: Resources
     children:
-      - title: Status <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+      - title: Status <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: http://status.weatherlink.com/
       - title: Tools
         url: /tools
@@ -55,5 +55,5 @@ navMain:
         url: /documentation-updates
   - title: Feedback 
     children:
-      - title: Programming Language Poll <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+      - title: Programming Language Poll <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /programming-language-poll
