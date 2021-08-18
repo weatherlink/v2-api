@@ -10,10 +10,12 @@ header:
 
 The WeatherLink v2 API can be used to access weather station metadata and weather observation data for WeatherLink.com connected weather stations that you have access to.
 
+<!--
 <div class="notice--success">
 <h4>API Update</h4>
 <p>The WeatherLink v2 API now supports the <a href="https://www.davisinstruments.com/product/airlink-professional-air-quality-sensor/">AirLink</a> air quality sensor.</p>
 </div>
+-->
 
 <div class="notice--success">
 <h4>Please Note:</h4>
