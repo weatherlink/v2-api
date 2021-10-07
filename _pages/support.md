@@ -33,6 +33,8 @@ Keep in mind other people will also be in the chat room so please be careful and
 
 The chat room is available at <a href="https://gitter.im/WeatherLink/v2-api">https://gitter.im/WeatherLink/v2-api</a>
 -->
+# Support
+
 ## Gitter Chat Room
 
 We have set up a dedicated support chat room for WeatherLink v2 API users.
