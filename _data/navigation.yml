@@ -45,7 +45,7 @@ navMain:
         url: http://status.weatherlink.com/
       - title: Tools
         url: /tools
-      - title: Support
+      - title: Support <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>
         url: /support
 #      - title: Terms of Service
 #        url: /terms-of-service
