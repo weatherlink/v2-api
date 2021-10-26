@@ -19,7 +19,7 @@ Latest Release: [![Maven Central Repository](https://img.shields.io/maven-centra
 ```xml
 <dependency>
    <groupId>com.weatherlink</groupId>
-   <artifactId>weatherlink-v2-api-sdk-java</artifactId>
+   <artifactId>weatherlink-v2-api-sdk</artifactId>
    <version>VERSION</version>
 </dependency>
 ```
