@@ -51,6 +51,7 @@ The metadata portion of the API supports:
 - Vantage Connect
 - EnviroMonitor
 - WeatherLink Live
+- AirLink
 
 ## Step 5
 
