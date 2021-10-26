@@ -35,7 +35,7 @@ After importing both files you will see a collection on the left hand side of Po
 
 To use the environment settings that include your API Key and Secret look near the top right corner in Postman. There will be a drop down list that might say "No Environment" if this is a fresh installation of Postman. Click that list and choose the "WeatherLink v2 API" entry to change the Postman environment to use your API Key and Secret.
 
-## Step 41
+## Step 4
 
 Under the Collections section expand the WeatherLink v2 API and expand the Metadata folder. Select the "Stations - Get All" item to see the details screen about this API call. On the details page you will see the special placeholders like `{% raw %} {{V2_API_KEY}}{% endraw %}`. These are placeholders that tell Postman to refer to the environment variables you imported. If you ever need to change your API Key or Secret do not change the placeholders. Instead edit the environment to have the new values.
 
