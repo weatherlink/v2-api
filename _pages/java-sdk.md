@@ -1,5 +1,5 @@
 ---
-title: Tutorial
+title: Java SDK
 permalink: /java-sdk
 classes: wide
 header:
