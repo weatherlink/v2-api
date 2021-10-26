@@ -42,6 +42,7 @@ navMain:
       - title: Size Limits
         url: /size-limits
   - title: SDKs
+    children:
       - title: Java <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
         url: /java-sdk
   - title: Resources
