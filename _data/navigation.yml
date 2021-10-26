@@ -41,6 +41,9 @@ navMain:
         url: /rate-limits
       - title: Size Limits
         url: /size-limits
+#  - title: SDKs
+#      - title: Java <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+#        url: /sdk-java
   - title: Resources
     children:
       - title: Status <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
