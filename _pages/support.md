@@ -16,6 +16,7 @@ We have created a WeatherLink Developers Discord to serve as a central location 
 
 You can join the WeatherLink Developers Discord at <a href="https://discord.gg/WCEdd2S4Ve">https://discord.gg/WCEdd2S4Ve</a>
 
+<!--
 ## Gitter Chat Room (Deprecated)
 
 <div class="notice--warning">
@@ -31,3 +32,4 @@ The chat room is monitored by the Davis Instruments/WeatherLink engineers respon
 Keep in mind other people will also be in the chat room so please be careful and do not post your API Secret in the chat.
 
 The chat room is available at <a href="https://gitter.im/WeatherLink/v2-api">https://gitter.im/WeatherLink/v2-api</a>
+-->
