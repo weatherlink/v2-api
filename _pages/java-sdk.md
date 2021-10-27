@@ -24,6 +24,10 @@ Latest Release: [![Maven Central Repository](https://img.shields.io/maven-centra
 </dependency>
 ```
 
+## Source
+
+* [GitHub](https://github.com/weatherlink/weatherlink-v2-api-sdk-java)
+
 ## Communication
 
 * [WeatherLink Developer Discord](https://discord.gg/WCEdd2S4Ve), please direct questions to the Java SDK channel under the WeatherLink v2 API category
