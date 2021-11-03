@@ -12,7 +12,7 @@ This project is just getting started and this is the initial release focused on 
 
 ## Artifacts
 
-The SDK has been published to the PyPI.
+The SDK has been published to [PyPI](https://pypi.org/project/weatherlink-v2-api-sdk/).
 
 Latest Release: [![PyPI](https://img.shields.io/pypi/v/weatherlink-v2-api-sdk?color=blue&style=flat-square)](https://pypi.org/project/weatherlink-v2-api-sdk/)
 
