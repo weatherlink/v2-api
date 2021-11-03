@@ -45,6 +45,8 @@ navMain:
     children:
       - title: Java <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
         url: /java-sdk
+      - title: PHP <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+        url: /php-sdk
       - title: Python <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
         url: /python-sdk
   - title: Resources
