@@ -8,6 +8,17 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2021-11-22 - Build 20211111.1
+  - Add support for 10 minute wind gust from WeatherLinkIP/WeatherLink Network Annual Subscription and Vantage Connect current conditions.
+  - Update sensor catalog.
+- 2021-09-23 - Build 20210922.1
+  - Add EnviroMonitor Integrate Sensor Suite forecast rule and number.
+  - Add WeatherLinkIP/WeatherLink Network Annual Subscription and Vantage Connect rain storm start date.
+  - Standardize EnviroMonitor Integrated Sensor Suite rain storm start date.
+  - Update sensor catalog.
+- 2021-08-25 - Build 20210823.2 (moved to a YYYYMMDD.Revision build number format)
+  - Improve API error messages.
+  - Make API Signature calculation case insensitive.
 - 2021-05-24 - Build 1.3.60
   - Add AirLink wood smoke support.
 - 2021-04-12 - Build 1.3.53
