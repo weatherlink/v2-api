@@ -12,7 +12,6 @@ header:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-standalone-preset.js"></script>
 
-
 <div id="api-ref"></div>
 <script>
 var ui = SwaggerUIBundle({
