@@ -3,7 +3,7 @@ info:
   title: WeatherLink v2 API
   description: >
     Metadata endpoints describe weather stations and their component parts, as well as the structure of the data available from the Weather Data endpoints.
-    
+    <br><br>
     Weather Data enpoints provide current and historical data.
   contact:
     name: API Support
@@ -737,9 +737,9 @@ paths:
     get:
       tags:
         - Reports
-      summary: Get evapotranspiration data for one station
+      summary: Get evapotranspiration data for one WeatherLink Live station
       description: >
-        Returns evapotranspiration data for a WeatherLink Live station selected by a station ID
+        Returns evapotranspiration data for one WeatherLink Live station selected by a station ID
         passed as a path parameter.
       parameters:
         - $ref: '#/components/parameters/StationId'
