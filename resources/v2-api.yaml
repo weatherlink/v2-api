@@ -14,6 +14,8 @@ tags:
     description: Metadata about the weather stations and sensors, as well as the different types of sensors, and the structure of the data returned by each one
   - name: Weather Data
     description: Weather sensor observation data
+  - name: Reports
+    description: 
 paths:
   /stations:
     get:
@@ -729,6 +731,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse500'
+  '/report/et/{station-id}':
+    get:
+      tags:
+        - Reports
+      summary: Get evapotranspiration data for one station
+      description: >
+        Returns evapotranspiration data for a WeatherLink Live station selected by a station ID
+        passed as a path parameter.
+      parameters:
+        - $ref: '#/components/parameters/StationId'
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
 components:
   parameters:
     ApiKey:
