@@ -29,7 +29,7 @@ navMain:
         url: /faq
   - title: Reference
     children:
-      - title: API Reference
+      - title: API Reference <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>
         url: /api-reference
       - title: Data Structure Types <!--<i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>-->
         url: /data-structure-types
