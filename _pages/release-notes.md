@@ -8,6 +8,10 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2022-01-25 - Build 20220125.1
+  - Update sensor catalog.
+  - Fix field name typos.
+  - Fix rain collector size detection for stations that use WeatherLinkIP, WeatherLink Network Annual Subscription, or Vantage Connect.
 - 2021-11-22 - Build 20211111.1
   - Add support for 10 minute wind gust from WeatherLinkIP/WeatherLink Network Annual Subscription and Vantage Connect current conditions.
   - Update sensor catalog.
