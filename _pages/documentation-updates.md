@@ -8,6 +8,18 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2021-12-10
+  - Add ET API call definition to [API Reference](api-reference).
+- 2021-11-03
+  - Add [PHP SDK](php-sdk).
+- 2021-11-02
+  - Add [Python SDK](python-sdk).
+- 2021-10-26
+  - Add [Java SDK](java-sdk).
+- 2021-10-07
+  - Update [Support](support) information.
+- 2020-11-19
+  - Added [Tutorial](tutorial).
 - 2020-09-24
   - Added [Data Permissions](data-permissions) information for WeatherLinkIP, WeatherLink Network Annual Subscription, and Vantage Connect.
 - 2020-09-02
