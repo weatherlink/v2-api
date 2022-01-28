@@ -15,8 +15,10 @@ jobs:
       - uses: actions/checkout@v2 # v2 minimum required
       - name: fetch
         run: curl -X GET -o resources/universal-sensor-catalog.json --compressed $WL_V2_API_URL/universal-sensor-catalog?api-key=$WL_V2_API_KEY
+      - name: install jq
+        run: sudo apt install jq
       - name: format
-        run: jq '.' resources/universal-sensor-catalog.json > resources/universal-sensor-catalog.json
+        run: jq . resources/universal-sensor-catalog.json > resources/universal-sensor-catalog.json
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: resources/universal-sensor-catalog.json
