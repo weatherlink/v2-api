@@ -13,11 +13,9 @@ jobs:
       WL_V2_API_URL: ${{ secrets.WL_V2_API_URL }}
     steps:
       - uses: actions/checkout@v2 # v2 minimum required
-      - name: fetch
-        run: curl -X GET -o resources/universal-sensor-catalog.json.temp --compressed $WL_V2_API_URL/universal-sensor-catalog?api-key=$WL_V2_API_KEY
-      - name: format
-        run: jq . resources/universal-sensor-catalog.json.temp > resources/universal-sensor-catalog.json
-      - run: cat resources/universal-sensor-catalog.json
+      - run: curl -X GET -o resources/universal-sensor-catalog.json.temp --compressed $WL_V2_API_URL/universal-sensor-catalog?api-key=$WL_V2_API_KEY
+      - run: jq . resources/universal-sensor-catalog.json.temp > resources/universal-sensor-catalog.json
+#      - run: cat resources/universal-sensor-catalog.json
 #      - uses: stefanzweifel/git-auto-commit-action@v4
 #        with:
 #          file_pattern: resources/universal-sensor-catalog.json
