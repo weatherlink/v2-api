@@ -1,5 +1,5 @@
 $('select#sensor').change(function() {
-//	$('div.params').hide();
+	$('div.params').hide();
 //	var selectedVal = $('select#api-endpoint').find(':selected').val();
 //	if (selectedVal != '') {
 //		$('div#params-' + selectedVal).show();
