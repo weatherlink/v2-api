@@ -89,10 +89,9 @@ function populateCatalog() {
 			var fieldType = dataStructureType[fieldName].type;
 			var fieldUnits = dataStructureType[fieldName].units;
 
-			tbody.append(
-				$('<tr/>').
-					append($('<td/>').text)
-			);
+			//tbody.append(
+				//$('<tr/>').					append($('<td/>').text)
+			//);
 		}
 	}
 }
