@@ -37,7 +37,7 @@ header:
 	color:red;
 }
 .form-style-2 input.input-field, .form-style-2 .select-field{
-	width: 60%;	
+	width: 80%;	
 }
 .form-style-2 input.input-field, 
 .form-style-2 .textarea-field, 
