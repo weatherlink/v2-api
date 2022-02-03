@@ -10,7 +10,7 @@ header:
 
 <style type="text/css">
 .form-style-2{
-	max-width: 1000px;
+	max-width: 900px;
 	padding: 20px 12px 10px 20px;
 	font: 13px Arial, Helvetica, sans-serif;
 }
