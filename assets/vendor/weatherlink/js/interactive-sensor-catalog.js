@@ -64,6 +64,26 @@ function populateCatalog() {
 	catalogDiv.html('');
 
 	console.log("populate catalog with sensor type id " + SENSOR_CATALOG.currentSensorTypeId + " data structure type id " + SENSOR_CATALOG.currentDataStructureTypeId);	
+
+	var sensorType = null;
+	var dataStructureType = null;
+
+	sensorType = _.find(SENSOR_CATALOG.json.sensor_types, {sensor_type: SENSOR_CATALOG.currentSensorTypeId});
+	sensorType = _.isNil(sensorType) ? null : sensorType;
+
+	if (sensorType != null) {
+		if (_.has(sensorType, 'data_structures')) {
+			dataStructureType = _.find(sensorType.data_structures, {data_structure_type: SENSOR_CATALOG.currentDataStructureTypeId});
+			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
+		} else if (_.has(sensorType, "data_structure")) {
+			dataStructureType = sensorType.data_structure;
+			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
+		}
+	}
+
+	if (dataStructureType != null) {
+		
+	}
 }
 
 var jqxhr = $.getJSON("/v2-api/resources/universal-sensor-catalog.json")
