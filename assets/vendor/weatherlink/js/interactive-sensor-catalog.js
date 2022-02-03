@@ -73,7 +73,7 @@ function populateCatalog() {
 
 	if (sensorType != null) {
 		if (_.has(sensorType, 'data_structures')) {
-			dataStructureType = _.find(sensorType.data_structures, {data_structure_type: SENSOR_CATALOG.currentDataStructureTypeId});
+			dataStructureType = _.find(sensorType.data_structures, {data_structure_type: _.toString(SENSOR_CATALOG.currentDataStructureTypeId)});
 			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
 		} else if (_.has(sensorType, "data_structure")) {
 			dataStructureType = sensorType.data_structure;
