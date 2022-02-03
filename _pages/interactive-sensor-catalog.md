@@ -91,7 +91,7 @@ header:
 </style>
 
 <style type="text/css" media="screen">
-#api-signature { 
+#catalog { 
 	position: relative !important;
 	border: 1px solid lightgray;
 	min-height: 200px;
@@ -121,7 +121,7 @@ header:
 </div>
 
 <label></label>
-<div><span>TITLE</span></div>
+<div><span></span></div>
 <div id="catalog"></div>
 
 <script>
