@@ -60,9 +60,6 @@ function populateDataStructuresTypeSelect() {
 }
 
 function populateCatalog() {
-	var catalogDiv = $('div#catalog');
-	catalogDiv.html('');
-
 	console.log("populate catalog with sensor type id " + SENSOR_CATALOG.currentSensorTypeId + " data structure type id " + SENSOR_CATALOG.currentDataStructureTypeId);	
 
 	var sensorType = null;
@@ -82,12 +79,28 @@ function populateCatalog() {
 	}
 
 	if (dataStructureType != null) {
-		
+		var fieldNames = _.keys(dataStructureType);
+
+		var tbody = $('div#catalog table tbody');
+		tbody.empty();
+
+		for(var i = 0 ; i < fieldNames.length ; i++) {
+			var fieldName = fieldNames[i];
+			var fieldType = dataStructureType[fieldName].type;
+			var fieldUnits = dataStructureType[fieldName].units;
+
+			tbody.append(
+				$('<tr/>').
+					append($('<td/>').text)
+			);
+		}
 	}
 }
 
 var jqxhr = $.getJSON("/v2-api/resources/universal-sensor-catalog.json")
 	.done(function(json) {
 		SENSOR_CATALOG.json = json;
+		SENSOR_CATALOG.currentSensorTypeId = null;
+		SENSOR_CATALOG.currentDataStructureTypeId = null;
 		populateSensorTypeSelect();
 	});

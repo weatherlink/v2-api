@@ -7012,6 +7012,128 @@
       ]
     },
     {
+      "sensor_type": 117,
+      "manufacturer": "Sentek",
+      "product_name": "Drill & Drop 120 cm (48\"); 12 sensors",
+      "product_number": "01220",
+      "category": "Soil Moisture",
+      "configuration": {
+          "depth_unit": "in",
+          "depths": {
+              "ring1": 4,
+              "ring2": 8,
+              "ring3": 12,
+              "ring4": 16,
+              "ring5": 20,
+              "ring6": 24,
+              "ring7": 28,
+              "ring8": 32,
+              "ring9": 36,
+              "ring10": 40,
+              "ring11": 44,
+              "ring12": 48
+          }
+      },
+      "data_structure": {
+          "moist_soil_last_1": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_2": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_3": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_4": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_5": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_6": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_7": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_8": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_9": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_10": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_11": {
+              "type": "float",
+              "units": "percent"
+          },
+          "moist_soil_last_12": {
+              "type": "float",
+              "units": "percent"
+          },
+          "temp_last_1": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_2": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_3": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_4": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_5": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_6": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_7": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_8": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_9": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_10": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_11": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          },
+          "temp_last_12": {
+              "type": "float",
+              "units": "degrees Fahrenheit"
+          }
+      }
+    },
+    {
       "sensor_type": 507,
       "manufacturer": "",
       "product_name": "Gateway Quectel Health",
