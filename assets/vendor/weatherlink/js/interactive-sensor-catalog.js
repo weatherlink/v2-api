@@ -51,7 +51,7 @@ function populateSensorTypeSelect() {
 		$('select#sensor-type').append($("<option value='"+sensorType.sensor_type+"'>Sensor Type "+sensorType.sensor_type+" - "+sensorType.product_name+"</option>"));
 	}
 	//$('select#sensor-type option:first-child').attr("selected", "selected");
-	//$('select#sensor-type').trigger('change');
+	$('select#sensor-type').trigger('change');
 }
 
 function populateDataStructureTypeSelect(dataStructures) {
