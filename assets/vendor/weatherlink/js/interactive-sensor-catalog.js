@@ -46,8 +46,8 @@ $('select#data-structure-type').change(function() {
 
 function populateSensorTypeSelect() {
 	$('select#sensor-type').empty();
-	for (var sensorTypeIndex = 0 ; sensorTypeIndex < SENSOR_CATALOG_JSON.sensor_types.length ; sensorTypeIndex++) {
-		var sensorType = SENSOR_CATALOG_JSON.sensor_types[sensorTypeIndex];
+	for (var sensorTypeIndex = 0 ; sensorTypeIndex < SENSOR_CATALOG.json.sensor_types.length ; sensorTypeIndex++) {
+		var sensorType = SENSOR_CATALOG.json.sensor_types[sensorTypeIndex];
 		$('select#sensor-type').append($("<option value='"+sensorType.sensor_type+"'>Sensor Type "+sensorType.sensor_type+" - "+sensorType.product_name+"</option>"));
 	}
 	//$('select#sensor-type option:first-child').attr("selected", "selected");
