@@ -7,7 +7,7 @@ $('select#sensor-type').change(function() {
 		if (sensorType != null) {
 			if (_.has(sensorType, "data_structures")) {
 				populateDataStructureTypeSelect(sensorType.data_structures);
-				$('div#data-structure-type').show();
+				$('div#data-structure-types').show();
 			}
 		}
 	}
