@@ -125,7 +125,7 @@ header:
 <label></label>
 <div><span></span></div>
 <div id="catalog">
-<table>
+<table class="table">
 	<thead>
 		<th>Field Name</th>
 		<th>Data Type</th>
