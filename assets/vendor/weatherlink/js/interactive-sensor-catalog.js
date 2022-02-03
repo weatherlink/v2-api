@@ -2,6 +2,7 @@ $('select#sensor-type').change(function() {
 	$('div.options').hide();
 	var selectedSensorTypeId = $('select#sensor-type').find(':selected').val();
 	if (selectedSensorTypeId != '') {
+		selectedSensorTypeId = +selectedSensorTypeId;
 		var sensorType = getSensorType(selectedSensorTypeId);
 		if (sensorType != null) {
 			if (_.has(sensorType, "data_structures")) {
