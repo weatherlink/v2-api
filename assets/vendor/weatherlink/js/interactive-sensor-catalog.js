@@ -10,44 +10,34 @@ $('select#sensor-type').change(function() {
 	var selectedSensorTypeId = $('select#sensor-type').find(':selected').val();
 	console.log(selectedSensorTypeId);
 	if (!_.isNil(selectedSensorTypeId)) {
-
-	}
-	/*
-	$('div.options').hide();
-	var selectedSensorTypeId = $('select#sensor-type').find(':selected').val();
-	if (selectedSensorTypeId != '') {
 		selectedSensorTypeId = +selectedSensorTypeId;
-		var sensorType = getSensorType(selectedSensorTypeId);
-		if (sensorType != null) {
-			if (_.has(sensorType, "data_structures")) {
-				populateDataStructureTypeSelect(sensorType.data_structures);
-				$('div#data-structure-types').show();
-			} else {
+		SENSOR_CATALOG.currentSensorTypeId = selectedSensorTypeId;
 
+		var sensorType = _.find(SENSOR_CATALOG.json.sensor_types, {sensor_type: selectedSensorTypeId});
+		sensorType = _.isNil(sensorType) ? null : sensorType;
+
+		if (_.has(sensorType, "data_structures")) {
+			$('select#data-structure-type').empty();
+			for (var dataStructureTypeIndex = 0 ; dataStructureTypeIndex < sensorType.data_structures.length ; dataStructureTypeIndex++) {
+				var dataStructureType = sensorType.data_structures[dataStructureTypeIndex];
+				$('select#data-structure-type').append($("<option value='"+dataStructureType.data_structure_type+"'>Data Structure Type "+dataStructureType.data_structure_type+" - "+dataStructureType.description+"</option>"));
 			}
+			$('div#data-structure-types').show();
+			$('select#data-structure-type').trigger('change');
 		}
+	} else {
+		SENSOR_CATALOG.currentSensorTypeId = null;
 	}
-	*/
 });
 
 $('select#data-structure-type').change(function() {
 	console.log("select#data-structure-type change");
-	/*
-	$('div#catalog table tbody').replateWith($('<tbody/>'));
 	var selectedDataStructureTypeId = $('select#data-structure-type').find(':selected').val();
-	if (selectedDataStructureTypeId != '') {
+	console.log(selectedDataStructureTypeId);
+	if (!_.isNil(selectedDataStructureTypeId)) {
 		selectedDataStructureTypeId = +selectedDataStructureTypeId;
-		var dataStructureType = getDataStructureType(selectedDataStructureTypeId);
-		if (dataStructureType != null) {
-			if (_.has(sensorType, "data_structures")) {
-				populateDataStructureTypeSelect(sensorType.data_structures);
-				$('div#data-structure-types').show();
-			} else {
-				
-			}
-		}
+		SENSOR_CATALOG.currentDataStructureTypeId = selectedDataStructureTypeId;
 	}
-	*/
 });
 
 function populateSensorTypeSelect() {
@@ -56,17 +46,7 @@ function populateSensorTypeSelect() {
 		var sensorType = SENSOR_CATALOG.json.sensor_types[sensorTypeIndex];
 		$('select#sensor-type').append($("<option value='"+sensorType.sensor_type+"'>Sensor Type "+sensorType.sensor_type+" - "+sensorType.product_name+"</option>"));
 	}
-	//$('select#sensor-type option:first-child').attr("selected", "selected");
 	$('select#sensor-type').trigger('change');
-}
-
-function populateDataStructureTypeSelect(dataStructures) {
-	$('select#data-structure-type').empty();
-	for (var dataStructureTypeIndex = 0 ; dataStructureTypeIndex < dataStructures.length ; dataStructureTypeIndex++) {
-		var dataStructureType = dataStructures[dataStructureTypeIndex];
-		$('select#data-structure-type').append($("<option value='"+dataStructureType.data_structure_type+"'>Data Structure Type "+dataStructureType.data_structure_type+" - "+dataStructureType.description+"</option>"));
-	}
-	$('select#data-structure-type').trigger('change');
 }
 
 function populateCatalog(dataStructure) {
