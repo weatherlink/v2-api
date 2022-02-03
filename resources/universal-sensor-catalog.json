@@ -3513,6 +3513,3736 @@
           "units": "inches of mercury"
         }
       }
+    },
+    {
+      "sensor_type": 23,
+      "manufacturer": "Davis Instruments",
+      "product_name": "Vantage Pro2, Cabled",
+      "product_number": "6322C",
+      "category": "ISS",
+      "data_structures": [
+          {
+              "data_structure_type": "1",
+              "description": "WeatherLink IP/Vantage Connect Current Conditions Record - Revision A",
+              "data_structure": {
+                  "bar": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "temp_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_in": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "temp_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_speed": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_10_min_avg": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir": {
+                      "type": "integer",
+                      "units": "degrees of compass"
+                  },
+                  "temp_extra_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_out": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "rain_rate_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_mm": {
+                      "type": "float",
+                      "units": "mm per hour"
+                  },
+                  "uv": {
+                      "type": "integer",
+                      "units": "ultraviolet index"
+                  },
+                  "solar_rad": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "rain_storm_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_storm_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_storm_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_storm_start_date": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rain_day_clicks": {
+                      "type": "integer",
+                      "units": "clicks for the day"
+                  },
+                  "rain_day_in": {
+                      "type": "float",
+                      "units": "inches for the day"
+                  },
+                  "rain_day_mm": {
+                      "type": "float",
+                      "units": "millimeters for the day"
+                  },
+                  "rain_month_clicks": {
+                      "type": "integer",
+                      "units": "clicks for the month"
+                  },
+                  "rain_month_in": {
+                      "type": "float",
+                      "units": "inches for the month"
+                  },
+                  "rain_month_mm": {
+                      "type": "float",
+                      "units": "millimeters for the month"
+                  },
+                  "rain_year_clicks": {
+                      "type": "integer",
+                      "units": "clicks for the year"
+                  },
+                  "rain_year_in": {
+                      "type": "float",
+                      "units": "inches for the year"
+                  },
+                  "rain_year_mm": {
+                      "type": "float",
+                      "units": "millimeters for the year"
+                  },
+                  "et_day": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "et_month": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "et_year": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "moist_soil_1": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "wet_leaf_1": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "forecast_rule": {
+                      "type": "integer",
+                      "units": ""
+                  },
+                  "forecast_desc": {
+                      "type": "string",
+                      "units": "forecast messages if available"
+                  },
+                  "dew_point": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_gust_10_min": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "2",
+              "description": "WeatherLink IP/Vantage Connect Current Conditions Record - Revision B",
+              "data_structure": {
+                  "bar_trend": {
+                      "type": "integer",
+                      "units": "change in inches of mercury"
+                  },
+                  "bar": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "temp_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_in": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "temp_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_speed": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_10_min_avg": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir": {
+                      "type": "integer",
+                      "units": "degrees of compass"
+                  },
+                  "temp_extra_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_out": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "rain_rate_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_mm": {
+                      "type": "float",
+                      "units": "mm per hour"
+                  },
+                  "uv": {
+                      "type": "integer",
+                      "units": "ultraviolet index"
+                  },
+                  "solar_rad": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "rain_storm_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_storm_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_storm_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_storm_start_date": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rain_day_clicks": {
+                      "type": "integer",
+                      "units": "clicks for the day"
+                  },
+                  "rain_day_in": {
+                      "type": "float",
+                      "units": "inches for the day"
+                  },
+                  "rain_day_mm": {
+                      "type": "float",
+                      "units": "millimeters for the day"
+                  },
+                  "rain_month_clicks": {
+                      "type": "integer",
+                      "units": "clicks for the month"
+                  },
+                  "rain_month_in": {
+                      "type": "float",
+                      "units": "inches for the month"
+                  },
+                  "rain_month_mm": {
+                      "type": "float",
+                      "units": "millimeters for the month"
+                  },
+                  "rain_year_clicks": {
+                      "type": "integer",
+                      "units": "clicks for the year"
+                  },
+                  "rain_year_in": {
+                      "type": "float",
+                      "units": "inches for the year"
+                  },
+                  "rain_year_mm": {
+                      "type": "float",
+                      "units": "millimeters for the year"
+                  },
+                  "et_day": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "et_month": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "et_year": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "moist_soil_1": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "wet_leaf_1": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "forecast_rule": {
+                      "type": "integer",
+                      "units": ""
+                  },
+                  "forecast_desc": {
+                      "type": "string",
+                      "units": "forecast messages if available"
+                  },
+                  "dew_point": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_gust_10_min": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "3",
+              "description": "WeatherLink IP/Vantage Connect Archive Record - Revision A",
+              "data_structure": {
+                  "arch_int": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rev_type": {
+                      "type": "integer",
+                      "units": "revision type: 1=A; 2=B"
+                  },
+                  "temp_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_in": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "rainfall_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_hi_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "et": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "bar": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "solar_rad_avg": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "uv_index_avg": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_index_hi": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "wind_num_samples": {
+                      "type": "integer",
+                      "units": "count"
+                  },
+                  "wind_speed_avg": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_hi": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_of_hi": {
+                      "type": "integer",
+                      "units": "direction code: 0=N, 1=NNE, ... 14=NW, 15=NNW"
+                  },
+                  "wind_dir_of_prevail": {
+                      "type": "integer",
+                      "units": "direction code: 0=N, 1=NNE, ... 14=NW, 15=NNW"
+                  },
+                  "moist_soil_1": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "temp_soil_1": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_leaf_1": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "temp_leaf_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_extra_1": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "forecast_rule": {
+                      "type": "integer",
+                      "units": ""
+                  },
+                  "forecast_desc": {
+                      "type": "string",
+                      "units": "forecast messages if available"
+                  },
+                  "abs_press": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_noaa": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_alt": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "air_density": {
+                      "type": "float",
+                      "units": "kilograms per cubic meter"
+                  },
+                  "dew_point_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "emc": {
+                      "type": "float",
+                      "units": "percent moisture"
+                  },
+                  "heat_index_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_run": {
+                      "type": "float",
+                      "units": "miles of wind"
+                  },
+                  "deg_days_heat": {
+                      "type": "float",
+                      "units": "heating degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  },
+                  "deg_days_cool": {
+                      "type": "float",
+                      "units": "cooling degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  },
+                  "solar_energy": {
+                      "type": "float",
+                      "units": "langleys"
+                  },
+                  "uv_dose": {
+                      "type": "float",
+                      "units": "minimum erythemal dose"
+                  },
+                  "thw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_bulb": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "night_cloud_cover": {
+                      "type": "float",
+                      "units": "cloud cover factor"
+                  },
+                  "iss_reception": {
+                      "type": "float",
+                      "units": "percent"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "4",
+              "description": "WeatherLink IP/Vantage Connect Archive Record - Revision B",
+              "data_structure": {
+                  "arch_int": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rev_type": {
+                      "type": "integer",
+                      "units": "revision type: 1=A; 2=B"
+                  },
+                  "temp_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_in": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "rainfall_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_hi_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "et": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "bar": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "solar_rad_avg": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "uv_index_avg": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_index_hi": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "wind_num_samples": {
+                      "type": "integer",
+                      "units": "count"
+                  },
+                  "wind_speed_avg": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_hi": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_of_hi": {
+                      "type": "integer",
+                      "units": "direction code: 0=N, 1=NNE, ... 14=NW, 15=NNW"
+                  },
+                  "wind_dir_of_prevail": {
+                      "type": "integer",
+                      "units": "direction code: 0=N, 1=NNE, ... 14=NW, 15=NNW"
+                  },
+                  "moist_soil_1": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "temp_soil_1": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_leaf_1": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "temp_leaf_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_extra_1": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "forecast_rule": {
+                      "type": "integer",
+                      "units": ""
+                  },
+                  "forecast_desc": {
+                      "type": "string",
+                      "units": "forecast messages if available"
+                  },
+                  "abs_press": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_noaa": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_alt": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "air_density": {
+                      "type": "float",
+                      "units": "kilograms per cubic meter"
+                  },
+                  "dew_point_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "emc": {
+                      "type": "float",
+                      "units": "percent moisture"
+                  },
+                  "heat_index_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_run": {
+                      "type": "float",
+                      "units": "miles of wind"
+                  },
+                  "deg_days_heat": {
+                      "type": "float",
+                      "units": "heating degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  },
+                  "deg_days_cool": {
+                      "type": "float",
+                      "units": "cooling degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  },
+                  "solar_energy": {
+                      "type": "float",
+                      "units": "langleys"
+                  },
+                  "uv_dose": {
+                      "type": "float",
+                      "units": "minimum erythemal dose"
+                  },
+                  "thw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_bulb": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "night_cloud_cover": {
+                      "type": "float",
+                      "units": "cloud cover factor"
+                  },
+                  "iss_reception": {
+                      "type": "float",
+                      "units": "percent"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "5",
+              "description": "WeatherLink IP/Vantage Connect High/Low Record",
+              "data_structure": {
+                  "bar_day_lo": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_day_hi": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_month_lo": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_month_hi": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_year_lo": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_year_hi": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "bar_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wind_speed_day_hi": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wind_speed_month_hi": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_year_hi": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "temp_in_day_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in_day_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_in_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_in_month_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in_month_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in_year_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in_year_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_in_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_in_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_in_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_in_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_in_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_in_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_in_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_in_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "temp_out_day_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_day_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_out_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_out_month_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_month_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_year_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_year_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "dew_point_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "dew_point_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wind_chill_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "heat_index_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "thsw_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "solar_rad_day_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "solar_rad_month_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_year_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "uv_day_hi": {
+                      "type": "integer",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "uv_month_hi": {
+                      "type": "integer",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_year_hi": {
+                      "type": "integer",
+                      "units": "ultraviolet index"
+                  },
+                  "rain_rate_day_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_day_hi_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_day_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "rain_rate_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rain_rate_hour_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_hour_hi_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_hour_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "rain_rate_month_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_month_hi_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_month_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "rain_rate_year_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_year_hi_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_year_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "temp_extra_1_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_2_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_3_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_4_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_5_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_6_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_7_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_1_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_2_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_3_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_4_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_1_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_2_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_3_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_4_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_1_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_2_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_3_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_4_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_5_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_6_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_7_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_1_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_2_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_3_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_soil_4_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_1_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_2_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_3_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_leaf_4_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_extra_1_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4_month_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4_month_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4_year_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_4_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_5_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_6_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_7_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_1_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_1_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_3_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_4_year_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_out_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_1_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_2_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_3_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_4_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_5_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_6_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_7_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_out_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_1_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_2_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_3_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_4_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_5_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_6_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_extra_7_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_out_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7_month_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7_month_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7_year_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_1_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_3_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_4_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_5_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_6_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_7_year_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "moist_soil_1_day_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2_day_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3_day_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4_day_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_1_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_2_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_3_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_4_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_1_day_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2_day_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3_day_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4_day_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_1_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_2_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_3_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_4_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "moist_soil_1_month_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2_month_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3_month_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4_month_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_1_month_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2_month_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3_month_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4_month_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_1_year_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2_year_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3_year_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4_year_lo": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_1_year_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2_year_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3_year_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4_year_hi": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "wet_leaf_1_day_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2_day_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3_day_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4_day_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_1_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_2_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_3_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_4_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_1_day_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2_day_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3_day_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4_day_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_1_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_2_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_3_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_4_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_leaf_1_month_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2_month_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3_month_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4_month_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_1_month_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2_month_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3_month_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4_month_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_1_year_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2_year_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3_year_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4_year_lo": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_1_year_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2_year_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_3_year_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_4_year_hi": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "6",
+              "description": "EnviroMonitor ISS Current Conditions Record",
+              "data_structure": {
+                  "bar": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_absolute": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_trend": {
+                      "type": "integer",
+                      "units": "change in inches of mercury"
+                  },
+                  "dew_point": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "et_day": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "forecast_rule": {
+                      "type": "integer",
+                      "units": ""
+                  },
+                  "forecast_desc": {
+                      "type": "string",
+                      "units": "forecast messages if available"
+                  },
+                  "heat_index": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_out": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "rain_15_min_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_15_min_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_15_min_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_60_min_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_60_min_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_60_min_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_24_hr_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_24_hr_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_24_hr_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_day_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_day_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_day_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "rain_storm_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_storm_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_storm_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_storm_start_date": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "solar_rad": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "temp_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "uv": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "wind_chill": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_dir": {
+                      "type": "integer",
+                      "units": "degrees of compass"
+                  },
+                  "wind_dir_of_gust_10_min": {
+                      "type": "integer",
+                      "units": "degrees of compass"
+                  },
+                  "wind_gust_10_min": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_2_min": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_10_min": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wet_bulb": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "7",
+              "description": "EnviroMonitor ISS Archive Record",
+              "data_structure": {
+                  "arch_int": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rev_type": {
+                      "type": "integer",
+                      "units": "revision type: 1=A; 2=B"
+                  },
+                  "temp_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_in": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "rainfall_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks per hour"
+                  },
+                  "rain_rate_hi_in": {
+                      "type": "float",
+                      "units": "inches per hour"
+                  },
+                  "rain_rate_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters per hour"
+                  },
+                  "et": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "bar": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "solar_rad_avg": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "uv_index_avg": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_index_hi": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "wind_num_samples": {
+                      "type": "integer",
+                      "units": "count"
+                  },
+                  "wind_speed_avg": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_hi": {
+                      "type": "integer",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_of_hi": {
+                      "type": "integer",
+                      "units": "direction code: 0=N, 1=NNE, ... 14=NW, 15=NNW"
+                  },
+                  "wind_dir_of_prevail": {
+                      "type": "integer",
+                      "units": "direction code: 0=N, 1=NNE, ... 14=NW, 15=NNW"
+                  },
+                  "moist_soil_1": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_2": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_3": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "moist_soil_4": {
+                      "type": "integer",
+                      "units": "centibars"
+                  },
+                  "temp_soil_1": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_2": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_3": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_soil_4": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_leaf_1": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "wet_leaf_2": {
+                      "type": "integer",
+                      "units": "wetness scale from 0 to 15"
+                  },
+                  "temp_leaf_1": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_leaf_2": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_1": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_2": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_extra_3": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum_extra_1": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_extra_2": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "abs_press": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_noaa": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_alt": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "air_density": {
+                      "type": "float",
+                      "units": "kilograms per cubic meter"
+                  },
+                  "dew_point_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "emc": {
+                      "type": "float",
+                      "units": "percent moisture"
+                  },
+                  "heat_index_out": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_in": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_run": {
+                      "type": "float",
+                      "units": "miles of wind"
+                  },
+                  "deg_days_heat": {
+                      "type": "float",
+                      "units": "heating degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  },
+                  "deg_days_cool": {
+                      "type": "float",
+                      "units": "cooling degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  },
+                  "solar_energy": {
+                      "type": "float",
+                      "units": "langleys"
+                  },
+                  "uv_dose": {
+                      "type": "float",
+                      "units": "minimum erythemal dose"
+                  },
+                  "thw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_bulb": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "night_cloud_cover": {
+                      "type": "float",
+                      "units": "cloud cover factor"
+                  },
+                  "iss_reception": {
+                      "type": "float",
+                      "units": "percent"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "8",
+              "description": "EnviroMonitor ISS Hi/Low Record",
+              "data_structure": {
+                  "bar_day_hi": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "bar_day_lo": {
+                      "type": "float",
+                      "units": "inches of mercury"
+                  },
+                  "bar_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "dew_point_day_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "dew_point_day_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "heat_index_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_out_day_hi": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_out_day_lo": {
+                      "type": "integer",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_out_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_out_day_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_out_day_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_out_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rain_rate_day_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_rate_day_hi_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_rate_day_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rain_rate_hour_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_rate_hour_hi_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_rate_hour_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "solar_rad_day_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "thsw_day_hi": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "uv_day_hi": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wind_speed_day_hi": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_day_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wind_chill_day_lo": {
+                      "type": "integer",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill_day_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "10",
+              "description": "WeatherLink Live ISS Current Conditions Record",
+              "data_structure": {
+                  "temp": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "hum": {
+                      "type": "float",
+                      "units": "percent relative humidity"
+                  },
+                  "dew_point": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_bulb": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_speed_last": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_last": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "wind_speed_avg_last_1_min": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_scalar_avg_last_1_min": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "wind_speed_avg_last_2_min": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_scalar_avg_last_2_min": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "wind_speed_hi_last_2_min": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_at_hi_speed_last_2_min": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "wind_speed_avg_last_10_min": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_scalar_avg_last_10_min": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "wind_speed_hi_last_10_min": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_at_hi_speed_last_10_min": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "rain_size": {
+                      "type": "integer",
+                      "units": "1 = 0.01 inch; 2 = 0.2 mm; 3 = 0.1 mm; 4 = 0.001 inch"
+                  },
+                  "rain_rate_last_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_rate_last_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_rate_last_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_rate_hi_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_rate_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rainfall_last_15_min_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_last_15_min_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_last_15_min_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_hi_last_15_min_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_rate_hi_last_15_min_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_rate_hi_last_15_min_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rainfall_last_60_min_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_last_60_min_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_last_60_min_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rainfall_last_24_hr_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_last_24_hr_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_last_24_hr_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_storm_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_storm_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_storm_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_storm_start_at": {
+                      "type": "long",
+                      "units": "seconds"
+                  },
+                  "solar_rad": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "uv_index": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "rx_state": {
+                      "type": "integer",
+                      "units": "configured receiver state at end of interval: 0 = synched and receiving; 1 = rescan; 2 = lost"
+                  },
+                  "trans_battery_flag": {
+                      "type": "integer",
+                      "units": "0 = battery ok; 1 = battery low"
+                  },
+                  "rainfall_daily_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_daily_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_daily_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rainfall_monthly_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_monthly_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_monthly_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rainfall_year_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_year_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_year_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_storm_last_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_storm_last_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_storm_last_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_storm_last_start_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rain_storm_last_end_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  }
+              }
+          },
+          {
+              "data_structure_type": "11",
+              "description": "WeatherLink Live ISS Archive Record",
+              "data_structure": {
+                  "arch_int": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_last": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_avg": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "temp_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "temp_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_last": {
+                      "type": "float",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_hi": {
+                      "type": "float",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "hum_lo": {
+                      "type": "float",
+                      "units": "percent relative humidity"
+                  },
+                  "hum_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "dew_point_last": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "dew_point_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "dew_point_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_bulb_last": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_bulb_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_bulb_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wet_bulb_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wet_bulb_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wind_speed_avg": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_dir_of_prevail": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "wind_speed_hi": {
+                      "type": "float",
+                      "units": "miles per hour"
+                  },
+                  "wind_speed_hi_dir": {
+                      "type": "integer",
+                      "units": "degrees"
+                  },
+                  "wind_speed_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "wind_chill_last": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "wind_chill_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "heat_index_last": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "heat_index_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "thw_index_last": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thw_index_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thw_index_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "thw_index_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thw_index_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "thsw_index_last": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index_hi": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "thsw_index_lo": {
+                      "type": "float",
+                      "units": "degrees Fahrenheit"
+                  },
+                  "thsw_index_lo_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "rain_size": {
+                      "type": "integer",
+                      "units": "1 = 0.01 inch; 2 = 0.2 mm; 3 = 0.1 mm; 4 = 0.001 inch"
+                  },
+                  "rainfall_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rainfall_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rainfall_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_hi_clicks": {
+                      "type": "integer",
+                      "units": "clicks"
+                  },
+                  "rain_rate_hi_in": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "rain_rate_hi_mm": {
+                      "type": "float",
+                      "units": "millimeters"
+                  },
+                  "rain_rate_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "solar_rad_avg": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_hi": {
+                      "type": "integer",
+                      "units": "watts per square meter"
+                  },
+                  "solar_rad_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "et": {
+                      "type": "float",
+                      "units": "inches"
+                  },
+                  "uv_index_avg": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_index_hi": {
+                      "type": "float",
+                      "units": "ultraviolet index"
+                  },
+                  "uv_index_hi_at": {
+                      "type": "integer",
+                      "units": "seconds"
+                  },
+                  "solar_rad_volt_last": {
+                      "type": "float",
+                      "units": "volts"
+                  },
+                  "uv_volt_last": {
+                      "type": "float",
+                      "units": "volts"
+                  },
+                  "reception": {
+                      "type": "integer",
+                      "units": "percentage"
+                  },
+                  "rssi": {
+                      "type": "integer",
+                      "units": "decibel-milliwatts"
+                  },
+                  "error_packets": {
+                      "type": "integer",
+                      "units": "number of packets"
+                  },
+                  "resynchs": {
+                      "type": "integer",
+                      "units": "number of resynchs"
+                  },
+                  "good_packets_streak": {
+                      "type": "integer",
+                      "units": "number of packets"
+                  },
+                  "trans_battery_flag": {
+                      "type": "integer",
+                      "units": "0 = battery ok; 1 = battery low"
+                  },
+                  "trans_battery": {
+                      "type": "float",
+                      "units": "volts"
+                  },
+                  "solar_volt_last": {
+                      "type": "float",
+                      "units": "volts"
+                  },
+                  "supercap_volt_last": {
+                      "type": "float",
+                      "units": "volts"
+                  },
+                  "afc": {
+                      "type": "integer",
+                      "units": "automatic frequency control radio setting at the end of the archive interval"
+                  },
+                  "wind_run": {
+                      "type": "float",
+                      "units": "miles"
+                  },
+                  "solar_energy": {
+                      "type": "float",
+                      "units": "langleys"
+                  },
+                  "uv_dose": {
+                      "type": "float",
+                      "units": "minimum erythemal dose"
+                  },
+                  "cooling_degree_days": {
+                      "type": "float",
+                      "units": "cooling degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  },
+                  "heating_degree_days": {
+                      "type": "float",
+                      "units": "heating degree days in degrees Fahrenheit, to convert to an equivalent Celsius value use C = F x 5 / 9"
+                  }
+              }
+          }
+      ]
+    },
+    {
+      "sensor_type": 507,
+      "manufacturer": "",
+      "product_name": "Gateway Quectel Health",
+      "product_number": "",
+      "category": "Health",
+      "data_structure": {
+          "health_version": {
+              "type": "integer",
+              "units": "none"
+          },
+          "tiva_application_firmware_version": {
+              "type": "long",
+              "units": "none"
+          },
+          "bluetooth_firmware_version": {
+              "type": "long",
+              "units": "none"
+          },
+          "cc1310_firmware_version": {
+              "type": "long",
+              "units": "none"
+          },
+          "bootloader_version": {
+              "type": "long",
+              "units": "none"
+          },
+          "platform_id": {
+              "type": "integer",
+              "units": "none"
+          },
+          "lead_acid_battery_voltage": {
+              "type": "integer",
+              "units": "millivolts"
+          },
+          "solar_panel_voltage": {
+              "type": "integer",
+              "units": "millivolts"
+          },
+          "inside_box_temp": {
+              "type": "float",
+              "units": "degrees fahrenheit"
+          },
+          "rpl_parent_node_id": {
+              "type": "long",
+              "units": "none"
+          },
+          "noise_floor_rssi": {
+              "type": "integer",
+              "units": "received signal strength indicator"
+          },
+          "last_rx_rssi": {
+              "type": "integer",
+              "units": "received signal strength indicator"
+          },
+          "rank": {
+              "type": "integer",
+              "units": "none"
+          },
+          "etx": {
+              "type": "integer",
+              "units": "none"
+          },
+          "beacon_interval": {
+              "type": "integer",
+              "units": "milliseconds"
+          },
+          "number_of_neighbors": {
+              "type": "integer",
+              "units": "none"
+          },
+          "link_layer_packets_received": {
+              "type": "integer",
+              "units": "none"
+          },
+          "last_parent_rtt_ping": {
+              "type": "integer",
+              "units": "milliseconds"
+          },
+          "rpl_mode": {
+              "type": "integer",
+              "units": "none"
+          },
+          "power_percentage_rx": {
+              "type": "integer",
+              "units": "percent"
+          },
+          "power_percentage_tx": {
+              "type": "integer",
+              "units": "percent"
+          },
+          "power_percentage_mcu": {
+              "type": "integer",
+              "units": "percent"
+          },
+          "false_wakeup_count": {
+              "type": "integer",
+              "units": "none"
+          },
+          "false_wakeup_rssi": {
+              "type": "integer",
+              "units": "received signal strength indicator"
+          },
+          "uptime": {
+              "type": "long",
+              "units": "seconds"
+          },
+          "creg_cgreg": {
+              "type": "integer",
+              "units": "lower nibble of first byte (creg)/upper nibble of first byte (cgreg) : 0 = not registered, is not currently searching a new operator to register to; 1 = registered, home network; 2 = not registered, but currently searching a new operator to register to; 3 = registration denied; 4 = unknown; 5 = registered, roaming"
+          },
+          "cereg": {
+              "type": "integer",
+              "units": "0 = not registered, is not currently searching a new operator to register to; 1 = registered, home network; 2 = not registered, but currently searching a new operator to register to; 3 = registration denied; 4 = unknown; 5 = registered, roaming"
+          },
+          "location_area_code": {
+              "type": "integer",
+              "units": "none"
+          },
+          "cell_id": {
+              "type": "long",
+              "units": "none"
+          },
+          "mcc_mnc": {
+              "type": "long",
+              "units": "none"
+          },
+          "rssi": {
+              "type": "integer",
+              "units": "received signal strength indicator : 0 = -113dBm or less; 1 = -111dBm; 2 through 30 = -109dBm through -53dBm; 31 = -51dBm or greater; 99 = Not known or not detectable; 100 = -116dBm or less; 101 = -115dBm; 102 through 190 = -114dBm through -26dBm; 191 = -25dBm or greater; 199 = Not known or not detectable; 100~199 = Extended to be used in TD-SCDMA indicating received signal code power (RSCP)"
+          },
+          "provider": {
+              "type": "string",
+              "units": "none"
+          },
+          "cme": {
+              "type": "integer",
+              "units": "none"
+          },
+          "last_cme_error_timestamp": {
+              "type": "long",
+              "units": "unix timestamp"
+          },
+          "overall_access_technology": {
+              "type": "integer",
+              "units": "0 = GSM; 2 = UTRAN; 3 = GSM W/EGPRS; 4 = UTRAN W/HSDPA; 5 = UTRAN W/HSUPA; 6 = UTRAN W/HSDPA and HSUPA; 7 = E-UTRAN"
+          },
+          "access_technology_selected": {
+              "type": "string",
+              "units": ""
+          },
+          "band_selected": {
+              "type": "string",
+              "units": ""
+          },
+          "cell_channel": {
+              "type": "long",
+              "units": "none"
+          },
+          "full_network_name": {
+              "type": "string",
+              "units": ""
+          },
+          "tx_bytes": {
+              "type": "long",
+              "units": "none"
+          },
+          "rx_bytes": {
+              "type": "long",
+              "units": "none"
+          },
+          "link_uptime": {
+              "type": "integer",
+              "units": "seconds"
+          },
+          "reception_percent": {
+              "type": "integer",
+              "units": "percentage"
+          },
+          "davistalk_rssi": {
+              "type": "integer",
+              "units": "received signal strength indicator"
+          },
+          "crc_errors": {
+              "type": "integer",
+              "units": "none"
+          },
+          "resyncs": {
+              "type": "integer",
+              "units": "none"
+          },
+          "good_packet_streak": {
+              "type": "integer",
+              "units": "none"
+          },
+          "transmitter_battery_state": {
+              "type": "integer",
+              "units": "none"
+          },
+          "iss_transmitter_battery_voltage": {
+              "type": "float",
+              "units": "volts"
+          },
+          "iss_solar_panel_voltage": {
+              "type": "float",
+              "units": "volts"
+          },
+          "iss_super_cap_voltage": {
+              "type": "float",
+              "units": "volts"
+          },
+          "afc_setting": {
+              "type": "integer",
+              "units": "none"
+          },
+          "last_gps_reading_timestamp": {
+              "type": "long",
+              "units": "unix timestamp"
+          },
+          "latitude": {
+              "type": "double",
+              "units": "degrees"
+          },
+          "longitude": {
+              "type": "double",
+              "units": "degrees"
+          },
+          "elevation": {
+              "type": "integer",
+              "units": "feet"
+          }
+      }
     }
   ],
   "generated_at": 1643691664

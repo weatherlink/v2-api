@@ -12,22 +12,12 @@ $('select#sensor-type').change(function() {
 	if (!_.isNil(selectedSensorTypeId)) {
 		selectedSensorTypeId = +selectedSensorTypeId;
 		SENSOR_CATALOG.currentSensorTypeId = selectedSensorTypeId;
-
-		var sensorType = _.find(SENSOR_CATALOG.json.sensor_types, {sensor_type: selectedSensorTypeId});
-		sensorType = _.isNil(sensorType) ? null : sensorType;
-
-		if (_.has(sensorType, "data_structures")) {
-			$('select#data-structure-type').empty();
-			for (var dataStructureTypeIndex = 0 ; dataStructureTypeIndex < sensorType.data_structures.length ; dataStructureTypeIndex++) {
-				var dataStructureType = sensorType.data_structures[dataStructureTypeIndex];
-				$('select#data-structure-type').append($("<option value='"+dataStructureType.data_structure_type+"'>Data Structure Type "+dataStructureType.data_structure_type+" - "+dataStructureType.description+"</option>"));
-			}
-			$('div#data-structure-types').show();
-			$('select#data-structure-type').trigger('change');
-		}
+		SENSOR_CATALOG.currentDataStructureTypeId = null;
 	} else {
 		SENSOR_CATALOG.currentSensorTypeId = null;
+		SENSOR_CATALOG.currentDataStructureTypeId = null;
 	}
+	populateDataStructuresTypeSelect();
 });
 
 $('select#data-structure-type').change(function() {
@@ -38,6 +28,7 @@ $('select#data-structure-type').change(function() {
 		selectedDataStructureTypeId = +selectedDataStructureTypeId;
 		SENSOR_CATALOG.currentDataStructureTypeId = selectedDataStructureTypeId;
 	}
+	populateCatalog();
 });
 
 function populateSensorTypeSelect() {
@@ -49,30 +40,28 @@ function populateSensorTypeSelect() {
 	$('select#sensor-type').trigger('change');
 }
 
-function populateCatalog(dataStructure) {
+function populateDataStructuresTypeSelect() {
+	var sensorType = _.find(SENSOR_CATALOG.json.sensor_types, {sensor_type: SENSOR_CATALOG.currentSensorTypeId});
+	sensorType = _.isNil(sensorType) ? null : sensorType;
 
-}
-
-function getSensorType(sensorTypeId) {
-	if (SENSOR_CATALOG_JSON == null) {
-		return null;
+	if (_.has(sensorType, "data_structures")) {
+		$('select#data-structure-type').empty();
+		for (var dataStructureTypeIndex = 0 ; dataStructureTypeIndex < sensorType.data_structures.length ; dataStructureTypeIndex++) {
+			var dataStructureType = sensorType.data_structures[dataStructureTypeIndex];
+			$('select#data-structure-type').append($("<option value='"+dataStructureType.data_structure_type+"'>Data Structure Type "+dataStructureType.data_structure_type+" - "+dataStructureType.description+"</option>"));
+		}
+		$('div#data-structure-types').show();
+		$('select#data-structure-type').trigger('change');
+	} else if (_.has(sensorType, "data_structure")) {
+		populateCatalog();
 	}
-	var result = _.find(SENSOR_CATALOG_JSON.sensor_types, {sensor_type: sensorTypeId});
-	return _.isUndefined(result) ? null : result;
 }
 
-function displayCatalogDetails() {
+function populateCatalog() {
 	var catalogDiv = $('div#catalog');
 	catalogDiv.html('');
+
 	
-	var sensorId = $('select#sensor-type').find(':selected').val();
-	
-	if (sensorId == '') {
-		alert("Please select an Sensor");
-		return;
-	}
-	
-	catalogDiv.html(sensorId);	
 }
 
 var jqxhr = $.getJSON("/v2-api/resources/universal-sensor-catalog.json")
