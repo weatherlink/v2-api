@@ -91,6 +91,7 @@ header:
 </style>
 
 <style type="text/css" media="screen">
+/*
 #catalog { 
 	position: relative !important;
 	border: 1px solid lightgray;
@@ -98,6 +99,7 @@ header:
 	width: 80%;
 	padding: 16px;
 }
+*/
 </style>
 
 <div class="form-style-2">
@@ -122,7 +124,17 @@ header:
 
 <label></label>
 <div><span></span></div>
-<div id="catalog"></div>
+<div id="catalog">
+<table>
+	<thead>
+		<th>Field Name</th>
+		<th>Data Type</th>
+		<th>Units</th>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+</div>
 
 <script>
 (function() {
