@@ -63,7 +63,7 @@ function populateCatalog() {
 	var catalogDiv = $('div#catalog');
 	catalogDiv.html('');
 
-	
+	console.log("populate catalog with sensor type id " + SENSOR_CATALOG.currentSensorTypeId + " data structure type id " + SENSOR_CATALOG.currentDataStructureTypeId);	
 }
 
 var jqxhr = $.getJSON("/v2-api/resources/universal-sensor-catalog.json")
