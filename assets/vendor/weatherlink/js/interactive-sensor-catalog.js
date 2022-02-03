@@ -27,6 +27,8 @@ $('select#data-structure-type').change(function() {
 	if (!_.isNil(selectedDataStructureTypeId)) {
 		selectedDataStructureTypeId = +selectedDataStructureTypeId;
 		SENSOR_CATALOG.currentDataStructureTypeId = selectedDataStructureTypeId;
+	} else {
+		SENSOR_CATALOG.currentDataStructureTypeId = null;
 	}
 	populateCatalog();
 });
