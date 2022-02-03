@@ -83,8 +83,8 @@ function populateCatalog() {
 				}
 			}
 		} else if (_.has(sensorType, "data_structure")) {
-			dataStructureType = sensorType.data_structure;
-			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
+			dataStructure = sensorType.data_structure;
+			dataStructure = _.isNil(dataStructure) ? null : dataStructure;
 		}
 	}
 
