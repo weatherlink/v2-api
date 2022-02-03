@@ -67,6 +67,7 @@ function populateCatalog() {
 
 	var sensorType = null;
 	var dataStructureType = null;
+	var dataStructure = null;
 
 	sensorType = _.find(SENSOR_CATALOG.json.sensor_types, {sensor_type: SENSOR_CATALOG.currentSensorTypeId});
 	sensorType = _.isNil(sensorType) ? null : sensorType;
@@ -75,19 +76,25 @@ function populateCatalog() {
 		if (_.has(sensorType, 'data_structures')) {
 			dataStructureType = _.find(sensorType.data_structures, {data_structure_type: _.toString(SENSOR_CATALOG.currentDataStructureTypeId)});
 			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
+			if (dataStructureType != null) {
+				if (_.has(dataStructureType, "data_structure")) {
+					dataStructure = dataStructureType.data_structure;
+					dataStructure = _.isNil(dataStructure) ? null : dataStructure;
+				}
+			}
 		} else if (_.has(sensorType, "data_structure")) {
 			dataStructureType = sensorType.data_structure;
 			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
 		}
 	}
 
-	if (dataStructureType != null) {
-		var fieldNames = _.keys(dataStructureType);
+	if (dataStructure != null) {
+		var fieldNames = _.keys(dataStructure);
 
 		for(var i = 0 ; i < fieldNames.length ; i++) {
 			var fieldName = fieldNames[i];
-			var fieldType = dataStructureType[fieldName].type;
-			var fieldUnits = dataStructureType[fieldName].units;
+			var fieldType = dataStructure[fieldName].type;
+			var fieldUnits = dataStructure[fieldName].units;
 
 			tbody.append(
 				$('<tr/>')
