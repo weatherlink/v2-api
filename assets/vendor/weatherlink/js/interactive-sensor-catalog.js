@@ -62,6 +62,9 @@ function populateDataStructuresTypeSelect() {
 function populateCatalog() {
 	console.log("populate catalog with sensor type id " + SENSOR_CATALOG.currentSensorTypeId + " data structure type id " + SENSOR_CATALOG.currentDataStructureTypeId);	
 
+	var tbody = $('div#catalog table tbody');
+	tbody.empty();
+
 	var sensorType = null;
 	var dataStructureType = null;
 
@@ -80,9 +83,6 @@ function populateCatalog() {
 
 	if (dataStructureType != null) {
 		var fieldNames = _.keys(dataStructureType);
-
-		var tbody = $('div#catalog table tbody');
-		tbody.empty();
 
 		for(var i = 0 ; i < fieldNames.length ; i++) {
 			var fieldName = fieldNames[i];
