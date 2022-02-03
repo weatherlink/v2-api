@@ -6,6 +6,12 @@ var SENSOR_CATALOG = {
 
 $('select#sensor-type').change(function() {
 	console.log("select#sensor-type change");
+	$('div.options').hide();
+	var selectedSensorTypeId = $('select#sensor-type').find(':selected').val();
+	console.log(selectedSensorTypeId);
+	if (!_.isNil(selectedSensorTypeId)) {
+
+	}
 	/*
 	$('div.options').hide();
 	var selectedSensorTypeId = $('select#sensor-type').find(':selected').val();
