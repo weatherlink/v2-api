@@ -103,18 +103,16 @@ header:
 <div class="form-style-2">
 <form action="" method="post">
 
-<label for="sensor">
-<span>Sensor</span>
-<select id="sensor" name="sensor" class="select-field">
-<!--<option value="historic">/historic/{station-id} - Get Historic Data</option>-->
+<label for="sensor-type">
+<span>Sensor Type</span>
+<select id="sensor-type" name="sensor-type" class="select-field">
 </select>
 </label>
 
-<div id="data-structures" class="options">
-<label for="data-structure">
-<span>Data Structure</span>
-<select id="data-structure" name="data-structure" class="select-field">
-<!--<option value="historic">/historic/{station-id} - Get Historic Data</option>-->
+<div id="data-structure-types" class="options">
+<label for="data-structure-type">
+<span>Data Structure Type</span>
+<select id="data-structure-type" name="data-structure-type" class="select-field">
 </select>
 </label>
 </div>
