@@ -107,8 +107,8 @@ function populateCatalog() {
 		}
 	} else {
 		tbody.append(
-			$('<tr colspan="3"/>')
-				.append($('<td align="center"/>').text("Not Available"))
+			$('<tr/>')
+				.append($('<td colspan="3" align="center"/>').text("Not Available"))
 		);
 	}
 }
