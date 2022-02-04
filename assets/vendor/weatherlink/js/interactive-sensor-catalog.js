@@ -105,6 +105,11 @@ function populateCatalog() {
 					.append($('<td/>').text(fieldUnits))
 			);
 		}
+	} else {
+		tbody.append(
+			$('<tr colspan="3"/>')
+				.append($('<td align="center"/>').text("Not Available"))
+		);
 	}
 }
 
