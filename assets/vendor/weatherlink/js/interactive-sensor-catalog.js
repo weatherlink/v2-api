@@ -30,7 +30,7 @@ $('select#data-structure-type').change(function() {
 	} else {
 		SENSOR_CATALOG.currentDataStructureTypeId = null;
 	}
-	populateCatalog();
+	populateCatalogItemDetails();
 });
 
 function populateSensorTypeSelect() {
@@ -55,16 +55,16 @@ function populateDataStructuresTypeSelect() {
 		$('div#data-structure-types').show();
 		$('select#data-structure-type').trigger('change');
 	} else if (_.has(sensorType, "data_structure")) {
-		populateCatalog();
+		populateCatalogItemDetails();
 	} else {
-		populateCatalog();
+		populateCatalogItemDetails();
 	}
 }
 
-function populateCatalog() {
-	console.log("populate catalog with sensor type id " + SENSOR_CATALOG.currentSensorTypeId + " data structure type id " + SENSOR_CATALOG.currentDataStructureTypeId);	
+function populateCatalogItemDetails() {
+	console.log("populate catalog item details with sensor type id " + SENSOR_CATALOG.currentSensorTypeId + " data structure type id " + SENSOR_CATALOG.currentDataStructureTypeId);	
 
-	var tbody = $('div#catalog table tbody');
+	var tbody = $('div#catalog-item-details table tbody');
 	tbody.empty();
 
 	var sensorType = null;
