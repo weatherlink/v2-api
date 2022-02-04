@@ -124,14 +124,16 @@ header:
 
 <label></label>
 <div id="catalog-item-details">
-<p>Sensor Type: <span id="catalog-item-details-sensor-type"></span></p>
-<p>Manufacturer: <span id="catalog-item-details-manufacturer"></span></p>
-<p>Product Name: <span id="catalog-item-details-product-name"></span></p>
-<p>Product Number: <span id="catalog-item-details-product-number"></span></p>
-<p>Category: <span id="catalog-item-details-category"></span></p>
-<p>Data Structure Type: <span id="catalog-item-details-data-structure-type"></span></p>
-<p>Data Structure Description: <span id="catalog-item-details-data-structure-description"></span></p>
-<p>Data Structure Fields</p>
+<p>
+Sensor Type: <span id="catalog-item-details-sensor-type"></span><br>
+Manufacturer: <span id="catalog-item-details-manufacturer"></span><br>
+Product Name: <span id="catalog-item-details-product-name"></span><br>
+Product Number: <span id="catalog-item-details-product-number"></span><br>
+Category: <span id="catalog-item-details-category"></span><br>
+Data Structure Type: <span id="catalog-item-details-data-structure-type"></span><br>
+Data Structure Description: <span id="catalog-item-details-data-structure-description"></span><br>
+Data Structure Fields:<br>
+</p>
 <table class="table" style="display: table;">
 	<thead>
 		<th>Field Name</th>

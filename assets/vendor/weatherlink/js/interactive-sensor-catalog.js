@@ -72,7 +72,7 @@ function populateCatalogItemDetails() {
 	divCatalogItemDetails.find("span#catalog-item-details-category").empty();
 
 	divCatalogItemDetails.find("span#catalog-item-details-data-structure-type").empty();
-	divCatalogItemDetails.find("span#catalog-item-details--data-structure-description").empty();
+	divCatalogItemDetails.find("span#catalog-item-details-data-structure-description").empty();
 
 	var tbody = $('div#catalog-item-details table tbody');
 	tbody.empty();
@@ -95,6 +95,8 @@ function populateCatalogItemDetails() {
 			dataStructureType = _.find(sensorType.data_structures, {data_structure_type: _.toString(SENSOR_CATALOG.currentDataStructureTypeId)});
 			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
 			if (dataStructureType != null) {
+				divCatalogItemDetails.find("span#catalog-item-details-data-structure-type").text(dataStructureType.data_structure_type);
+				divCatalogItemDetails.find("span#catalog-item-details-data-structure-description").text(dataStructureType.description);
 				if (_.has(dataStructureType, "data_structure")) {
 					dataStructure = dataStructureType.data_structure;
 					dataStructure = _.isNil(dataStructure) ? null : dataStructure;
@@ -107,9 +109,6 @@ function populateCatalogItemDetails() {
 	}
 
 	if (dataStructure != null) {
-		divCatalogItemDetails.find("span#catalog-item-details-data-structure-type").text(dataStructure.data_structure_type);
-		divCatalogItemDetails.find("span#catalog-item-details--data-structure-description").text(dataStructure.description);
-
 		var fieldNames = _.keys(dataStructure);
 
 		for(var i = 0 ; i < fieldNames.length ; i++) {
