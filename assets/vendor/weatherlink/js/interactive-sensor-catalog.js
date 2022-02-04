@@ -64,6 +64,16 @@ function populateDataStructuresTypeSelect() {
 function populateCatalogItemDetails() {
 	console.log("populate catalog item details with sensor type id " + SENSOR_CATALOG.currentSensorTypeId + " data structure type id " + SENSOR_CATALOG.currentDataStructureTypeId);	
 
+	var divCatalogItemDetails = $('div#catalog-item-details');
+	divCatalogItemDetails.find("span#catalog-item-details-sensor-type").empty();
+	divCatalogItemDetails.find("span#catalog-item-details-manufacturer").empty();
+	divCatalogItemDetails.find("span#catalog-item-details-product-name").empty();
+	divCatalogItemDetails.find("span#catalog-item-details-product-number").empty();
+	divCatalogItemDetails.find("span#catalog-item-details-category").empty();
+
+	divCatalogItemDetails.find("span#catalog-item-details-data-structure-type").empty();
+	divCatalogItemDetails.find("span#catalog-item-details--data-structure-description").empty();
+
 	var tbody = $('div#catalog-item-details table tbody');
 	tbody.empty();
 
@@ -75,6 +85,12 @@ function populateCatalogItemDetails() {
 	sensorType = _.isNil(sensorType) ? null : sensorType;
 
 	if (sensorType != null) {
+		divCatalogItemDetails.find("span#catalog-item-details-sensor-type").text(sensorType.sensor_type);
+		divCatalogItemDetails.find("span#catalog-item-details-manufacturer").text(sensorType.manufacturer);
+		divCatalogItemDetails.find("span#catalog-item-details-product-name").text(sensorType.product_name);
+		divCatalogItemDetails.find("span#catalog-item-details-product-number").text(sensorType.product_number);
+		divCatalogItemDetails.find("span#catalog-item-details-category").text(sensorType.category);
+
 		if (_.has(sensorType, 'data_structures')) {
 			dataStructureType = _.find(sensorType.data_structures, {data_structure_type: _.toString(SENSOR_CATALOG.currentDataStructureTypeId)});
 			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
@@ -91,6 +107,9 @@ function populateCatalogItemDetails() {
 	}
 
 	if (dataStructure != null) {
+		divCatalogItemDetails.find("span#catalog-item-details-data-structure-type").text(dataStructure.data_structure_type);
+		divCatalogItemDetails.find("span#catalog-item-details--data-structure-description").text(dataStructure.description);
+
 		var fieldNames = _.keys(dataStructure);
 
 		for(var i = 0 ; i < fieldNames.length ; i++) {
