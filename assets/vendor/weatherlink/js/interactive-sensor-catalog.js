@@ -56,6 +56,8 @@ function populateDataStructuresTypeSelect() {
 		$('select#data-structure-type').trigger('change');
 	} else if (_.has(sensorType, "data_structure")) {
 		populateCatalog();
+	} else {
+		populateCatalog();
 	}
 }
 
