@@ -102,6 +102,11 @@ header:
 */
 </style>
 
+<div class="notice--warning">
+<h4>Please Note:</h4>
+<p>The Sensor Catalog information presented here is for sensor types that are common to all users and covers all types of sensors except the Sentek EnviroSCAN probe. The EnviroSCAN probe is user customizable and can be configured differently for each installation. If you have an EnviroSCAN probe you will need to make an API call to the `/sensor-catalog` API endpoint to get the sensor catalog meta-data details for your particular EnviroSCAN probe.</p>
+</div>
+
 <div class="form-style-2">
 <form action="" method="post">
 
