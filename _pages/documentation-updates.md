@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2022-02-07
+  - Add [Interactive Sensor Catalog](interactive-sensor-catalog).
 - 2021-12-10
   - Add ET API call definition to [API Reference](api-reference).
 - 2021-11-03
