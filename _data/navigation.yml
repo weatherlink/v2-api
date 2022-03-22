@@ -45,11 +45,11 @@ navMain:
         url: /size-limits
   - title: SDKs
     children:
-      - title: <i class="fab fa-java"></i> Java <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
+      - title: Java <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /java-sdk
-      - title: <i class="fab fa-php"></i> PHP <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
+      - title: PHP <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /php-sdk
-      - title: <i class="fab fa-python"></i> Python <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
+      - title: Python <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /python-sdk
   - title: Resources
     children:
