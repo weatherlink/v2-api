@@ -45,7 +45,7 @@ navMain:
         url: /size-limits
   - title: SDKs
     children:
-      - title: Java <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
+      - title: <i class="fa-brands fa-java"></i> Java <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /java-sdk
       - title: PHP <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /php-sdk
