@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "101bc3d7-ad35-4e4f-8257-cadd1b5d9c25",
+		"_postman_id": "bceaee67-6882-4637-9404-83350e9b53c7",
 		"name": "WeatherLink v2 API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -65,7 +64,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -125,7 +123,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -176,7 +173,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -221,8 +217,8 @@
 								{
 									"key": "node-ids",
 									"value": "",
-									"description": "(Required) List of one or more node IDs, separated by commas",
-									"type": "string"
+									"type": "string",
+									"description": "(Required) List of one or more node IDs, separated by commas"
 								}
 							]
 						},
@@ -236,7 +232,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -287,7 +282,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -332,8 +326,8 @@
 								{
 									"key": "sensor-ids",
 									"value": "",
-									"description": "(Required) List of one or more sensor IDs, separated by commas",
-									"type": "string"
+									"type": "string",
+									"description": "(Required) List of one or more sensor IDs, separated by commas"
 								}
 							]
 						},
@@ -347,7 +341,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -398,7 +391,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -443,8 +435,8 @@
 								{
 									"key": "sensor-ids",
 									"value": "",
-									"description": "(Required) List of one or more sensor IDs, separated by commas",
-									"type": "string"
+									"type": "string",
+									"description": "(Required) List of one or more sensor IDs, separated by commas"
 								}
 							]
 						},
@@ -458,7 +450,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -503,18 +494,18 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Metadata about the weather stations and sensors, as well as the different types of sensors, and the structure of the data returned by each one"
 		},
 		{
 			"name": "Weather Data",
 			"item": [
 				{
-					"name": "Current Conditions Data",
+					"name": "Current Conditions",
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -569,12 +560,11 @@
 					"response": []
 				},
 				{
-					"name": "Historic Data",
+					"name": "Historic Archive Data",
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0d88c71a-d953-41ff-9c17-4e9cb0e900fd",
 								"exec": [
 									""
 								],
@@ -586,7 +576,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.weatherlink.com/v2/historic/:station-id?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}&start-timestamp=1561964400&end-timestamp=1561965400",
+							"raw": "https://api.weatherlink.com/v2/historic/:station-id?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}&start-timestamp=&end-timestamp=",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -616,13 +606,13 @@
 								},
 								{
 									"key": "start-timestamp",
-									"value": "1561964400",
-									"description": "Unix timestamp, time window queried is (start-timestamp, end-timestamp]"
+									"value": "",
+									"description": "(Required) Unix timestamp, time window queried is (start-timestamp, end-timestamp]"
 								},
 								{
 									"key": "end-timestamp",
-									"value": "1561965400",
-									"description": "Unix timestamp, time window queried is (start-timestamp, end-timestamp]"
+									"value": "",
+									"description": "(Required) Unix timestamp, time window queried is (start-timestamp, end-timestamp]"
 								}
 							],
 							"variable": [
@@ -634,18 +624,84 @@
 								}
 							]
 						},
-						"description": "Get historic data for one station ID within a given timerange"
+						"description": "Get historic data for one station ID within a given time range"
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Weather sensor observation data as it was sent to WeatherLink.com"
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "ET Report",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherlink.com/v2/report/et/:station-id?api-key={{V2_API_KEY}}&api-signature={{V2_API_SIGNATURE}}&t={{V2_API_TIMESTAMP}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherlink",
+								"com"
+							],
+							"path": [
+								"v2",
+								"report",
+								"et",
+								":station-id"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "{{V2_API_KEY}}",
+									"description": "(Required) API Key, loaded from the environment"
+								},
+								{
+									"key": "api-signature",
+									"value": "{{V2_API_SIGNATURE}}",
+									"description": "(Required) API Signature, automatically calculated and loaded from the environment"
+								},
+								{
+									"key": "t",
+									"value": "{{V2_API_TIMESTAMP}}",
+									"description": "(Required) Unix timestamp, automatically calculated and loaded from the environment"
+								}
+							],
+							"variable": [
+								{
+									"key": "station-id",
+									"value": "",
+									"type": "string",
+									"description": "(Required) Station ID"
+								}
+							]
+						},
+						"description": "Get evapotranspiration data for one WeatherLink Live station"
+					},
+					"response": []
+				}
+			],
+			"description": "Additional weather sensor observation data"
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "03974938-bbcb-4f94-a6be-07c60dbd02ce",
 				"type": "text/javascript",
 				"exec": [
 					"/*",
@@ -697,15 +753,13 @@
 					"var apiSignature = CryptoJS.HmacSHA256(stringToHash, apiSecret).toString(CryptoJS.enc.Hex);",
 					"",
 					"// save the API Signature to a Postman environment variable",
-					"pm.environment.set(\"V2_API_SIGNATURE\", apiSignature);",
-					""
+					"pm.environment.set(\"V2_API_SIGNATURE\", apiSignature);"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "37a406f6-ea52-462d-96a7-21c4a7d35591",
 				"type": "text/javascript",
 				"exec": [
 					""
