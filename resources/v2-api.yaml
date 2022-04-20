@@ -688,7 +688,7 @@ paths:
     get:
       tags:
         - Weather Data
-      summary: Get historic data for one station ID within a given timerange
+      summary: Get historic data for one station ID within a given time range
       description: >
         Returns historic data for a weather station selected by a station ID passed as a path parameter, 
         within a given time range.
