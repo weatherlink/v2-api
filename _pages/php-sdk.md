@@ -14,6 +14,8 @@ This project is just getting started and this is the initial release focused on 
 
 The SDK has been published to [Packagist.org](https://packagist.org/packages/weatherlink/weatherlink_v2_api_sdk)
 
+Latest Release: [![Packagist](https://img.shields.io/packagist/v/weatherlink/weatherlink_v2_api_sdk?color=blue&style=flat-square)](https://packagist.org/packages/weatherlink/weatherlink_v2_api_sdk)
+
 ## Source
 
 * [GitHub](https://github.com/weatherlink/weatherlink-v2-api-sdk-php)
