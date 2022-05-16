@@ -1,0 +1,24 @@
+name: Update Java SDK Version
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update:
+    name: Update Java SDK Version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install yq
+        run: pip3 install yq
+      - name: Update Java SDK Version
+        run: sed -i 's/<version>.*\?<\/version>/<version>'`curl -s https://repo1.maven.org/maven2/com/weatherlink/weatherlink-v2-api-sdk/maven-metadata.xml | xq '.metadata.versioning.latest' | tr -d '"'`'<\/version>/g' _pages/java-sdk.md
+      - name: Commit java-sdk.md if needed
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update released dependency version in java-sdk
+          file_pattern: _pages/java-sdk.md
+          skip_dirty_check: false
