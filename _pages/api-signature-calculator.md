@@ -108,19 +108,21 @@ The purpose of this page is to provide an interactive demonstration of how to co
 <label for="api-endpoint">
 <span>API Endpoint <span class="required">*</span></span>
 <select id="api-endpoint" name="api-endpoint" class="select-field">
-<option value="">*** Meta Data API Endpoints *** </option>
-<option value="stations-all">/stations - Get All Stations</option>
-<option value="stations-some">/stations/{station-ids} - Get Some Stations</option>
-<option value="nodes-all">/nodes - Get All Nodes</option>
-<option value="nodes-some">/nodes/{node-ids} - Get Some Nodes</option>
-<option value="sensors-all">/sensors - Get All Sensors</option>
-<option value="sensors-some">/sensors/{sensor-ids} - Get Some Sensors</option>
-<option value="sensor-activity-all">/sensor-activity - Get Latest Activity For All Sensors</option>
-<option value="sensor-activity-some">/sensor-activity/{sensor-ids} - Get Latest Activity For Some Sensors</option>
-<option value="sensor-catalog">/sensor-catalog - Get The Sensor Catalog</option>
+<option value="">*** Metadata API Endpoints *** </option>
+<option value="stations-all">/stations - Get all weather stations associated with your API Key</option>
+<option value="stations-some">/stations/{station-ids} - Get weather stations for one or more station IDs provided</option>
+<option value="nodes-all">/nodes - Get all nodes attached to all weather stations associated with your API Key</option>
+<option value="nodes-some">/nodes/{node-ids} - Get nodes for one or more node IDs provided</option>
+<option value="sensors-all">/sensors - Get all sensors attached to all weather stations associated with your API Key</option>
+<option value="sensors-some">/sensors/{sensor-ids} - Get sensors for one or more sensor IDs provided</option>
+<option value="sensor-activity-all">/sensor-activity - Get latest reporting times for all sensors attached to all weather stations associated with your API Key</option>
+<option value="sensor-activity-some">/sensor-activity/{sensor-ids} - Get latest reporting times for one or more sensors for sensor IDs provided</option>
+<option value="sensor-catalog">/sensor-catalog - Get a catalog of all types of sensors</option>
 <option value="">*** Weather Data API Endpoints *** </option>
-<option value="current">/current/{station-id} - Get Current Conditions Data</option>
-<option value="historic">/historic/{station-id} - Get Historic Data</option>
+<option value="current">/current/{station-id} - Get current conditions data for one station</option>
+<option value="historic">/historic/{station-id} - Get historic data for one station ID within a given time range</option>
+<option value="">*** Reports API Endpoints *** </option>
+<option value="report-et">/report/et/{station-id} - Get evapotranspiration data for one WeatherLink Live station</option>
 </select>
 </label>
 
@@ -186,6 +188,13 @@ The purpose of this page is to provide an interactive demonstration of how to co
 <label for="current-station-id">
 <span>Station ID <span class="required">*</span></span>
 <input id="current-station-id" type="text" class="input-field" name="current-station-id" value="" placeholder="Station ID" />
+</label>
+</div>
+
+<div id="params-report-et" class="params">
+<label for="report-et-station-id">
+<span>Station ID <span class="required">*</span></span>
+<input id="report-et-station-id" type="text" class="input-field" name="report-et-station-id" value="" placeholder="Station ID" />
 </label>
 </div>
 
