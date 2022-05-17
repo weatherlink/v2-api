@@ -79,6 +79,10 @@ function calculateApiSignature() {
 			queryParams.push({"key": "end-timestamp", "value": $('input#historic-end-timestamp').val()});
 			apiEndpointPath = '/historic/' + $('input#historic-station-id').val();
 			break;
+		case 'report-et':
+			pathParams.push({"key": "station-id", "value": $('input#report-et-station-id').val()});
+			apiEndpointPath = '/report/et/' + $('input#report-et-station-id').val();
+			break;
 	}
 	
 	var instructions = '';
