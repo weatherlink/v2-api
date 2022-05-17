@@ -1,5 +1,5 @@
 ---
-title: Test
+title: API Signature Calculator
 permalink: /api-signature-calculator
 classes: wide
 header:
@@ -99,6 +99,8 @@ header:
 	padding: 16px;
 }
 </style>
+
+The purpose of this page is to provide an interactive demonstration of how to compute an API Signature based on the type of API call and parameters you enter in the form below.
 
 <div class="form-style-2">
 <form action="" method="post">
