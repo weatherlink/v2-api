@@ -21,6 +21,8 @@ navMain:
         url: /tutorial
       - title: Authentication
         url: /authentication
+      - title: API Signature Calculator
+        url: /api-signature-calculator
       - title: API Response
         url: /api-response
       - title: API Use Cases
@@ -35,7 +37,7 @@ navMain:
         url: /data-structure-types
       - title: Sensor Catalog
         url: /sensor-catalog
-      - title: Interactive Sensor Catalog <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+      - title: Interactive Sensor Catalog <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /interactive-sensor-catalog
       - title: Data Permissions <!--<i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>--><!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /data-permissions
