@@ -19,7 +19,7 @@ The WeatherLink v2 API is a shared resource between all API users. In an effort 
 
 By default, all API users will have the following rate limits:
 
-* 300 API calls per hour
+* 1,000 API calls per hour
 * 10 API calls per second
 
 This is more than enough for 95% percent of all WeatherLink users to access meta-data, current conditions data, and historic data for all of their weather stations.
