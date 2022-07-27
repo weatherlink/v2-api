@@ -10,7 +10,7 @@ header:
 
 There are a number of factors that determine both if and how often you can access weather observation data for a particular weather station. These factors include:
 
-* The type of weather station. Is it WeatherLink Live or EnviroMonitor?
+* The type of weather station. Is it WeatherLink Live or EnviroMonitor or something else?
 * The type of weather observation data being requested. Are you requesting current conditions or historic data?
 * Your relationship with the weather station. Does the station belong to your WeatherLink account or was it shared with you?
 * What subscription level is your association with the weather station? Is it Basic, Pro or Pro+ access?
