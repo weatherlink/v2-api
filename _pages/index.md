@@ -10,6 +10,12 @@ header:
 
 The WeatherLink v2 API can be used to access weather station metadata and weather observation data for WeatherLink.com connected weather stations that you have access to.
 
+In order to access a station via the WeatherLink v2 API the station must meet one of the following criteria:
+
+1. You own the station under your WeatherLink account.
+1. You don't own the station but it was shared to your WeatherLink account. If the station was shared as a Basic level share then the share must have been made by the station owner
+1. You don't own the station but it is a publicly visible station and you purchased a Pro or Pro+ upgrade and applied it to that station to give yourself increased access to the station's data. 
+
 <!--
 <div class="notice--success">
 <h4>API Update</h4>
