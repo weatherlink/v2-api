@@ -25,7 +25,7 @@ In order to access a station via the WeatherLink v2 API the station must meet on
 
 <div class="notice--success">
 <h4>Please Note:</h4>
-<p>The WeatherLink v2 API now supports Vantage Connect, WeatherLinkIP, and WeatherLink Network Annual Subscription connected stations.</p>
+<p>The WeatherLink v2 API supports Vantage Connect, WeatherLinkIP, and WeatherLink Network Annual Subscription connected stations.</p>
 <p>The older <a href="https://www.weatherlink.com/static/docs/APIdocumentation.pdf">WeatherLink v1 API</a> will continue to function and support these older device types.</p>
 <p>Please be aware that the WeatherLink v2 API is not a one-to-one correlation with the v1 API. The focus of the v2 API is on the raw data from the weather station as it is reported to the WeatherLink.com service. The v1 API was more focused on mixing different kinds of data together to form a report.</p>
 </div>
