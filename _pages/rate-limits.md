@@ -24,4 +24,4 @@ By default, all API users will have the following rate limits:
 
 This is more than enough for 95% percent of all WeatherLink users to access meta-data, current conditions data, and historic data for all of their weather stations.
 
-Higher rate limits can be granted for large scale WeatherLink customers. To request a rate limit increase please join our [WeatherLink Developers Discord](https://discord.gg/WCEdd2S4Ve) and post a message in the WeatherLink v2 API chat channel explaining your situation.
+Higher rate limits can be granted for large scale WeatherLink customers. To request a rate limit increase please join our [WeatherLink Developers Discord](https://discord.gg/D4rCKRqpEM) and post a message in the WeatherLink v2 API chat channel explaining your situation.
