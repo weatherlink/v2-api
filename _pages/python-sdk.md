@@ -22,5 +22,5 @@ Latest Release: [![PyPI](https://img.shields.io/pypi/v/weatherlink-v2-api-sdk?co
 
 ## Communication
 
-* [WeatherLink Developer Discord](https://discord.gg/D4rCKRqpEM), please direct questions to the Python SDK channel under the WeatherLink v2 API category
+* [WeatherLink Developers Discord](https://weatherlink.github.io/v2-api/discord), please direct questions to the Python SDK channel under the WeatherLink v2 API category
 * [GitHub Issues](https://github.com/weatherlink/weatherlink-v2-api-sdk-python/issues) for bug reports
