@@ -1,3 +1,12 @@
+{% assign refresh_time = 0 %}
+{% if page.refresh_time %}
+{% assign refresh_time = page.refresh_time %}
+{% endif %}
+
+{% if page.refresh_url %}
+<meta http-equiv="refresh" content="{{ refresh_time }};url={{ page.refresh_url }}"/>
+{% endif %}
+
 <style>
 .new-content-notification {
   color: #ff9900;
