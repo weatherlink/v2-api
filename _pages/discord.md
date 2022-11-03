@@ -1,5 +1,5 @@
 ---
 permalink: /discord
-layout: forward
-target: https://discord.gg/D4rCKRqpEM
+refresh_time: 0
+refresh_url: https://discord.gg/D4rCKRqpEM
 ---
