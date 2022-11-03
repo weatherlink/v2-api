@@ -10,7 +10,7 @@ header:
 
 We have created a WeatherLink Developers Discord to serve as a central location for API related chat and support with dedicated channels for each WeatherLink API. The Discord is monitored by the Davis Instruments/WeatherLink engineers responsible for the WeatherLink APIs. Feel free to ask your questions and report any issues you have.
 
-You can join the WeatherLink Developers Discord at [https://weatherlink.github.io/v2-api/discord]
+You can join the WeatherLink Developers Discord at [https://weatherlink.github.io/v2-api/discord](https://weatherlink.github.io/v2-api/discord)
 
 <!--
 ## Gitter Chat Room (Deprecated)
