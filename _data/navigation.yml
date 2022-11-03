@@ -6,7 +6,7 @@ main:
   - title: "Davis Instruments"
     url: https://www.davisinstruments.com
   - title: "Discord"
-    url: /discord
+    url: https://weatherlink.github.io/discord
 
 navMain: 
   - title: Overview
