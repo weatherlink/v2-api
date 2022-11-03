@@ -22,5 +22,5 @@ Latest Release: [![Packagist](https://img.shields.io/packagist/v/weatherlink/wea
 
 ## Communication
 
-* [WeatherLink Developer Discord](https://discord.gg/WCEdd2S4Ve), please direct questions to the PHP SDK channel under the WeatherLink v2 API category
+* [WeatherLink Developer Discord](https://discord.gg/D4rCKRqpEM), please direct questions to the PHP SDK channel under the WeatherLink v2 API category
 * [GitHub Issues](https://github.com/weatherlink/weatherlink-v2-api-sdk-php/issues) for bug reports
