@@ -84,7 +84,7 @@ Permission descriptions like "Most recent 5 minute record" means that data will 
 
 <i>* Basic shares must be created by the owner of the weather station.</i>
 
-## WeatherLink Live
+## WeatherLink Console / WeatherLink Live
 
 <table>
   <thead>
