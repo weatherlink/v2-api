@@ -33,15 +33,15 @@ navMain:
     children:
       - title: API Reference <!--<i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>-->
         url: /api-reference
-      - title: Data Structure Types <!--<i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>-->
+      - title: Data Structure Types <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>
         url: /data-structure-types
       - title: Sensor Catalog
         url: /sensor-catalog
       - title: Interactive Sensor Catalog <!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /interactive-sensor-catalog
-      - title: Data Permissions <!--<i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>--><!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
+      - title: Data Permissions <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b><!--<i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>-->
         url: /data-permissions
-      - title: Rate Limits <i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>
+      - title: Rate Limits <!--<i class="fas fa-star new-content-notification"></i> <b><i>Updated!</i></b>-->
         url: /rate-limits
       - title: Size Limits
         url: /size-limits
