@@ -48,7 +48,9 @@ function populateDataStructuresTypeSelect() {
 	var sensorType = _.find(SENSOR_CATALOG.json.sensor_types, {sensor_type: SENSOR_CATALOG.currentSensorTypeId});
 	sensorType = _.isNil(sensorType) ? null : sensorType;
 
-	if (_.has(sensorType, "data_structures")) {
+	if (_.has(sensorType, "data_structure")) {
+		populateCatalogItemDetails();
+	} else if (_.has(sensorType, "data_structures")) {
 		$('select#data-structure-type').empty();
 		for (var dataStructureTypeIndex = 0 ; dataStructureTypeIndex < sensorType.data_structures.length ; dataStructureTypeIndex++) {
 			var dataStructureType = sensorType.data_structures[dataStructureTypeIndex];
@@ -56,8 +58,6 @@ function populateDataStructuresTypeSelect() {
 		}
 		$('div#data-structure-types').show();
 		$('select#data-structure-type').trigger('change');
-	} else if (_.has(sensorType, "data_structure")) {
-		populateCatalogItemDetails();
 	} else {
 		populateCatalogItemDetails();
 	}
