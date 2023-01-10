@@ -93,7 +93,10 @@ function populateCatalogItemDetails() {
 		divCatalogItemDetails.find("span#catalog-item-details-product-number").text(sensorType.product_number);
 		divCatalogItemDetails.find("span#catalog-item-details-category").text(sensorType.category);
 
-		if (_.has(sensorType, 'data_structures')) {
+		if (_.has(sensorType, "data_structure")) {
+			dataStructure = sensorType.data_structure;
+			dataStructure = _.isNil(dataStructure) ? null : dataStructure;
+		} else if (_.has(sensorType, 'data_structures')) {
 			dataStructureType = _.find(sensorType.data_structures, {data_structure_type: _.toString(SENSOR_CATALOG.currentDataStructureTypeId)});
 			dataStructureType = _.isNil(dataStructureType) ? null : dataStructureType;
 			if (dataStructureType != null) {
@@ -104,9 +107,6 @@ function populateCatalogItemDetails() {
 					dataStructure = _.isNil(dataStructure) ? null : dataStructure;
 				}
 			}
-		} else if (_.has(sensorType, "data_structure")) {
-			dataStructure = sensorType.data_structure;
-			dataStructure = _.isNil(dataStructure) ? null : dataStructure;
 		}
 	}
 
