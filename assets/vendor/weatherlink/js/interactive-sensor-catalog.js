@@ -117,12 +117,17 @@ function populateCatalogItemDetails() {
 			var fieldName = fieldNames[i];
 			var fieldType = dataStructure[fieldName].type;
 			var fieldUnits = dataStructure[fieldName].units;
+			var fieldDescription = "";
+			if (_.has(dataStructure, "description")) {
+				fieldDescription = dataStructure[fieldName].description;
+			}
 
 			tbody.append(
 				$('<tr/>')
 					.append($('<td/>').text(fieldName))
 					.append($('<td/>').text(fieldType))
 					.append($('<td/>').text(fieldUnits))
+					.append($('<td/>').text(fieldDescription))
 			);
 		}
 	} else {
