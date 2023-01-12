@@ -118,7 +118,7 @@ function populateCatalogItemDetails() {
 			var fieldType = dataStructure[fieldName].type;
 			var fieldUnits = dataStructure[fieldName].units;
 			var fieldDescription = "";
-			if (_.has(dataStructure, "description")) {
+			if (_.has(dataStructure[fieldName], "description")) {
 				fieldDescription = dataStructure[fieldName].description;
 			}
 
