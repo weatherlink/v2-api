@@ -144,6 +144,7 @@ Data Structure Fields:<br>
 		<th>Field Name</th>
 		<th>Data Type</th>
 		<th>Units</th>
+		<th>Description</th>
 	</thead>
 	<tbody>
 	</tbody>
