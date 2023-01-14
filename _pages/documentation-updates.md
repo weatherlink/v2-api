@@ -8,6 +8,12 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2023-01-06
+  - Added [Data Permissions](data-permissions) and [Data Structure Types](data-structure-types) information for the [WeatherLink Console](https://www.davisinstruments.com/pages/weatherlink-console).
+- 2022-07-25
+  - Update [Rate Limits](rate-limits).
+- 2022-05-16
+  - Add [API Signature Calculator](api-signature-calculator).
 - 2022-02-07
   - Add [Interactive Sensor Catalog](interactive-sensor-catalog).
 - 2021-12-10
@@ -25,7 +31,7 @@ header:
 - 2020-09-24
   - Added [Data Permissions](data-permissions) information for WeatherLinkIP, WeatherLink Network Annual Subscription, and Vantage Connect.
 - 2020-09-02
-  - Added [Data Permissions](data-permissions) and [Data Structure Types](data-structure-types) information for [AirLink](https://www.davisinstruments.com/product/airlink-professional-air-quality-sensor/) air quality sensor.
+  - Added [Data Permissions](data-permissions) and [Data Structure Types](data-structure-types) information for the [AirLink](https://www.davisinstruments.com/products/airlink-professional-air-quality-monitor) air quality sensor.
 - 2020-02-04
   - Added link for Python 2 and Python 3 live code sample for API Signature calculation under [Authentication Live Code Examples](authentication#live-code-examples).
 - 2019-11-04
