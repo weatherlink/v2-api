@@ -887,7 +887,7 @@ components:
                 type: boolean
               private:
                 type: boolean
-              uploadInterval:
+              recording_interval:
                 type: integer
                 format: int32
               firmware_version:
