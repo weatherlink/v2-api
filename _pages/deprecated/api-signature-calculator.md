@@ -100,6 +100,11 @@ header:
 }
 </style>
 
+<div class="notice--success">
+<h4>DEPRECATED</h4>
+<p>API Signature is no longer required</p>
+</div>
+
 The purpose of this page is to provide an interactive demonstration of how to compute an API Signature based on the type of API call and parameters you enter in the form below.
 
 <div class="form-style-2">
