@@ -21,8 +21,6 @@ navMain:
         url: /tutorial
       - title: Authentication
         url: /authentication
-      - title: API Signature Calculator
-        url: /api-signature-calculator
       - title: API Response
         url: /api-response
       - title: API Use Cases
