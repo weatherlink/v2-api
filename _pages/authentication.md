@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
-The WeatherLink v2 API uses an API Key, an API Secret, a request timestamp, and a calculated API Signature for authenticating API requests.
+The WeatherLink v2 API uses an API Key and an API Secret for authenticating API requests.
 
 ## API Key
 
