@@ -100,7 +100,7 @@ header:
 }
 </style>
 
-<div class="notice--success">
+<div class="notice--error">
 <h4>DEPRECATED</h4>
 <p>API Signature is no longer required</p>
 </div>
