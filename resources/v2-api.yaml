@@ -13,11 +13,10 @@ info:
     JSON format.
     </p>
     <p>
-    Reports endpoints provide weather observation data but
-    are not able to be categorized in the Weather Data category. This is mainly
-    due to the fact that the data returned by Reports endpoints does not adhere
-    to the requirement that the data format matches what was sent to 
-    WeatherLink.com.
+    Reports endpoints provide weather observation data but are not able to be
+    categorized in the Weather Data category. This is mainly due to the fact
+    that the data returned by Reports endpoints does not adhere to the
+    requirement that the data format matches what was sent to WeatherLink.com.
     </p>
   contact:
     name: API Support
@@ -26,7 +25,7 @@ servers:
   - url: "https://api.weatherlink.com/v2"
 tags:
   - name: Metadata
-    description: Metadata about the weather stations and sensors, as well as the different types of sensors, and the structure of the data returned by each one
+    description: Metadata endpoints describe weather stations and their component parts, as well as the structure of the data available from the Weather Data endpoints
   - name: Weather Data
     description: Weather sensor observation data as it was sent to WeatherLink.com
   - name: Reports
