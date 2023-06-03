@@ -8,6 +8,15 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 20230531.1 - Build 20230518.1
+  - Add support for sending API Secret as a header instead of computing an API Signature.
+  - Allow use of Station UUID.
+- 20230508.1 - Build 20230502.1
+  - Add support for new sensor types.
+- 20230112.1 - Build 20230110.2
+  - Add WeatherLink Console support.
+- 20220510.1 - Build 20220503.1
+  - Update /sensor-activity API call to support WeatherLinkIP, WeatherLink Network Annual Subscription, and Vantage Connect.
 - 2022-01-25 - Build 20220125.1
   - Update sensor catalog.
   - Fix field name typos.
