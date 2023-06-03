@@ -29,16 +29,24 @@ paths:
       summary: Get all weather stations associated with your API Key
       description: >
         Returns data for all weather stations associated with the API Key passed
-        in the query parameters. Currently all stations are returned in a
-        single response. The fields listed below are returned for each
+        in the query parameters.  Currently all stations are returned in a
+        single response.  A future enhancement will provide pagination to reduce
+        the size of the response.  The fields listed below are returned for each
         station; additionally, a **generated_at** field is returned for the
         entire response, containing a Unix timestamp of the time the response
         was returned by the server.
       parameters:
         - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/ApiSignature'
+        - $ref: '#/components/parameters/Timestamp'
+        # - $ref: '#/components/parameters/RegisteredSinceStations'
       responses:
         '200':
           description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StationsResponse'
         '400':
           description: bad request
           content:
