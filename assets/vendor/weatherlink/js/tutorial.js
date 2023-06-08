@@ -1,19 +1,3 @@
-if ($('input#api-timestamp').length > 0) {
-	setInterval(updateApiTimestamp, 1000);
-}
-
-function updateApiTimestamp() {
-	$('input#api-timestamp').val(Math.floor(Date.now() / 1000));
-}
-
-$('select#api-endpoint').change(function() {
-	$('div.params').hide();
-	var selectedVal = $('select#api-endpoint').find(':selected').val();
-	if (selectedVal != '') {
-		$('div#params-' + selectedVal).show();
-	}
-});
-
 function calculateApiSignature() {
 	var apiSignatureDiv = $('div#api-signature');
 	apiSignatureDiv.html('');
@@ -148,7 +132,3 @@ function calculateApiSignature() {
 
 	apiSignatureDiv.html(instructions);	
 }
-
-$('input#calculate-api-signature-button').on('click', function(eventData) {
-	calculateApiSignature();
-});
