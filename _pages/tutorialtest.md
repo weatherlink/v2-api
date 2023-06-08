@@ -133,11 +133,9 @@ The Station ID is different from your station's Device ID or DID. The [FAQ](faq)
 
 The [API Reference](api-reference) documents information on what parameters/headers are available with each API call the WeatherLink v2 API supports.
 
-To make the API call to the `/stations` API endpoint you need to cal
+To make the API call to the `/stations` API endpoint you need to make an HTTP GET API call to the following URL and be sure to include the 
 
-```
-https://api.weatherlink.com/v2/stations?api-key=
-```
+```https://api.weatherlink.com/v2/stations?api-key=```
 
 ### Step 2.5 - Read the API Response
 
