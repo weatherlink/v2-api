@@ -18,7 +18,7 @@ The API Key is passed in the API request as a query parameter named `api-key`.
 
 ## API Secret
 
-The API Secret is a secret value that is passed as a header named `X-Api-Secret`.
+The API Secret is a secret value that is passed as a header named `X-Api-Secret` (case insensitive).
 
 If your API Secret is compromised it will allow others to access the API while pretending to be you. If this occurs please go back to the Account page at <a href="https://www.weatherlink.com/account">https://www.weatherlink.com/account</a> and click the `Generate v2 Key` button again. This will delete the old API Secret and create a new API Secret. You will then need to update your code to use the new API Secret. 
 
