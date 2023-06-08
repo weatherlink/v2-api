@@ -99,12 +99,12 @@ You can enter your API credentials below to update the examples in this tutorial
 
 <label for="api-key">
 <span>API Key</span>
-<input id="api-key" type="text" class="input-field" name="api-key" value="YOUR API KEY" />
+<input id="api-key" type="text" class="input-field" name="api-key" value="" placeholder="YOUR API KEY" />
 </label>
 
 <label for="api-secret">
 <span>API Secret</span>
-<input id="api-secret" type="text" class="input-field" name="api-secret" value="YOUR API SECRET" />
+<input id="api-secret" type="text" class="input-field" name="api-secret" value="" placeholder="YOUR API SECRET" />
 </label>
 
 </form>
