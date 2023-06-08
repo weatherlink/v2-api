@@ -92,6 +92,7 @@ header:
 
 This tutorial will walk you through what a first time user of the WeatherLink v2 API needs to do in order to start retrieving weather observation data.
 
+<!--
 You can enter your API credentials below to update the examples in this tutorial with your real world values.
 
 <div class="form-style-2">
@@ -109,6 +110,7 @@ You can enter your API credentials below to update the examples in this tutorial
 
 </form>
 </div>
+-->
 
 ## Step 1 - Get Your API Key and API Secret
 
@@ -133,13 +135,11 @@ The Station ID is different from your station's Device ID or DID. The [FAQ](faq)
 
 The [API Reference](api-reference) documents information on what parameters/headers are available with each API call the WeatherLink v2 API supports.
 
-To make the API call to the `/stations` API endpoint you need to make an HTTP GET API call to the following URL and be sure to include the 
+To make the API call to the `/stations` API endpoint you need to make an HTTP GET API call to the following URL and include a header named `X-Api-Secret` set to the value of your API Secret.
 
-<span class="url-stations-all">
 ```
 https://api.weatherlink.com/v2/stations?api-key={YOUR API KEY}
 ```
-</span>
 
 ### Step 2.5 - Read the API Response
 
