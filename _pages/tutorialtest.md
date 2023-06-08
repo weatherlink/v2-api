@@ -110,11 +110,6 @@ You can enter your API credentials below to update the examples in this tutorial
 </form>
 </div>
 
-<div class="notice--warning">
-<h4>Please Note:</h4>
-<p>Make sure to use your own real API Key and API Secret if you try to recreate the steps shown in this tutorial.</p>
-</div>
-
 ## Step 1 - Get Your API Key and API Secret
 
 To retrieve your WeatherLink v2 API Key and API Secret you can go to WeatherLink.com and visit the Account page at <a href="https://www.weatherlink.com/account">https://www.weatherlink.com/account</a>.
@@ -136,14 +131,12 @@ Before you can download weather observation data you need to know the Station ID
 
 The Station ID is different from your station's Device ID or DID. The [FAQ](faq) page has some brief explanations on why it is different from the Device ID of the past.
 
-The remainder of this tutorial will show how to make a call to the `/stations` API endpoint and use the UUID version of the Station ID.
-
 The [API Reference](api-reference) documents information on what parameters/headers are available with each API call the WeatherLink v2 API supports.
 
 To make the API call to the `/stations` API endpoint you need to cal
 
 ```
-https://api.weatherlink.com/v2/stations?api-key=987654321
+https://api.weatherlink.com/v2/stations?api-key=
 ```
 
 ### Step 2.5 - Read the API Response
