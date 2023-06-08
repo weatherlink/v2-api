@@ -92,9 +92,24 @@ header:
 
 This tutorial will walk you through what a first time user of the WeatherLink v2 API needs to do in order to start retrieving weather observation data.
 
-Enter your API 
+You can enter your API credentials below to update the examples in this tutorial with your real world values.
 
-For the examples shown in this tutorial we will use the following details:
+<div class="form-style-2">
+<form action="" method="post">
+
+<label for="api-key">
+<span>API Key <span class="required">*</span></span>
+<input id="api-key" type="text" class="input-field" name="api-key" value="" />
+</label>
+
+<label for="api-secret">
+<span>API Secret <span class="required">*</span></span>
+<input id="api-secret" type="text" class="input-field" name="api-secret" value="" />
+</label>
+
+</form>
+</div>
+
 
 * We will use the fictitious API Key `987654321`.
 * We will use the fictitious API Secret `ABC123`.
