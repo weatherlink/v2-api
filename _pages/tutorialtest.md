@@ -98,21 +98,17 @@ You can enter your API credentials below to update the examples in this tutorial
 <form action="" method="post">
 
 <label for="api-key">
-<span>API Key <span class="required">*</span></span>
-<input id="api-key" type="text" class="input-field" name="api-key" value="" />
+<span>API Key</span>
+<input id="api-key" type="text" class="input-field" name="api-key" value="YOUR API KEY" />
 </label>
 
 <label for="api-secret">
-<span>API Secret <span class="required">*</span></span>
-<input id="api-secret" type="text" class="input-field" name="api-secret" value="" />
+<span>API Secret</span>
+<input id="api-secret" type="text" class="input-field" name="api-secret" value="YOUR API SECRET" />
 </label>
 
 </form>
 </div>
-
-
-* We will use the fictitious API Key `987654321`.
-* We will use the fictitious API Secret `ABC123`.
 
 <div class="notice--warning">
 <h4>Please Note:</h4>
