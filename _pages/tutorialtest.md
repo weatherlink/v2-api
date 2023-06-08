@@ -135,9 +135,11 @@ The [API Reference](api-reference) documents information on what parameters/head
 
 To make the API call to the `/stations` API endpoint you need to make an HTTP GET API call to the following URL and be sure to include the 
 
+<span class="url-stations-all">
 ```
-<span class="url-stations-all">https://api.weatherlink.com/v2/stations?api-key=</span>
+https://api.weatherlink.com/v2/stations?api-key={YOUR API KEY}
 ```
+</span>
 
 ### Step 2.5 - Read the API Response
 

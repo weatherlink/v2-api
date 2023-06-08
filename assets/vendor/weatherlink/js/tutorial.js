@@ -6,7 +6,7 @@ function updateTemplates() {
 		apiKey = '{YOUR API KEY}';
 	}
 	if (apiSecret.length == 0) {
-		apiSecret = '{YOUR API KEY}';
+		apiSecret = '{YOUR API SECRET}';
 	}
 
 	$('span.url-stations-all').html('https://api.weatherlink.com/v2/stations?api-key=' + apiKey);
