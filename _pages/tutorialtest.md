@@ -333,3 +333,19 @@ https://api.weatherlink.com/v2/historic/96230?api-key=987654321&t=1558729481&sta
 The JSON response for the API call will contain historic weather observation data for the specified Station ID, assuming you have permission to view the station via the WeatherLink v2 API. Please refer to the [Data Permissions](data-permissions) documentation about what level of data access is available for the different combinations of weather station types and WeatherLink service plans.
 
 Information about what the weather observation data API response looks like is at [API Response](api-response).
+
+<script>
+(function() {
+  var nTimer = setInterval(function() {
+    if (window.jQuery) {
+      clearInterval(nTimer);
+      var fileref = document.createElement('script');
+      fileref.setAttribute("type","text/javascript");
+      fileref.setAttribute("src", "/v2-api/assets/vendor/weatherlink/js/tutorial.js");
+      document.getElementsByTagName("head")[0].appendChild(fileref);
+
+      //console.log($('select#api-endpoint').find(':selected').val());
+    }
+  }, 100);
+})();
+</script>
