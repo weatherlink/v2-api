@@ -1,6 +1,6 @@
 ---
 title: Tutorial
-permalink: /tutorialtest
+permalink: /tutorial
 classes: wide
 header:
   overlay_color: "#000000"
