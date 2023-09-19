@@ -120,6 +120,7 @@ function populateCatalogItemDetails() {
 			var fieldDescription = "";
 			if (_.has(dataStructure[fieldName], "description")) {
 				fieldDescription = dataStructure[fieldName].description;
+				console.log(fieldDescription);
 			}
 
 			tbody.append(
