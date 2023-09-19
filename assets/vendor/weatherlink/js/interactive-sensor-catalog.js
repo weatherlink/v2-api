@@ -121,9 +121,7 @@ function populateCatalogItemDetails() {
 			if (_.has(dataStructure[fieldName], "description")) {
 				fieldDescription = dataStructure[fieldName].description;
 				console.log(fieldDescription);
-				fieldDescription = _.replace(fieldDescription, "\\\\n", "<br>");
-				console.log(fieldDescription);
-				fieldDescription = _.replace(fieldDescription, "\\n", "<br>");
+				fieldDescription = _.replace(fieldDescription, "\n", "<br>");
 				console.log(fieldDescription);
 			}
 
