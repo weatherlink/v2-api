@@ -130,7 +130,7 @@ function populateCatalogItemDetails() {
 					.append($('<td/>').text(fieldName))
 					.append($('<td/>').text(fieldType))
 					.append($('<td/>').text(fieldUnits))
-					.append($('<td/>').text(fieldDescription))
+					.append($('<td/>').html(fieldDescription))
 			);
 		}
 	} else {
