@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2023-08-10
+  - Removed documentation about the old API Signature and API Timestamp parameters that are no longer necessary.
 - 2023-01-06
   - Added [Data Permissions](data-permissions) and [Data Structure Types](data-structure-types) information for the [WeatherLink Console](https://www.davisinstruments.com/pages/weatherlink-console).
 - 2022-07-25
