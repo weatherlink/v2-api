@@ -52,10 +52,9 @@ The metadata portion of the API supports:
 - EnviroMonitor
 - WeatherLink Live
 - AirLink
+- WeatherLink Console
 
 ## Step 5
-
-Since the WeatherLink v2 API is still in a beta test phase and only supports fetching weather data for EnviroMonitor and WeatherLink Live devices you will need to select an appropriate station ID to complete this next step.
 
 From the JSON response copy one of the station ID numbers and then select "Current Conditions Data" from the "Weather Data" folder under the "WeatherLink v2 API" collection on the left hand side of Postman. On the "Current Conditions Data" details screen enter the station ID into the "Value" field for the `station-id` in the Path Variables section. Then click the Send button to send the API call to get current conditions.
 
