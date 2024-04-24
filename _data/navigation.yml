@@ -21,6 +21,8 @@ navMain:
         url: /tutorial
       - title: Authentication
         url: /authentication
+      - title: Demo Mode <i class="fas fa-star new-content-notification"></i> <b><i>New!</i></b>
+        url: /demo-mode
       - title: API Response
         url: /api-response
       - title: API Use Cases
