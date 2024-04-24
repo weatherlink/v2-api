@@ -38,7 +38,7 @@ https://api.weatherlink.com/v2/current/2?api-key={YOUR API KEY}&demo=true
 To retrieve historic data the URL will be:
 
 ```
-https://api.weatherlink.com/v2/historic/2?api-key={YOUR API KEY}&start-timestamp={start-timestamp}&end-timestamp={end-timestamp}&demo=true
+https://api.weatherlink.com/v2/historic/2?api-key={YOUR API KEY}&start-timestamp={START UNIX TIMESTAMP}&end-timestamp={END UNIX TIMESTAMP}&demo=true
 ```
 
 For information on the extra parameters required to retrieve historic observation records please read through the [Tutorial](tutorial).
