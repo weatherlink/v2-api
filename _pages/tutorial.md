@@ -90,7 +90,7 @@ header:
 }
 </style>
 
-This tutorial will walk you through what a first time user of the WeatherLink v2 API needs to do in order to start retrieving weather observation data.
+This tutorial will walk you through what a first time user of the WeatherLink v2 API needs to do in order to start retrieving weather observation data. If you do not have your own WeatherLink weather station setup yet you can use the WeatherLink v2 API in [demo mode](demo-mode).
 
 <!--
 You can enter your API credentials below to update the examples in this tutorial with your real world values.
