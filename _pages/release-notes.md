@@ -8,6 +8,12 @@ header:
   overlay_image: /assets/vendor/weatherlink/images/landing.jpg
 ---
 
+- 2024-03-27 - Build 20240223.2
+  - Add support for new sensor types.
+- 2024-02-15 - Build 20240214.1
+  - Add support for demo mode.
+- 2023-11-14 - Build 20231011.2
+  - Include timezone offset with archive and current condition records
 - 2023-05-31 - Build 20230518.1
   - Add support for sending API Secret as a header instead of computing an API Signature.
   - Allow use of Station UUID.
