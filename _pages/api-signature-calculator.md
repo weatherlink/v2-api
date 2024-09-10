@@ -102,7 +102,7 @@ header:
 
 <div class="notice--warning">
 <h4>DEPRECATED</h4>
-<p>API Signature is no longer required</p>
+<p>API Signature is no longer required as this is no longer the preferred way of authenticating with the WeatherLink v2 API. Please see the [Tutorial](Tutorial) and [Authentication](Authentication) pages for more information on the preferred authentication mechanism which involves passing the API secret as a header.</p>
 </div>
 
 The purpose of this page is to provide an interactive demonstration of how to compute an API Signature based on the type of API call and parameters you enter in the form below.
