@@ -31,7 +31,7 @@ Save the environment file after replacing the API Key and Secret placeholders.
 
 Install and/or start Postman. From the menu select File > Import and browse for the Postman collection file you downloaded in Step 1. Then select File > Import again and browse for the Postman environment file you downloaded and edited.
 
-After importing both files you will see a collection on the left hand side of Postman named "WeatherLink v2 API". This is the collection of URLs for testing the API. Additionally, the collection import file also contains a small block of JavaScript code that calculates the API Signature and API Timestamp variables dynamically. More on this will be discussed later.
+After importing both files you will see a collection on the left hand side of Postman named "WeatherLink v2 API". This is the collection of URLs for testing the API.
 
 To use the environment settings that include your API Key and Secret look near the top right corner in Postman. There will be a drop down list that might say "No Environment" if this is a fresh installation of Postman. Click that list and choose the "WeatherLink v2 API" entry to change the Postman environment to use your API Key and Secret.
 
