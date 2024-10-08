@@ -39,8 +39,6 @@ To use the environment settings that include your API Key and Secret look near t
 
 Under the Collections section expand the WeatherLink v2 API and expand the Metadata folder. Select the "Stations - Get All" item to see the details screen about this API call. On the details page you will see the special placeholders like `{{V2_API_KEY}}`. These are placeholders that tell Postman to refer to the environment variables you imported. If you ever need to change your API Key or Secret do not change the placeholders. Instead edit the environment to have the new values.
 
-In addition to the API Key and API Secret environment variables there are additional environment variables that are calculated on the fly when you make a test call the the API from Postman. These additional environment variables are `V2_API_SIGNATURE` and `V2_API_TIMESTAMP`. Do not edit these values as they are automatically calculated and updated for each API call. The code that calculates these additional environment variables is a small block of JavaScript code embedded in the collection that automatically runs when you click the Send button to test an API call.
-
 Now it's time to send a test API call. With the "Stations - Get All" detail screen open click the Send button in the upper right corner of Postman.
 
 If you entered the API Key and Secret correctly into the environment then the API call will return with the proper JSON response containing the list of stations your API Key has access to.
