@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
+
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -24,7 +27,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
       - name: Commit changes
         run: |
-          git commit -a -m "Automated commit from GitHub Actions" || echo "No changes to commit"
+          git commit -a -m "Update released dependency version in java-sdk" || echo "No changes to commit"
       # - name: Commit java-sdk.md if needed
       #   uses: stefanzweifel/git-auto-commit-action@v4
       #   with:

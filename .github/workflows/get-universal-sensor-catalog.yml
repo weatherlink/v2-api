@@ -7,16 +7,34 @@ on:
 
 jobs:
   build:
+    name: Get Universal Sensor Catalog
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       WL_V2_API_KEY: ${{ secrets.WL_V2_API_KEY }}
       WL_V2_API_URL: ${{ secrets.WL_V2_API_URL }}
     steps:
-      - uses: actions/checkout@v5 # v2 minimum required
-      - run: curl -X GET -o resources/universal-sensor-catalog.json.temp --fail --compressed $WL_V2_API_URL/universal-sensor-catalog?api-key=$WL_V2_API_KEY
-      - run: jq . resources/universal-sensor-catalog.json.temp > resources/universal-sensor-catalog.json
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update universal-sensor-catalog.json
-          file_pattern: resources/universal-sensor-catalog.json
-          skip_dirty_check: false
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Download Universal Sensor Catalog data file to a temp file
+        run: curl -X GET -o resources/universal-sensor-catalog.json.temp --fail --compressed $WL_V2_API_URL/universal-sensor-catalog?api-key=$WL_V2_API_KEY
+      - name: Rename temp file to final name
+        run: jq . resources/universal-sensor-catalog.json.temp > resources/universal-sensor-catalog.json
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Commit changes
+        run: |
+          git commit -a -m "Update universal-sensor-catalog.json" || echo "No changes to commit"
+      # - uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: Update universal-sensor-catalog.json
+      #     file_pattern: resources/universal-sensor-catalog.json
+      #     skip_dirty_check: false
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin HEAD
