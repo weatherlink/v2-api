@@ -9,6 +9,8 @@ jobs:
   update:
     name: Update Java SDK Version
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
