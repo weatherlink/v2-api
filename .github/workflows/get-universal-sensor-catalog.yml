@@ -28,11 +28,6 @@ jobs:
       - name: Commit changes
         run: |
           git commit -a -m "Update universal-sensor-catalog.json" || echo "No changes to commit"
-      # - uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     commit_message: Update universal-sensor-catalog.json
-      #     file_pattern: resources/universal-sensor-catalog.json
-      #     skip_dirty_check: false
       - name: Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

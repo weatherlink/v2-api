@@ -28,12 +28,6 @@ jobs:
       - name: Commit changes
         run: |
           git commit -a -m "Update released dependency version in java-sdk" || echo "No changes to commit"
-      # - name: Commit java-sdk.md if needed
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     commit_message: Update released dependency version in java-sdk
-      #     file_pattern: _pages/java-sdk.md
-      #     skip_dirty_check: false
       - name: Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
