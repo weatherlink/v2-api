@@ -63,6 +63,8 @@ navMain:
         url: /support
 #      - title: Terms of Service
 #        url: /terms-of-service
+      - title: Awesome WeatherLink
+        url: /awesome-weatherlink
       - title: Release Notes
         url: /release-notes
       - title: Documentation Updates
