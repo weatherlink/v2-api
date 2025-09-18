@@ -26,6 +26,11 @@ Please note that the API Key will not be changed and can not be deleted when gen
 
 <div class="notice--warning">
 <p>If you get the following response message from the WeatherLink v2 API:</p>
-<p><pre>{"code":"401","message":"API call timestamp parameter \"t\" is stale. The timestamp you provide must be within a range that is plus or minus 300 seconds of the API server's internal clock."}</pre></p>
+<p><pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">
+{
+  "code":"401",
+  "message":"API call timestamp parameter \"t\" is stale. The timestamp you provide must be within a range that is plus or minus 300 seconds of the API server's internal clock."
+}
+</pre></p>
 <p>This means you are not sending the API Secret as an HTTP request header and this is triggering a legacy authentication system to attempt to authenticate your API call.</p>
 </div>
