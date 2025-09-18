@@ -15,6 +15,7 @@ Here are some common questions we receive regarding the WeatherLink v2 API.
 - [What is a Station ID?](#what-is-a-station-id)
 - [Is a Station ID the same as the Device ID or DID?](#is-station-id-a-device-id)
 - [How do I find my Station ID?](#how-to-find-my-station-id)
+- [Why does the API tell me "API call timestamp parameter t is stale"?](#legacy-authentication)
 
 <a name="what-is-a-station-id"></a>
 ## What is a Station ID?
@@ -36,5 +37,12 @@ In the past a single Device ID could be used to easily identify a weather statio
 ## How do I find my Station ID?
 
 You can get the Station IDs for the weather stations you have access to by calling the `/stations` API endpoint. This is discussed on the [API Use Cases](api-use-cases) page. Alternatively, if you wish to use the UUID form of Station ID you can retrieve it from the URL shown in your browser address bar when viewing the particular station in question on WeatherLink.com.
+
+[Back to the top](#top)
+
+<a name="legacy-authentication"></a>
+## Why does the API tell me "API call timestamp parameter t is stale"?
+
+This message appears when you trigger a legacy authentication system that is no longer the primary way to authenticate your API calls to the WeatherLink v2 API. To fix this please be sure to include your API secret as a request header named X-Api-Secret (the header name is case-insensitive). More information can be found on the preferred authentication requirements at [Authentication](authentication).
 
 [Back to the top](#top)
