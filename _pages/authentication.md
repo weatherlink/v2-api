@@ -23,3 +23,9 @@ The API Secret is a secret value that is passed as a header named `X-Api-Secret`
 If your API Secret is compromised it will allow others to access the API while pretending to be you. If this occurs please go back to the Account page at <a href="https://www.weatherlink.com/account">https://www.weatherlink.com/account</a> and click the `Generate v2 Key` button again. This will delete the old API Secret and create a new API Secret. You will then need to update your code to use the new API Secret. 
 
 Please note that the API Key will not be changed and can not be deleted when generating a new API Secret.
+
+<div class="notice--warning">
+<p>If you get the following response message from the WeatherLink v2 API:</p>
+<p>API call timestamp parameter "t" is stale. The timestamp you provide must be within a range that is plus or minus 300 seconds of the API server's internal clock.</p>
+<p>This means you are not sending the API Secret as an HTTP request header and this is triggering a legacy authentication system to attempt to authenticate your API call.</p>
+</div>
