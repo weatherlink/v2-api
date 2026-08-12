@@ -188920,6 +188920,31 @@
       }
     },
     {
+      "sensor_type": 399,
+      "manufacturer": "Keller",
+      "product_name": "Acculevel",
+      "product_number": "0507.01309.0813**",
+      "category": "Depth & Level Sensors",
+      "data_structure": {
+        "pressure": {
+          "type": "float",
+          "units": "pounds per square inch"
+        },
+        "depth": {
+          "type": "float",
+          "units": "feet"
+        },
+        "sensor_ref_level": {
+          "type": "float",
+          "units": "feet"
+        },
+        "raw_fluid_sensor_level": {
+          "type": "float",
+          "units": "feet"
+        }
+      }
+    },
+    {
       "sensor_type": 500,
       "manufacturer": "",
       "product_name": "Gateway CDMA Health",
@@ -190177,5 +190202,5 @@
       ]
     }
   ],
-  "generated_at": 1786406824
+  "generated_at": 1786493455
 }
